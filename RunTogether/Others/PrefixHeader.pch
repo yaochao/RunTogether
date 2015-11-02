@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  RunTogether
+//
+//  Created by yaochao on 15/11/2.
+//  Copyright (c) 2015年 duoduo. All rights reserved.
+//
+
+#ifndef RunTogether_PrefixHeader_pch
+#define RunTogether_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+/**
+ *  颜色宏定义
+ */
+#define BBARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define BBColor(r, g, b) BBARGBColor(r, g, b, 1.0)
+#define BBRandomColor BBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+/**
+ *  屏幕宽度和高度
+ */
+#define Screen_W [UIScreen mainScreen].bounds.size.width
+#define Screen_H [UIScreen mainScreen].bounds.size.height
+
+
+#endif
