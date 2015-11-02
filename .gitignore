@@ -13,9 +13,12 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 DerivedData
-*.hmap
+*.hap
 *.ipa
 *.xcuserstate
+.DS_Store
+.DS_Store?
+.Trashes
 
 # CocoaPods
 #
