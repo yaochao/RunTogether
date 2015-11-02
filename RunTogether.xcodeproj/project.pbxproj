@@ -19,6 +19,8 @@
 		D2917FB11BE746CF00004AE7 /* RTLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */; };
 		D2917FB21BE746CF00004AE7 /* RTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAC1BE746CF00004AE7 /* RTLoginController.m */; };
 		D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */; };
+		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
+		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		D2917FAC1BE746CF00004AE7 /* RTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoginController.m; sourceTree = "<group>"; };
 		D2917FAE1BE746CF00004AE7 /* RTRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRegisterController.h; sourceTree = "<group>"; };
 		D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRegisterController.m; sourceTree = "<group>"; };
+		D2917FB51BE755C600004AE7 /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
+		D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHTTPSessionManager.m; sourceTree = "<group>"; };
+		D2917FB81BE7565600004AE7 /* RTNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTNetworkTools.h; sourceTree = "<group>"; };
+		D2917FB91BE7565600004AE7 /* RTNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTNetworkTools.m; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,7 @@
 		D2917F891BE7083400004AE7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D2917FB41BE752C800004AE7 /* Network */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -239,6 +246,17 @@
 				D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		D2917FB41BE752C800004AE7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2917FB81BE7565600004AE7 /* RTNetworkTools.h */,
+				D2917FB91BE7565600004AE7 /* RTNetworkTools.m */,
+				D2917FB51BE755C600004AE7 /* RTHTTPSessionManager.h */,
+				D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,8 +415,10 @@
 			files = (
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
+				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D2917FB21BE746CF00004AE7 /* RTLoginController.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
+				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

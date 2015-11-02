@@ -26,5 +26,9 @@
 #define Screen_W [UIScreen mainScreen].bounds.size.width
 #define Screen_H [UIScreen mainScreen].bounds.size.height
 
+/**
+ *  BaseUrl
+ */
+#define BaseUrl @"https://api.duoduosports.com/v1"
 
 #endif
