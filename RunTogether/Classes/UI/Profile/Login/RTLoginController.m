@@ -9,10 +9,18 @@
 #import "RTLoginController.h"
 
 @interface RTLoginController ()
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
 @implementation RTLoginController
+
+#pragma mark - btnClick
+- (IBAction)loginBtnClick:(id)sender {
+    
+}
+
 
 #pragma mark - viewDiaLoad
 - (void)viewDidLoad {

@@ -10,9 +10,18 @@
 
 @interface RTRegisterController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNum;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+
 @end
 
 @implementation RTRegisterController
+
+#pragma mark - btnClick
+- (IBAction)registerBtnClick:(id)sender {
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

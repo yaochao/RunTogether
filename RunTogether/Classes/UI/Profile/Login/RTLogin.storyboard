@@ -60,6 +60,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="Eu3-Od-nNV" eventType="touchUpInside" id="bRa-U1-06U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kq3-sh-pfg">
                                 <rect key="frame" x="260" y="520" width="80" height="40"/>
@@ -101,6 +104,10 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="password" destination="dVl-Am-bLh" id="JXJ-9T-MIc"/>
+                        <outlet property="username" destination="H0N-i2-RKL" id="eQO-ln-rxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3a0-CB-GNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,8 +147,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerBtnClick:" destination="rOj-Eb-h4f" eventType="touchUpInside" id="A2v-iD-KfU"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="登录密码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-vP-4lC">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pFw-vP-4lC">
                                 <rect key="frame" x="30" y="214" width="540" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -169,6 +179,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F54-u9-EFk"/>
+                    <connections>
+                        <outlet property="password" destination="pFw-vP-4lC" id="GrU-zd-nwE"/>
+                        <outlet property="phoneNum" destination="kuU-3j-Haf" id="dTn-k1-QB0"/>
+                        <outlet property="username" destination="tbQ-Mv-KxV" id="sgg-9b-t9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcQ-mM-zvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
