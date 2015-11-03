@@ -11,9 +11,9 @@
 @interface RTNetworkTools : NSObject
 
 // POST请求
-+ (void)postDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType completionBlock:(void (^)(id responseObject))completionBlock;
++ (void)postDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 // GET请求
-+ (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType completionBlock:(void (^)(id responseObject))completionBlock;
++ (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 @end

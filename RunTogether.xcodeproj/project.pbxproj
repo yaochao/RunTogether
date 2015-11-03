@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1095DC4FECCF883DFAE6DBA0 /* libPods.a */; };
+		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
+		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
+		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
+		D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03F1BE84835007BB1EE /* NSData+Base64.m */; };
+		D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF0411BE84835007BB1EE /* NSDate+Category.m */; };
+		D22CF0551BE84835007BB1EE /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF0431BE84835007BB1EE /* NSDateFormatter+Category.m */; };
+		D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF0451BE84835007BB1EE /* NSString+Base64.m */; };
+		D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF0471BE84835007BB1EE /* NSString+BBExtension.m */; };
+		D22CF0581BE84835007BB1EE /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF0491BE84835007BB1EE /* NSString+Extension.m */; };
+		D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */; };
+		D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */; };
+		D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04F1BE84835007BB1EE /* UIView+Extension.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -21,6 +33,7 @@
 		D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */; };
 		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
 		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
+		D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,30 @@
 /* Begin PBXFileReference section */
 		1095DC4FECCF883DFAE6DBA0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF811E886039A64FEC97BF0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		D22CF03C1BE84835007BB1EE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D22CF03E1BE84835007BB1EE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		D22CF03F1BE84835007BB1EE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		D22CF0401BE84835007BB1EE /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
+		D22CF0411BE84835007BB1EE /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
+		D22CF0421BE84835007BB1EE /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
+		D22CF0431BE84835007BB1EE /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
+		D22CF0441BE84835007BB1EE /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		D22CF0451BE84835007BB1EE /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		D22CF0461BE84835007BB1EE /* NSString+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BBExtension.h"; sourceTree = "<group>"; };
+		D22CF0471BE84835007BB1EE /* NSString+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BBExtension.m"; sourceTree = "<group>"; };
+		D22CF0481BE84835007BB1EE /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		D22CF0491BE84835007BB1EE /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		D22CF04A1BE84835007BB1EE /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D22CF04C1BE84835007BB1EE /* UIImage+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBExtension.h"; sourceTree = "<group>"; };
+		D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBExtension.m"; sourceTree = "<group>"; };
+		D22CF04E1BE84835007BB1EE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D22CF04F1BE84835007BB1EE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D22CF06C1BE88704007BB1EE /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,10 +93,11 @@
 		D2917FAC1BE746CF00004AE7 /* RTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoginController.m; sourceTree = "<group>"; };
 		D2917FAE1BE746CF00004AE7 /* RTRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRegisterController.h; sourceTree = "<group>"; };
 		D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRegisterController.m; sourceTree = "<group>"; };
-		D2917FB51BE755C600004AE7 /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
 		D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHTTPSessionManager.m; sourceTree = "<group>"; };
 		D2917FB81BE7565600004AE7 /* RTNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTNetworkTools.h; sourceTree = "<group>"; };
 		D2917FB91BE7565600004AE7 /* RTNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTNetworkTools.m; sourceTree = "<group>"; };
+		D2917FBC1BE7711C00004AE7 /* RTProfileUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProfileUserModel.h; sourceTree = "<group>"; };
+		D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProfileUserModel.m; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +135,36 @@
 				1095DC4FECCF883DFAE6DBA0 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D22CF0381BE84835007BB1EE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */,
+				D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */,
+				D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */,
+				D22CF03C1BE84835007BB1EE /* MBProgressHUD.h */,
+				D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */,
+				D22CF03E1BE84835007BB1EE /* NSData+Base64.h */,
+				D22CF03F1BE84835007BB1EE /* NSData+Base64.m */,
+				D22CF0401BE84835007BB1EE /* NSDate+Category.h */,
+				D22CF0411BE84835007BB1EE /* NSDate+Category.m */,
+				D22CF0421BE84835007BB1EE /* NSDateFormatter+Category.h */,
+				D22CF0431BE84835007BB1EE /* NSDateFormatter+Category.m */,
+				D22CF0441BE84835007BB1EE /* NSString+Base64.h */,
+				D22CF0451BE84835007BB1EE /* NSString+Base64.m */,
+				D22CF0461BE84835007BB1EE /* NSString+BBExtension.h */,
+				D22CF0471BE84835007BB1EE /* NSString+BBExtension.m */,
+				D22CF0481BE84835007BB1EE /* NSString+Extension.h */,
+				D22CF0491BE84835007BB1EE /* NSString+Extension.m */,
+				D22CF04A1BE84835007BB1EE /* UIBarButtonItem+Extension.h */,
+				D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */,
+				D22CF04C1BE84835007BB1EE /* UIImage+BBExtension.h */,
+				D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */,
+				D22CF04E1BE84835007BB1EE /* UIView+Extension.h */,
+				D22CF04F1BE84835007BB1EE /* UIView+Extension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		D25526CA1BE6FA2B00CDEFC7 = {
@@ -173,6 +241,7 @@
 		D2917F881BE7083400004AE7 /* BussinessModels */ = {
 			isa = PBXGroup;
 			children = (
+				D2917FBB1BE7707500004AE7 /* Profile */,
 			);
 			path = BussinessModels;
 			sourceTree = "<group>";
@@ -197,6 +266,7 @@
 		D2917F8B1BE7085000004AE7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				D22CF0381BE84835007BB1EE /* Category */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -253,10 +323,19 @@
 			children = (
 				D2917FB81BE7565600004AE7 /* RTNetworkTools.h */,
 				D2917FB91BE7565600004AE7 /* RTNetworkTools.m */,
-				D2917FB51BE755C600004AE7 /* RTHTTPSessionManager.h */,
+				D22CF06C1BE88704007BB1EE /* RTHTTPSessionManager.h */,
 				D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D2917FBB1BE7707500004AE7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D2917FBC1BE7711C00004AE7 /* RTProfileUserModel.h */,
+				D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +386,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RT;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = duoduo;
 				TargetAttributes = {
 					D25526D21BE6FA2C00CDEFC7 = {
@@ -348,6 +427,7 @@
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
+				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,13 +493,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
+				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
+				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
+				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2917FB21BE746CF00004AE7 /* RTLoginController.m in Sources */,
+				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
+				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
+				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
+				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
+				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
+				D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.m in Sources */,
+				D22CF0551BE84835007BB1EE /* NSDateFormatter+Category.m in Sources */,
+				D22CF0581BE84835007BB1EE /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +574,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -551,6 +644,7 @@
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -563,6 +657,7 @@
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -581,6 +676,7 @@
 				);
 				INFOPLIST_FILE = RunTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunTogether.app/RunTogether";
 			};
@@ -596,6 +692,7 @@
 				);
 				INFOPLIST_FILE = RunTogetherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RunTogether.app/RunTogether";
 			};

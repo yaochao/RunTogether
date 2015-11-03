@@ -9,6 +9,14 @@
 #ifndef RunTogether_PrefixHeader_pch
 #define RunTogether_PrefixHeader_pch
 
+/**
+ *  导入全局经常使用的头文件
+ */
+#import "RTNetworkTools.h"
+#import <MJExtension/MJExtension.h>
+#import "MBProgressHUD+MJ.h"
+#import <UIImageView+WebCache.h>
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
@@ -29,6 +37,6 @@
 /**
  *  BaseUrl
  */
-#define BaseUrl @"https://api.duoduosports.com/v1"
+#define BaseUrl @"http://123.57.19.156:3001/v1"
 
 #endif

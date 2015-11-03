@@ -12,7 +12,7 @@
 @implementation RTNetworkTools
 
 #pragma mark - POST 加载网络数据
-+ (void)postDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType completionBlock:(void (^)(id responseObject))completionBlock{
++ (void)postDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     
     // 获得网络管理单例对象
     RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
@@ -21,15 +21,16 @@
     }
     
     // 打印一下请求的地址
-    NSString *completeUrl = [NSString stringWithFormat:@"%@/%@", BaseUrl, interfaceType];
+    NSString *completeUrl = [BaseUrl stringByAppendingPathComponent:interfaceType];
     NSLog(@"请求的网络地址 - %@", completeUrl);
     
     // 发送POST请求
     [manager POST:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        completionBlock(responseObject);
+        success(responseObject);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
         NSLog(@"网络错误 - %@", error);
         // 提示网络有问题
         NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
@@ -41,7 +42,7 @@
 
 
 #pragma mark - POST 加载网络数据
-+ (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType completionBlock:(void (^)(id responseObject))completionBlock{
++ (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     
     // 获得网络管理单例对象
     RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
@@ -56,9 +57,10 @@
     // 发送POST请求
     [manager GET:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        completionBlock(responseObject);
+        success(responseObject);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
         NSLog(@"网络错误 - %@", error);
         // 提示网络有问题
         NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];

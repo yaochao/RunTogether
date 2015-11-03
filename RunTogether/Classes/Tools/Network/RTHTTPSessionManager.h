@@ -6,7 +6,7 @@
 //
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface RTHTTPSessionManager : AFHTTPSessionManager
 

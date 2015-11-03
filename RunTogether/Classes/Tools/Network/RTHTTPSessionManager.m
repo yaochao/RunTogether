@@ -12,17 +12,20 @@
 
 // 单例
 + (instancetype)sharedNetworkManager {
-    static RTHTTPSessionManager *tools;
+    static RTHTTPSessionManager *manager;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        tools = [[RTHTTPSessionManager alloc] init];
+        manager = [RTHTTPSessionManager manager];
         
         // 设置反序列化的数据格式－> 官方建议的修改方式
-        tools.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
+        
+        // 设置安全策略，忽略签名证书，SSL
+//        manager.securityPolicy.allowInvalidCertificates = YES;
     });
-    return tools;
+    return manager;
 }
 
 @end
