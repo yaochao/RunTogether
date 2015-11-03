@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C0EB89049CBDED5F13196DD8CA85A2BCBA0CA7A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AF6311B77F966AD6826BFAC73C720B9B2CC57651" : 0,
+    "C0EB89049CBDED5F13196DD8CA85A2BCBA0CA7A3" : 0,
+    "181154023DE15EB7606BCEBCDFA161E03C7737C7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5FBC0704-AE3E-4BE4-9925-C8317C470416",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AF6311B77F966AD6826BFAC73C720B9B2CC57651" : "RunTogether",
+    "C0EB89049CBDED5F13196DD8CA85A2BCBA0CA7A3" : "rt-ios\/",
+    "181154023DE15EB7606BCEBCDFA161E03C7737C7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RunTogether",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RunTogether.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FlipperPA\/django-python3-vagrant",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "181154023DE15EB7606BCEBCDFA161E03C7737C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yaochao\/RunTogether.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AF6311B77F966AD6826BFAC73C720B9B2CC57651"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.duoduosports.com:mobile\/rt-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C0EB89049CBDED5F13196DD8CA85A2BCBA0CA7A3"
+    }
+  ]
+}

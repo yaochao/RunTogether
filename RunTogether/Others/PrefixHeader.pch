@@ -37,6 +37,6 @@
 /**
  *  BaseUrl
  */
-#define BaseUrl @"http://123.57.19.156:3001/v1"
+#define BaseUrl @"https://api.duoduosports.com/v1"
 
 #endif

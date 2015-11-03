@@ -23,7 +23,13 @@
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
         
         // 设置安全策略，忽略签名证书，SSL
-//        manager.securityPolicy.allowInvalidCertificates = YES;
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"rt" ofType:@"der"];
+        NSData *certData = [NSData dataWithContentsOfFile:cerPath];
+        [securityPolicy setAllowInvalidCertificates:YES];
+        [securityPolicy setValidatesDomainName:NO];
+        [securityPolicy setPinnedCertificates:@[certData]];
+        manager.securityPolicy = securityPolicy;
     });
     return manager;
 }

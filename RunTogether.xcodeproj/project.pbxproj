@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */ = {isa = PBXBuildFile; fileRef = 41338CCF1BE8CE6C00BCAEC3 /* rt.der */; };
 		63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1095DC4FECCF883DFAE6DBA0 /* libPods.a */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1095DC4FECCF883DFAE6DBA0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		41338CCF1BE8CE6C00BCAEC3 /* rt.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = rt.der; path = ../rt.der; sourceTree = "<group>"; };
 		CAF811E886039A64FEC97BF0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		D25526D61BE6FA2C00CDEFC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41338CCF1BE8CE6C00BCAEC3 /* rt.der */,
 				D2917F851BE7074D00004AE7 /* Default-568h@2x.png */,
 				D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */,
 				D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */,
@@ -428,6 +431,7 @@
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
+				41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
