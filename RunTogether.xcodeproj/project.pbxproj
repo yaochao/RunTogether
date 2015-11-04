@@ -38,7 +38,6 @@
 		D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
-		D2C2F1AB1BE9ECAE0027A4A5 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A81BE9ECAE0027A4A5 /* UICKeyChainStore.m */; };
 		D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1AD1BE9F0D10027A4A5 /* RTKeyChainSingleton.m */; };
 		D2C2F1B11BE9F1C40027A4A5 /* RTKeyChainTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1B01BE9F1C40027A4A5 /* RTKeyChainTools.m */; };
 /* End PBXBuildFile section */
@@ -111,8 +110,6 @@
 		D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
 		D2C2F1A51BE9ECAE0027A4A5 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
-		D2C2F1A71BE9ECAE0027A4A5 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
-		D2C2F1A81BE9ECAE0027A4A5 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		D2C2F1AC1BE9F0D10027A4A5 /* RTKeyChainSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKeyChainSingleton.h; sourceTree = "<group>"; };
 		D2C2F1AD1BE9F0D10027A4A5 /* RTKeyChainSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKeyChainSingleton.m; sourceTree = "<group>"; };
 		D2C2F1AF1BE9F1C40027A4A5 /* RTKeyChainTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKeyChainTools.h; sourceTree = "<group>"; };
@@ -380,8 +377,6 @@
 				D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */,
 				D2C2F1A51BE9ECAE0027A4A5 /* NSString+Hash.h */,
 				D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */,
-				D2C2F1A71BE9ECAE0027A4A5 /* UICKeyChainStore.h */,
-				D2C2F1A81BE9ECAE0027A4A5 /* UICKeyChainStore.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -546,7 +541,6 @@
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
-				D2C2F1AB1BE9ECAE0027A4A5 /* UICKeyChainStore.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,

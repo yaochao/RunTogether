@@ -25,6 +25,11 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:session_key forKey:@"session_key"];
 }
 
++ (BOOL)savePhone:(NSString *)phone {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:phone forKey:@"phone"];
+}
+
+
 // 读取
 + (NSString *)getRememberToken {
     return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"remember_token"];
@@ -38,6 +43,11 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"session_key"];
 }
 
++ (NSString *)getPhone {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"phone"];
+}
+
+
 // 删除
 + (BOOL)removeRememberToken {
     return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"remember_token"];
@@ -49,6 +59,10 @@
 
 + (BOOL)removeSessionKey {
     return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"session_key"];
+}
+
++ (BOOL)removePhone {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"phone"];
 }
 
 @end
