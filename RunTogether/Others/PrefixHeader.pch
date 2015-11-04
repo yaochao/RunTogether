@@ -39,4 +39,9 @@
  */
 #define BaseUrl @"https://api.duoduosports.com/v1"
 
+/**
+ *  百度地图AppKey
+ */
+#define BaiduMapAppKey @"Bo9uI5LwGFjfhceL1xlTKYxG"
+
 #endif
