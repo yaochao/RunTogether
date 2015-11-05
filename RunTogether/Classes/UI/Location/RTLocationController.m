@@ -10,12 +10,13 @@
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import "RTLocationTools.h"
+#import "RTLocationModel.h"
+
 
 @interface RTLocationController () <BMKMapViewDelegate>
-
 @property (nonatomic, strong) BMKMapView *mapView;
-@property (nonatomic, strong) UILabel *coordinateLbl;
-
+@property (nonatomic, strong) IBOutlet UILabel *coordinateLbl;
 @end
 
 @implementation RTLocationController
@@ -26,7 +27,32 @@
     // 添加mapView
     [self.view addSubview:self.mapView];
     
+    // 注册通知，接受定位的通知
+    [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
+    
 }
+
+- (void)receivedLocationNotification:(NSNotification *)notification {
+    //去除HUD
+    [MBProgressHUD hideHUD];
+    RTLocationModel *locationModel = notification.userInfo[@"LocationSuccessKey"];
+    // 更新地理坐标显示
+    _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", locationModel.point.latitude, locationModel.point.longitude];
+}
+
+#pragma mark - btnClick
+- (IBAction)startLocationBtnClick:(id)sender {
+    [MBProgressHUD showMessage:@"正在开启定位..."];
+    [RTLocationTools startLocation];
+}
+
+- (IBAction)stopLocationBtnClick:(id)sender {
+    [MBProgressHUD showMessage:@"正在关闭定位..."];
+    [RTLocationTools stopLocation];
+    _coordinateLbl.text = @"请开启定位";
+    [MBProgressHUD hideHUD];
+}
+
 
 #pragma mark - 懒加载
 - (BMKMapView *)mapView {

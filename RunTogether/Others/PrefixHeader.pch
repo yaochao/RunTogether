@@ -44,4 +44,9 @@
  */
 #define BaiduMapAppKey @"Bo9uI5LwGFjfhceL1xlTKYxG"
 
+/**
+ *  通知中心
+ */
+#define RTNotificationCenter [NSNotificationCenter defaultCenter]
+
 #endif

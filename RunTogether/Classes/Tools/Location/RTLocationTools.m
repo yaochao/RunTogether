@@ -1,0 +1,44 @@
+//
+//  RTLocationTools.m
+//  RunTogether
+//
+//  Created by yaochao on 15/11/5.
+//  Copyright © 2015年 duoduo. All rights reserved.
+//
+
+#import "RTLocationTools.h"
+
+@implementation RTLocationTools
+
++ (instancetype)sharedLocationTools {
+    
+    static RTLocationTools *manager;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[self alloc] init];
+    });
+    return manager;
+}
+
+// 开始定位, 定位的结果以通知的形式发出
++ (void)startLocation {
+    [[RTLocationTools sharedLocationTools] startLocation];
+}
+
+// 结束定位, 节省耗电
++ (void)stopLocation {
+    [[RTLocationTools sharedLocationTools] stopLocation];
+}
+
+// 根据城市名称，进行poi搜索
++ (BOOL)poiSearchInCity:(NSString *)city keyword:(NSString *)keyword {
+    return [[RTLocationTools sharedLocationTools] poiSearchInCity:city keyword:keyword];
+}
+
+// 根据坐标反地理编码
++ (void)reverseGeocodeWith:(CLLocationCoordinate2D)point {
+    [[RTLocationTools sharedLocationTools] reverseGeocodeWith:point];
+}
+
+@end
