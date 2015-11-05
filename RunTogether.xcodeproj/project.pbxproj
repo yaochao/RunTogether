@@ -35,6 +35,8 @@
 		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
 		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
 		D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */; };
+		D297FE8E1BEB311F0029B3B0 /* RTLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */; };
+		D297FE901BEB31B20029B3B0 /* RTLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */; };
 		D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
@@ -121,6 +123,9 @@
 		D2917FB91BE7565600004AE7 /* RTNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTNetworkTools.m; sourceTree = "<group>"; };
 		D2917FBC1BE7711C00004AE7 /* RTProfileUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProfileUserModel.h; sourceTree = "<group>"; };
 		D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProfileUserModel.m; sourceTree = "<group>"; };
+		D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationController.h; sourceTree = "<group>"; };
+		D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationController.m; sourceTree = "<group>"; };
+		D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLocation.storyboard; sourceTree = "<group>"; };
 		D2C2F19F1BE9B54E0027A4A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D2C2F1A31BE9ECAE0027A4A5 /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
 		D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
@@ -334,6 +339,7 @@
 			children = (
 				D2917FA51BE746CF00004AE7 /* Base */,
 				D2917FA81BE746CF00004AE7 /* Profile */,
+				D297FE8B1BEB30ED0029B3B0 /* Location */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -413,6 +419,16 @@
 				D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		D297FE8B1BEB30ED0029B3B0 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */,
+				D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */,
+				D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		D2C2F1A11BE9B5B00027A4A5 /* Keychain */ = {
@@ -541,6 +557,7 @@
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
+				D297FE901BEB31B20029B3B0 /* RTLocation.storyboard in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
@@ -630,6 +647,7 @@
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
 				D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */,
+				D297FE8E1BEB311F0029B3B0 /* RTLocationController.m in Sources */,
 				D22CF0551BE84835007BB1EE /* NSDateFormatter+Category.m in Sources */,
 				D22CF0581BE84835007BB1EE /* NSString+Extension.m in Sources */,
 				D2C2F1B11BE9F1C40027A4A5 /* RTKeyChainTools.m in Sources */,

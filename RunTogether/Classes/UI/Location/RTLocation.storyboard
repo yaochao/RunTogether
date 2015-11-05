@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3u8-16-b7b">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Base Nav Controller-->
+        <scene sceneID="2Xr-fg-7u1">
+            <objects>
+                <navigationController id="dTl-Me-tOR" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gg7-Bc-016">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3u8-16-b7b" kind="relationship" relationship="rootViewController" id="3Pd-xS-sc3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7k-bm-VRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-195" y="233"/>
+        </scene>
+        <!--我的位置-->
+        <scene sceneID="rk3-Jt-UlJ">
+            <objects>
+                <viewController id="3u8-16-b7b" customClass="RTLocationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="od4-Z2-M7l"/>
+                        <viewControllerLayoutGuide type="bottom" id="MmI-c6-CR8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iuk-Wc-DcO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-nZ-G9f" userLabel="t">
+                                <rect key="frame" x="0.0" y="64" width="600" height="268"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dee-6b-dK1" userLabel="b">
+                                <rect key="frame" x="0.0" y="332" width="600" height="268"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请开启定位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-QN-52q">
+                                        <rect key="frame" x="30" y="20" width="540" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SFP-s5-qF5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFU-34-htj">
+                                        <rect key="frame" x="30" y="100" width="540" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="K0I-id-DH6"/>
+                                        </constraints>
+                                        <state key="normal" title="开启定位" backgroundImage="login_bg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loj-fa-nCK">
+                                        <rect key="frame" x="30" y="170" width="540" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5rz-LY-mir"/>
+                                        </constraints>
+                                        <state key="normal" title="关闭定位" backgroundImage="login_bg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xuC-QN-52q" firstAttribute="leading" secondItem="dee-6b-dK1" secondAttribute="leading" constant="30" id="5h9-mt-lFd"/>
+                                    <constraint firstItem="loj-fa-nCK" firstAttribute="leading" secondItem="dee-6b-dK1" secondAttribute="leading" constant="30" id="Egj-AH-92m"/>
+                                    <constraint firstItem="uFU-34-htj" firstAttribute="leading" secondItem="dee-6b-dK1" secondAttribute="leading" constant="30" id="JQi-fz-KAV"/>
+                                    <constraint firstItem="uFU-34-htj" firstAttribute="top" secondItem="xuC-QN-52q" secondAttribute="bottom" constant="40" id="ReJ-mu-weu"/>
+                                    <constraint firstItem="loj-fa-nCK" firstAttribute="top" secondItem="uFU-34-htj" secondAttribute="bottom" constant="30" id="Tpd-hn-ued"/>
+                                    <constraint firstItem="xuC-QN-52q" firstAttribute="top" secondItem="dee-6b-dK1" secondAttribute="top" constant="20" id="jWG-k8-Yx1"/>
+                                    <constraint firstAttribute="trailing" secondItem="loj-fa-nCK" secondAttribute="trailing" constant="30" id="na3-Y1-B13"/>
+                                    <constraint firstAttribute="trailing" secondItem="xuC-QN-52q" secondAttribute="trailing" constant="30" id="qJG-zp-mdE"/>
+                                    <constraint firstAttribute="trailing" secondItem="uFU-34-htj" secondAttribute="trailing" constant="30" id="wzp-jN-qtg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dee-6b-dK1" firstAttribute="top" secondItem="eiT-nZ-G9f" secondAttribute="bottom" id="Fki-EX-hnp"/>
+                            <constraint firstItem="eiT-nZ-G9f" firstAttribute="leading" secondItem="Iuk-Wc-DcO" secondAttribute="leading" id="Ji9-Pa-bh5"/>
+                            <constraint firstItem="dee-6b-dK1" firstAttribute="height" secondItem="eiT-nZ-G9f" secondAttribute="height" id="OVD-fh-Q1V"/>
+                            <constraint firstItem="eiT-nZ-G9f" firstAttribute="top" secondItem="od4-Z2-M7l" secondAttribute="bottom" id="PTZ-Dl-0M6"/>
+                            <constraint firstAttribute="trailing" secondItem="eiT-nZ-G9f" secondAttribute="trailing" id="PUH-18-ajl"/>
+                            <constraint firstItem="MmI-c6-CR8" firstAttribute="top" secondItem="dee-6b-dK1" secondAttribute="bottom" id="fud-aN-hsk"/>
+                            <constraint firstAttribute="trailing" secondItem="dee-6b-dK1" secondAttribute="trailing" id="kFT-Jg-ndN"/>
+                            <constraint firstItem="dee-6b-dK1" firstAttribute="leading" secondItem="Iuk-Wc-DcO" secondAttribute="leading" id="olS-fF-4gI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的位置" id="831-yz-2Do"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAI-ch-MVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_bg" width="6" height="6"/>
+    </resources>
+</document>

@@ -8,6 +8,7 @@
 
 #import "RTLoginController.h"
 #import "RTKeyChainTools.h"
+#import "RTLocationController.h"
 
 typedef enum {
     RTLoginPasswordType,
@@ -18,6 +19,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) NSDictionary *responseObject;
+@property (nonatomic, strong) RTLocationController *locationVC;
 @end
 
 @implementation RTLoginController
@@ -77,6 +79,13 @@ typedef enum {
             if ([RTKeyChainTools saveSessionKey:responseObject[@"session_key"]]) {
                 NSLog(@"session_key存储成功");
             }
+            
+            // 判断是否需要跳转页面
+            if (type == RTLoginPasswordType) {
+                self.locationVC = [[UIStoryboard storyboardWithName:@"RTLocation" bundle:nil] instantiateInitialViewController];
+                [self.navigationController pushViewController:self.locationVC animated:YES];
+            }
+            
         } else {
             [MBProgressHUD showError:[NSString stringWithFormat:@"错误代码:%@", [responseObject objectForKey:@"errcode"]]];
         }
