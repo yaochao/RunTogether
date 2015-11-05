@@ -57,7 +57,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XvI-jS-vn7"/>
                                 </constraints>
-                                <state key="normal" title="登录" backgroundImage="login_bg">
+                                <state key="normal" title="password登录" backgroundImage="login_bg">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,16 +80,33 @@
                                     <segue destination="rOj-Eb-h4f" kind="show" id="fzH-TO-8qH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leM-MJ-Waj">
+                                <rect key="frame" x="30" y="294" width="540" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mL8-1D-a10"/>
+                                </constraints>
+                                <state key="normal" title="token登录" backgroundImage="login_bg">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tokenLoginBtnClick:" destination="Eu3-Od-nNV" eventType="touchUpInside" id="pIu-XO-Yfa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="dVl-Am-bLh" secondAttribute="centerX" constant="-0.5" id="D92-an-cdc"/>
+                            <constraint firstItem="leM-MJ-Waj" firstAttribute="leading" secondItem="pdL-F6-AoZ" secondAttribute="leading" constant="30" id="Dq3-2g-LuI"/>
                             <constraint firstAttribute="centerX" secondItem="jkn-xk-Wyx" secondAttribute="centerX" id="EmK-tI-E2F"/>
                             <constraint firstItem="jkn-xk-Wyx" firstAttribute="leading" secondItem="pdL-F6-AoZ" secondAttribute="leading" constant="30" id="GYM-ke-VZ3"/>
                             <constraint firstItem="hYk-Vz-b3o" firstAttribute="top" secondItem="kq3-sh-pfg" secondAttribute="bottom" constant="40" id="OjK-ij-DhI"/>
                             <constraint firstAttribute="trailing" secondItem="jkn-xk-Wyx" secondAttribute="trailing" constant="30" id="PBr-yF-KJg"/>
                             <constraint firstItem="H0N-i2-RKL" firstAttribute="leading" secondItem="pdL-F6-AoZ" secondAttribute="leading" constant="30" id="SIO-KO-ugr"/>
+                            <constraint firstItem="leM-MJ-Waj" firstAttribute="top" secondItem="jkn-xk-Wyx" secondAttribute="bottom" constant="30" id="TNR-3X-bLC"/>
+                            <constraint firstAttribute="trailing" secondItem="leM-MJ-Waj" secondAttribute="trailing" constant="30" id="W13-v1-wrb"/>
                             <constraint firstItem="dVl-Am-bLh" firstAttribute="top" secondItem="H0N-i2-RKL" secondAttribute="bottom" constant="30" id="YD3-SO-i5c"/>
                             <constraint firstItem="jkn-xk-Wyx" firstAttribute="top" secondItem="dVl-Am-bLh" secondAttribute="bottom" constant="40" id="gu8-mm-M6V"/>
                             <constraint firstAttribute="centerX" secondItem="H0N-i2-RKL" secondAttribute="centerX" id="keh-d3-tjB"/>

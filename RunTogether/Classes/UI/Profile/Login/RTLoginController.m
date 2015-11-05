@@ -9,6 +9,11 @@
 #import "RTLoginController.h"
 #import "RTKeyChainTools.h"
 
+typedef enum {
+    RTLoginPasswordType,
+    RTLoginTokenType
+}RTLoginType;
+
 @interface RTLoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -18,47 +23,63 @@
 @implementation RTLoginController
 
 #pragma mark - btnClick
+// 密码登录
 - (IBAction)loginBtnClick:(id)sender {
     // 判空
     if ([_phone.text isEqual:@""]) {
         [MBProgressHUD showError:@"请输入手机号码"];
         return;
     }
-    
     if ([_password.text isEqual:@""]) {
         [MBProgressHUD showError:@"请输入密码"];
         return;
     }
     
+    [MBProgressHUD showMessage:@"正在登录..."];
+    [self loginWithPhone:_phone.text proof:_password.text type:RTLoginPasswordType];
+    
+}
+
+
+// token 登录
+- (IBAction)tokenLoginBtnClick:(id)sender {
+    [self loginWithPhone:[RTKeyChainTools getPhone] proof:[RTKeyChainTools getRememberToken] type:RTLoginTokenType];
+}
+
+
+// 登陆的封装
+- (void)loginWithPhone:(NSString *)phone proof:(NSString *)proof type:(RTLoginType)type {
     // 请求网络
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"phone"] = _phone.text;
-    params[@"password"] = _password.text;
-  
-    [MBProgressHUD showMessage:@"请稍后..."];
+    params[@"phone"] = phone;
+    if (type == RTLoginPasswordType) {
+        params[@"password"] = proof;
+    } else {
+        params[@"remember_token"] = [RTKeyChainTools getRememberToken];
+    }
     [RTNetworkTools postDataWithParams:params interfaceType:@"sessions" success:^(NSDictionary *responseObject) {
         [MBProgressHUD hideHUD];
         NSLog(@"%@", responseObject);
         _responseObject = responseObject;
-        [MBProgressHUD showSuccess:@"登录成功,欢迎你"];
-        // 存储信息到钥匙串
-//        [RTKeyChainTools savePhone:_phone.text];
-//        [RTKeyChainTools saveRememberToken:responseObject[@"remember_token"]];
-//        [RTKeyChainTools saveUserId:responseObject[@"user_id"]];
-//        [RTKeyChainTools saveSessionKey:responseObject[@"session_key"]];
-        if ([RTKeyChainTools savePhone:_phone.text]) {
-            NSLog(@"phone存储成功");
+        // 对返回信息的处理
+        if ([responseObject objectForKey:@"errcode"] == nil) {
+            [MBProgressHUD showSuccess:@"登录成功"];
+            // 存储信息到钥匙串
+            if ([RTKeyChainTools savePhone:phone]) {
+                NSLog(@"phone存储成功");
+            }
+            if ([RTKeyChainTools saveRememberToken:responseObject[@"remember_token"]]) {
+                NSLog(@"remember_token存储成功");
+            }
+            if ([RTKeyChainTools saveUserId:[NSString stringWithFormat:@"%@", responseObject[@"user_id"]]]) {
+                NSLog(@"user_id存储成功");
+            }
+            if ([RTKeyChainTools saveSessionKey:responseObject[@"session_key"]]) {
+                NSLog(@"session_key存储成功");
+            }
+        } else {
+            [MBProgressHUD showError:[NSString stringWithFormat:@"错误代码:%@", [responseObject objectForKey:@"errcode"]]];
         }
-        if ([RTKeyChainTools saveRememberToken:responseObject[@"remember_token"]]) {
-            NSLog(@"remember_token存储成功");
-        }
-        if ([RTKeyChainTools saveUserId:[NSString stringWithFormat:@"%@", responseObject[@"user_id"]]]) {
-            NSLog(@"user_id存储成功");
-        }
-        if ([RTKeyChainTools saveSessionKey:responseObject[@"session_key"]]) {
-            NSLog(@"session_key存储成功");
-        }
-
         
         
     } failure:^(NSError *error) {
