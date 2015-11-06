@@ -12,11 +12,15 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import "RTLocationTools.h"
 #import "RTLocationModel.h"
+#import "MaxwellClient.h"
+#import "RTKeyChainTools.h"
+#import "RTMaxwellListener.h"
 
 
 @interface RTLocationController () <BMKMapViewDelegate>
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UILabel *coordinateLbl;
+@property (nonatomic, strong) MaxwellClient *mwClient;
 @end
 
 @implementation RTLocationController
@@ -30,6 +34,10 @@
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
     
+    //MaxwellListener
+    RTMaxwellListener *mwListener = [[RTMaxwellListener alloc] init];
+    // Maxwell
+    _mwClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:mwListener];
 }
 
 - (void)receivedLocationNotification:(NSNotification *)notification {

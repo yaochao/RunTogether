@@ -15,6 +15,7 @@
 + (BOOL)saveUserId:(NSString *)user_id;
 + (BOOL)saveSessionKey:(NSString *)session_key;
 + (BOOL)savePhone:(NSString *)phone;
++ (BOOL)saveEndpoint:(NSString *)endpoint;
 
 
 // 读取
@@ -22,11 +23,13 @@
 + (NSString *)getUserId;
 + (NSString *)getSessionKey;
 + (NSString *)getPhone;
++ (NSString *)getEndpoint;
 
 // 删除
 + (BOOL)removeRememberToken;
 + (BOOL)removeUserId;
 + (BOOL)removeSessionKey;
 + (BOOL)removePhone;
++ (BOOL)removeEndpoint;
 
 @end

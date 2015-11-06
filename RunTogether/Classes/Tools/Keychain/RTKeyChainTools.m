@@ -29,6 +29,10 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:phone forKey:@"phone"];
 }
 
++ (BOOL)saveEndpoint:(NSString *)endpoint {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:endpoint forKey:@"endpoint"];
+}
+
 
 // 读取
 + (NSString *)getRememberToken {
@@ -47,6 +51,10 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"phone"];
 }
 
++ (NSString *)getEndpoint {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"endpoint"];
+}
+
 
 // 删除
 + (BOOL)removeRememberToken {
@@ -63,6 +71,10 @@
 
 + (BOOL)removePhone {
     return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"phone"];
+}
+
++ (BOOL)removeEndpoint {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"endpoint"];
 }
 
 @end

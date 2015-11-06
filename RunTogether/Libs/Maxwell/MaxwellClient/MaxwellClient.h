@@ -33,7 +33,6 @@ struct MaxwellMessage
 
 @property(nonatomic,retain) NSObject *maxwellClient;
 
-- (id) initWithMessageBox : (NSObject *) messagebox;
 
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message;
