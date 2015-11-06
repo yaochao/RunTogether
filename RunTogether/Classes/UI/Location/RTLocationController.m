@@ -13,6 +13,7 @@
 #import "RTLocationTools.h"
 #import "RTLocationModel.h"
 #import "RTKeyChainTools.h"
+#import "MBProgressHUD+MJ.h"
 //#import "RTMaxwellListener.h"
 
 
@@ -61,7 +62,7 @@
         CGRect mapViewFrame = CGRectMake(0, 64, Screen_W, (Screen_H - 64) / 2);
         _mapView = [[BMKMapView alloc] initWithFrame:mapViewFrame];
         _mapView.delegate = self; // 设置代理
-        _mapView.showsUserLocation = YES; //设置为可以显示用户位置
+        _mapView.showsUserLocation = YES; // 设置为可以显示用户位置
         _mapView.zoomLevel = 16; // 地图的缩放比例
     }
     return _mapView;

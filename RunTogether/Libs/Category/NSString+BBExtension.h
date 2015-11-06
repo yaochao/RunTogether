@@ -15,6 +15,6 @@
  *
  *  @return UIColor颜色
  */
-- (UIColor *)hexColor;
+//- (UIColor *)hexColor;
 
 @end

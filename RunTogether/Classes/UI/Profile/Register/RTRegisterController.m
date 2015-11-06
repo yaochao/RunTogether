@@ -11,6 +11,7 @@
 #import "RTNetworkTools.h"
 #import <MJExtension/MJExtension.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "MBProgressHUD+MJ.h"
 
 @interface RTRegisterController ()
 
