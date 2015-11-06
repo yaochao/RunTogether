@@ -14,12 +14,12 @@
 #import "RTLocationModel.h"
 #import "MaxwellClient.h"
 #import "RTKeyChainTools.h"
-#import "RTMaxwellListener.h"
+//#import "RTMaxwellListener.h"
 
 
 @interface RTLocationController () <BMKMapViewDelegate>
 @property (nonatomic, strong) BMKMapView *mapView;
-@property (nonatomic, strong) IBOutlet UILabel *coordinateLbl;
+@property (weak, nonatomic) IBOutlet UILabel *coordinateLbl;
 @property (nonatomic, strong) MaxwellClient *mwClient;
 @end
 
@@ -35,9 +35,9 @@
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
     
     //MaxwellListener
-    RTMaxwellListener *mwListener = [[RTMaxwellListener alloc] init];
+//    RTMaxwellListener *mwListener = [[RTMaxwellListener alloc] init];
     // Maxwell
-    _mwClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:mwListener];
+//    _mwClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:mwListener];
 }
 
 - (void)receivedLocationNotification:(NSNotification *)notification {

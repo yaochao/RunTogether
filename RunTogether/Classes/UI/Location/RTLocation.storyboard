@@ -38,12 +38,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-nZ-G9f" userLabel="t">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-nZ-G9f" userLabel="top">
                                 <rect key="frame" x="0.0" y="64" width="600" height="268"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dee-6b-dK1" userLabel="b">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dee-6b-dK1" userLabel="bottom">
                                 <rect key="frame" x="0.0" y="332" width="600" height="268"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请开启定位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-QN-52q">
@@ -115,7 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="我的位置" id="831-yz-2Do"/>
                     <connections>
-                        <outlet property="coordinateLbl" destination="xuC-QN-52q" id="OMn-yg-xRj"/>
+                        <outlet property="coordinateLbl" destination="xuC-QN-52q" id="MHx-wZ-vkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAI-ch-MVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
