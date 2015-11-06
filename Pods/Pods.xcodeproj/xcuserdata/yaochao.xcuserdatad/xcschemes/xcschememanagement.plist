@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>199955ECC3C2F4091FDB17C474A275AC</key>
+		<key>0812BDC31246C0DBCAD64973715FC014</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56F5F8A71E0263D2BB79964AE740CBDA</key>
+		<key>48F687CDE9990BD471D7883061F7E5D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59EC6AC43729E4B415B99FC1CE8A3EA9</key>
+		<key>9AF3A4C679D70FDD406382DF882CD97F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC78AEEDCAC7FB547A05B7F671A6B2D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

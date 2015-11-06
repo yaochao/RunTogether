@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CocoaAsyncSocket (7.3.5)
   - MJExtension (2.5.16)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -28,12 +29,14 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.1)
+  - CocoaAsyncSocket (~> 7.3.5)
   - MJExtension (~> 2.5.16)
   - SDWebImage (~> 3.7.3)
   - UICKeyChainStore (~> 2.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
+  CocoaAsyncSocket: 94c582a5bef4bb0f51b6ebf3e1b561d9091a68ba
   MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
