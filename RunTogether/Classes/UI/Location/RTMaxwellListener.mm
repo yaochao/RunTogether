@@ -7,6 +7,7 @@
 //
 
 #import "RTMaxwellListener.h"
+#import "MBProgressHUD+MJ.h"
 
 @implementation RTMaxwellListener 
 
@@ -14,6 +15,7 @@
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message {
     NSLog(@"Listener - 收到了推送 %@", message->payload);
+    [MBProgressHUD showSuccess:[NSString stringWithFormat:@"收到了推送 - %@", message->payload]];
 }
 
 - (void) onTimeout {

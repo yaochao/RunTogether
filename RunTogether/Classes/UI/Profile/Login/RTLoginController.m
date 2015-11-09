@@ -81,6 +81,10 @@ typedef enum {
             if ([RTKeyChainTools saveSessionKey:responseObject[@"session_key"]]) {
                 NSLog(@"session_key存储成功");
             }
+            if ([RTKeyChainTools saveEndpoint:responseObject[@"maxwell_endpoint"]]) {
+                NSLog(@"endpoint存储成功");
+            }
+            
             
             // 判断是否需要跳转页面
             if (type == RTLoginPasswordType) {

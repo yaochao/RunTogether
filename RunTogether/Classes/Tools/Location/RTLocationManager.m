@@ -84,7 +84,7 @@
  *@param userLocation 新的用户位置
  */
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation {
-    NSLog(@"用户方向更新...");
+//    NSLog(@"用户方向更新...");
 }
 
 /**

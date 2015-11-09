@@ -35,10 +35,15 @@
     [self.view addSubview:self.mapView];
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
-    // 启动Maxwell
+    // 加载Maxwell
     RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
     _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    // 启动Maxwell
     [_maxwellClient start];
+    NSLog(@"endpoint - %@", [RTKeyChainTools getEndpoint]);
+    NSLog(@"userid - %@", [NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]]);
+    NSLog(@"sessionKey - %@", [RTKeyChainTools getSessionKey]);
+    
 }
 
 - (void)receivedLocationNotification:(NSNotification *)notification {
@@ -81,6 +86,8 @@
     [RTLocationTools stopLocation];
     _coordinateLbl.text = @"请开启定位";
     [MBProgressHUD hideHUD];
+    // 关闭Maxwell
+    [_maxwellClient stop];
 }
 
 

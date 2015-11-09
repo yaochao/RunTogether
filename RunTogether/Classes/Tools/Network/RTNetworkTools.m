@@ -14,6 +14,9 @@
 #pragma mark - POST 加载网络数据
 + (void)postDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     
+    // loadcookies
+//    [self loadCookies];
+    
     // 获得网络管理单例对象
     RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
     if (params == nil) {
@@ -28,6 +31,8 @@
     [manager POST:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         success(responseObject);
+        // savecookies
+//        [self saveCookies];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
@@ -38,11 +43,15 @@
         [alertView show];
     }];
     
+    
 }
 
 
-#pragma mark - POST 加载网络数据
+#pragma mark - GET 加载网络数据
 + (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    
+    // loadcookies
+    [self loadCookies];
     
     // 获得网络管理单例对象
     RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
@@ -58,6 +67,8 @@
     [manager GET:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         success(responseObject);
+        // savecookies
+        [self saveCookies];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
@@ -69,5 +80,41 @@
     }];
     
 }
+
+
+#pragma mark - 保存cookies和加载cookies和删除cookies
+
++ (void)saveCookies{
+    
+    NSData *cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject: cookiesData forKey: @"sessionCookies"];
+    [defaults synchronize];
+    NSLog(@"----------%lu",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies].count);
+    
+}
+
++ (void)loadCookies{
+    
+    NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData: [[NSUserDefaults standardUserDefaults] objectForKey: @"sessionCookies"]];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    
+    for (NSHTTPCookie *cookie in cookies){
+        [cookieStorage setCookie: cookie];
+        NSLog(@"----------%@", cookie);
+    }
+    
+    
+}
+
++ (void)deleteCookies {
+    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray *_tmpArray = [NSArray arrayWithArray:[cookieJar cookies]];
+    for (id obj in _tmpArray) {
+        [cookieJar deleteCookie:obj];
+    }
+    NSLog(@"cookie个数 - %li",[[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies] count]);
+}
+
 
 @end
