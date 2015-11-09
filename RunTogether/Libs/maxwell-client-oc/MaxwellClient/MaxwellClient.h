@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AsyncSocket.h"
+#import "RTMaxwellListener.h"
 
 #include "common_structs.pb.h"
 #include "subscriber_publisher_structs.pb.h"
@@ -16,34 +17,39 @@
 using namespace maxwell::protocol;
 using namespace google::protobuf;
 
-struct SessionId
-{
-    NSNumber *userId;
-    NSString *sessionKey;
-};
 
-struct MaxwellMessage
-{
-    NSNumber *_id;
-    NSString *payload;
-    NSNumber * dateAdded;
-};
 
-@interface Listener : NSObject
+// 监听器协议
+//@protocol Listener <NSObject>
+//
+//@required
+//- (id) initWithMessageBox : (NSObject *) messagebox;
+//
+//- (void) onMessage:(SessionId *)sessionId
+//                  :(MaxwellMessage *)message;
+//
+//- (void) onTimeout;
+//
+//- (void) onFailure:(int)errorCode
+//                  :(NSString *)errorMessage;
+//
+//@end
 
-@property(nonatomic,retain) NSObject *maxwellClient;
-
-- (id) initWithMessageBox : (NSObject *) messagebox;
-
-- (void) onMessage:(SessionId *)sessionId
-                  :(MaxwellMessage *)message;
-
-- (void) onTimeout;
-
-- (void) onFailure:(int)errorCode
-                  :(NSString *)errorMessage;
-
-@end
+//@interface Listener : NSObject
+//
+//@property(nonatomic,retain) NSObject *maxwellClient;
+//
+//- (id) initWithMessageBox : (NSObject *) messagebox;
+//
+//- (void) onMessage:(SessionId *)sessionId
+//                  :(MaxwellMessage *)message;
+//
+//- (void) onTimeout;
+//
+//- (void) onFailure:(int)errorCode
+//                  :(NSString *)errorMessage;
+//
+//@end
 
 @protocol MessageboxListener <NSObject>
 
@@ -89,7 +95,7 @@ struct MaxwellMessage
 @interface MaxwellClient : NSObject
 {
     NSString *endpoint_;
-    Listener *listener_;
+    RTMaxwellListener *listener_;
     
     //临时增加，供重构期间使用，重构完成后替换Listener
     SFListener *SFlistener_;
@@ -106,7 +112,7 @@ struct MaxwellMessage
 - (id)initWithEndpoint:(NSString *)endpoint
             withUserId:(NSNumber *)userId
         withSessionKey:(NSString *)sessionKey
-          withListener:(Listener *)listener;
+          withListener:(RTMaxwellListener *)listener;
 
 - (id)initWithEndpoint:(NSString *)endpoint
             withUserId:(NSNumber *)userId

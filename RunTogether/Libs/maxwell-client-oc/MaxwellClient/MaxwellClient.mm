@@ -28,7 +28,7 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
 - (id)initWithEndpoint:(NSString *)endpoint
             withUserId:(NSNumber *)userId
         withSessionKey:(NSString *)sessionKey
-          withListener:(Listener *)listener
+          withListener:(RTMaxwellListener *)listener
 {
     endpoint_ = endpoint;
     listener_ = listener;

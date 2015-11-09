@@ -40,12 +40,12 @@
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
 		D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */; };
-		D2BDA6531BEF8CE100F2F2F7 /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */; };
 		D2BDA6611BEF937000F2F2F7 /* common_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6561BEF937000F2F2F7 /* common_structs.pb.cc */; };
 		D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6591BEF937000F2F2F7 /* MaxwellClient.mm */; };
 		D2BDA6631BEF937000F2F2F7 /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA65A1BEF937000F2F2F7 /* subscriber_publisher.pb.cc */; };
 		D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */; };
 		D2BDA6651BEF937000F2F2F7 /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BDA6601BEF937000F2F2F7 /* google.framework */; };
+		D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */; };
 		D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
@@ -141,8 +141,6 @@
 		D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationModel.m; sourceTree = "<group>"; };
 		D297FE991BEB44F30029B3B0 /* RTLocationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationTools.h; sourceTree = "<group>"; };
 		D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationTools.m; sourceTree = "<group>"; };
-		D2BDA6511BEF8CE100F2F2F7 /* RTMaxwellListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaxwellListener.h; sourceTree = "<group>"; };
-		D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTMaxwellListener.mm; sourceTree = "<group>"; };
 		D2BDA6561BEF937000F2F2F7 /* common_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_structs.pb.cc; sourceTree = "<group>"; };
 		D2BDA6571BEF937000F2F2F7 /* common_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_structs.pb.h; sourceTree = "<group>"; };
 		D2BDA6581BEF937000F2F2F7 /* MaxwellClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxwellClient.h; sourceTree = "<group>"; };
@@ -152,6 +150,8 @@
 		D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
 		D2BDA65D1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
 		D2BDA6601BEF937000F2F2F7 /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
+		D2C079751BF035BC00F40CFE /* RTMaxwellListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaxwellListener.h; sourceTree = "<group>"; };
+		D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTMaxwellListener.mm; sourceTree = "<group>"; };
 		D2C2F19F1BE9B54E0027A4A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D2C2F1A31BE9ECAE0027A4A5 /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
 		D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
@@ -457,8 +457,8 @@
 				D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */,
 				D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */,
 				D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */,
-				D2BDA6511BEF8CE100F2F2F7 /* RTMaxwellListener.h */,
-				D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */,
+				D2C079751BF035BC00F40CFE /* RTMaxwellListener.h */,
+				D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -721,7 +721,6 @@
 			files = (
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
-				D2BDA6531BEF8CE100F2F2F7 /* RTMaxwellListener.mm in Sources */,
 				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
@@ -740,6 +739,7 @@
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
+				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
@@ -882,6 +882,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunTogether/Libs/BaiduMap",
@@ -906,6 +907,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunTogether/Libs/BaiduMap",

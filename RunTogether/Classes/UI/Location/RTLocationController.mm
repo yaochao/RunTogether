@@ -35,7 +35,10 @@
     [self.view addSubview:self.mapView];
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
-    
+    // 启动Maxwell
+    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
+    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    [_maxwellClient start];
 }
 
 - (void)receivedLocationNotification:(NSNotification *)notification {
@@ -46,9 +49,7 @@
     _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", _locationModel.point.latitude, _locationModel.point.longitude];
     // 上传到服务器，每次收到都上传
     [self updateLocation:_locationModel];
-    // 启动Maxwell
-    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
-    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+
 }
 
 
