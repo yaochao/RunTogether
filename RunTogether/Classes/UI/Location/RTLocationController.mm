@@ -14,12 +14,16 @@
 #import "RTLocationModel.h"
 #import "RTKeyChainTools.h"
 #import "MBProgressHUD+MJ.h"
-//#import "RTMaxwellListener.h"
+#import "RTNetworkTools.h"
+#import "MaxwellClient.h"
+#import "RTMaxwellListener.h"
 
 
 @interface RTLocationController () <BMKMapViewDelegate>
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *coordinateLbl;
+@property (nonatomic, strong) RTLocationModel *locationModel;
+@property (nonatomic, strong) MaxwellClient *maxwellClient;
 @end
 
 @implementation RTLocationController
@@ -29,18 +33,41 @@
     [super viewDidLoad];
     // 添加mapView
     [self.view addSubview:self.mapView];
-    
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
+    
 }
 
 - (void)receivedLocationNotification:(NSNotification *)notification {
     //去除HUD
     [MBProgressHUD hideHUD];
-    RTLocationModel *locationModel = notification.userInfo[@"LocationSuccessKey"];
+    _locationModel = notification.userInfo[@"LocationSuccessKey"];
     // 更新地理坐标显示
-    _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", locationModel.point.latitude, locationModel.point.longitude];
+    _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", _locationModel.point.latitude, _locationModel.point.longitude];
+    // 上传到服务器，每次收到都上传
+    [self updateLocation:_locationModel];
+    // 启动Maxwell
+    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
+    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
 }
+
+
+
+// 上传用户地理位置到服务器
+- (BOOL)updateLocation:(RTLocationModel *)locationModel {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"latitude"] = @(locationModel.point.latitude);
+    params[@"longitude"] = @(locationModel.point.longitude);
+    NSString *interface = [NSString stringWithFormat:@"users/%@/locations", [RTKeyChainTools getUserId]];
+    [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(NSDictionary *responseObject) {
+        NSLog(@"更新用户位置 - %@", responseObject);
+    } failure:^(NSError *error) {
+
+    }];
+    
+    return YES;
+}
+
 
 #pragma mark - btnClick
 - (IBAction)startLocationBtnClick:(id)sender {

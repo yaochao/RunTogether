@@ -35,16 +35,17 @@
 		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
 		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
 		D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */; };
-		D297FE8E1BEB311F0029B3B0 /* RTLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */; };
+		D297FE8E1BEB311F0029B3B0 /* RTLocationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */; };
 		D297FE901BEB31B20029B3B0 /* RTLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */; };
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
 		D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */; };
-		D2A243861BECA37100A8AC69 /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A2437C1BECA37100A8AC69 /* google.framework */; };
-		D2A243871BECA37100A8AC69 /* common_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2A2437E1BECA37100A8AC69 /* common_structs.pb.cc */; };
-		D2A243881BECA37100A8AC69 /* MaxwellClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2A243811BECA37100A8AC69 /* MaxwellClient.mm */; };
-		D2A243891BECA37100A8AC69 /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2A243821BECA37100A8AC69 /* subscriber_publisher.pb.cc */; };
-		D2A2438A1BECA37100A8AC69 /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2A243841BECA37100A8AC69 /* subscriber_publisher_structs.pb.cc */; };
+		D2BDA6531BEF8CE100F2F2F7 /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */; };
+		D2BDA6611BEF937000F2F2F7 /* common_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6561BEF937000F2F2F7 /* common_structs.pb.cc */; };
+		D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA6591BEF937000F2F2F7 /* MaxwellClient.mm */; };
+		D2BDA6631BEF937000F2F2F7 /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA65A1BEF937000F2F2F7 /* subscriber_publisher.pb.cc */; };
+		D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */; };
+		D2BDA6651BEF937000F2F2F7 /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BDA6601BEF937000F2F2F7 /* google.framework */; };
 		D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
@@ -132,7 +133,7 @@
 		D2917FBC1BE7711C00004AE7 /* RTProfileUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProfileUserModel.h; sourceTree = "<group>"; };
 		D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProfileUserModel.m; sourceTree = "<group>"; };
 		D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationController.h; sourceTree = "<group>"; };
-		D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationController.m; sourceTree = "<group>"; };
+		D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTLocationController.mm; sourceTree = "<group>"; };
 		D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLocation.storyboard; sourceTree = "<group>"; };
 		D297FE921BEB41F70029B3B0 /* RTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationManager.h; sourceTree = "<group>"; };
 		D297FE931BEB41F70029B3B0 /* RTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationManager.m; sourceTree = "<group>"; };
@@ -140,15 +141,17 @@
 		D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationModel.m; sourceTree = "<group>"; };
 		D297FE991BEB44F30029B3B0 /* RTLocationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationTools.h; sourceTree = "<group>"; };
 		D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationTools.m; sourceTree = "<group>"; };
-		D2A2437C1BECA37100A8AC69 /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
-		D2A2437E1BECA37100A8AC69 /* common_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_structs.pb.cc; sourceTree = "<group>"; };
-		D2A2437F1BECA37100A8AC69 /* common_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_structs.pb.h; sourceTree = "<group>"; };
-		D2A243801BECA37100A8AC69 /* MaxwellClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxwellClient.h; sourceTree = "<group>"; };
-		D2A243811BECA37100A8AC69 /* MaxwellClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxwellClient.mm; sourceTree = "<group>"; };
-		D2A243821BECA37100A8AC69 /* subscriber_publisher.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher.pb.cc; sourceTree = "<group>"; };
-		D2A243831BECA37100A8AC69 /* subscriber_publisher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher.pb.h; sourceTree = "<group>"; };
-		D2A243841BECA37100A8AC69 /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
-		D2A243851BECA37100A8AC69 /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
+		D2BDA6511BEF8CE100F2F2F7 /* RTMaxwellListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaxwellListener.h; sourceTree = "<group>"; };
+		D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTMaxwellListener.mm; sourceTree = "<group>"; };
+		D2BDA6561BEF937000F2F2F7 /* common_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_structs.pb.cc; sourceTree = "<group>"; };
+		D2BDA6571BEF937000F2F2F7 /* common_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_structs.pb.h; sourceTree = "<group>"; };
+		D2BDA6581BEF937000F2F2F7 /* MaxwellClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxwellClient.h; sourceTree = "<group>"; };
+		D2BDA6591BEF937000F2F2F7 /* MaxwellClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxwellClient.mm; sourceTree = "<group>"; };
+		D2BDA65A1BEF937000F2F2F7 /* subscriber_publisher.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher.pb.cc; sourceTree = "<group>"; };
+		D2BDA65B1BEF937000F2F2F7 /* subscriber_publisher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher.pb.h; sourceTree = "<group>"; };
+		D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
+		D2BDA65D1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
+		D2BDA6601BEF937000F2F2F7 /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
 		D2C2F19F1BE9B54E0027A4A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D2C2F1A31BE9ECAE0027A4A5 /* CommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunc.h; sourceTree = "<group>"; };
 		D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunc.m; sourceTree = "<group>"; };
@@ -193,7 +196,7 @@
 				D2C2F1BA1BEA0BA10027A4A5 /* BaiduMapAPI_Base.framework in Frameworks */,
 				D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */,
 				D2C2F1C01BEA0BA10027A4A5 /* BaiduMapAPI_Utils.framework in Frameworks */,
-				D2A243861BECA37100A8AC69 /* google.framework in Frameworks */,
+				D2BDA6651BEF937000F2F2F7 /* google.framework in Frameworks */,
 				D2C2F1BF1BEA0BA10027A4A5 /* BaiduMapAPI_Search.framework in Frameworks */,
 				D2C2F1BE1BEA0BA10027A4A5 /* BaiduMapAPI_Radar.framework in Frameworks */,
 				D2C2F1BB1BEA0BA10027A4A5 /* BaiduMapAPI_Cloud.framework in Frameworks */,
@@ -373,7 +376,7 @@
 		D2917F8B1BE7085000004AE7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				D2A2437B1BECA37100A8AC69 /* Maxwell */,
+				D2BDA6541BEF937000F2F2F7 /* maxwell-client-oc */,
 				D2C2F1B21BEA0BA10027A4A5 /* BaiduMap */,
 				D2C2F1A21BE9ECAE0027A4A5 /* Security */,
 				D22CF0381BE84835007BB1EE /* Category */,
@@ -452,8 +455,10 @@
 			isa = PBXGroup;
 			children = (
 				D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */,
-				D297FE8D1BEB311F0029B3B0 /* RTLocationController.m */,
+				D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */,
 				D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */,
+				D2BDA6511BEF8CE100F2F2F7 /* RTMaxwellListener.h */,
+				D2BDA6521BEF8CE100F2F2F7 /* RTMaxwellListener.mm */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -478,28 +483,44 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		D2A2437B1BECA37100A8AC69 /* Maxwell */ = {
+		D2BDA6541BEF937000F2F2F7 /* maxwell-client-oc */ = {
 			isa = PBXGroup;
 			children = (
-				D2A2437C1BECA37100A8AC69 /* google.framework */,
-				D2A2437D1BECA37100A8AC69 /* MaxwellClient */,
+				D2BDA6551BEF937000F2F2F7 /* MaxwellClient */,
+				D2BDA65E1BEF937000F2F2F7 /* protobuf */,
 			);
-			path = Maxwell;
+			path = "maxwell-client-oc";
 			sourceTree = "<group>";
 		};
-		D2A2437D1BECA37100A8AC69 /* MaxwellClient */ = {
+		D2BDA6551BEF937000F2F2F7 /* MaxwellClient */ = {
 			isa = PBXGroup;
 			children = (
-				D2A2437E1BECA37100A8AC69 /* common_structs.pb.cc */,
-				D2A2437F1BECA37100A8AC69 /* common_structs.pb.h */,
-				D2A243801BECA37100A8AC69 /* MaxwellClient.h */,
-				D2A243811BECA37100A8AC69 /* MaxwellClient.mm */,
-				D2A243821BECA37100A8AC69 /* subscriber_publisher.pb.cc */,
-				D2A243831BECA37100A8AC69 /* subscriber_publisher.pb.h */,
-				D2A243841BECA37100A8AC69 /* subscriber_publisher_structs.pb.cc */,
-				D2A243851BECA37100A8AC69 /* subscriber_publisher_structs.pb.h */,
+				D2BDA6561BEF937000F2F2F7 /* common_structs.pb.cc */,
+				D2BDA6571BEF937000F2F2F7 /* common_structs.pb.h */,
+				D2BDA6581BEF937000F2F2F7 /* MaxwellClient.h */,
+				D2BDA6591BEF937000F2F2F7 /* MaxwellClient.mm */,
+				D2BDA65A1BEF937000F2F2F7 /* subscriber_publisher.pb.cc */,
+				D2BDA65B1BEF937000F2F2F7 /* subscriber_publisher.pb.h */,
+				D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */,
+				D2BDA65D1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.h */,
 			);
 			path = MaxwellClient;
+			sourceTree = "<group>";
+		};
+		D2BDA65E1BEF937000F2F2F7 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				D2BDA65F1BEF937000F2F2F7 /* framework */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		D2BDA65F1BEF937000F2F2F7 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				D2BDA6601BEF937000F2F2F7 /* google.framework */,
+			);
+			path = framework;
 			sourceTree = "<group>";
 		};
 		D2C2F1A11BE9B5B00027A4A5 /* Keychain */ = {
@@ -700,8 +721,11 @@
 			files = (
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
+				D2BDA6531BEF8CE100F2F2F7 /* RTMaxwellListener.mm in Sources */,
+				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
+				D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */,
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
@@ -712,22 +736,20 @@
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
-				D2A2438A1BECA37100A8AC69 /* subscriber_publisher_structs.pb.cc in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
-				D2A243871BECA37100A8AC69 /* common_structs.pb.cc in Sources */,
-				D2A243891BECA37100A8AC69 /* subscriber_publisher.pb.cc in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
 				D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */,
+				D2BDA6611BEF937000F2F2F7 /* common_structs.pb.cc in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */,
-				D297FE8E1BEB311F0029B3B0 /* RTLocationController.m in Sources */,
+				D2BDA6631BEF937000F2F2F7 /* subscriber_publisher.pb.cc in Sources */,
+				D297FE8E1BEB311F0029B3B0 /* RTLocationController.mm in Sources */,
 				D22CF0551BE84835007BB1EE /* NSDateFormatter+Category.m in Sources */,
 				D22CF0581BE84835007BB1EE /* NSString+Extension.m in Sources */,
-				D2A243881BECA37100A8AC69 /* MaxwellClient.mm in Sources */,
 				D2C2F1B11BE9F1C40027A4A5 /* RTKeyChainTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,16 +885,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunTogether/Libs/BaiduMap",
-					"$(PROJECT_DIR)/RunTogether/Libs/Maxwell/protobuf/framework",
-					"$(PROJECT_DIR)/RunTogether/Libs/Maxwell",
+					"$(PROJECT_DIR)/RunTogether/Libs/maxwell-client-oc/protobuf/framework",
 				);
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -886,16 +909,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RunTogether/Libs/BaiduMap",
-					"$(PROJECT_DIR)/RunTogether/Libs/Maxwell/protobuf/framework",
-					"$(PROJECT_DIR)/RunTogether/Libs/Maxwell",
+					"$(PROJECT_DIR)/RunTogether/Libs/maxwell-client-oc/protobuf/framework",
 				);
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
