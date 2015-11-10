@@ -72,11 +72,11 @@
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
-        NSLog(@"网络错误 - %@", error);
-        // 提示网络有问题
-        NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alertView show];
+//        NSLog(@"网络错误 - %@", error);
+//        // 提示网络有问题
+//        NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//        [alertView show];
     }];
     
 }

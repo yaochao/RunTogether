@@ -69,7 +69,7 @@
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(NSDictionary *responseObject) {
         NSLog(@"更新用户位置 - %@", responseObject);
     } failure:^(NSError *error) {
-
+        NSLog(@"位置更新失败 - %@", error);
     }];
 
     return YES;
@@ -88,7 +88,7 @@
     _coordinateLbl.text = @"请开启定位";
     [MBProgressHUD hideHUD];
     // 关闭Maxwell
-    [_maxwellClient stop];
+//    [_maxwellClient stop];
 }
 
 
