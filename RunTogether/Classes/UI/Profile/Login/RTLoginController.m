@@ -40,6 +40,7 @@ typedef enum {
     }
     
     [MBProgressHUD showMessage:@"正在登录..."];
+    // 密码登录
     [self loginWithPhone:_phone.text proof:_password.text type:RTLoginPasswordType];
     
 }

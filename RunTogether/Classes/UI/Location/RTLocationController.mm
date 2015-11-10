@@ -46,6 +46,8 @@
     
 }
 
+
+#pragma mark - ----
 - (void)receivedLocationNotification:(NSNotification *)notification {
     //去除HUD
     [MBProgressHUD hideHUD];
@@ -54,12 +56,10 @@
     _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", _locationModel.point.latitude, _locationModel.point.longitude];
     // 上传到服务器，每次收到都上传
     [self updateLocation:_locationModel];
-
 }
 
 
-
-// 上传用户地理位置到服务器
+#pragma mark - 上传用户地理位置到服务器
 - (BOOL)updateLocation:(RTLocationModel *)locationModel {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"latitude"] = @(locationModel.point.latitude);

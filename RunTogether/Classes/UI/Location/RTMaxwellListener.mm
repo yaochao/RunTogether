@@ -6,6 +6,7 @@
 //  Copyright © 2015年 duoduo. All rights reserved.
 //
 
+
 #import "RTMaxwellListener.h"
 #import "MBProgressHUD+MJ.h"
 
@@ -18,8 +19,11 @@
     [MBProgressHUD showSuccess:[NSString stringWithFormat:@"收到了推送 - %@", message->payload]];
 }
 
+// 当Maxwell超时的时候调用的方法
 - (void) onTimeout {
     NSLog(@"Listener - onTimeout");
+    
+    
 }
 
 - (void) onFailure:(int)errorCode

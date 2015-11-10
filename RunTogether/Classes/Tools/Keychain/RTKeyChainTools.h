@@ -17,7 +17,6 @@
 + (BOOL)savePhone:(NSString *)phone;
 + (BOOL)saveEndpoint:(NSString *)endpoint;
 
-
 // 读取
 + (NSString *)getRememberToken;
 + (NSString *)getUserId;
