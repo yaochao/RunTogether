@@ -209,7 +209,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
         [_outputStream close];
         _outputStream = nil;
     }
-    
+
     if (_backgroundTaskCleanup) {
         _backgroundTaskCleanup();
     }
@@ -292,14 +292,14 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
         UIApplication *application = [UIApplication sharedApplication];
         UIBackgroundTaskIdentifier __block backgroundTaskIdentifier = UIBackgroundTaskInvalid;
         __weak __typeof(self)weakSelf = self;
-        
+
         self.backgroundTaskCleanup = ^(){
             if (backgroundTaskIdentifier != UIBackgroundTaskInvalid) {
                 [[UIApplication sharedApplication] endBackgroundTask:backgroundTaskIdentifier];
                 backgroundTaskIdentifier = UIBackgroundTaskInvalid;
             }
         };
-        
+
         backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
             __strong __typeof(weakSelf)strongSelf = weakSelf;
 

@@ -24,21 +24,21 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
 {
     // 1.没有block就直接返回
     if (enumeration == nil) return;
-    
+
     // 2.停止遍历的标记
     BOOL stop = NO;
-    
+
     // 3.当前正在遍历的类
     Class c = self;
-    
+
     // 4.开始遍历每一个类
     while (c && !stop) {
         // 4.1.执行操作
         enumeration(c, &stop);
-        
+
         // 4.2.获得父类
         c = class_getSuperclass(c);
-        
+
         if ([MJFoundation isClassFromFoundation:c]) break;
     }
 }
@@ -47,18 +47,18 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
 {
     // 1.没有block就直接返回
     if (enumeration == nil) return;
-    
+
     // 2.停止遍历的标记
     BOOL stop = NO;
-    
+
     // 3.当前正在遍历的类
     Class c = self;
-    
+
     // 4.开始遍历每一个类
     while (c && !stop) {
         // 4.1.执行操作
         enumeration(c, &stop);
-        
+
         // 4.2.获得父类
         c = class_getSuperclass(c);
     }
@@ -115,7 +115,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
     } else {
         objc_setAssociatedObject(self, key, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    
+
     // 清空数据
     [[MJDictionaryCache dictWithDictId:key] removeAllObjects];
 }
@@ -124,10 +124,10 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
 {
     NSMutableArray *array = [MJDictionaryCache objectForKey:NSStringFromClass(self) forDictId:key];
     if (array) return array;
-    
+
     // 创建、存储
     [MJDictionaryCache setObject:array = [NSMutableArray array] forKey:NSStringFromClass(self) forDictId:key];
-    
+
     if ([self respondsToSelector:selector]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -137,7 +137,7 @@ static const char MJIgnoredCodingPropertyNamesKey = '\0';
             [array addObjectsFromArray:subArray];
         }
     }
-    
+
     [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
         NSArray *subArray = objc_getAssociatedObject(c, key);
         [array addObjectsFromArray:subArray];

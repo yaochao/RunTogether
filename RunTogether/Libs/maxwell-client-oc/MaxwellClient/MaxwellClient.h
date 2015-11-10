@@ -19,37 +19,6 @@ using namespace google::protobuf;
 
 
 
-// 监听器协议
-//@protocol Listener <NSObject>
-//
-//@required
-//- (id) initWithMessageBox : (NSObject *) messagebox;
-//
-//- (void) onMessage:(SessionId *)sessionId
-//                  :(MaxwellMessage *)message;
-//
-//- (void) onTimeout;
-//
-//- (void) onFailure:(int)errorCode
-//                  :(NSString *)errorMessage;
-//
-//@end
-
-//@interface Listener : NSObject
-//
-//@property(nonatomic,retain) NSObject *maxwellClient;
-//
-//- (id) initWithMessageBox : (NSObject *) messagebox;
-//
-//- (void) onMessage:(SessionId *)sessionId
-//                  :(MaxwellMessage *)message;
-//
-//- (void) onTimeout;
-//
-//- (void) onFailure:(int)errorCode
-//                  :(NSString *)errorMessage;
-//
-//@end
 
 @protocol MessageboxListener <NSObject>
 
@@ -63,42 +32,12 @@ using namespace google::protobuf;
 
 @end
 
-//simply clone a listener using SF- prefix for SFMessage refactor. Two listers would work at the same time
-@interface SFListener : NSObject
-
-@property(nonatomic,retain) NSObject *maxwellClient;
-
-- (id) initWithMessageBox : (NSObject *) messagebox;
-
-- (void) onMessage:(SessionId *)sessionId
-                  :(MaxwellMessage *)message;
-
-- (void) onTimeout;
-
-- (void) onFailure:(int)errorCode
-                  :(NSString *)errorMessage;
-
-@end
-
-@protocol SFMessageboxListener <NSObject>
-
-- (void) onMessage:(SessionId *)sessionId
-                  :(MaxwellMessage *)message;
-
-- (void) onTimeout;
-
-- (void) onFailure:(int)errorCode
-                  :(NSString *)errorMessage;
-
-@end
 
 @interface MaxwellClient : NSObject
 {
     NSString *endpoint_;
     RTMaxwellListener *listener_;
     
-    //临时增加，供重构期间使用，重构完成后替换Listener
-    SFListener *SFlistener_;
     session_id_t *sessionId_;
 
     NSTimer *timer_;
@@ -113,11 +52,6 @@ using namespace google::protobuf;
             withUserId:(NSNumber *)userId
         withSessionKey:(NSString *)sessionKey
           withListener:(RTMaxwellListener *)listener;
-
-- (id)initWithEndpoint:(NSString *)endpoint
-            withUserId:(NSNumber *)userId
-        withSessionKey:(NSString *)sessionKey
-          withSFListener:(SFListener *)SFlistener;
 
 - (void)start;
 

@@ -17,9 +17,9 @@
 + (instancetype)cachedTypeWithCode:(NSString *)code
 {
     MJExtensionAssertParamNotNil2(code, nil);
-    
+
     static const char MJCachedTypesKey = '\0';
-    
+
     MJPropertyType *type = [MJDictionaryCache objectForKey:code forDictId:&MJCachedTypesKey];
     if (type == nil) {
         type = [[self alloc] init];
@@ -33,9 +33,9 @@
 - (void)setCode:(NSString *)code
 {
     _code = code;
-    
+
     MJExtensionAssertParamNotNil(code);
-    
+
     if ([code isEqualToString:MJPropertyTypeId]) {
         _idType = YES;
     } else if (code.length == 0) {
@@ -46,19 +46,19 @@
         _typeClass = NSClassFromString(_code);
         _fromFoundation = [MJFoundation isClassFromFoundation:_typeClass];
         _numberType = [_typeClass isSubclassOfClass:[NSNumber class]];
-        
+
     } else if ([code isEqualToString:MJPropertyTypeSEL] ||
                [code isEqualToString:MJPropertyTypeIvar] ||
                [code isEqualToString:MJPropertyTypeMethod]) {
         _KVCDisabled = YES;
     }
-    
+
     // 是否为数字类型
     NSString *lowerCode = _code.lowercaseString;
     NSArray *numberTypes = @[MJPropertyTypeInt, MJPropertyTypeShort, MJPropertyTypeBOOL1, MJPropertyTypeBOOL2, MJPropertyTypeFloat, MJPropertyTypeDouble, MJPropertyTypeLong, MJPropertyTypeLongLong, MJPropertyTypeChar];
     if ([numberTypes containsObject:lowerCode]) {
         _numberType = YES;
-        
+
         if ([lowerCode isEqualToString:MJPropertyTypeBOOL1]
             || [lowerCode isEqualToString:MJPropertyTypeBOOL2]) {
             _boolType = YES;

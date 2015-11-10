@@ -18,10 +18,10 @@
         dict = [NSMutableDictionary dictionary];
         objc_setAssociatedObject(self, dictId, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    
+
     // 存储数据
     dict[key] = object;
-    
+
     return dict;
 }
 
