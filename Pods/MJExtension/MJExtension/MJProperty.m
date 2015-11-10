@@ -50,12 +50,12 @@
 - (void)setProperty:(objc_property_t)property
 {
     _property = property;
-    
+
     MJExtensionAssertParamNotNil(property);
-    
+
     // 1.属性名
     _name = @(property_getName(property));
-    
+
     // 2.成员类型
     NSString *attrs = @(property_getAttributes(property));
     NSUInteger dotLoc = [attrs rangeOfString:@","].location;
@@ -93,11 +93,11 @@
 - (NSArray *)propertyKeysWithStringKey:(NSString *)stringKey
 {
     if (stringKey.length == 0) return nil;
-    
+
     NSMutableArray *propertyKeys = [NSMutableArray array];
     // 如果有多级映射
     NSArray *oldKeys = [stringKey componentsSeparatedByString:@"."];
-    
+
     for (NSString *oldKey in oldKeys) {
         NSUInteger start = [oldKey rangeOfString:@"["].location;
         if (start != NSNotFound) { // 有索引的key
@@ -107,10 +107,10 @@
                 MJPropertyKey *propertyKey = [[MJPropertyKey alloc] init];
                 propertyKey.name = prefixKey;
                 [propertyKeys addObject:propertyKey];
-                
+
                 indexKey = [oldKey stringByReplacingOccurrencesOfString:prefixKey withString:@""];
             }
-            
+
             /** 解析索引 **/
             // 元素
             NSArray *cmps = [[indexKey stringByReplacingOccurrencesOfString:@"[" withString:@""] componentsSeparatedByString:@"]"];
@@ -126,7 +126,7 @@
             [propertyKeys addObject:propertyKey];
         }
     }
-    
+
     return propertyKeys;
 }
 

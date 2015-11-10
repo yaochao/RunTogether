@@ -28,13 +28,13 @@ static const char MJCachedPropertiesKey = '\0';
 + (NSString *)propertyKey:(NSString *)propertyName
 {
     MJExtensionAssertParamNotNil2(propertyName, nil);
-    
+
     __block NSString *key = nil;
     // 查看有没有需要替换的key
     if ([self respondsToSelector:@selector(replacedKeyFromPropertyName121:)]) {
         key = [self replacedKeyFromPropertyName121:propertyName];
     }
-    
+
     // 调用block
     if (!key) {
         [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
@@ -45,12 +45,12 @@ static const char MJCachedPropertiesKey = '\0';
             if (key) *stop = YES;
         }];
     }
-    
+
     // 查看有没有需要替换的key
     if (!key && [self respondsToSelector:@selector(replacedKeyFromPropertyName)]) {
         key = [self replacedKeyFromPropertyName][propertyName];
     }
-    
+
     if (!key) {
         [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJReplacedKeyFromPropertyNameKey);
@@ -60,10 +60,10 @@ static const char MJCachedPropertiesKey = '\0';
             if (key) *stop = YES;
         }];
     }
-    
+
     // 2.用属性名作为key
     if (!key) key = propertyName;
-    
+
     return key;
 }
 
@@ -73,7 +73,7 @@ static const char MJCachedPropertiesKey = '\0';
     if ([self respondsToSelector:@selector(objectClassInArray)]) {
         aClass = [self objectClassInArray][propertyName];
     }
-    
+
     if (!aClass) {
         [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
             NSDictionary *dict = objc_getAssociatedObject(c, &MJObjectClassInArrayKey);
@@ -83,7 +83,7 @@ static const char MJCachedPropertiesKey = '\0';
             if (aClass) *stop = YES;
         }];
     }
-    
+
     // 如果是NSString类型
     if ([aClass isKindOfClass:[NSString class]]) {
         aClass = NSClassFromString(aClass);
@@ -96,7 +96,7 @@ static const char MJCachedPropertiesKey = '\0';
 {
     // 获得成员变量
     NSArray *cachedProperties = [self properties];
-    
+
     // 遍历成员变量
     BOOL stop = NO;
     for (MJProperty *property in cachedProperties) {
@@ -115,7 +115,7 @@ static const char MJCachedPropertiesKey = '\0';
     //  1> 关联到的对象
     //  2> 关联的属性 key
     NSMutableArray *cachedProperties = [MJDictionaryCache objectForKey:NSStringFromClass(self) forDictId:&MJCachedPropertiesKey];
-    
+
     //***
     if (cachedProperties == nil) {
         cachedProperties = [NSMutableArray array];
@@ -132,7 +132,7 @@ static const char MJCachedPropertiesKey = '\0';
                 class_copyProtocolList 协议
                 */
             objc_property_t *properties = class_copyPropertyList(c, &outCount);
-            
+
             // 2.遍历每一个成员变量
             for (unsigned int i = 0; i<outCount; i++) {
                 MJProperty *property = [MJProperty cachedPropertyWithProperty:properties[i]];
@@ -148,16 +148,16 @@ static const char MJCachedPropertiesKey = '\0';
                 [property setObjectClassInArray:[self propertyObjectClassInArray:property.name] forClass:self];
                 [cachedProperties addObject:property];
             }
-            
+
             // 3.释放内存
             free(properties);
         }];
-        
+
         //*** 在此时设置当前这个类为关联对象，这样下次就不会重复获取类的相关属性。
         [MJDictionaryCache setObject:cachedProperties forKey:NSStringFromClass(self) forDictId:&MJCachedPropertiesKey];
         //***
     }
-    
+
     return cachedProperties;
 }
 
@@ -172,7 +172,7 @@ static const char MJCachedPropertiesKey = '\0';
     if ([object respondsToSelector:@selector(newValueFromOldValue:property:)]) {
         return [object newValueFromOldValue:oldValue property:property];
     }
-    
+
     // 查看静态设置
     __block id newValue = oldValue;
     [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
@@ -189,7 +189,7 @@ static const char MJCachedPropertiesKey = '\0';
 + (void)setupObjectClassInArray:(MJObjectClassInArray)objectClassInArray
 {
     [self setupBlockReturnValue:objectClassInArray key:&MJObjectClassInArrayKey];
-    
+
     [[MJDictionaryCache dictWithDictId:&MJCachedPropertiesKey] removeAllObjects];
 }
 
@@ -197,14 +197,14 @@ static const char MJCachedPropertiesKey = '\0';
 + (void)setupReplacedKeyFromPropertyName:(MJReplacedKeyFromPropertyName)replacedKeyFromPropertyName
 {
     [self setupBlockReturnValue:replacedKeyFromPropertyName key:&MJReplacedKeyFromPropertyNameKey];
-    
+
     [[MJDictionaryCache dictWithDictId:&MJCachedPropertiesKey] removeAllObjects];
 }
 
 + (void)setupReplacedKeyFromPropertyName121:(MJReplacedKeyFromPropertyName121)replacedKeyFromPropertyName121
 {
     objc_setAssociatedObject(self, &MJReplacedKeyFromPropertyName121Key, replacedKeyFromPropertyName121, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    
+
     [[MJDictionaryCache dictWithDictId:&MJCachedPropertiesKey] removeAllObjects];
 }
 @end

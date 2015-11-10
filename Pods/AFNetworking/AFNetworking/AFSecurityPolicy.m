@@ -298,7 +298,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             return trustedPublicKeyCount > 0;
         }
     }
-    
+
     return NO;
 }
 

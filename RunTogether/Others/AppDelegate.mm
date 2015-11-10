@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+
     // 检测网络状态
     _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [_reachabilityManager startMonitoring];
@@ -33,7 +33,7 @@
     if (ret) {
         NSLog(@"百度地图管理器启动成功！");
     }
-    
+
     return YES;
 }
 
@@ -58,7 +58,7 @@
         case AFNetworkReachabilityStatusReachableViaWiFi:
             NSLog(@" - wifi网络");
             break;
-            
+
         default:
             break;
     }

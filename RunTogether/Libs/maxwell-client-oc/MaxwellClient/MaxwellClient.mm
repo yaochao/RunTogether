@@ -51,31 +51,7 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
     return self;
 }
 
-- (id)initWithEndpoint:(NSString *)endpoint
-            withUserId:(NSNumber *)userId
-        withSessionKey:(NSString *)sessionKey
-        withSFListener:(SFListener *)SFlistener
-{
-    endpoint_ = endpoint;
-    SFlistener_ = SFlistener;
-    
-    sessionId_ = new session_id_t();
-    sessionId_->set_user_id([userId longLongValue]);
-    sessionId_->set_session_key([sessionKey UTF8String]);
-    
-    socket_ = [[AsyncSocket alloc] initWithDelegate:self];
-    subscribed_ = NO;
-    timer_ = [NSTimer scheduledTimerWithTimeInterval: 2
-                                              target: self
-                                            selector: @selector(handleTimeout:)
-                                            userInfo: nil
-                                             repeats: YES];
-    
-    serverLastActive_ = [[NSDate date] timeIntervalSince1970];
-    clientLastHeartbeat_ = [[NSDate date] timeIntervalSince1970];
-    
-    return self;
-}
+
 
 - (void)start
 {
@@ -84,7 +60,6 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
     if (![socket_ connectToHost:[url host] onPort:[[url port] shortValue]
                    withTimeout:CONNECT_TIMEOUT error:&error]) {
         [listener_ onFailure:3 :@"connect error."];
-        [SFlistener_ onFailure:3 :@"connect error."];
     }
 }
 
@@ -110,7 +85,6 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
     NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
     if (now - serverLastActive_ > SERVER_TIMEOUT) {
         [listener_ onTimeout];
-        [SFlistener_ onTimeout];
         return;
     }
 
@@ -163,17 +137,15 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
                 v.ParseFromArray((uint8_t *)[data bytes] + 1, [data length] - 1);
                 [self handleManyMessages:&v];
             }
-                
+
             default:
                 [listener_ onFailure:1 :[NSString stringWithFormat:@"bad pub type: %d.", type]];
-                [SFlistener_ onFailure:1 :[NSString stringWithFormat:@"bad pub type: %d.", type]];
                 break;
         }
 
         [socket_ readDataToLength:PROTOCOL_HEADER_LENGTH withTimeout:RECEIVE_TIMEOUT tag:PROTOCOL_HEADER_TAG];
     } else {
         [listener_ onFailure:2 :@"protocol error."];
-        [SFlistener_ onFailure:2 :@"protocol error."];
     }
 }
 
@@ -219,12 +191,12 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
 
 - (void)handleMessage:(msg_t *)v
 {
-   
+
         __block SessionId *sessionId = new SessionId;
         sessionId->userId = [[NSNumber alloc] initWithLongLong:sessionId_->user_id()];
         sessionId->sessionKey = [NSString stringWithCString:sessionId_->session_key().c_str()
                                                    encoding:[NSString defaultCStringEncoding]];
-        
+
         __block MaxwellMessage *message = new MaxwellMessage;
         message->_id = [[NSNumber alloc] initWithLongLong:v->id()];
         message->payload = [NSString stringWithCString:v->payload().c_str()
@@ -232,7 +204,6 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
         message->dateAdded = [[NSNumber alloc] initWithInt:v->date_added()];
     dispatch_async(dispatch_get_main_queue(), ^{
         [listener_ onMessage:sessionId :message];
-        [SFlistener_ onMessage:sessionId :message];
     });
 
 
@@ -257,7 +228,6 @@ static uint8_t PROTOCOL_HEADER_MESSAGE = 3;
         message->dateAdded = [[NSNumber alloc] initWithInt:v->msgs(i).date_added()];
 
         [listener_ onMessage:sessionId :message];
-        [SFlistener_ onMessage:sessionId :message];
     }
 
     [self ackMany:ids withLength:v->msgs_size()];

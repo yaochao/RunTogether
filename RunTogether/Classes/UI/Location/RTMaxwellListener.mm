@@ -10,9 +10,9 @@
 #import "RTMaxwellListener.h"
 #import "MBProgressHUD+MJ.h"
 
-@implementation RTMaxwellListener 
+@implementation RTMaxwellListener
 
-
+// 每次推送会调用3次这个方法
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message {
     NSLog(@"Listener - 收到了推送 %@", message->payload);
@@ -22,8 +22,8 @@
 // 当Maxwell超时的时候调用的方法
 - (void) onTimeout {
     NSLog(@"Listener - onTimeout");
-    
-    
+
+
 }
 
 - (void) onFailure:(int)errorCode
