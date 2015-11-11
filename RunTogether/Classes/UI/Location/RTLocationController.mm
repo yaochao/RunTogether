@@ -15,15 +15,13 @@
 #import "RTKeyChainTools.h"
 #import "MBProgressHUD+MJ.h"
 #import "RTNetworkTools.h"
-#import "MaxwellClient.h"
-#import "RTMaxwellListener.h"
+
 
 
 @interface RTLocationController () <BMKMapViewDelegate>
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *coordinateLbl;
 @property (nonatomic, strong) RTLocationModel *locationModel;
-@property (nonatomic, strong) MaxwellClient *maxwellClient;
 @end
 
 @implementation RTLocationController
@@ -35,16 +33,6 @@
     [self.view addSubview:self.mapView];
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
-    [self startMaxwellClient];
-}
-
-#pragma mark - 启动Maxwell
-- (void)startMaxwellClient {
-    // 加载Maxwell
-    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
-    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
-    // 启动Maxwell
-    [_maxwellClient start];
 }
 
 
@@ -87,8 +75,6 @@
     [RTLocationTools stopLocation];
     _coordinateLbl.text = @"请开启定位";
     [MBProgressHUD hideHUD];
-    // 关闭Maxwell
-    [_maxwellClient stop];
 }
 
 
