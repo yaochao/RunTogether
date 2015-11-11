@@ -124,6 +124,7 @@ typedef enum {
     _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
     // 启动Maxwell
     [_maxwellClient start];
+    NSLog(@"Maxwell启动了");
 }
 
 #pragma mark - 关闭Maxwell
@@ -147,20 +148,29 @@ typedef enum {
  */
 - (void)reachabilityDidChange:(NSNotification *)notification {
     NSInteger status = [notification.userInfo[AFNetworkingReachabilityNotificationStatusItem] integerValue];
+    NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
     switch (status) {
         case AFNetworkReachabilityStatusUnknown:
             NSLog(@" - 未知网络类型");
             break;
         case AFNetworkReachabilityStatusNotReachable:
             NSLog(@" - 网络断开连接");
+            [RTKeyChainTools saveLastNetworkReachabilityStatus:@"unconnected"];
             break;
         case AFNetworkReachabilityStatusReachableViaWWAN:
             NSLog(@" - 2/3/4G网络");
+            if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
+                [self tokenLoginBtnClick:nil];
+                [RTKeyChainTools saveLastNetworkReachabilityStatus:@"2/3/4G"];
+            }
             break;
         case AFNetworkReachabilityStatusReachableViaWiFi:
             NSLog(@" - wifi网络");
+            if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
+                [self tokenLoginBtnClick:nil];
+                [RTKeyChainTools saveLastNetworkReachabilityStatus:@"wifi"];
+            }
             break;
-            
         default:
             break;
     }

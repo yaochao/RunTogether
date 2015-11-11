@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
+#import "RTKeyChainTools.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 每次第一次进入程序，重置一下标示符
+    [RTKeyChainTools saveLastNetworkReachabilityStatus:@"firstLaunch"];
 
     // 检测网络状态
     _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
