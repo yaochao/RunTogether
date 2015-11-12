@@ -22,13 +22,15 @@
 // 当Maxwell超时的时候调用的方法
 - (void) onTimeout {
     NSLog(@"Listener - onTimeout");
-
+    [RTNotificationCenter postNotificationName:@"MaxwellTimeoutNotification" object:nil];
 
 }
 
 - (void) onFailure:(int)errorCode
                   :(NSString *)errorMessage {
     NSLog(@"Listener - onFailure,%@", errorMessage);
+    [RTNotificationCenter postNotificationName:@"MaxwellFailureNotification" object:nil];
+    
 }
 
 
