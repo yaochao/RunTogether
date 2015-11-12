@@ -59,7 +59,7 @@
 - (void)stopLocation {
     [self.locationService stopUserLocationService];
     self.locationService.delegate = nil;
-    self.geoSearch.delegate = nil;
+//    self.geoSearch.delegate = nil;
 }
 
 

@@ -108,9 +108,7 @@ typedef enum {
         NSLog(@"网络错误 - %@", error);
         // 提示网络有问题
         NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alertView show];
-
+        [[[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
     }];
 }
 
@@ -138,14 +136,15 @@ typedef enum {
     NSLog(@"maxwell关闭了");
 }
 
+#pragma mark - MaxwellListener超时
+- (void)onTimeoutNotification {
+    if (![[RTKeyChainTools getLastNetworkReachabilityStatus] isEqualToString:@"unconnected"]) {
+        [self tokenLoginBtnClick:nil];
+    }
+}
+
 
 #pragma mark - 监听网络状态调用函数
-/**
- AFNetworkReachabilityStatusUnknown          = -1,
- AFNetworkReachabilityStatusNotReachable     = 0,
- AFNetworkReachabilityStatusReachableViaWWAN = 1,
- AFNetworkReachabilityStatusReachableViaWiFi = 2,
- */
 - (void)reachabilityDidChange:(NSNotification *)notification {
     NSInteger status = [notification.userInfo[AFNetworkingReachabilityNotificationStatusItem] integerValue];
     NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
@@ -154,22 +153,23 @@ typedef enum {
             NSLog(@" - 未知网络类型");
             break;
         case AFNetworkReachabilityStatusNotReachable:
-            NSLog(@" - 网络断开连接");
+            NSLog(@" - 网络连接已断开，请检查网络配置");
+            [[[UIAlertView alloc] initWithTitle:@"网络错误" message:@"网络连接已断开，请检查网络配置" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
             [RTKeyChainTools saveLastNetworkReachabilityStatus:@"unconnected"];
             break;
         case AFNetworkReachabilityStatusReachableViaWWAN:
             NSLog(@" - 2/3/4G网络");
             if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
                 [self tokenLoginBtnClick:nil];
-                [RTKeyChainTools saveLastNetworkReachabilityStatus:@"2/3/4G"];
             }
+            [RTKeyChainTools saveLastNetworkReachabilityStatus:@"2/3/4G"];
             break;
         case AFNetworkReachabilityStatusReachableViaWiFi:
             NSLog(@" - wifi网络");
             if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
                 [self tokenLoginBtnClick:nil];
-                [RTKeyChainTools saveLastNetworkReachabilityStatus:@"wifi"];
             }
+            [RTKeyChainTools saveLastNetworkReachabilityStatus:@"wifi"];
             break;
         default:
             break;
@@ -181,6 +181,7 @@ typedef enum {
     [super viewDidLoad];
     // 注册通知
     [RTNotificationCenter addObserver:self selector:@selector(reachabilityDidChange:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+    [RTNotificationCenter addObserver:self selector:@selector(onTimeoutNotification) name:@"MaxwellTimeoutNotification" object:nil];
 }
 
 #pragma mark 触摸空白结束编辑
@@ -192,6 +193,11 @@ typedef enum {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - dealloc
+- (void)dealloc {
+    [RTNotificationCenter removeObserver:self];
 }
 
 

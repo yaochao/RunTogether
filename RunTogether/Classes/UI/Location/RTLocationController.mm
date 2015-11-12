@@ -90,4 +90,10 @@
     return _mapView;
 }
 
+#pragma mark - dealloc
+- (void)dealloc {
+    [RTNotificationCenter removeObserver:self];
+}
+
+
 @end
