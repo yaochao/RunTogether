@@ -33,6 +33,10 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:endpoint forKey:@"endpoint"];
 }
 
++ (BOOL)saveLastNetworkReachabilityStatus:(NSString *)networkReachabilityStatus {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] setString:networkReachabilityStatus forKey:@"networkReachabilityStatus"];
+}
+
 
 // 读取
 + (NSString *)getRememberToken {
@@ -55,6 +59,10 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] stringForKey:@"endpoint"];
 }
 
++ (NSString *)getLastNetworkReachabilityStatus {
+    return [[RTKeyChainSingleton  sharedKeyChainSingleton] stringForKey:@"networkReachabilityStatus"];
+}
+
 
 // 删除
 + (BOOL)removeRememberToken {
@@ -75,6 +83,10 @@
 
 + (BOOL)removeEndpoint {
     return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"endpoint"];
+}
+
++ (BOOL)removeLastNetworkReachabilityStatus {
+    return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"networkReachabilityStatus"];
 }
 
 @end

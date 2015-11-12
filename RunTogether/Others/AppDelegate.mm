@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
+#import "RTKeyChainTools.h"
 
 @interface AppDelegate ()
 
@@ -22,11 +23,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 每次第一次进入程序，重置一下标示符
+    [RTKeyChainTools saveLastNetworkReachabilityStatus:@"firstLaunch"];
 
     // 检测网络状态
     _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [_reachabilityManager startMonitoring];
-    [RTNotificationCenter addObserver:self selector:@selector(reachabilityDidChange:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+    
     // 启动百度地图管理器
     _mapManager = [[BMKMapManager alloc] init];
     BOOL ret = [_mapManager start:BaiduMapAppKey generalDelegate:nil];
@@ -37,32 +40,6 @@
     return YES;
 }
 
-/**
- AFNetworkReachabilityStatusUnknown          = -1,
- AFNetworkReachabilityStatusNotReachable     = 0,
- AFNetworkReachabilityStatusReachableViaWWAN = 1,
- AFNetworkReachabilityStatusReachableViaWiFi = 2,
- */
-- (void)reachabilityDidChange:(NSNotification *)notification {
-    NSInteger status = [notification.userInfo[AFNetworkingReachabilityNotificationStatusItem] integerValue];
-    switch (status) {
-        case AFNetworkReachabilityStatusUnknown:
-            NSLog(@" - 未知网络类型");
-            break;
-        case AFNetworkReachabilityStatusNotReachable:
-            NSLog(@" - 网络断开连接");
-            break;
-        case AFNetworkReachabilityStatusReachableViaWWAN:
-            NSLog(@" - 2/3/4G网络");
-            break;
-        case AFNetworkReachabilityStatusReachableViaWiFi:
-            NSLog(@" - wifi网络");
-            break;
-
-        default:
-            break;
-    }
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -16,6 +16,7 @@
 + (BOOL)saveSessionKey:(NSString *)session_key;
 + (BOOL)savePhone:(NSString *)phone;
 + (BOOL)saveEndpoint:(NSString *)endpoint;
++ (BOOL)saveLastNetworkReachabilityStatus:(NSString *)networkReachabilityStatus;
 
 // 读取
 + (NSString *)getRememberToken;
@@ -23,6 +24,7 @@
 + (NSString *)getSessionKey;
 + (NSString *)getPhone;
 + (NSString *)getEndpoint;
++ (NSString *)getLastNetworkReachabilityStatus;
 
 // 删除
 + (BOOL)removeRememberToken;
@@ -30,5 +32,7 @@
 + (BOOL)removeSessionKey;
 + (BOOL)removePhone;
 + (BOOL)removeEndpoint;
++ (BOOL)removeLastNetworkReachabilityStatus;
+
 
 @end

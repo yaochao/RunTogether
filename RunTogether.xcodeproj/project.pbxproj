@@ -30,7 +30,7 @@
 		D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917F8E1BE7086100004AE7 /* AppDelegate.mm */; };
 		D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */; };
 		D2917FB11BE746CF00004AE7 /* RTLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */; };
-		D2917FB21BE746CF00004AE7 /* RTLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAC1BE746CF00004AE7 /* RTLoginController.m */; };
+		D2917FB21BE746CF00004AE7 /* RTLoginController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */; };
 		D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */; };
 		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
 		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
@@ -124,7 +124,7 @@
 		D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBaseNavController.m; sourceTree = "<group>"; };
 		D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLogin.storyboard; sourceTree = "<group>"; };
 		D2917FAB1BE746CF00004AE7 /* RTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoginController.h; sourceTree = "<group>"; };
-		D2917FAC1BE746CF00004AE7 /* RTLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoginController.m; sourceTree = "<group>"; };
+		D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTLoginController.mm; sourceTree = "<group>"; };
 		D2917FAE1BE746CF00004AE7 /* RTRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRegisterController.h; sourceTree = "<group>"; };
 		D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRegisterController.m; sourceTree = "<group>"; };
 		D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -417,7 +417,7 @@
 			children = (
 				D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */,
 				D2917FAB1BE746CF00004AE7 /* RTLoginController.h */,
-				D2917FAC1BE746CF00004AE7 /* RTLoginController.m */,
+				D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -731,7 +731,7 @@
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
-				D2917FB21BE746CF00004AE7 /* RTLoginController.m in Sources */,
+				D2917FB21BE746CF00004AE7 /* RTLoginController.mm in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
