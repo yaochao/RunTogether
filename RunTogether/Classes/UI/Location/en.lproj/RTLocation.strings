@@ -1,0 +1,12 @@
+
+/* Class = "UINavigationItem"; title = "我的位置"; ObjectID = "831-yz-2Do"; */
+"831-yz-2Do.title" = "MyLocation";
+
+/* Class = "UIButton"; normalTitle = "关闭定位"; ObjectID = "loj-fa-nCK"; */
+"loj-fa-nCK.normalTitle" = "StopLocation";
+
+/* Class = "UIButton"; normalTitle = "开启定位"; ObjectID = "uFU-34-htj"; */
+"uFU-34-htj.normalTitle" = "StartLocation";
+
+/* Class = "UILabel"; text = "请开启定位"; ObjectID = "xuC-QN-52q"; */
+"xuC-QN-52q.text" = "Please Start Location";

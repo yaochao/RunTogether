@@ -28,18 +28,18 @@
 #pragma mark - btnClick
 - (IBAction)registerBtnClick:(id)sender {
     // 判空
-    if ([_username.text isEqual:@""]) {
-        [MBProgressHUD showError:@"请输入用户名"];
+    if ([_username.text isEqual:NSLocalizedString(@"", nil)]) {
+        [MBProgressHUD showError:NSLocalizedString(@"请输入用户名", nil)];
         return;
     }
     
     if ([_phoneNum.text isEqual:@""]) {
-        [MBProgressHUD showError:@"请输入手机号"];
+        [MBProgressHUD showError:NSLocalizedString(@"请输入手机号", nil)];
         return;
     }
     
-    if ([_password.text isEqual:@""]) {
-        [MBProgressHUD showError:@"请输入密码"];
+    if ([_password.text isEqual:NSLocalizedString(@"", nil)]) {
+        [MBProgressHUD showError:NSLocalizedString(@"请输入密码", nil)];
         return;
     }
     
@@ -48,18 +48,18 @@
     params[@"name"] = _username.text;
     params[@"password"] = _password.text;
     params[@"phone"] = _phoneNum.text;
-    [MBProgressHUD showMessage:@"请稍后..."];
+    [MBProgressHUD showMessage:NSLocalizedString(@"请稍后...", nil)];
     [RTNetworkTools postDataWithParams:params interfaceType:@"users" success:^(NSDictionary *responseObject) {
         [MBProgressHUD hideHUD];
         NSLog(@"%@", responseObject);
         _responseObject = responseObject;
-        [MBProgressHUD showSuccess:[NSString stringWithFormat:@"注册成功,欢迎你%@", responseObject[@"name"]]];
+        [MBProgressHUD showSuccess:[NSString stringWithFormat:NSLocalizedString(@"注册成功,欢迎你%@", nil), responseObject[@"name"]]];
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUD];
         NSLog(@"网络错误 - %@", error);
         // 提示网络有问题
-        NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        NSString *errorMsg = [NSString stringWithFormat:NSLocalizedString(@"请检查您的网络连接\n错误代码 %li", nil), error.code];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"网络错误", nil) message:errorMsg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil];
         [alertView show];
 
     }];
@@ -72,7 +72,7 @@
     [super viewDidLoad];
     
     // 自定义左边返回的按钮
-    self.navigationItem.leftBarButtonItem =  [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backarrow_icon"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick)];
+    self.navigationItem.leftBarButtonItem =  [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:NSLocalizedString(@"backarrow_icon", nil)] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemClick)];
 }
 
 #pragma mark - 自定义左边返回的按钮

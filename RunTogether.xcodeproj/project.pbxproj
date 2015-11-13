@@ -29,14 +29,12 @@
 		D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2917F851BE7074D00004AE7 /* Default-568h@2x.png */; };
 		D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917F8E1BE7086100004AE7 /* AppDelegate.mm */; };
 		D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */; };
-		D2917FB11BE746CF00004AE7 /* RTLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */; };
 		D2917FB21BE746CF00004AE7 /* RTLoginController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */; };
 		D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FAF1BE746CF00004AE7 /* RTRegisterController.m */; };
 		D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB61BE755C600004AE7 /* RTHTTPSessionManager.m */; };
 		D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FB91BE7565600004AE7 /* RTNetworkTools.m */; };
 		D2917FBE1BE7711C00004AE7 /* RTProfileUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */; };
 		D297FE8E1BEB311F0029B3B0 /* RTLocationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */; };
-		D297FE901BEB31B20029B3B0 /* RTLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */; };
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
 		D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */; };
@@ -67,6 +65,9 @@
 		D2C2F1CE1BEA0C860027A4A5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F1CD1BEA0C860027A4A5 /* CoreTelephony.framework */; };
 		D2C2F1D01BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F1CF1BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd */; };
 		D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D2C2F1D11BEA102E0027A4A5 /* mapapi.bundle */; };
+		D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C309A41BF5D3C20010D3F7 /* RTLocation.storyboard */; };
+		D2C309A51BF5D3DA0010D3F7 /* RTLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C309A71BF5D3DA0010D3F7 /* RTLogin.storyboard */; };
+		D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2C309AC1BF5D4580010D3F7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +123,6 @@
 		D2917F901BE708FF00004AE7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D2917FA61BE746CF00004AE7 /* RTBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBaseNavController.h; sourceTree = "<group>"; };
 		D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBaseNavController.m; sourceTree = "<group>"; };
-		D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLogin.storyboard; sourceTree = "<group>"; };
 		D2917FAB1BE746CF00004AE7 /* RTLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoginController.h; sourceTree = "<group>"; };
 		D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTLoginController.mm; sourceTree = "<group>"; };
 		D2917FAE1BE746CF00004AE7 /* RTRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRegisterController.h; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 		D2917FBD1BE7711C00004AE7 /* RTProfileUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProfileUserModel.m; sourceTree = "<group>"; };
 		D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationController.h; sourceTree = "<group>"; };
 		D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTLocationController.mm; sourceTree = "<group>"; };
-		D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLocation.storyboard; sourceTree = "<group>"; };
 		D297FE921BEB41F70029B3B0 /* RTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationManager.h; sourceTree = "<group>"; };
 		D297FE931BEB41F70029B3B0 /* RTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationManager.m; sourceTree = "<group>"; };
 		D297FE961BEB43BB0029B3B0 /* RTLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationModel.h; sourceTree = "<group>"; };
@@ -177,6 +176,19 @@
 		D2C2F1CD1BEA0C860027A4A5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D2C2F1CF1BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		D2C2F1D11BEA102E0027A4A5 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = mapapi.bundle; sourceTree = "<group>"; };
+		D2C309A31BF5D3C20010D3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RTLocation.storyboard; sourceTree = "<group>"; };
+		D2C309A61BF5D3DA0010D3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RTLogin.storyboard; sourceTree = "<group>"; };
+		D2C309AB1BF5D4580010D3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2C309AD1BF5D4690010D3F7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RTLogin.strings"; sourceTree = "<group>"; };
+		D2C309AE1BF5D4690010D3F7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/RTLocation.strings"; sourceTree = "<group>"; };
+		D2C309AF1BF5D4690010D3F7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D2C309B01BF5D4690010D3F7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D2C309B11BF5D4690010D3F7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D2C309BB1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RTLogin.strings; sourceTree = "<group>"; };
+		D2C309BC1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RTLocation.strings; sourceTree = "<group>"; };
+		D2C309BD1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D2C309BE1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D2C309BF1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +318,7 @@
 		D25526D61BE6FA2C00CDEFC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2C309AC1BF5D4580010D3F7 /* Localizable.strings */,
 				41338CCF1BE8CE6C00BCAEC3 /* rt.der */,
 				D2917F851BE7074D00004AE7 /* Default-568h@2x.png */,
 				D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */,
@@ -415,7 +428,7 @@
 		D2917FA91BE746CF00004AE7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				D2917FAA1BE746CF00004AE7 /* RTLogin.storyboard */,
+				D2C309A71BF5D3DA0010D3F7 /* RTLogin.storyboard */,
 				D2917FAB1BE746CF00004AE7 /* RTLoginController.h */,
 				D2917FAC1BE746CF00004AE7 /* RTLoginController.mm */,
 			);
@@ -456,7 +469,7 @@
 			children = (
 				D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */,
 				D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */,
-				D297FE8F1BEB31B20029B3B0 /* RTLocation.storyboard */,
+				D2C309A41BF5D3C20010D3F7 /* RTLocation.storyboard */,
 				D2C079751BF035BC00F40CFE /* RTMaxwellListener.h */,
 				D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */,
 			);
@@ -626,8 +639,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
+				en,
 			);
 			mainGroup = D25526CA1BE6FA2B00CDEFC7;
 			productRefGroup = D25526D41BE6FA2C00CDEFC7 /* Products */;
@@ -645,11 +659,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2917FB11BE746CF00004AE7 /* RTLogin.storyboard in Resources */,
+				D2C309A51BF5D3DA0010D3F7 /* RTLogin.storyboard in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
-				D297FE901BEB31B20029B3B0 /* RTLocation.storyboard in Resources */,
+				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
+				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
@@ -777,6 +792,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D25526E11BE6FA2C00CDEFC7 /* Base */,
+				D2C309AF1BF5D4690010D3F7 /* zh-Hans */,
+				D2C309BD1BF5D4CB0010D3F7 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -785,8 +802,40 @@
 			isa = PBXVariantGroup;
 			children = (
 				D25526E61BE6FA2C00CDEFC7 /* Base */,
+				D2C309B01BF5D4690010D3F7 /* zh-Hans */,
+				D2C309BE1BF5D4CB0010D3F7 /* en */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D2C309A41BF5D3C20010D3F7 /* RTLocation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2C309A31BF5D3C20010D3F7 /* Base */,
+				D2C309AE1BF5D4690010D3F7 /* zh-Hans */,
+				D2C309BC1BF5D4CB0010D3F7 /* en */,
+			);
+			name = RTLocation.storyboard;
+			sourceTree = "<group>";
+		};
+		D2C309A71BF5D3DA0010D3F7 /* RTLogin.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2C309A61BF5D3DA0010D3F7 /* Base */,
+				D2C309AD1BF5D4690010D3F7 /* zh-Hans */,
+				D2C309BB1BF5D4CB0010D3F7 /* en */,
+			);
+			name = RTLogin.storyboard;
+			sourceTree = "<group>";
+		};
+		D2C309AC1BF5D4580010D3F7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2C309AB1BF5D4580010D3F7 /* Base */,
+				D2C309B11BF5D4690010D3F7 /* zh-Hans */,
+				D2C309BF1BF5D4CB0010D3F7 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

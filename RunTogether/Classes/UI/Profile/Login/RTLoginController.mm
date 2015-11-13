@@ -36,15 +36,15 @@ typedef enum {
 - (IBAction)loginBtnClick:(id)sender {
     // 判空
     if ([_phone.text isEqual:@""]) {
-        [MBProgressHUD showError:@"请输入手机号码"];
+        [MBProgressHUD showError:NSLocalizedString(@"请输入手机号码", nil)];
         return;
     }
     if ([_password.text isEqual:@""]) {
-        [MBProgressHUD showError:@"请输入密码"];
+        [MBProgressHUD showError:NSLocalizedString(@"请输入密码", nil)];
         return;
     }
     
-    [MBProgressHUD showMessage:@"正在登录..."];
+    [MBProgressHUD showMessage:NSLocalizedString(@"正在登录...", nil)];
     // 密码登录
     [self loginWithPhone:_phone.text proof:_password.text type:RTLoginPasswordType];
     
@@ -74,12 +74,12 @@ typedef enum {
         
         // 如果登录出错
         if ([responseObject objectForKey:@"errcode"] != nil) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"错误代码:%@", [responseObject objectForKey:@"errcode"]]];
+            [MBProgressHUD showError:[NSString stringWithFormat:NSLocalizedString(@"错误代码:%@", nil), [responseObject objectForKey:@"errcode"]]];
             return ;
         }
         
         // 如果登录成功
-        [MBProgressHUD showSuccess:@"登录成功"];
+        [MBProgressHUD showSuccess:NSLocalizedString(@"登录成功", nil)];
         if ([RTKeyChainTools savePhone:phone]) {
             NSLog(@"phone存储成功");
         }
@@ -107,10 +107,10 @@ typedef enum {
         [MBProgressHUD hideHUD];
         NSLog(@"网络错误 - %@", error);
         // 提示网络有问题
-        NSString *errorMsg = [NSString stringWithFormat:@"请检查您的网络连接\n错误代码 %li", error.code];
+        NSString *errorMsg = [NSString stringWithFormat:NSLocalizedString(@"请检查您的网络连接\n错误代码 %li", nil), error.code];
         // 判断是否需要提示用户，隐式登录不需要
         if (type == RTLoginPasswordType) {
-            [[[UIAlertView alloc] initWithTitle:@"网络错误" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];        }
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"网络错误", nil) message:errorMsg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil] show];        }
     }];
 }
 
@@ -156,7 +156,7 @@ typedef enum {
             break;
         case AFNetworkReachabilityStatusNotReachable:
             NSLog(@" - 网络连接已断开，请检查网络配置");
-            [[[UIAlertView alloc] initWithTitle:@"网络错误" message:@"网络连接已断开，请检查网络配置" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"网络错误", nil) message:NSLocalizedString(@"网络连接已断开，请检查网络配置", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil] show];
             [RTKeyChainTools saveLastNetworkReachabilityStatus:@"unconnected"];
             break;
         case AFNetworkReachabilityStatusReachableViaWWAN:
