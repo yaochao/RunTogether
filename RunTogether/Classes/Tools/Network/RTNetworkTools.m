@@ -36,9 +36,6 @@
 #pragma mark - GET 加载网络数据
 + (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     
-    // loadcookies
-    [self loadCookies];
-    
     // 获得网络管理单例对象
     RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
     if (params == nil) {
@@ -53,8 +50,6 @@
     [manager GET:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         success(responseObject);
-        // savecookies
-        [self saveCookies];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         failure(error);
