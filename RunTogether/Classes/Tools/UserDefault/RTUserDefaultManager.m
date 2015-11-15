@@ -41,6 +41,7 @@
     NSData *data = [FastCoder dataWithRootObject:value];
     if (data) {
         [[NSUserDefaults standardUserDefaults] setObject:data forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
 
