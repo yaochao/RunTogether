@@ -20,5 +20,10 @@
 
 + (id)getValueWithKey:(NSString *)key;
 
++ (void)removeAll;
+
++ (void)removeValueWithKey:(NSString *)key;
+
+
 
 @end

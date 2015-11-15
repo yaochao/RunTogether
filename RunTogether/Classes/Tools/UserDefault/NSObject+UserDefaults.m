@@ -18,5 +18,13 @@
     return [[RTUserDefaultManager sharedUserDefaultManager] getValeWithKey:key];
 }
 
++ (void)removeAll {
+    [[RTUserDefaultManager sharedUserDefaultManager] removeAll];
+}
+
++ (void)removeValueWithKey:(NSString *)key {
+    [[RTUserDefaultManager sharedUserDefaultManager] removeValueWithKey:key];
+}
+
 
 @end

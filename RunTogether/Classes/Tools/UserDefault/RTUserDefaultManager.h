@@ -35,5 +35,16 @@
  */
 - (id)getValeWithKey:(NSString *)key;
 
+/**
+ *  @author yaochao
+ *
+ *  清空UserDefaults
+ */
+- (void)removeAll;
+
+/**
+ *  删除单个键值对
+ */
+- (void)removeValueWithKey:(NSString *)key;
 
 @end

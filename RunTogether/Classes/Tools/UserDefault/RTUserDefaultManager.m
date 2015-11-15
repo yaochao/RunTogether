@@ -45,7 +45,6 @@
     }
 }
 
-
 /**
  *  取值
  *
@@ -56,6 +55,26 @@
     NSParameterAssert(key);
     NSData *data = [[NSUserDefaults standardUserDefaults] valueForKey:key];
     return [FastCoder objectWithData:data];
+}
+
+/**
+ *  @author yaochao
+ *
+ *  清空UserDefaults所有内容
+ */
+- (void)removeAll {
+    NSDictionary *dict = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
+    for (NSString *key in dict) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+
+- (void)removeValueWithKey:(NSString *)key {
+    // 断言，防止nil
+    NSParameterAssert(key);
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
 }
 
 @end
