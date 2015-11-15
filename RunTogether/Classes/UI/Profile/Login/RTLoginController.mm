@@ -45,6 +45,7 @@ typedef enum {
     }
     
     [MBProgressHUD showMessage:NSLocalizedString(@"正在登录...", nil)];
+
     // 密码登录
     [self loginWithPhone:_phone.text proof:_password.text type:RTLoginPasswordType];
     
@@ -121,7 +122,7 @@ typedef enum {
     [self stopMaxwellClient];
     // 加载Maxwell
     RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
-    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithInt:[[RTKeyChainTools getUserId] intValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithLongLong:[[RTKeyChainTools getUserId] longLongValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
     // 启动Maxwell
     [_maxwellClient start];
     NSLog(@"Maxwell启动了");
