@@ -68,6 +68,8 @@
 		D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C309A41BF5D3C20010D3F7 /* RTLocation.storyboard */; };
 		D2C309A51BF5D3DA0010D3F7 /* RTLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2C309A71BF5D3DA0010D3F7 /* RTLogin.storyboard */; };
 		D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2C309AC1BF5D4580010D3F7 /* Localizable.strings */; };
+		D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */; };
+		D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ECB8561BF87C0400ECBA87 /* NSObject+UserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,10 @@
 		D2C309BD1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		D2C309BE1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D2C309BF1BF5D4CB0010D3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D2ECB8521BF876B200ECBA87 /* RTUserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserDefaultManager.h; sourceTree = "<group>"; };
+		D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserDefaultManager.m; sourceTree = "<group>"; };
+		D2ECB8551BF87C0400ECBA87 /* NSObject+UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UserDefaults.h"; sourceTree = "<group>"; };
+		D2ECB8561BF87C0400ECBA87 /* NSObject+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UserDefaults.m"; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -369,6 +375,7 @@
 		D2917F891BE7083400004AE7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				D2ECB8511BF8763A00ECBA87 /* UserDefault */,
 				D297FE911BEB41A60029B3B0 /* Location */,
 				D2C2F1A11BE9B5B00027A4A5 /* Keychain */,
 				D2917FB41BE752C800004AE7 /* Network */,
@@ -573,6 +580,17 @@
 			path = BaiduMap;
 			sourceTree = "<group>";
 		};
+		D2ECB8511BF8763A00ECBA87 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				D2ECB8551BF87C0400ECBA87 /* NSObject+UserDefaults.h */,
+				D2ECB8561BF87C0400ECBA87 /* NSObject+UserDefaults.m */,
+				D2ECB8521BF876B200ECBA87 /* RTUserDefaultManager.h */,
+				D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -752,9 +770,11 @@
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
+				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
+				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
