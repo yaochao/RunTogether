@@ -501,7 +501,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
         return nil;
     }
 
-    self.format = [[decoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(format))] unsignedIntegerValue];
+    self.format = (NSPropertyListFormat)[[decoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(format))] unsignedIntegerValue];
     self.readOptions = [[decoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(readOptions))] unsignedIntegerValue];
 
     return self;
@@ -545,7 +545,7 @@ static NSLock* imageLock = nil;
     dispatch_once(&onceToken, ^{
         imageLock = [[NSLock alloc] init];
     });
-
+    
     [imageLock lock];
     image = [UIImage imageWithData:data];
     [imageLock unlock];
@@ -559,7 +559,7 @@ static UIImage * AFImageWithDataAtScale(NSData *data, CGFloat scale) {
     if (image.images) {
         return image;
     }
-
+    
     return [[UIImage alloc] initWithCGImage:[image CGImage] scale:scale orientation:image.imageOrientation];
 }
 

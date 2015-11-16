@@ -82,10 +82,10 @@
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidResumeNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidSuspendNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidCompleteNotification object:nil];
-
+    
     if (task) {
         if (task.state != NSURLSessionTaskStateCompleted) {
-
+            
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
 #pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
@@ -114,7 +114,7 @@
 
     if (operation) {
         if (![operation isFinished]) {
-
+            
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wreceiver-is-weak"
 #pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
@@ -155,13 +155,13 @@
 
 - (void)dealloc {
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-
+    
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidCompleteNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidResumeNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingTaskDidSuspendNotification object:nil];
 #endif
-
+    
     [notificationCenter removeObserver:self name:AFNetworkingOperationDidStartNotification object:nil];
     [notificationCenter removeObserver:self name:AFNetworkingOperationDidFinishNotification object:nil];
 }

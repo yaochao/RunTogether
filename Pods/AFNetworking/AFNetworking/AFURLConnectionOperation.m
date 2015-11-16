@@ -209,7 +209,7 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
         [_outputStream close];
         _outputStream = nil;
     }
-
+    
     if (_backgroundTaskCleanup) {
         _backgroundTaskCleanup();
     }
@@ -292,14 +292,14 @@ static inline BOOL AFStateTransitionIsValid(AFOperationState fromState, AFOperat
         UIApplication *application = [UIApplication sharedApplication];
         UIBackgroundTaskIdentifier __block backgroundTaskIdentifier = UIBackgroundTaskInvalid;
         __weak __typeof(self)weakSelf = self;
-
+        
         self.backgroundTaskCleanup = ^(){
             if (backgroundTaskIdentifier != UIBackgroundTaskInvalid) {
                 [[UIApplication sharedApplication] endBackgroundTask:backgroundTaskIdentifier];
                 backgroundTaskIdentifier = UIBackgroundTaskInvalid;
             }
         };
-
+        
         backgroundTaskIdentifier = [application beginBackgroundTaskWithExpirationHandler:^{
             __strong __typeof(weakSelf)strongSelf = weakSelf;
 
@@ -743,7 +743,7 @@ didReceiveResponse:(NSURLResponse *)response
         return nil;
     }
 
-    self.state = [[decoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(state))] integerValue];
+    self.state = (AFOperationState)[[decoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(state))] integerValue];
     self.response = [decoder decodeObjectOfClass:[NSHTTPURLResponse class] forKey:NSStringFromSelector(@selector(response))];
     self.error = [decoder decodeObjectOfClass:[NSError class] forKey:NSStringFromSelector(@selector(error))];
     self.responseData = [decoder decodeObjectOfClass:[NSData class] forKey:NSStringFromSelector(@selector(responseData))];

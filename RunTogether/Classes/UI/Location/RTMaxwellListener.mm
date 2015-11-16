@@ -24,7 +24,7 @@
 // 当Maxwell超时的时候调用的方法
 - (void) onTimeout {
     NSLog(@"Listener - onTimeout");
-//    [RTNotificationCenter postNotificationName:@"MaxwellTimeoutNotification" object:nil];
+    [RTNotificationCenter postNotificationName:@"MaxwellTimeoutNotification" object:nil];
 
 }
 
