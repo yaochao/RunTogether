@@ -1,0 +1,36 @@
+
+/* Class = "UIBarButtonItem"; title = "忘记密码"; ObjectID = "3fy-ok-wYf"; */
+"3fy-ok-wYf.title" = "FogotPassword";
+
+/* Class = "UITextField"; placeholder = "手机号码"; ObjectID = "H0N-i2-RKL"; */
+"H0N-i2-RKL.placeholder" = "PhoneNumber";
+
+/* Class = "UITextField"; text = "18365837881"; ObjectID = "H0N-i2-RKL"; */
+"H0N-i2-RKL.text" = "18365837881";
+
+/* Class = "UITextField"; placeholder = "登录密码"; ObjectID = "dVl-Am-bLh"; */
+"dVl-Am-bLh.placeholder" = "Password";
+
+/* Class = "UITextField"; text = "123"; ObjectID = "dVl-Am-bLh"; */
+"dVl-Am-bLh.text" = "123";
+
+/* Class = "UIButton"; normalTitle = "password登录"; ObjectID = "jkn-xk-Wyx"; */
+"jkn-xk-Wyx.normalTitle" = "passwordLogin";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "kq3-sh-pfg"; */
+"kq3-sh-pfg.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "手机号码"; ObjectID = "kuU-3j-Haf"; */
+"kuU-3j-Haf.placeholder" = "PhoneNumber";
+
+/* Class = "UIButton"; normalTitle = "token登录"; ObjectID = "leM-MJ-Waj"; */
+"leM-MJ-Waj.normalTitle" = "tokenLogin";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "ncQ-Sv-e3L"; */
+"ncQ-Sv-e3L.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "pFw-vP-4lC"; */
+"pFw-vP-4lC.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "tbQ-Mv-KxV"; */
+"tbQ-Mv-KxV.placeholder" = "Username";

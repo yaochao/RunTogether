@@ -65,6 +65,10 @@
 
 #pragma mark - 上传用户地理位置到服务器
 - (BOOL)updateLocation {
+    // 如果模型为空就不上传
+    if (self.locationModel == nil) {
+        return NO;
+    }
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"latitude"] = @(self.locationModel.point.latitude);
     params[@"longitude"] = @(self.locationModel.point.longitude);
@@ -83,6 +87,7 @@
 - (IBAction)startLocationBtnClick:(id)sender {
     [MBProgressHUD showMessage:@"正在开启定位..."];
     [RTLocationTools startLocation];
+#warning 重大BUG
     [self initTimer];
 }
 

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  
+
+  Created by yaochao on 15/11/13.
+
+*/
+"请输入用户名" = "Please enter a username";
+"请输入手机号" = "Please enter a phonenumber";
+"请输入密码" = "Please enter a password";
+"请稍后..." = "waiting...";
+"注册成功,欢迎你%@" = "OK, welcome%@";
+"请检查您的网络连接\n错误代码 %li" = "Please check your network connection\nErrorCode %li";
+"网络错误" = "Network error";
+"确定" = "OK";
+"正在登录..." = "waiting...";
+"错误代码:%@" = "ErrorCode:%@";
+"登录成功" = "Success";
