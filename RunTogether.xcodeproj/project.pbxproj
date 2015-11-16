@@ -26,6 +26,7 @@
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
 		D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25526E51BE6FA2C00CDEFC7 /* LaunchScreen.xib */; };
 		D25526F31BE6FA2C00CDEFC7 /* RunTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */; };
+		D26A6C7F1BF9E2630033D56E /* RTLobbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26A6C7E1BF9E2630033D56E /* RTLobbyController.m */; };
 		D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2917F851BE7074D00004AE7 /* Default-568h@2x.png */; };
 		D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917F8E1BE7086100004AE7 /* AppDelegate.mm */; };
 		D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */; };
@@ -119,6 +120,8 @@
 		D25526EC1BE6FA2C00CDEFC7 /* RunTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526F11BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTogetherTests.m; sourceTree = "<group>"; };
+		D26A6C7D1BF9E2630033D56E /* RTLobbyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLobbyController.h; sourceTree = "<group>"; };
+		D26A6C7E1BF9E2630033D56E /* RTLobbyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLobbyController.m; sourceTree = "<group>"; };
 		D2917F851BE7074D00004AE7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		D2917F8D1BE7086100004AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2917F8E1BE7086100004AE7 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -353,6 +356,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D26A6C7C1BF9E1F20033D56E /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				D26A6C7D1BF9E2630033D56E /* RTLobbyController.h */,
+				D26A6C7E1BF9E2630033D56E /* RTLobbyController.m */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
 		D2917F871BE7083400004AE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +401,7 @@
 				D2917FA51BE746CF00004AE7 /* Base */,
 				D2917FA81BE746CF00004AE7 /* Profile */,
 				D297FE8B1BEB30ED0029B3B0 /* Location */,
+				D26A6C7C1BF9E1F20033D56E /* Lobby */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -768,6 +781,7 @@
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
+				D26A6C7F1BF9E2630033D56E /* RTLobbyController.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,

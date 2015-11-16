@@ -66,7 +66,7 @@
 #pragma mark - 上传用户地理位置到服务器
 - (BOOL)updateLocation {
     // 如果模型为空就不上传
-    if (self.locationModel == nil) {
+    if (!self.locationModel) {
         return NO;
     }
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -74,7 +74,7 @@
     params[@"longitude"] = @(self.locationModel.point.longitude);
     NSString *interface = [NSString stringWithFormat:@"users/%@/locations", [RTKeyChainTools getUserId]];
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(NSDictionary *responseObject) {
-        NSLog(@"更新用户位置 - %@", responseObject);
+        NSLog(@"位置更新成功 - %@", responseObject);
     } failure:^(NSError *error) {
         NSLog(@"位置更新失败 - %@", error);
     }];
@@ -87,7 +87,7 @@
 - (IBAction)startLocationBtnClick:(id)sender {
     [MBProgressHUD showMessage:@"正在开启定位..."];
     [RTLocationTools startLocation];
-#warning 重大BUG
+#warning 重大BUG已修复
     [self initTimer];
 }
 
