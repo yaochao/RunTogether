@@ -1,27 +1,237 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Sc-rO-Ee1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Lobby-->
+        <scene sceneID="Qdc-W5-jGf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <navigationController id="bdQ-GZ-tZe" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lobby" image="success.png" id="wMF-ut-tgv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThG-OO-80Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ATG-eS-1Gb" kind="relationship" relationship="rootViewController" id="1Ln-Kd-HB3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4d-OQ-0Y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="199"/>
+        </scene>
+        <!--Lobbyt-->
+        <scene sceneID="eax-Bm-UDx">
+            <objects>
+                <viewController title="Lobbyt" id="ATG-eS-1Gb" customClass="RTLobbyController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="czg-wV-veN"/>
+                        <viewControllerLayoutGuide type="bottom" id="u1o-e5-jdP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="yBr-aV-s1b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-5J-LDm">
+                                <rect key="frame" x="40" y="192" width="520" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ATG-eS-1Gb" id="7Ve-Vh-rNP"/>
+                                    <outlet property="delegate" destination="ATG-eS-1Gb" id="QR3-Jw-O1G"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
+                                <rect key="frame" x="277" y="416" width="46" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="sth-Ej-tNz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-gr-r9T">
+                                <rect key="frame" x="274.5" y="164" width="51" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="MDi-5J-LDm" secondAttribute="trailing" constant="20" id="49b-N7-XW2"/>
+                            <constraint firstItem="MDi-5J-LDm" firstAttribute="top" secondItem="HgI-gr-r9T" secondAttribute="bottom" constant="8" id="7N2-Uo-Lb8"/>
+                            <constraint firstItem="MDi-5J-LDm" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="IQP-X6-W8b"/>
+                            <constraint firstItem="MDi-5J-LDm" firstAttribute="centerY" secondItem="yBr-aV-s1b" secondAttribute="centerY" id="cyx-tI-kHK"/>
+                            <constraint firstItem="HgI-gr-r9T" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="djG-dw-uJ6"/>
+                            <constraint firstItem="MDi-5J-LDm" firstAttribute="leading" secondItem="yBr-aV-s1b" secondAttribute="leadingMargin" constant="20" id="i3y-By-DEb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lobby" id="zdW-57-SyF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7p-pG-6O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="199"/>
+        </scene>
+        <!--Waiting room-->
+        <scene sceneID="ozW-w6-kUE">
+            <objects>
+                <navigationController id="vKM-cT-fQw" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Waiting room" image="success.png" id="wPM-MM-D0k"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QCg-3R-6oX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nNr-cV-kbo" kind="relationship" relationship="rootViewController" id="ZuV-Nt-IKA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rc-rK-aa3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="887"/>
+        </scene>
+        <!--Lobbyt-->
+        <scene sceneID="Wdv-ue-kMN">
+            <objects>
+                <viewController title="Lobbyt" id="nNr-cV-kbo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gWK-yp-fbT"/>
+                        <viewControllerLayoutGuide type="bottom" id="bqW-tO-N9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pZD-hK-5AY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Waiting room" id="cLl-6b-783"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eu-id-2IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="209" y="887"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yKH-11-MxH">
+            <objects>
+                <tabBarController id="6Sc-rO-Ee1" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ai7-p3-cg8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bdQ-GZ-tZe" kind="relationship" relationship="viewControllers" id="UcW-58-nMK"/>
+                        <segue destination="vKM-cT-fQw" kind="relationship" relationship="viewControllers" id="PTm-Fe-WR3"/>
+                        <segue destination="8iL-vr-S3c" kind="relationship" relationship="viewControllers" id="dQP-Sl-dVa"/>
+                        <segue destination="oY9-q1-Y5I" kind="relationship" relationship="viewControllers" id="o19-WJ-ZAt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csO-P3-0v8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="1213"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="lWI-zJ-JK5">
+            <objects>
+                <navigationController id="8iL-vr-S3c" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Game" image="success.png" id="1wp-UP-tsg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XjK-5q-cQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SrJ-Ep-G4S" kind="relationship" relationship="rootViewController" id="a8W-uW-qZ6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AY-Pp-cyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="1565"/>
+        </scene>
+        <!--Lobbyt-->
+        <scene sceneID="FBc-xU-BIW">
+            <objects>
+                <viewController title="Lobbyt" id="SrJ-Ep-G4S" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jnr-ef-1hT"/>
+                        <viewControllerLayoutGuide type="bottom" id="yT8-Oi-70T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pno-ho-ouZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game" id="UOr-Ze-gcJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiC-as-Dd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="1565"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="ETG-3D-Id9">
+            <objects>
+                <navigationController id="oY9-q1-Y5I" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Results" image="success.png" id="zrY-Uq-gf7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7h6-dJ-T6u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="10D-WO-R36" kind="relationship" relationship="rootViewController" id="6yz-CL-rWT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30p-PK-wxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506" y="2235"/>
+        </scene>
+        <!--Lobbyt-->
+        <scene sceneID="nRJ-dN-KYO">
+            <objects>
+                <viewController title="Lobbyt" id="10D-WO-R36" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UgH-7D-VO6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fcD-Zk-6DU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wYo-w2-vbX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="Mws-2U-OR3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-d0-GeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="2235"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="success.png" width="28" height="28"/>
+    </resources>
 </document>
