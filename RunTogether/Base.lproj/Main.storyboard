@@ -40,8 +40,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
-                                <rect key="frame" x="284" y="415" width="33" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
+                                <rect key="frame" x="284" y="416" width="33" height="42"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Go">
@@ -51,15 +51,15 @@
                                     <action selector="goClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="sth-Ej-tNz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Are you ready" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-gr-r9T">
-                                <rect key="frame" x="201" y="147" width="197" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-gr-r9T">
+                                <rect key="frame" x="201" y="148" width="197" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-5J-LDm">
-                                <rect key="frame" x="40" y="191" width="520" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-5J-LDm">
+                                <rect key="frame" x="40" y="192" width="520" height="216"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="dataSource" destination="ATG-eS-1Gb" id="7Ve-Vh-rNP"/>
@@ -81,6 +81,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lobby" id="zdW-57-SyF"/>
+                    <connections>
+                        <outlet property="pickerView" destination="MDi-5J-LDm" id="0VP-5b-PeD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7p-pG-6O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-506" y="887"/>
         </scene>
-        <!--Lobbyt-->
+        <!--Waiting room-->
         <scene sceneID="Wdv-ue-kMN">
             <objects>
-                <viewController title="Lobbyt" id="nNr-cV-kbo" sceneMemberID="viewController">
+                <viewController id="nNr-cV-kbo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gWK-yp-fbT"/>
                         <viewControllerLayoutGuide type="bottom" id="bqW-tO-N9j"/>
@@ -170,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="-506" y="1565"/>
         </scene>
-        <!--Lobbyt-->
+        <!--Game-->
         <scene sceneID="FBc-xU-BIW">
             <objects>
-                <viewController title="Lobbyt" id="SrJ-Ep-G4S" sceneMemberID="viewController">
+                <viewController id="SrJ-Ep-G4S" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jnr-ef-1hT"/>
                         <viewControllerLayoutGuide type="bottom" id="yT8-Oi-70T"/>
@@ -212,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="-506" y="2235"/>
         </scene>
-        <!--Lobbyt-->
+        <!--Results-->
         <scene sceneID="nRJ-dN-KYO">
             <objects>
-                <viewController title="Lobbyt" id="10D-WO-R36" sceneMemberID="viewController">
+                <viewController id="10D-WO-R36" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UgH-7D-VO6"/>
                         <viewControllerLayoutGuide type="bottom" id="fcD-Zk-6DU"/>

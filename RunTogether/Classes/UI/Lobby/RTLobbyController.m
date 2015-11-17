@@ -10,10 +10,13 @@
 #import "NSObject+UserDefaults.h"
 
 #define dataSource  @[@1, @3, @5, @10]
+#define numberOfComponents 1
 
 @interface RTLobbyController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic, copy) NSString *isLogin;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
 @end
 
 @implementation RTLobbyController
@@ -28,7 +31,7 @@
 
 #pragma mark - datasource
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+    return numberOfComponents;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
@@ -50,15 +53,17 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark - button click
 - (IBAction)goClick:(UIButton *)sender {
     NSLog(@"go");
 }
 
+
+#pragma mark -
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
 @end
