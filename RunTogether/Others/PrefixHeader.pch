@@ -41,4 +41,20 @@
  */
 #define RTNotificationCenter [NSNotificationCenter defaultCenter]
 
+typedef enum {
+    RTLoginPasswordType,
+    RTLoginTokenType
+}RTLoginType;
+
+#define RTLoginTypeKey @"RTLoginTypeKey"
+#define RTLoginNotification @"RTLoginNotification"
+
+/**
+ *  接口类型
+ */
+#define RTPreparationsType @"preparations"
+#define RTSessionsType @"sessions"
+#define RTRegisterType @"users"
+
+
 #endif

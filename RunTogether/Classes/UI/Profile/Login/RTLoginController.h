@@ -10,4 +10,6 @@
 
 @interface RTLoginController : UIViewController
 
+// token 登录
+- (void)tokenLogin;
 @end

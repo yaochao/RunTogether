@@ -49,7 +49,7 @@
     params[@"password"] = _password.text;
     params[@"phone"] = _phoneNum.text;
     [MBProgressHUD showMessage:NSLocalizedString(@"请稍后...", nil)];
-    [RTNetworkTools postDataWithParams:params interfaceType:@"users" success:^(NSDictionary *responseObject) {
+    [RTNetworkTools postDataWithParams:params interfaceType:RTRegisterType success:^(NSDictionary *responseObject) {
         [MBProgressHUD hideHUD];
         NSLog(@"%@", responseObject);
         _responseObject = responseObject;
