@@ -91,7 +91,7 @@
             NSLog(@"%@", responseObject);
             self.responseObject = responseObject;
         } failure:^(NSError *error) {
-            NSLog(@"%@", error);
+            NSLog(@"error body - %@", error.userInfo[kErrorResponseObjectKey]);
         }];
         return ;
     }
