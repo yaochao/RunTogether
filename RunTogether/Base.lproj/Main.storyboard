@@ -10,7 +10,7 @@
         <scene sceneID="Qdc-W5-jGf">
             <objects>
                 <navigationController id="bdQ-GZ-tZe" customClass="RTBaseNavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lobby" image="success.png" id="wMF-ut-tgv"/>
+                    <tabBarItem key="tabBarItem" title="Lobby" image="star" id="sru-ac-hhm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThG-OO-80Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,30 +40,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-5J-LDm">
-                                <rect key="frame" x="40" y="192" width="520" height="216"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
+                                <rect key="frame" x="284" y="415" width="33" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="sth-Ej-tNz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Are you ready" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-gr-r9T">
+                                <rect key="frame" x="201" y="147" width="197" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-5J-LDm">
+                                <rect key="frame" x="40" y="191" width="520" height="216"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="dataSource" destination="ATG-eS-1Gb" id="7Ve-Vh-rNP"/>
                                     <outlet property="delegate" destination="ATG-eS-1Gb" id="QR3-Jw-O1G"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
-                                <rect key="frame" x="277" y="416" width="46" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Go"/>
-                                <connections>
-                                    <action selector="goClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="sth-Ej-tNz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-gr-r9T">
-                                <rect key="frame" x="274.5" y="164" width="51" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,9 +73,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MDi-5J-LDm" secondAttribute="trailing" constant="20" id="49b-N7-XW2"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="top" secondItem="HgI-gr-r9T" secondAttribute="bottom" constant="8" id="7N2-Uo-Lb8"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="IQP-X6-W8b"/>
+                            <constraint firstItem="eaS-lQ-0vV" firstAttribute="top" secondItem="MDi-5J-LDm" secondAttribute="bottom" constant="8" id="SlH-58-qv7"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="centerY" secondItem="yBr-aV-s1b" secondAttribute="centerY" id="cyx-tI-kHK"/>
                             <constraint firstItem="HgI-gr-r9T" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="djG-dw-uJ6"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="leading" secondItem="yBr-aV-s1b" secondAttribute="leadingMargin" constant="20" id="i3y-By-DEb"/>
+                            <constraint firstItem="eaS-lQ-0vV" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="yb5-68-eB1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lobby" id="zdW-57-SyF"/>
@@ -86,7 +90,7 @@
         <scene sceneID="ozW-w6-kUE">
             <objects>
                 <navigationController id="vKM-cT-fQw" customClass="RTBaseNavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Waiting room" image="success.png" id="wPM-MM-D0k"/>
+                    <tabBarItem key="tabBarItem" title="Waiting room" image="star" id="wPM-MM-D0k"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QCg-3R-6oX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,8 +136,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="bdQ-GZ-tZe" kind="relationship" relationship="viewControllers" id="UcW-58-nMK"/>
@@ -150,7 +152,7 @@
         <scene sceneID="lWI-zJ-JK5">
             <objects>
                 <navigationController id="8iL-vr-S3c" customClass="RTBaseNavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Game" image="success.png" id="1wp-UP-tsg"/>
+                    <tabBarItem key="tabBarItem" title="Game" image="star" id="1wp-UP-tsg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XjK-5q-cQ3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -192,7 +194,7 @@
         <scene sceneID="ETG-3D-Id9">
             <objects>
                 <navigationController id="oY9-q1-Y5I" customClass="RTBaseNavController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Results" image="success.png" id="zrY-Uq-gf7"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="star" id="zrY-Uq-gf7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7h6-dJ-T6u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -232,6 +234,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="success.png" width="28" height="28"/>
+        <image name="star" width="36" height="36"/>
     </resources>
 </document>
