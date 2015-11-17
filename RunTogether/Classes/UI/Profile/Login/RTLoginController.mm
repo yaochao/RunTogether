@@ -16,10 +16,7 @@
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 
 
-typedef enum {
-    RTLoginPasswordType,
-    RTLoginTokenType
-}RTLoginType;
+
 
 @interface RTLoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *phone;
@@ -32,6 +29,11 @@ typedef enum {
 @implementation RTLoginController
 
 #pragma mark - btnClick
+// 返回
+- (IBAction)cancelBtnClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 // 密码登录
 - (IBAction)loginBtnClick:(id)sender {
     // 判空
@@ -53,7 +55,7 @@ typedef enum {
 
 
 // token 登录
-- (IBAction)tokenLoginBtnClick:(id)sender {
+- (void)tokenLogin {
     [self loginWithPhone:[RTKeyChainTools getPhone] proof:[RTKeyChainTools getRememberToken] type:RTLoginTokenType];
 }
 
@@ -68,7 +70,7 @@ typedef enum {
     } else {
         params[@"remember_token"] = [RTKeyChainTools getRememberToken];
     }
-    [RTNetworkTools postDataWithParams:params interfaceType:@"sessions" success:^(NSDictionary *responseObject) {
+    [RTNetworkTools postDataWithParams:params interfaceType:RTSessionsType success:^(NSDictionary *responseObject) {
         [MBProgressHUD hideHUD];
         NSLog(@"%@", responseObject);
         _responseObject = responseObject;
@@ -80,30 +82,24 @@ typedef enum {
         }
         
         // 如果登录成功
-        [MBProgressHUD showSuccess:NSLocalizedString(@"登录成功", nil)];
-        if ([RTKeyChainTools savePhone:phone]) {
-            NSLog(@"phone存储成功");
-        }
-        if ([RTKeyChainTools saveRememberToken:responseObject[@"remember_token"]]) {
-            NSLog(@"remember_token存储成功");
-        }
-        if ([RTKeyChainTools saveUserId:[NSString stringWithFormat:@"%@", responseObject[@"user_id"]]]) {
-            NSLog(@"user_id存储成功");
-        }
-        if ([RTKeyChainTools saveSessionKey:responseObject[@"session_key"]]) {
-            NSLog(@"session_key存储成功");
-        }
-        if ([RTKeyChainTools saveEndpoint:responseObject[@"maxwell_endpoint"]]) {
-            NSLog(@"endpoint存储成功");
-        }
+        [RTKeyChainTools savePhone:phone];
+        [RTKeyChainTools saveRememberToken:responseObject[@"remember_token"]];
+        [RTKeyChainTools saveUserId:[NSString stringWithFormat:@"%@", responseObject[@"user_id"]]];
+        [RTKeyChainTools saveSessionKey:responseObject[@"session_key"]];
+        [RTKeyChainTools saveEndpoint:responseObject[@"maxwell_endpoint"]];
+
         // 判断是否需要跳转页面
         if (type == RTLoginPasswordType) {
-            self.locationVC = [[UIStoryboard storyboardWithName:@"RTLocation" bundle:nil] instantiateInitialViewController];
-            [self.navigationController pushViewController:self.locationVC animated:YES];
+            [MBProgressHUD showSuccess:NSLocalizedString(@"登录成功", nil)];
+            NSLog(@"登录成功");
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [MBProgressHUD showSuccess:NSLocalizedString(@"后台自动登录成功", nil)];
+            NSLog(@"后台自动登录成功");
         }
         // 打开Maxwell
         [self startMaxwellClient];
-     
+    
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUD];
         NSLog(@"网络错误 - %@", error);
@@ -111,7 +107,8 @@ typedef enum {
         NSString *errorMsg = [NSString stringWithFormat:NSLocalizedString(@"请检查您的网络连接\n错误代码 %li", nil), error.code];
         // 判断是否需要提示用户，隐式登录不需要
         if (type == RTLoginPasswordType) {
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"网络错误", nil) message:errorMsg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil] show];        }
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"网络错误", nil) message:errorMsg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil] show];
+        }
     }];
 }
 
@@ -142,7 +139,7 @@ typedef enum {
 #pragma mark - MaxwellListener超时
 - (void)onTimeoutNotification {
     if (![[RTKeyChainTools getLastNetworkReachabilityStatus] isEqualToString:@"unconnected"]) {
-        [self tokenLoginBtnClick:nil];
+        [self tokenLogin];
     }
 }
 
@@ -163,14 +160,14 @@ typedef enum {
         case AFNetworkReachabilityStatusReachableViaWWAN:
             NSLog(@" - 2/3/4G网络");
             if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
-                [self tokenLoginBtnClick:nil];
+                [self tokenLogin];
             }
             [RTKeyChainTools saveLastNetworkReachabilityStatus:@"2/3/4G"];
             break;
         case AFNetworkReachabilityStatusReachableViaWiFi:
             NSLog(@" - wifi网络");
             if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
-                [self tokenLoginBtnClick:nil];
+                [self tokenLogin];
             }
             [RTKeyChainTools saveLastNetworkReachabilityStatus:@"wifi"];
             break;

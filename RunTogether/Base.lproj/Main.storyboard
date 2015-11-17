@@ -40,13 +40,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
-                                <rect key="frame" x="284" y="416" width="33" height="42"/>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaS-lQ-0vV">
+                                <rect key="frame" x="265.5" y="416" width="70" height="42"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Match"/>
                                 <connections>
                                     <action selector="goClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="sth-Ej-tNz"/>
                                 </connections>
@@ -69,6 +67,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="MDi-5J-LDm" secondAttribute="trailing" constant="20" id="49b-N7-XW2"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="top" secondItem="HgI-gr-r9T" secondAttribute="bottom" constant="8" id="7N2-Uo-Lb8"/>
@@ -80,8 +79,17 @@
                             <constraint firstItem="eaS-lQ-0vV" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="yb5-68-eB1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lobby" id="zdW-57-SyF"/>
+                    <navigationItem key="navigationItem" title="Lobby" id="zdW-57-SyF">
+                        <barButtonItem key="rightBarButtonItem" title="退出登录" id="x7v-th-A34">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="logoutBtnClick:" destination="ATG-eS-1Gb" id="RZj-y3-KQV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="goBtn" destination="eaS-lQ-0vV" id="IoH-jG-UCI"/>
+                        <outlet property="logoutBtn" destination="x7v-th-A34" id="BQi-3U-gs1"/>
                         <outlet property="pickerView" destination="MDi-5J-LDm" id="0VP-5b-PeD"/>
                     </connections>
                 </viewController>
@@ -134,7 +142,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yKH-11-MxH">
             <objects>
-                <tabBarController id="6Sc-rO-Ee1" sceneMemberID="viewController">
+                <tabBarController id="6Sc-rO-Ee1" customClass="RTTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ai7-p3-cg8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

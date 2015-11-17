@@ -21,6 +21,7 @@
 		D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */; };
 		D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */; };
 		D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04F1BE84835007BB1EE /* UIView+Extension.m */; };
+		D239E1331BFACFE8009A963F /* RTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1321BFACFE8009A963F /* RTTabBarController.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -111,6 +112,8 @@
 		D22CF04E1BE84835007BB1EE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D22CF04F1BE84835007BB1EE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D22CF06C1BE88704007BB1EE /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
+		D239E1311BFACFE8009A963F /* RTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTTabBarController.h; sourceTree = "<group>"; };
+		D239E1321BFACFE8009A963F /* RTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTabBarController.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -293,6 +296,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		D239E1301BFACFB9009A963F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D239E1311BFACFE8009A963F /* RTTabBarController.h */,
+				D239E1321BFACFE8009A963F /* RTTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		D25526CA1BE6FA2B00CDEFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +414,7 @@
 				D2917FA81BE746CF00004AE7 /* Profile */,
 				D297FE8B1BEB30ED0029B3B0 /* Location */,
 				D26A6C7C1BF9E1F20033D56E /* Lobby */,
+				D239E1301BFACFB9009A963F /* Main */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -778,6 +791,7 @@
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
 				D2917FB21BE746CF00004AE7 /* RTLoginController.mm in Sources */,
+				D239E1331BFACFE8009A963F /* RTTabBarController.m in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,

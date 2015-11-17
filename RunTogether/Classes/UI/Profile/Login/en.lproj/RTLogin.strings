@@ -15,7 +15,7 @@
 "dVl-Am-bLh.text" = "123";
 
 /* Class = "UIButton"; normalTitle = "password登录"; ObjectID = "jkn-xk-Wyx"; */
-"jkn-xk-Wyx.normalTitle" = "passwordLogin";
+"jkn-xk-Wyx.normalTitle" = "Login";
 
 /* Class = "UIButton"; normalTitle = "注册"; ObjectID = "kq3-sh-pfg"; */
 "kq3-sh-pfg.normalTitle" = "Register";

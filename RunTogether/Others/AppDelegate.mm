@@ -22,7 +22,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     // 每次第一次进入程序，重置一下标示符
     [RTKeyChainTools saveLastNetworkReachabilityStatus:@"firstLaunch"];
 
