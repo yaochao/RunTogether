@@ -12,7 +12,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "RTNetworkTools.h"
 
-#define dataSource  @[@1, @3, @5, @10]
+#define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
 #define cancelMatch 101;
 
@@ -49,7 +49,7 @@
 
 #pragma mark - delegate
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [NSString stringWithFormat:@"%@ km", self.data[row]];
+    return [NSString stringWithFormat:@"%@ m", self.data[row]];
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     NSLog(@"select %li row", (long)row);
