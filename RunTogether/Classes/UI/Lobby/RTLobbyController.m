@@ -76,7 +76,7 @@
             [sender setTitle:@"Match" forState:UIControlStateNormal];
             [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         } failure:^(NSError *error) {
-            NSLog(@"%@", error);
+            NSLog(@"error body - %@", error.userInfo[kErrorResponseObjectKey]);
         }];
     }
     
