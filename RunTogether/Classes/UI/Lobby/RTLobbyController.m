@@ -113,7 +113,7 @@
     _responseObject = responseObject;
     // 处理
     // 返回成功
-    if (!responseObject[@""]) {
+    if (!responseObject[@"errorcode"]) {
         [self.goBtn setTitle:@"CancelMatch" forState:UIControlStateNormal];
         [self.goBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         self.goBtn.tag = cancelMatch; // tag = 101，取消匹配
