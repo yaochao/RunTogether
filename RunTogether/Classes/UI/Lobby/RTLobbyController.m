@@ -71,13 +71,15 @@
     if (sender.tag == 101) {
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
-        [RTNetworkTools postDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
+        [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
             NSLog(@"%@", responseObject);
             [sender setTitle:@"Match" forState:UIControlStateNormal];
             [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            sender.tag = 100;
         } failure:^(NSError *error) {
             NSLog(@"error body - %@", error.userInfo[kErrorResponseObjectKey]);
         }];
+        return;
     }
     
     // MatchBtn
