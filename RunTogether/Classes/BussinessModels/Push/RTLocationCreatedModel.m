@@ -7,6 +7,7 @@
 //
 
 #import "RTLocationCreatedModel.h"
+#import <MJExtension/MJExtension.h>
 
 @implementation RTLocationCreatedModel
 

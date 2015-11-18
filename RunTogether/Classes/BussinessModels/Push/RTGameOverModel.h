@@ -1,5 +1,5 @@
 //
-//  RTLocationCreatedModel.h
+//  RTGameOverModel.h
 //  RunTogether
 //
 //  Created by yaochao on 15/11/18.
@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RTLocationCreateBodyModel.h"
+#import "RTGameOverBodyModel.h"
 
-@interface RTLocationCreatedModel : NSObject
+@interface RTGameOverModel : NSObject
 
-@property (nonatomic, strong) RTLocationCreateBodyModel *body;
+@property (nonatomic, strong) RTGameOverBodyModel *body;
 @property (nonatomic, strong) NSString *date_added;
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *type;
+
 
 @end

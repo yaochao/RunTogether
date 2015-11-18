@@ -1,5 +1,5 @@
 //
-//  RTLocationCreatedModel.h
+//  RTGameRankChangedModel.h
 //  RunTogether
 //
 //  Created by yaochao on 15/11/18.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RTLocationCreateBodyModel.h"
+#import "RTGameRankChangedBodyModel.h"
 
-@interface RTLocationCreatedModel : NSObject
+@interface RTGameRankChangedModel : NSObject
 
-@property (nonatomic, strong) RTLocationCreateBodyModel *body;
+@property (nonatomic, strong) RTGameRankChangedBodyModel *body;
 @property (nonatomic, strong) NSString *date_added;
 @property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *type;

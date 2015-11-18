@@ -23,6 +23,16 @@
 		D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04F1BE84835007BB1EE /* UIView+Extension.m */; };
 		D239E1331BFACFE8009A963F /* RTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1321BFACFE8009A963F /* RTTabBarController.m */; };
 		D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */; };
+		D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E13B1BFC75B4009A963F /* RTLocationCreateBodyModel.m */; };
+		D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E13E1BFC7665009A963F /* RTGameStartedModel.m */; };
+		D239E1421BFC767F009A963F /* RTGameStartedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1411BFC767F009A963F /* RTGameStartedBodyModel.m */; };
+		D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1441BFC7775009A963F /* RTGameStartedBodyUsersModel.m */; };
+		D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1471BFC789B009A963F /* RTGameOverModel.m */; };
+		D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */; };
+		D239E14E1BFC78ED009A963F /* RTGameOverBodyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */; };
+		D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */; };
+		D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */; };
+		D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -117,6 +127,26 @@
 		D239E1321BFACFE8009A963F /* RTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTabBarController.m; sourceTree = "<group>"; };
 		D239E1371BFC6861009A963F /* RTLocationCreatedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationCreatedModel.h; sourceTree = "<group>"; };
 		D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationCreatedModel.m; sourceTree = "<group>"; };
+		D239E13A1BFC75B4009A963F /* RTLocationCreateBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationCreateBodyModel.h; sourceTree = "<group>"; };
+		D239E13B1BFC75B4009A963F /* RTLocationCreateBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationCreateBodyModel.m; sourceTree = "<group>"; };
+		D239E13D1BFC7665009A963F /* RTGameStartedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameStartedModel.h; sourceTree = "<group>"; };
+		D239E13E1BFC7665009A963F /* RTGameStartedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameStartedModel.m; sourceTree = "<group>"; };
+		D239E1401BFC767F009A963F /* RTGameStartedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameStartedBodyModel.h; sourceTree = "<group>"; };
+		D239E1411BFC767F009A963F /* RTGameStartedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameStartedBodyModel.m; sourceTree = "<group>"; };
+		D239E1431BFC7775009A963F /* RTGameStartedBodyUsersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameStartedBodyUsersModel.h; sourceTree = "<group>"; };
+		D239E1441BFC7775009A963F /* RTGameStartedBodyUsersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameStartedBodyUsersModel.m; sourceTree = "<group>"; };
+		D239E1461BFC789B009A963F /* RTGameOverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverModel.h; sourceTree = "<group>"; };
+		D239E1471BFC789B009A963F /* RTGameOverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverModel.m; sourceTree = "<group>"; };
+		D239E1491BFC78BC009A963F /* RTGameOverBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyModel.h; sourceTree = "<group>"; };
+		D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyModel.m; sourceTree = "<group>"; };
+		D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankModel.h; sourceTree = "<group>"; };
+		D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankModel.m; sourceTree = "<group>"; };
+		D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankUserModel.h; sourceTree = "<group>"; };
+		D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankUserModel.m; sourceTree = "<group>"; };
+		D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedModel.h; sourceTree = "<group>"; };
+		D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRankChangedModel.m; sourceTree = "<group>"; };
+		D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedBodyModel.h; sourceTree = "<group>"; };
+		D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRankChangedBodyModel.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -313,6 +343,26 @@
 			children = (
 				D239E1371BFC6861009A963F /* RTLocationCreatedModel.h */,
 				D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */,
+				D239E13A1BFC75B4009A963F /* RTLocationCreateBodyModel.h */,
+				D239E13B1BFC75B4009A963F /* RTLocationCreateBodyModel.m */,
+				D239E13D1BFC7665009A963F /* RTGameStartedModel.h */,
+				D239E13E1BFC7665009A963F /* RTGameStartedModel.m */,
+				D239E1401BFC767F009A963F /* RTGameStartedBodyModel.h */,
+				D239E1411BFC767F009A963F /* RTGameStartedBodyModel.m */,
+				D239E1431BFC7775009A963F /* RTGameStartedBodyUsersModel.h */,
+				D239E1441BFC7775009A963F /* RTGameStartedBodyUsersModel.m */,
+				D239E1461BFC789B009A963F /* RTGameOverModel.h */,
+				D239E1471BFC789B009A963F /* RTGameOverModel.m */,
+				D239E1491BFC78BC009A963F /* RTGameOverBodyModel.h */,
+				D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */,
+				D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */,
+				D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */,
+				D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */,
+				D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */,
+				D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */,
+				D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */,
+				D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */,
+				D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */,
 			);
 			path = Push;
 			sourceTree = "<group>";
@@ -792,28 +842,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
+				D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
+				D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */,
+				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
+				D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */,
 				D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */,
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
+				D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
+				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
 				D2917FB21BE746CF00004AE7 /* RTLoginController.mm in Sources */,
 				D239E1331BFACFE8009A963F /* RTTabBarController.m in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D26A6C7F1BF9E2630033D56E /* RTLobbyController.m in Sources */,
+				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
+				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
+				D239E1421BFC767F009A963F /* RTGameStartedBodyModel.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
 				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
@@ -828,6 +887,7 @@
 				D22CF0551BE84835007BB1EE /* NSDateFormatter+Category.m in Sources */,
 				D22CF0581BE84835007BB1EE /* NSString+Extension.m in Sources */,
 				D2C2F1B11BE9F1C40027A4A5 /* RTKeyChainTools.m in Sources */,
+				D239E14E1BFC78ED009A963F /* RTGameOverBodyRankModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
