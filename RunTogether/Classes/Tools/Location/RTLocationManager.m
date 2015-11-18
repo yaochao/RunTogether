@@ -116,7 +116,7 @@
 - (void)reverseGeocodeWith:(CLLocationCoordinate2D)point {
     
     
-    NSLog(@"要反编码的坐标 - %f - %f", point.latitude, point.longitude);
+//    NSLog(@"要反编码的坐标 - %f - %f", point.latitude, point.longitude);
     self.geoSearch.delegate = self;
     BMKReverseGeoCodeOption *option = [[BMKReverseGeoCodeOption alloc] init];
     option.reverseGeoPoint = point;
