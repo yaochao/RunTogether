@@ -92,9 +92,9 @@
         if (type == RTLoginPasswordType) {
             [MBProgressHUD showSuccess:NSLocalizedString(@"登录成功", nil)];
             NSLog(@"登录成功");
-//            [self dismissViewControllerAnimated:YES completion:nil];
-            self.locationVC = [[UIStoryboard storyboardWithName:@"RTLocation" bundle:nil] instantiateInitialViewController];
-            [self.navigationController pushViewController:self.locationVC animated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
+//            self.locationVC = [[UIStoryboard storyboardWithName:@"RTLocation" bundle:nil] instantiateInitialViewController];
+//            [self.navigationController pushViewController:self.locationVC animated:YES];
         } else {
             [MBProgressHUD showSuccess:NSLocalizedString(@"后台自动登录成功", nil)];
             NSLog(@"后台自动登录成功");

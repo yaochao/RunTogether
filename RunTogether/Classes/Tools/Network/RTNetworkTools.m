@@ -46,7 +46,7 @@
     NSString *completeUrl = [NSString stringWithFormat:@"%@/%@", BaseUrl, interfaceType];
     NSLog(@"请求的网络地址 - %@", completeUrl);
     
-    // 发送POST请求
+    // 发送GET请求
     [manager GET:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         success(responseObject);
@@ -55,6 +55,26 @@
         failure(error);
     }];
     
+}
+
+#pragma mark - DELETE 加载网络数据
++ (void)deleteDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id))success failure:(void (^)(NSError *))failure {
+    // 获得网络管理单例对象
+    RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
+    if (params == nil) {
+        params = [NSMutableDictionary dictionary];
+    }
+    
+    // 打印一下请求的地址
+    NSString *completeUrl = [BaseUrl stringByAppendingPathComponent:interfaceType];
+    NSLog(@"请求的网络地址 - %@", completeUrl);
+    
+    // 发送DELETE请求
+    [manager DELETE:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
+    }];
 }
 
 

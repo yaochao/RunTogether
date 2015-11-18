@@ -16,6 +16,9 @@
 // GET请求
 + (void)getDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
+// DELETE请求
++ (void)deleteDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
 // cookie操作
 + (void)saveCookies;
 + (void)loadCookies;
