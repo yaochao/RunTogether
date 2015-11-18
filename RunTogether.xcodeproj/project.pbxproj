@@ -22,6 +22,7 @@
 		D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */; };
 		D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04F1BE84835007BB1EE /* UIView+Extension.m */; };
 		D239E1331BFACFE8009A963F /* RTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1321BFACFE8009A963F /* RTTabBarController.m */; };
+		D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -114,6 +115,8 @@
 		D22CF06C1BE88704007BB1EE /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
 		D239E1311BFACFE8009A963F /* RTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTTabBarController.h; sourceTree = "<group>"; };
 		D239E1321BFACFE8009A963F /* RTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTabBarController.m; sourceTree = "<group>"; };
+		D239E1371BFC6861009A963F /* RTLocationCreatedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationCreatedModel.h; sourceTree = "<group>"; };
+		D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationCreatedModel.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -305,6 +308,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D239E1361BFC67D4009A963F /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				D239E1371BFC6861009A963F /* RTLocationCreatedModel.h */,
+				D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 		D25526CA1BE6FA2B00CDEFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +402,7 @@
 		D2917F881BE7083400004AE7 /* BussinessModels */ = {
 			isa = PBXGroup;
 			children = (
+				D239E1361BFC67D4009A963F /* Push */,
 				D297FE951BEB43AD0029B3B0 /* Location */,
 				D2917FBB1BE7707500004AE7 /* Profile */,
 			);
@@ -782,6 +795,7 @@
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
+				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
 				D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */,
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,

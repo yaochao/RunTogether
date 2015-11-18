@@ -14,7 +14,7 @@
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
-#define cancelMatch 101;
+#define cancelMatch 101
 
 @interface RTLobbyController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (nonatomic, strong) NSArray *data;
@@ -68,7 +68,7 @@
 - (IBAction)goClick:(UIButton *)sender {
     NSLog(@"go");
     // CancelMatchBtn
-    if (sender.tag == 101) {
+    if (sender.tag == cancelMatch) {
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
