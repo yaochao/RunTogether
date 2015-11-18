@@ -16,9 +16,27 @@
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message {
     NSLog(@"Listener - 收到了推送 %@", message->payload);
-//    NSString *payload = message->payload;
-//    NSDictionary *payloadDict = [NSJSONSerialization JSONObjectWithData:[payload dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
-//    [MBProgressHUD showSuccess:[NSString stringWithFormat:@"收到推送\nID - %@\nlatitude:%@\nlongitude:%@", payloadDict[@"body"][@"user_id"], payloadDict[@"body"][@"latitude"], payloadDict[@"body"][@"longitude"]]];
+    // 字符串转字典
+    NSData *data = [message->payload dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    switch ([dict[@"type"] integerValue]) {
+        case USER_LOCATION_CREATED:
+
+            break;
+        case TYPE_GAME_STARTED:
+            
+            break;
+        case TYPE_GAME_OVER:
+            
+            break;
+        case TYPE_GAME_RANK_CHANGED:
+            
+            break;
+
+            
+        default:
+            break;
+    }
 }
 
 // 当Maxwell超时的时候调用的方法

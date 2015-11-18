@@ -61,5 +61,12 @@ typedef enum {
  */
 #define kErrorResponseObjectKey @"kErrorResponseObjectKey"
 
+/**
+ *  推送消息的类型 type
+ */
+#define USER_LOCATION_CREATED 1
+#define TYPE_GAME_STARTED 1000
+#define TYPE_GAME_OVER 1001
+#define TYPE_GAME_RANK_CHANGED 1002
 
 #endif
