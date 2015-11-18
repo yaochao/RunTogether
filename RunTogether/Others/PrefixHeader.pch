@@ -56,5 +56,10 @@ typedef enum {
 #define RTSessionsType @"sessions"
 #define RTRegisterType @"users"
 
+/**
+ *  AFN 取出Error Response Body
+ */
+#define kErrorResponseObjectKey @"kErrorResponseObjectKey"
+
 
 #endif
