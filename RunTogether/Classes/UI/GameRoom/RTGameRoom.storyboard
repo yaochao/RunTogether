@@ -29,7 +29,7 @@
         <!--GameRoom-->
         <scene sceneID="2uP-g5-4YN">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="Fjl-Qa-zPy" customClass="RTGameRoomController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameRoomController" hidesBottomBarWhenPushed="YES" id="Fjl-Qa-zPy" customClass="RTGameRoomController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S3K-yk-lPf"/>
                         <viewControllerLayoutGuide type="bottom" id="rAe-iL-yJc"/>
@@ -41,7 +41,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LM-Fp-xTd" userLabel="topView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="比赛进行中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZY-cD-kkq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="比赛未开始" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZY-cD-kkq">
                                         <rect key="frame" x="225" y="57" width="150" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>

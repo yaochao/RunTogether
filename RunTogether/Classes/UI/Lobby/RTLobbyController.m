@@ -13,6 +13,7 @@
 #import "RTNetworkTools.h"
 #import "RTGameStartedBodyModel.h"
 #import "RTGameRoomController.h"
+#import "RTLocationController.h"
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
@@ -27,6 +28,7 @@
 
 @property (nonatomic, strong) RTLoginController *loginController;
 @property (nonatomic, strong) RTGameRoomController *gameRommController;
+@property (nonatomic, strong) RTLocationController *locationController;
 @property (nonatomic, strong) NSDictionary *responseObject;
 @end
 
@@ -88,6 +90,8 @@
     NSLog(@"go");
     // CancelMatchBtn
     if (sender.tag == cancelMatch) {
+        // 打开定位
+        [self.locationController startLocationBtnClick:nil];
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
@@ -105,6 +109,8 @@
     // 判断是否已登录
     if ([RTKeyChainTools getRememberToken]) {
         // 已登录
+        // 关闭定位
+        [self.locationController stopLocationBtnClick:nil];
         // 请求网络，进行匹配
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"distance"] = @([self.data[[self.pickerView selectedRowInComponent:0]] intValue]);
@@ -146,9 +152,17 @@
 - (RTGameRoomController *)gameRommController {
     if (_gameRommController == nil) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTGameRoom" bundle:nil];
-        _gameRommController = [sb instantiateInitialViewController];
+        _gameRommController = [sb instantiateViewControllerWithIdentifier:@"gameRoomController"];
+//        _gameRommController = [sb instantiateInitialViewController];
     }
     return _gameRommController;
+}
+
+- (RTLocationController *)locationController {
+    if (_locationController == nil) {
+        _locationController = [[RTLocationController alloc] init];
+    }
+    return _locationController;
 }
 
 

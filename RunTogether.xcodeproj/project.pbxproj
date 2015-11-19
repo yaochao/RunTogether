@@ -30,7 +30,6 @@
 		D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1471BFC789B009A963F /* RTGameOverModel.m */; };
 		D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */; };
 		D239E14E1BFC78ED009A963F /* RTGameOverBodyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */; };
-		D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */; };
 		D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */; };
 		D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */; };
 		D239E15B1BFD76E7009A963F /* RTGameRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15A1BFD76E7009A963F /* RTGameRoomController.m */; };
@@ -144,8 +143,6 @@
 		D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyModel.m; sourceTree = "<group>"; };
 		D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankModel.h; sourceTree = "<group>"; };
 		D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankModel.m; sourceTree = "<group>"; };
-		D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankUserModel.h; sourceTree = "<group>"; };
-		D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankUserModel.m; sourceTree = "<group>"; };
 		D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedModel.h; sourceTree = "<group>"; };
 		D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRankChangedModel.m; sourceTree = "<group>"; };
 		D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedBodyModel.h; sourceTree = "<group>"; };
@@ -365,8 +362,6 @@
 				D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */,
 				D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */,
 				D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */,
-				D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */,
-				D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */,
 				D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */,
 				D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */,
 				D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */,
@@ -870,7 +865,6 @@
 				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
-				D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */,
 				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
 				D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */,
