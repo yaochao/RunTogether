@@ -61,5 +61,22 @@ typedef enum {
  */
 #define kErrorResponseObjectKey @"kErrorResponseObjectKey"
 
+/**
+ *  推送消息的类型 type
+ */
+#define USER_LOCATION_CREATED 1
+#define TYPE_GAME_STARTED 1000
+#define TYPE_GAME_OVER 1001
+#define TYPE_GAME_RANK_CHANGED 1002
+// 推送消息的通知
+#define RTLocationCreatedNotification @"RTLocationCreatedNotification"
+#define RTGameStartedNotification @"RTGameStartedNotification"
+#define RTGameOverNotification @"RTGameOverNotification"
+#define RTGameRankChangedNotification @"RTGameRankChangedNotification"
+// 字典的Key
+#define RTLocationCreatedKey @"RTLocationCreatedKey"
+#define RTGameStartedKey @"RTGameStartedKey"
+#define RTGameOverKey @"RTGameOverKey"
+#define RTGameRankChangedKey @"RTGameRankChangedKey"
 
 #endif

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RTGameOverBodyRankUserModel.h"
+#import "RTGameStartedBodyUsersModel.h"
 
 @interface RTGameOverBodyRankModel : NSObject
 
 @property (nonatomic, strong) NSString *distance;
-@property (nonatomic, strong) RTGameOverBodyRankUserModel *user;
+@property (nonatomic, strong) RTGameStartedBodyUsersModel *user;
 
 @end

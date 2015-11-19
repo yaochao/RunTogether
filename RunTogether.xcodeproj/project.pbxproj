@@ -30,9 +30,11 @@
 		D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1471BFC789B009A963F /* RTGameOverModel.m */; };
 		D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */; };
 		D239E14E1BFC78ED009A963F /* RTGameOverBodyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */; };
-		D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */; };
 		D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */; };
 		D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */; };
+		D239E15B1BFD76E7009A963F /* RTGameRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15A1BFD76E7009A963F /* RTGameRoomController.m */; };
+		D239E15D1BFD76FF009A963F /* RTGameRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */; };
+		D239E1601BFD7BC7009A963F /* RTPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -141,12 +143,15 @@
 		D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyModel.m; sourceTree = "<group>"; };
 		D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankModel.h; sourceTree = "<group>"; };
 		D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankModel.m; sourceTree = "<group>"; };
-		D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameOverBodyRankUserModel.h; sourceTree = "<group>"; };
-		D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameOverBodyRankUserModel.m; sourceTree = "<group>"; };
 		D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedModel.h; sourceTree = "<group>"; };
 		D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRankChangedModel.m; sourceTree = "<group>"; };
 		D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRankChangedBodyModel.h; sourceTree = "<group>"; };
 		D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRankChangedBodyModel.m; sourceTree = "<group>"; };
+		D239E1591BFD76E7009A963F /* RTGameRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameRoomController.h; sourceTree = "<group>"; };
+		D239E15A1BFD76E7009A963F /* RTGameRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameRoomController.m; sourceTree = "<group>"; };
+		D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTGameRoom.storyboard; sourceTree = "<group>"; };
+		D239E15E1BFD7BC7009A963F /* RTPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPlayerCell.h; sourceTree = "<group>"; };
+		D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPlayerCell.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -357,14 +362,24 @@
 				D239E14A1BFC78BC009A963F /* RTGameOverBodyModel.m */,
 				D239E14C1BFC78ED009A963F /* RTGameOverBodyRankModel.h */,
 				D239E14D1BFC78ED009A963F /* RTGameOverBodyRankModel.m */,
-				D239E14F1BFC7B64009A963F /* RTGameOverBodyRankUserModel.h */,
-				D239E1501BFC7B64009A963F /* RTGameOverBodyRankUserModel.m */,
 				D239E1521BFC7BB3009A963F /* RTGameRankChangedModel.h */,
 				D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */,
 				D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */,
 				D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */,
 			);
 			path = Push;
+			sourceTree = "<group>";
+		};
+		D239E1581BFD7414009A963F /* GameRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D239E1591BFD76E7009A963F /* RTGameRoomController.h */,
+				D239E15A1BFD76E7009A963F /* RTGameRoomController.m */,
+				D239E15E1BFD7BC7009A963F /* RTPlayerCell.h */,
+				D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */,
+				D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */,
+			);
+			path = GameRoom;
 			sourceTree = "<group>";
 		};
 		D25526CA1BE6FA2B00CDEFC7 = {
@@ -477,6 +492,7 @@
 				D2917FA81BE746CF00004AE7 /* Profile */,
 				D297FE8B1BEB30ED0029B3B0 /* Location */,
 				D26A6C7C1BF9E1F20033D56E /* Lobby */,
+				D239E1581BFD7414009A963F /* GameRoom */,
 				D239E1301BFACFB9009A963F /* Main */,
 			);
 			path = UI;
@@ -767,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C309A51BF5D3DA0010D3F7 /* RTLogin.storyboard in Resources */,
+				D239E15D1BFD76FF009A963F /* RTGameRoom.storyboard in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
@@ -843,11 +860,11 @@
 			files = (
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */,
+				D239E15B1BFD76E7009A963F /* RTGameRoomController.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2BDA6621BEF937000F2F2F7 /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
-				D239E1511BFC7B64009A963F /* RTGameOverBodyRankUserModel.m in Sources */,
 				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
 				D2917FB31BE746CF00004AE7 /* RTRegisterController.m in Sources */,
 				D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */,
@@ -872,6 +889,7 @@
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
+				D239E1601BFD7BC7009A963F /* RTPlayerCell.m in Sources */,
 				D239E1421BFC767F009A963F /* RTGameStartedBodyModel.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RTLocationController : UIViewController
-
+- (IBAction)startLocationBtnClick:(id)sender;
+- (IBAction)stopLocationBtnClick:(id)sender;
 @end

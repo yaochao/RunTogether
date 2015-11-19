@@ -11,6 +11,9 @@
 #import "RTKeyChainTools.h"
 #import "MBProgressHUD+MJ.h"
 #import "RTNetworkTools.h"
+#import "RTGameStartedBodyModel.h"
+#import "RTGameRoomController.h"
+#import "RTLocationController.h"
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
@@ -24,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *goBtn;
 
 @property (nonatomic, strong) RTLoginController *loginController;
+@property (nonatomic, strong) RTGameRoomController *gameRommController;
+@property (nonatomic, strong) RTLocationController *locationController;
 @property (nonatomic, strong) NSDictionary *responseObject;
 @end
 
@@ -35,6 +40,18 @@
     // 数据源
     self.data = dataSource;
     [self.pickerView selectRow:1 inComponent:0 animated:YES];
+    // 注册通知
+    [RTNotificationCenter addObserver:self selector:@selector(receivedPush:) name:RTGameStartedNotification object:nil];
+}
+
+#pragma mark -
+- (void)receivedPush:(NSNotification *)notification {
+    // 模态出GameRoomController
+    RTGameStartedBodyModel *bodyModel = notification.userInfo[RTGameStartedKey];
+    self.gameRommController.bodyModel = bodyModel;
+    [self presentViewController:self.gameRommController animated:YES completion:nil];
+    // 对本身控件的处理
+    // ...
 }
 
 
@@ -65,10 +82,16 @@
     [MBProgressHUD showSuccess:@"您已退出登录"];
 }
 
+- (IBAction)puchBtnClick:(id)sender {
+    [self.navigationController presentViewController:self.gameRommController animated:YES completion:nil];
+}
+
 - (IBAction)goClick:(UIButton *)sender {
     NSLog(@"go");
     // CancelMatchBtn
     if (sender.tag == cancelMatch) {
+        // 打开定位
+        [self.locationController startLocationBtnClick:nil];
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
@@ -86,6 +109,8 @@
     // 判断是否已登录
     if ([RTKeyChainTools getRememberToken]) {
         // 已登录
+        // 关闭定位
+        [self.locationController stopLocationBtnClick:nil];
         // 请求网络，进行匹配
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"distance"] = @([self.data[[self.pickerView selectedRowInComponent:0]] intValue]);
@@ -121,6 +146,23 @@
     }
     // 返回失败
     // ...
+}
+
+#pragma mark - getter
+- (RTGameRoomController *)gameRommController {
+    if (_gameRommController == nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTGameRoom" bundle:nil];
+        _gameRommController = [sb instantiateViewControllerWithIdentifier:@"gameRoomController"];
+//        _gameRommController = [sb instantiateInitialViewController];
+    }
+    return _gameRommController;
+}
+
+- (RTLocationController *)locationController {
+    if (_locationController == nil) {
+        _locationController = [[RTLocationController alloc] init];
+    }
+    return _locationController;
 }
 
 
