@@ -14,7 +14,7 @@
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
-#define cancelMatch 101;
+#define cancelMatch 101
 
 @interface RTLobbyController () <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (nonatomic, strong) NSArray *data;
@@ -68,16 +68,18 @@
 - (IBAction)goClick:(UIButton *)sender {
     NSLog(@"go");
     // CancelMatchBtn
-    if (sender.tag == 101) {
+    if (sender.tag == cancelMatch) {
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
-        [RTNetworkTools postDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
+        [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
             NSLog(@"%@", responseObject);
             [sender setTitle:@"Match" forState:UIControlStateNormal];
             [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+            sender.tag = 100;
         } failure:^(NSError *error) {
             NSLog(@"error body - %@", error.userInfo[kErrorResponseObjectKey]);
         }];
+        return;
     }
     
     // MatchBtn
@@ -111,7 +113,7 @@
     _responseObject = responseObject;
     // 处理
     // 返回成功
-    if (!responseObject[@""]) {
+    if (!responseObject[@"errorcode"]) {
         [self.goBtn setTitle:@"CancelMatch" forState:UIControlStateNormal];
         [self.goBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         self.goBtn.tag = cancelMatch; // tag = 101，取消匹配
