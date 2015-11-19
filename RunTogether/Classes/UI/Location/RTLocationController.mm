@@ -55,8 +55,9 @@
 
 #pragma mark - 收到坐标变化的通知
 - (void)receivedLocationNotification:(NSNotification *)notification {
+    
     //去除HUD
-//    [MBProgressHUD hideHUD];
+    [MBProgressHUD hideHUD];
     _locationModel = notification.userInfo[@"LocationSuccessKey"];
     // 更新地理坐标显示
     _coordinateLbl.text = [NSString stringWithFormat:@"%f - %f", _locationModel.point.latitude, _locationModel.point.longitude];
@@ -76,7 +77,7 @@
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(NSDictionary *responseObject) {
         NSLog(@"位置更新成功 - %@", responseObject);
     } failure:^(NSError *error) {
-        NSLog(@"位置更新失败 - %@", error);
+        NSLog(@"位置更新失败 - %@\n%@", error, error.userInfo[kErrorResponseObjectKey]);
     }];
 
     return YES;
@@ -85,17 +86,19 @@
 
 #pragma mark - btnClick
 - (IBAction)startLocationBtnClick:(id)sender {
-//    [MBProgressHUD showMessage:@"正在开启定位..."];
+    // 注册通知，接受定位的通知
+    [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
+    [MBProgressHUD showMessage:@"正在开启定位..."];
     [RTLocationTools startLocation];
 #warning 重大BUG已修复
     [self initTimer];
 }
 
 - (IBAction)stopLocationBtnClick:(id)sender {
-//    [MBProgressHUD showMessage:@"正在关闭定位..."];
+    [MBProgressHUD showMessage:@"正在关闭定位..."];
     [RTLocationTools stopLocation];
-//    _coordinateLbl.text = @"请开启定位";
-//    [MBProgressHUD hideHUD];
+    _coordinateLbl.text = @"请开启定位";
+    [MBProgressHUD hideHUD];
     [self invalidateTimer];
 }
 
