@@ -12,8 +12,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "RTNetworkTools.h"
 #import "RTGameStartedBodyModel.h"
-#import "RTGameStartedBodyUsersModel.h"
-#import <MJExtension/MJExtension.h>
+#import "RTGameRoomController.h"
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
@@ -27,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *goBtn;
 
 @property (nonatomic, strong) RTLoginController *loginController;
+@property (nonatomic, strong) RTGameRoomController *gameRommController;
 @property (nonatomic, strong) NSDictionary *responseObject;
 @end
 
@@ -42,8 +42,14 @@
     [RTNotificationCenter addObserver:self selector:@selector(receivedPush:) name:RTGameStartedNotification object:nil];
 }
 
+#pragma mark -
 - (void)receivedPush:(NSNotification *)notification {
-    
+    // 模态出GameRoomController
+    RTGameStartedBodyModel *bodyModel = notification.userInfo[RTGameStartedKey];
+    self.gameRommController.bodyModel = bodyModel;
+    [self presentViewController:self.gameRommController animated:YES completion:nil];
+    // 对本身控件的处理
+    // ...
 }
 
 
@@ -72,6 +78,10 @@
 - (IBAction)logoutBtnClick:(UIBarButtonItem *)sender {
     [RTKeyChainTools removeRememberToken];
     [MBProgressHUD showSuccess:@"您已退出登录"];
+}
+
+- (IBAction)puchBtnClick:(id)sender {
+    [self.navigationController presentViewController:self.gameRommController animated:YES completion:nil];
 }
 
 - (IBAction)goClick:(UIButton *)sender {
@@ -130,6 +140,15 @@
     }
     // 返回失败
     // ...
+}
+
+#pragma mark - getter
+- (RTGameRoomController *)gameRommController {
+    if (_gameRommController == nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTGameRoom" bundle:nil];
+        _gameRommController = [sb instantiateInitialViewController];
+    }
+    return _gameRommController;
 }
 
 

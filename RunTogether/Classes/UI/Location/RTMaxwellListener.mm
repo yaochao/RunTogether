@@ -9,6 +9,11 @@
 
 #import "RTMaxwellListener.h"
 #import "MBProgressHUD+MJ.h"
+#import "RTGameStartedBodyModel.h"
+#import "RTLocationCreateBodyModel.h"
+#import "RTGameOverBodyModel.h"
+#import "RTGameRankChangedBodyModel.h"
+#import <MJExtension/MJExtension.h>
 
 @implementation RTMaxwellListener
 
@@ -21,16 +26,16 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     switch ([dict[@"type"] integerValue]) {
         case USER_LOCATION_CREATED:
-            [RTNotificationCenter postNotificationName:RTLocationCreatedNotification object:nil userInfo:@{RTLocationCreatedKey : dict}];
+            [RTNotificationCenter postNotificationName:RTLocationCreatedNotification object:nil userInfo:@{RTLocationCreatedKey : [RTLocationCreateBodyModel objectWithKeyValues:dict[@"body"]]}];
             break;
         case TYPE_GAME_STARTED:
-            [RTNotificationCenter postNotificationName:RTGameStartedNotification object:nil userInfo:@{RTGameStartedKey : dict}];
+            [RTNotificationCenter postNotificationName:RTGameStartedNotification object:nil userInfo:@{RTGameStartedKey : [RTGameStartedBodyModel objectWithKeyValues:dict[@"body"]]}];
             break;
         case TYPE_GAME_OVER:
-            [RTNotificationCenter postNotificationName:RTGameOverNotification object:nil userInfo:@{RTGameOverKey : dict}];
+            [RTNotificationCenter postNotificationName:RTGameOverNotification object:nil userInfo:@{RTGameOverKey : [RTGameOverBodyModel objectWithKeyValues:dict[@"body"]]}];
             break;
         case TYPE_GAME_RANK_CHANGED:
-            [RTNotificationCenter postNotificationName:RTGameRankChangedNotification object:nil userInfo:@{RTGameRankChangedKey : dict}];
+            [RTNotificationCenter postNotificationName:RTGameRankChangedNotification object:nil userInfo:@{RTGameRankChangedKey : [RTGameRankChangedBodyModel objectWithKeyValues:dict[@"body"]]}];
             break;
         default:
             break;

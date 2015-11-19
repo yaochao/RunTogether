@@ -64,6 +64,14 @@
                                     <outlet property="delegate" destination="ATG-eS-1Gb" id="QR3-Jw-O1G"/>
                                 </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-5d-YJ2">
+                                <rect key="frame" x="283" y="466" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="push"/>
+                                <connections>
+                                    <action selector="puchBtnClick:" destination="ATG-eS-1Gb" eventType="touchUpInside" id="k6O-VK-OjD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,9 +80,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MDi-5J-LDm" secondAttribute="trailing" constant="20" id="49b-N7-XW2"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="top" secondItem="HgI-gr-r9T" secondAttribute="bottom" constant="8" id="7N2-Uo-Lb8"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="IQP-X6-W8b"/>
+                            <constraint firstItem="ay7-5d-YJ2" firstAttribute="top" secondItem="eaS-lQ-0vV" secondAttribute="bottom" constant="8" id="Kat-0n-5c3"/>
                             <constraint firstItem="eaS-lQ-0vV" firstAttribute="top" secondItem="MDi-5J-LDm" secondAttribute="bottom" constant="8" id="SlH-58-qv7"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="centerY" secondItem="yBr-aV-s1b" secondAttribute="centerY" id="cyx-tI-kHK"/>
                             <constraint firstItem="HgI-gr-r9T" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="djG-dw-uJ6"/>
+                            <constraint firstItem="ay7-5d-YJ2" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="dux-YG-s9k"/>
                             <constraint firstItem="MDi-5J-LDm" firstAttribute="leading" secondItem="yBr-aV-s1b" secondAttribute="leadingMargin" constant="20" id="i3y-By-DEb"/>
                             <constraint firstItem="eaS-lQ-0vV" firstAttribute="centerX" secondItem="yBr-aV-s1b" secondAttribute="centerX" id="yb5-68-eB1"/>
                         </constraints>
