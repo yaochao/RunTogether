@@ -92,11 +92,12 @@
     NSLog(@"go");
     // CancelMatchBtn
     if (sender.tag == cancelMatch) {
-        // 打开定位
-        [self.locationController stopLocationBtnClick:nil];
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
+            // 打开定位
+            [self.locationController stopLocationBtnClick:nil];
+            
             NSLog(@"%@", responseObject);
             [sender setTitle:@"Match" forState:UIControlStateNormal];
             [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
