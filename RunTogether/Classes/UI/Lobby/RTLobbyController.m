@@ -84,17 +84,20 @@
 
 - (IBAction)puchBtnClick:(id)sender {
     [self.navigationController presentViewController:self.gameRommController animated:YES completion:nil];
+    // 打开定位
+    [self.locationController startLocationBtnClick:nil];
 }
 
 - (IBAction)goClick:(UIButton *)sender {
     NSLog(@"go");
     // CancelMatchBtn
     if (sender.tag == cancelMatch) {
-        // 打开定位
-        [self.locationController startLocationBtnClick:nil];
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
+            // 打开定位
+            [self.locationController stopLocationBtnClick:nil];
+            
             NSLog(@"%@", responseObject);
             [sender setTitle:@"Match" forState:UIControlStateNormal];
             [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -110,7 +113,7 @@
     if ([RTKeyChainTools getRememberToken]) {
         // 已登录
         // 关闭定位
-        [self.locationController stopLocationBtnClick:nil];
+        [self.locationController startLocationBtnClick:nil];
         // 请求网络，进行匹配
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"distance"] = @([self.data[[self.pickerView selectedRowInComponent:0]] intValue]);

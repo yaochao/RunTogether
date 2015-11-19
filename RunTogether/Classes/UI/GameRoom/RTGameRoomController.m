@@ -51,6 +51,13 @@
         // ...
     }];
 }
+// 第二个退出
+- (IBAction)quit:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        // 自身退出后的处理...内存等
+        // ...
+    }];
+}
 
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
