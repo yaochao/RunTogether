@@ -180,6 +180,7 @@
 
 #pragma mark - viewDiaLoad
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // 注册通知
     [RTNotificationCenter addObserver:self selector:@selector(reachabilityDidChange:) name:AFNetworkingReachabilityDidChangeNotification object:nil];

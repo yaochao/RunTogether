@@ -21,19 +21,17 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     switch ([dict[@"type"] integerValue]) {
         case USER_LOCATION_CREATED:
-
+            [RTNotificationCenter postNotificationName:RTLocationCreatedNotification object:nil userInfo:@{RTLocationCreatedKey : dict}];
             break;
         case TYPE_GAME_STARTED:
-            
+            [RTNotificationCenter postNotificationName:RTGameStartedNotification object:nil userInfo:@{RTGameStartedKey : dict}];
             break;
         case TYPE_GAME_OVER:
-            
+            [RTNotificationCenter postNotificationName:RTGameOverNotification object:nil userInfo:@{RTGameOverKey : dict}];
             break;
         case TYPE_GAME_RANK_CHANGED:
-            
+            [RTNotificationCenter postNotificationName:RTGameRankChangedNotification object:nil userInfo:@{RTGameRankChangedKey : dict}];
             break;
-
-            
         default:
             break;
     }
@@ -43,9 +41,9 @@
 - (void) onTimeout {
     NSLog(@"Listener - onTimeout");
     [RTNotificationCenter postNotificationName:@"MaxwellTimeoutNotification" object:nil];
-
 }
 
+// Failure
 - (void) onFailure:(int)errorCode
                   :(NSString *)errorMessage {
     NSLog(@"Listener - onFailure,%@", errorMessage);

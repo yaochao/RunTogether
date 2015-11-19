@@ -11,6 +11,9 @@
 #import "RTKeyChainTools.h"
 #import "MBProgressHUD+MJ.h"
 #import "RTNetworkTools.h"
+#import "RTGameStartedBodyModel.h"
+#import "RTGameStartedBodyUsersModel.h"
+#import <MJExtension/MJExtension.h>
 
 #define dataSource  @[@1000, @3000, @5000, @10000]
 #define numberOfComponents 1
@@ -35,6 +38,12 @@
     // 数据源
     self.data = dataSource;
     [self.pickerView selectRow:1 inComponent:0 animated:YES];
+    // 注册通知
+    [RTNotificationCenter addObserver:self selector:@selector(receivedPush:) name:RTGameStartedNotification object:nil];
+}
+
+- (void)receivedPush:(NSNotification *)notification {
+    
 }
 
 

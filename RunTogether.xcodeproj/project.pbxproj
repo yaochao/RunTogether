@@ -367,6 +367,13 @@
 			path = Push;
 			sourceTree = "<group>";
 		};
+		D239E1581BFD7414009A963F /* GameRoom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameRoom;
+			sourceTree = "<group>";
+		};
 		D25526CA1BE6FA2B00CDEFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +484,7 @@
 				D2917FA81BE746CF00004AE7 /* Profile */,
 				D297FE8B1BEB30ED0029B3B0 /* Location */,
 				D26A6C7C1BF9E1F20033D56E /* Lobby */,
+				D239E1581BFD7414009A963F /* GameRoom */,
 				D239E1301BFACFB9009A963F /* Main */,
 			);
 			path = UI;
