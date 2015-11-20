@@ -48,8 +48,8 @@
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-aU-MkH">
-                                        <rect key="frame" x="546" y="8" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhD-aU-MkH">
+                                        <rect key="frame" x="562" y="8" width="30" height="30"/>
                                         <animations/>
                                         <state key="normal" title="退出">
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,9 +62,11 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WhD-aU-MkH" secondAttribute="trailing" constant="8" id="Egj-L1-Eqb"/>
                                     <constraint firstAttribute="height" constant="150" id="Zy6-Eo-eRi"/>
                                     <constraint firstItem="oZY-cD-kkq" firstAttribute="centerY" secondItem="8LM-Fp-xTd" secondAttribute="centerY" id="es3-fh-Boh"/>
                                     <constraint firstItem="oZY-cD-kkq" firstAttribute="centerX" secondItem="8LM-Fp-xTd" secondAttribute="centerX" id="s7V-Aa-jk3"/>
+                                    <constraint firstItem="WhD-aU-MkH" firstAttribute="top" secondItem="8LM-Fp-xTd" secondAttribute="top" constant="8" id="x6R-fl-MFI"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-u4-sbc">
