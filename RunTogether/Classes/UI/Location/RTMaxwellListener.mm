@@ -13,6 +13,7 @@
 #import "RTLocationCreateBodyModel.h"
 #import "RTGameOverBodyModel.h"
 #import "RTGameRankChangedBodyModel.h"
+#import "RTGameDistanceChangedBodyModel.h"
 #import <MJExtension/MJExtension.h>
 
 @implementation RTMaxwellListener
@@ -33,6 +34,9 @@
             break;
         case TYPE_GAME_OVER:
             [RTNotificationCenter postNotificationName:RTGameOverNotification object:nil userInfo:@{RTGameOverKey : [RTGameOverBodyModel objectWithKeyValues:dict[@"body"]]}];
+            break;
+        case TYPE_GAME_DISTANCE_CHANGED:
+            [RTNotificationCenter postNotificationName:RTGameDistanceChangedNotification object:nil userInfo:@{RTGameDistanceChangedKey : [RTGameDistanceChangedBodyModel objectWithKeyValues:dict[@"body"]]}];
             break;
         case TYPE_GAME_RANK_CHANGED:
             [RTNotificationCenter postNotificationName:RTGameRankChangedNotification object:nil userInfo:@{RTGameRankChangedKey : [RTGameRankChangedBodyModel objectWithKeyValues:dict[@"body"]]}];
