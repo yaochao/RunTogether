@@ -95,7 +95,7 @@
         // 请求网络，取消匹配
         NSString *interfaceType = [NSString stringWithFormat:@"preparations/%@", self.responseObject[@"id"]];
         [RTNetworkTools deleteDataWithParams:nil interfaceType:interfaceType success:^(NSDictionary *responseObject) {
-            // 打开定位
+            // 关闭定位
             [self.locationController stopLocationBtnClick:nil];
             
             NSLog(@"%@", responseObject);
@@ -112,18 +112,19 @@
     // 判断是否已登录
     if ([RTKeyChainTools getRememberToken]) {
         // 已登录
-        // 关闭定位
-        [self.locationController startLocationBtnClick:nil];
         // 请求网络，进行匹配
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"distance"] = @([self.data[[self.pickerView selectedRowInComponent:0]] intValue]);
         [RTNetworkTools postDataWithParams:params interfaceType:RTPreparationsType success:^(NSDictionary *responseObject) {
             NSLog(@"%@", responseObject);
+            // 给本身变量赋值
             self.responseObject = responseObject;
+            // 打开定位
+            [self.locationController startLocationBtnClick:nil];
         } failure:^(NSError *error) {
             NSString *errorbody = error.userInfo[kErrorResponseObjectKey];
             NSLog(@"error body - %@",errorbody);
-            [MBProgressHUD showError:[NSString stringWithFormat:@"%@", errorbody]];
+            [MBProgressHUD showError:[NSString stringWithFormat:@"%@", error.userInfo[kErrorResponseObjectKey][@"detail"]]];
         }];
         return ;
     }
