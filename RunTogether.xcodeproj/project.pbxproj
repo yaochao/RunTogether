@@ -157,7 +157,7 @@
 		D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameDistanceChangedBodyModel.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D25526E11BE6FA2C00CDEFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D25526E61BE6FA2C00CDEFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };

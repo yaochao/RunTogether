@@ -121,7 +121,9 @@
             NSLog(@"%@", responseObject);
             self.responseObject = responseObject;
         } failure:^(NSError *error) {
-            NSLog(@"error body - %@", error.userInfo[kErrorResponseObjectKey]);
+            NSString *errorbody = error.userInfo[kErrorResponseObjectKey];
+            NSLog(@"error body - %@",errorbody);
+            [MBProgressHUD showError:[NSString stringWithFormat:@"%@", errorbody]];
         }];
         return ;
     }
