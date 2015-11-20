@@ -21,25 +21,29 @@
 // 每次推送会调用3次这个方法
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message {
-    NSLog(@"Listener - 收到了推送 %@", message->payload);
     // 字符串转字典
     NSData *data = [message->payload dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     switch ([dict[@"type"] integerValue]) {
         case USER_LOCATION_CREATED:
             [RTNotificationCenter postNotificationName:RTLocationCreatedNotification object:nil userInfo:@{RTLocationCreatedKey : [RTLocationCreateBodyModel objectWithKeyValues:dict[@"body"]]}];
+            NSLog(@"Listener - 收到了位置更新的推送 %@", message->payload);
             break;
         case TYPE_GAME_STARTED:
             [RTNotificationCenter postNotificationName:RTGameStartedNotification object:nil userInfo:@{RTGameStartedKey : [RTGameStartedBodyModel objectWithKeyValues:dict[@"body"]]}];
+            NSLog(@"Listener - 收到了游戏开始的推送 %@", message->payload);
             break;
         case TYPE_GAME_OVER:
             [RTNotificationCenter postNotificationName:RTGameOverNotification object:nil userInfo:@{RTGameOverKey : [RTGameOverBodyModel objectWithKeyValues:dict[@"body"]]}];
+            NSLog(@"Listener - 收到了游戏结束的推送 %@", message->payload);
             break;
         case TYPE_GAME_DISTANCE_CHANGED:
             [RTNotificationCenter postNotificationName:RTGameDistanceChangedNotification object:nil userInfo:@{RTGameDistanceChangedKey : [RTGameDistanceChangedBodyModel objectWithKeyValues:dict[@"body"]]}];
+            NSLog(@"Listener - 收到了距离改变的推送 %@", message->payload);
             break;
         case TYPE_GAME_RANK_CHANGED:
             [RTNotificationCenter postNotificationName:RTGameRankChangedNotification object:nil userInfo:@{RTGameRankChangedKey : [RTGameRankChangedBodyModel objectWithKeyValues:dict[@"body"]]}];
+            NSLog(@"Listener - 收到了排名改变的推送 %@", message->payload);
             break;
         default:
             break;
