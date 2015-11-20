@@ -35,6 +35,7 @@
 		D239E15B1BFD76E7009A963F /* RTGameRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15A1BFD76E7009A963F /* RTGameRoomController.m */; };
 		D239E15D1BFD76FF009A963F /* RTGameRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */; };
 		D239E1601BFD7BC7009A963F /* RTPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */; };
+		D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -152,6 +153,8 @@
 		D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTGameRoom.storyboard; sourceTree = "<group>"; };
 		D239E15E1BFD7BC7009A963F /* RTPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPlayerCell.h; sourceTree = "<group>"; };
 		D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPlayerCell.m; sourceTree = "<group>"; };
+		D239E1611BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameDistanceChangedBodyModel.h; sourceTree = "<group>"; };
+		D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameDistanceChangedBodyModel.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				D239E1531BFC7BB3009A963F /* RTGameRankChangedModel.m */,
 				D239E1551BFC7C34009A963F /* RTGameRankChangedBodyModel.h */,
 				D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */,
+				D239E1611BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.h */,
+				D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */,
 			);
 			path = Push;
 			sourceTree = "<group>";
@@ -886,6 +891,7 @@
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
+				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,

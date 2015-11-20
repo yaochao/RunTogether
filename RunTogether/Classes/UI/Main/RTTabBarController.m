@@ -55,7 +55,6 @@
     return _loginController;
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

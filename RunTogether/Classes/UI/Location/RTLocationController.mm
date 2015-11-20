@@ -88,7 +88,7 @@
 - (IBAction)startLocationBtnClick:(id)sender {
     // 注册通知，接受定位的通知
     [RTNotificationCenter addObserver:self selector:@selector(receivedLocationNotification:) name:@"LocationSuccessNotification" object:nil];
-    [MBProgressHUD showMessage:@"正在开启定位..."];
+//    [MBProgressHUD showMessage:@"正在开启定位..."]; // 在4s(9.1)上有问题，在收到定位通知后去不掉
     [RTLocationTools startLocation];
 #warning 重大BUG已修复
     [self initTimer];
