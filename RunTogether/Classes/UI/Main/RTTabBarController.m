@@ -21,8 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [RTNotificationCenter addObserver:self selector:@selector(receivedLoginNotification:) name:RTLoginNotification object:nil];
-    // 每次进来的时候自动登录，先清空token
-    [RTKeyChainTools removeRememberToken];
+    // 每次进来的时候自动登录
+//    [RTKeyChainTools removeRememberToken];
+    RTLoginController *loginVC = [[RTLoginController alloc] init];
+    if ([RTKeyChainTools getRememberToken]) {
+        [loginVC tokenLogin];
+    }
 }
 
 // 登录通知调用
