@@ -69,13 +69,18 @@ typedef enum {
 #define TYPE_GAME_OVER 1001
 #define TYPE_GAME_DISTANCE_CHANGED 1002
 #define TYPE_GAME_RANK_CHANGED 1003
-//推送消息的通知
+/**
+ *  推送消息的通知
+ */
 #define RTLocationCreatedNotification @"RTLocationCreatedNotification"
 #define RTGameStartedNotification @"RTGameStartedNotification"
 #define RTGameOverNotification @"RTGameOverNotification"
 #define RTGameDistanceChangedNotification @"RTGameDistanceChangedNotification"
 #define RTGameRankChangedNotification @"RTGameRankChangedNotification"
-// 字典的Key
+
+/**
+ *  字典的Key
+ */
 #define RTLocationCreatedKey @"RTLocationCreatedKey"
 #define RTGameStartedKey @"RTGameStartedKey"
 #define RTGameOverKey @"RTGameOverKey"
