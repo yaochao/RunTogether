@@ -33,10 +33,8 @@
         manager.securityPolicy = securityPolicy;
         
         // 方式二：直接忽略，会遭到中间人攻击的危险(建议方式一)
-        // manager.securityPolicy.allowInvalidCertificates = YES;
-        // manager.securityPolicy.validatesDomainName = NO;
-        
-        
+//         manager.securityPolicy.allowInvalidCertificates = YES;
+//         manager.securityPolicy.validatesDomainName = NO;
     });
     return manager;
 }
