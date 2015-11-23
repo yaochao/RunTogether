@@ -36,6 +36,7 @@
 		D239E15D1BFD76FF009A963F /* RTGameRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D239E15C1BFD76FF009A963F /* RTGameRoom.storyboard */; };
 		D239E1601BFD7BC7009A963F /* RTPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */; };
 		D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */; };
+		D239E1681C02B231009A963F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -60,7 +61,6 @@
 		D2BDA6641BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2BDA65C1BEF937000F2F2F7 /* subscriber_publisher_structs.pb.cc */; };
 		D2BDA6651BEF937000F2F2F7 /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BDA6601BEF937000F2F2F7 /* google.framework */; };
 		D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */; };
-		D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
 		D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1AD1BE9F0D10027A4A5 /* RTKeyChainSingleton.m */; };
@@ -155,6 +155,8 @@
 		D239E15F1BFD7BC7009A963F /* RTPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPlayerCell.m; sourceTree = "<group>"; };
 		D239E1611BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameDistanceChangedBodyModel.h; sourceTree = "<group>"; };
 		D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameDistanceChangedBodyModel.m; sourceTree = "<group>"; };
+		D239E1641C02A847009A963F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D239E1661C02A855009A963F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D239E1681C02B231009A963F /* Security.framework in Frameworks */,
 				D2C2F1D01BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd in Frameworks */,
 				D2C2F1CE1BEA0C860027A4A5 /* CoreTelephony.framework in Frameworks */,
 				D2C2F1CC1BEA0C7B0027A4A5 /* libsqlite3.0.tbd in Frameworks */,
@@ -259,15 +262,14 @@
 				D2C2F1C41BEA0C350027A4A5 /* QuartzCore.framework in Frameworks */,
 				D2C2F1C21BEA0C240027A4A5 /* CoreLocation.framework in Frameworks */,
 				D2C2F1BA1BEA0BA10027A4A5 /* BaiduMapAPI_Base.framework in Frameworks */,
-				D2C2F1A01BE9B54E0027A4A5 /* Security.framework in Frameworks */,
 				D2C2F1C01BEA0BA10027A4A5 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D2BDA6651BEF937000F2F2F7 /* google.framework in Frameworks */,
 				D2C2F1BF1BEA0BA10027A4A5 /* BaiduMapAPI_Search.framework in Frameworks */,
 				D2C2F1BE1BEA0BA10027A4A5 /* BaiduMapAPI_Radar.framework in Frameworks */,
 				D2C2F1BB1BEA0BA10027A4A5 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				D2C2F1BC1BEA0BA10027A4A5 /* BaiduMapAPI_Location.framework in Frameworks */,
-				63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */,
 				D2C2F1BD1BEA0BA10027A4A5 /* BaiduMapAPI_Map.framework in Frameworks */,
+				63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +295,8 @@
 		68CF7A37D22305BAB4D93778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D239E1661C02A855009A963F /* Foundation.framework */,
+				D239E1641C02A847009A963F /* CoreFoundation.framework */,
 				D2C2F1CF1BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd */,
 				D2C2F1CD1BEA0C860027A4A5 /* CoreTelephony.framework */,
 				D2C2F1CB1BEA0C7B0027A4A5 /* libsqlite3.0.tbd */,
@@ -1085,7 +1089,7 @@
 				);
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1110,7 +1114,7 @@
 				);
 				GCC_PREFIX_HEADER = RunTogether/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = RunTogether/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
