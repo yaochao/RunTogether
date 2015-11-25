@@ -42,6 +42,13 @@
 		D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1561BFC7C34009A963F /* RTGameRankChangedBodyModel.m */; };
 		D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */; };
 		D239E1681C02B231009A963F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C2F19F1BE9B54E0027A4A5 /* Security.framework */; };
+		D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F55FE1C05E22900BB30A7 /* RTSetting.storyboard */; };
+		D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F56001C05E22900BB30A7 /* RTSettingController.m */; };
+		D24F56081C05E23800BB30A7 /* RTMyHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F56031C05E23800BB30A7 /* RTMyHistory.storyboard */; };
+		D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F56051C05E23800BB30A7 /* RTMyHistoryCell.m */; };
+		D24F560A1C05E23800BB30A7 /* RTMyHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F56071C05E23800BB30A7 /* RTMyHistoryController.m */; };
+		D24F560E1C05E24E00BB30A7 /* RTHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */; };
+		D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F560D1C05E24E00BB30A7 /* RTHomeController.m */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -164,6 +171,17 @@
 		D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameDistanceChangedBodyModel.m; sourceTree = "<group>"; };
 		D239E1641C02A847009A963F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D239E1661C02A855009A963F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D24F55FE1C05E22900BB30A7 /* RTSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTSetting.storyboard; sourceTree = "<group>"; };
+		D24F55FF1C05E22900BB30A7 /* RTSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSettingController.h; sourceTree = "<group>"; };
+		D24F56001C05E22900BB30A7 /* RTSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSettingController.m; sourceTree = "<group>"; };
+		D24F56031C05E23800BB30A7 /* RTMyHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMyHistory.storyboard; sourceTree = "<group>"; };
+		D24F56041C05E23800BB30A7 /* RTMyHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyHistoryCell.h; sourceTree = "<group>"; };
+		D24F56051C05E23800BB30A7 /* RTMyHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryCell.m; sourceTree = "<group>"; };
+		D24F56061C05E23800BB30A7 /* RTMyHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyHistoryController.h; sourceTree = "<group>"; };
+		D24F56071C05E23800BB30A7 /* RTMyHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryController.m; sourceTree = "<group>"; };
+		D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTHome.storyboard; sourceTree = "<group>"; };
+		D24F560C1C05E24E00BB30A7 /* RTHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHomeController.h; sourceTree = "<group>"; };
+		D24F560D1C05E24E00BB30A7 /* RTHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHomeController.m; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -364,6 +382,28 @@
 				D239E1621BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m */,
 			);
 			path = Push;
+			sourceTree = "<group>";
+		};
+		D24F55FC1C05E1DC00BB30A7 /* MyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D24F56031C05E23800BB30A7 /* RTMyHistory.storyboard */,
+				D24F56041C05E23800BB30A7 /* RTMyHistoryCell.h */,
+				D24F56051C05E23800BB30A7 /* RTMyHistoryCell.m */,
+				D24F56061C05E23800BB30A7 /* RTMyHistoryController.h */,
+				D24F56071C05E23800BB30A7 /* RTMyHistoryController.m */,
+			);
+			name = MyHistory;
+			sourceTree = "<group>";
+		};
+		D24F55FD1C05E1F400BB30A7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D24F55FE1C05E22900BB30A7 /* RTSetting.storyboard */,
+				D24F55FF1C05E22900BB30A7 /* RTSettingController.h */,
+				D24F56001C05E22900BB30A7 /* RTSettingController.m */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		D25526CA1BE6FA2B00CDEFC7 = {
@@ -670,6 +710,11 @@
 		D2EDA81C1C05983A00F1EA1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D24F55FD1C05E1F400BB30A7 /* Setting */,
+				D24F55FC1C05E1DC00BB30A7 /* MyHistory */,
+				D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */,
+				D24F560C1C05E24E00BB30A7 /* RTHomeController.h */,
+				D24F560D1C05E24E00BB30A7 /* RTHomeController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -810,14 +855,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
+				D24F56081C05E23800BB30A7 /* RTMyHistory.storyboard in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
 				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */,
+				D24F560E1C05E24E00BB30A7 /* RTHome.storyboard in Resources */,
 				CE65787C1C059C620045D043 /* QueuingViewController.xib in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
 				CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */,
@@ -903,9 +951,12 @@
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
 				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
+				D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */,
+				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
 				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
+				D24F560A1C05E23800BB30A7 /* RTMyHistoryController.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
@@ -923,6 +974,7 @@
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
 				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
+				D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
