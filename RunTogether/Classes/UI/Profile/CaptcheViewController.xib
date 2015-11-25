@@ -26,14 +26,14 @@
                         <action selector="captcheTextAction:" destination="-1" eventType="editingChanged" id="ohy-3Y-qDy"/>
                     </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-ZK-NWn">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-ZK-NWn">
                     <rect key="frame" x="82" y="253" width="217" height="44"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.458610409" green="1" blue="0.88712092170000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-pB-eaG">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-pB-eaG">
                     <rect key="frame" x="82" y="253" width="217" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Frd-Pl-A8T"/>
@@ -47,31 +47,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="166" id="1ln-Ur-Gal"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="250" id="3oR-TS-0VK"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="5kS-M9-jtr"/>
-                <constraint firstAttribute="trailing" secondItem="O53-pB-eaG" secondAttribute="trailing" constant="76" id="ABI-c4-bdw"/>
-                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="K7W-eE-aVm"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="O0d-8D-bqQ"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="OLu-c5-Iyf"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="Y2u-zI-7l7"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="a6h-O3-QnU"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="rkK-Bc-Bsy" secondAttribute="bottom" constant="39" id="km0-6j-a06"/>
-                <constraint firstAttribute="trailing" secondItem="O53-pB-eaG" secondAttribute="trailing" constant="76" id="q2G-1u-0iq"/>
-                <constraint firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" constant="81" id="t12-43-Skc"/>
-                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="zPL-el-Kqf"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="3IL-ZK-NWn" secondAttribute="top" id="2xL-oB-w1d"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="rkK-Bc-Bsy" secondAttribute="bottom" constant="42" id="7WY-VL-z07"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="AVR-dD-ZcP"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="bottom" secondItem="3IL-ZK-NWn" secondAttribute="bottom" id="CEh-oF-Se9"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="3IL-ZK-NWn" secondAttribute="leading" id="DSd-Of-wxV"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="3IL-ZK-NWn" secondAttribute="trailing" id="XRC-uB-mqI"/>
+                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="Y6t-wO-jB2"/>
+                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="166" id="mcL-ec-FfO"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="p4E-RX-827"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="253" id="rv0-cX-1pv"/>
+                <constraint firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" constant="76" id="s3n-vu-X8N"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="K7W-eE-aVm"/>
-                    <exclude reference="t12-43-Skc"/>
-                    <exclude reference="5kS-M9-jtr"/>
-                    <exclude reference="ABI-c4-bdw"/>
-                    <exclude reference="a6h-O3-QnU"/>
-                    <exclude reference="zPL-el-Kqf"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="163.5" y="367.5"/>
         </view>
     </objects>

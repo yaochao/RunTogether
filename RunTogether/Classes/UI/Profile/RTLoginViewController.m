@@ -49,17 +49,21 @@
 }
 - (IBAction)checkoutButtonAction:(UIButton *)sender {
     if (i == 0) {
-        [self.checkoutLable setFrame:CGRectMake(82, 241, 0, 44)];
+        CGFloat width = self.checkoutLable.frame.size.width;
+        CGFloat x = self.checkoutLable.frame.origin.x;
+        CGFloat y = self.checkoutLable.frame.origin.y;
+        CGFloat height = self.checkoutLable.frame.size.height;
+        [self.checkoutLable setFrame:CGRectMake(x, y, 0, height)];
         [UIView animateWithDuration:3 animations:^{
-            [self.checkoutLable setFrame:CGRectMake(82, 241, 217, 44)];
+            [self.checkoutLable setFrame:CGRectMake(x, y, width, height)];
         }];
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"phone"] = self.phoneNumberTextField.text;
         NSString *interface = @"security_codes";
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
-            NSLog(@"登陆成功- %@",responseObject);
+            NSLog(@"获取验证码成功- %@",responseObject);
         } failure:^(NSError *error) {
-            NSLog(@"登陆失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+            NSLog(@"获取验证码失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
         }];
         i++;
     }else{

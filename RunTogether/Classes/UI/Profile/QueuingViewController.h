@@ -10,4 +10,6 @@
 
 @interface QueuingViewController : UIViewController
 
+@property (nonatomic, strong) NSString *user_id;
+
 @end
