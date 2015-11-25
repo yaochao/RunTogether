@@ -86,6 +86,13 @@
 		D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8091C05824800F1EA1A /* subscriber_publisher.pb.cc */; };
 		D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA80B1C05824800F1EA1A /* subscriber_publisher_structs.pb.cc */; };
 		D2EDA8141C05824800F1EA1A /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EDA80F1C05824800F1EA1A /* google.framework */; };
+		D2EDA8261C059CF100F1EA1A /* RTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8251C059CF100F1EA1A /* RTHomeController.m */; };
+		D2EDA8281C059D4400F1EA1A /* RTHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2EDA8271C059D4400F1EA1A /* RTHome.storyboard */; };
+		D2EDA82C1C05B55700F1EA1A /* RTMyHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA82B1C05B55700F1EA1A /* RTMyHistoryController.m */; };
+		D2EDA82E1C05B5AA00F1EA1A /* RTMyHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2EDA82D1C05B5AA00F1EA1A /* RTMyHistory.storyboard */; };
+		D2EDA8311C05B98100F1EA1A /* RTMyHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8301C05B98100F1EA1A /* RTMyHistoryCell.m */; };
+		D2EDA8351C05BBF300F1EA1A /* RTSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8341C05BBF300F1EA1A /* RTSettingController.m */; };
+		D2EDA8371C05BBFF00F1EA1A /* RTSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2EDA8361C05BBFF00F1EA1A /* RTSetting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +247,17 @@
 		D2EDA80B1C05824800F1EA1A /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
 		D2EDA80C1C05824800F1EA1A /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
 		D2EDA80F1C05824800F1EA1A /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
+		D2EDA8241C059CF100F1EA1A /* RTHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHomeController.h; sourceTree = "<group>"; };
+		D2EDA8251C059CF100F1EA1A /* RTHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHomeController.m; sourceTree = "<group>"; };
+		D2EDA8271C059D4400F1EA1A /* RTHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTHome.storyboard; sourceTree = "<group>"; };
+		D2EDA82A1C05B55600F1EA1A /* RTMyHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyHistoryController.h; sourceTree = "<group>"; };
+		D2EDA82B1C05B55700F1EA1A /* RTMyHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryController.m; sourceTree = "<group>"; };
+		D2EDA82D1C05B5AA00F1EA1A /* RTMyHistory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMyHistory.storyboard; sourceTree = "<group>"; };
+		D2EDA82F1C05B98100F1EA1A /* RTMyHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyHistoryCell.h; sourceTree = "<group>"; };
+		D2EDA8301C05B98100F1EA1A /* RTMyHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryCell.m; sourceTree = "<group>"; };
+		D2EDA8331C05BBF300F1EA1A /* RTSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSettingController.h; sourceTree = "<group>"; };
+		D2EDA8341C05BBF300F1EA1A /* RTSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSettingController.m; sourceTree = "<group>"; };
+		D2EDA8361C05BBFF00F1EA1A /* RTSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTSetting.storyboard; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -698,6 +716,11 @@
 		D2EDA8201C05986E00F1EA1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D2EDA8321C05BB7100F1EA1A /* Setting */,
+				D2EDA8291C05B3FF00F1EA1A /* MyHistory */,
+				D2EDA8241C059CF100F1EA1A /* RTHomeController.h */,
+				D2EDA8251C059CF100F1EA1A /* RTHomeController.m */,
+				D2EDA8271C059D4400F1EA1A /* RTHome.storyboard */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -721,6 +744,28 @@
 			children = (
 			);
 			name = Result;
+			sourceTree = "<group>";
+		};
+		D2EDA8291C05B3FF00F1EA1A /* MyHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDA82A1C05B55600F1EA1A /* RTMyHistoryController.h */,
+				D2EDA82B1C05B55700F1EA1A /* RTMyHistoryController.m */,
+				D2EDA82D1C05B5AA00F1EA1A /* RTMyHistory.storyboard */,
+				D2EDA82F1C05B98100F1EA1A /* RTMyHistoryCell.h */,
+				D2EDA8301C05B98100F1EA1A /* RTMyHistoryCell.m */,
+			);
+			name = MyHistory;
+			sourceTree = "<group>";
+		};
+		D2EDA8321C05BB7100F1EA1A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDA8331C05BBF300F1EA1A /* RTSettingController.h */,
+				D2EDA8341C05BBF300F1EA1A /* RTSettingController.m */,
+				D2EDA8361C05BBFF00F1EA1A /* RTSetting.storyboard */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -809,15 +854,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EDA82E1C05B5AA00F1EA1A /* RTMyHistory.storyboard in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
+				D2EDA8371C05BBFF00F1EA1A /* RTSetting.storyboard in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
 				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */,
+				D2EDA8281C059D4400F1EA1A /* RTHome.storyboard in Resources */,
 				CE65787C1C059C620045D043 /* QueuingViewController.xib in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
 				CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */,
@@ -889,8 +937,10 @@
 			files = (
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */,
+				D2EDA8311C05B98100F1EA1A /* RTMyHistoryCell.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
 				D2EDA8111C05824800F1EA1A /* MaxwellClient.mm in Sources */,
+				D2EDA82C1C05B55700F1EA1A /* RTMyHistoryController.m in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
 				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
@@ -899,8 +949,10 @@
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
 				CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */,
 				D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */,
+				D2EDA8351C05BBF300F1EA1A /* RTSettingController.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
+				D2EDA8261C059CF100F1EA1A /* RTHomeController.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
 				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
 				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
