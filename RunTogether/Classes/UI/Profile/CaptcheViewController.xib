@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptcheViewController">
+            <connections>
+                <outlet property="captcheTextField" destination="rkK-Bc-Bsy" id="ihV-tG-8ZQ"/>
+                <outlet property="nextButton" destination="O53-pB-eaG" id="UP5-ST-oVx"/>
+                <outlet property="nextLable" destination="3IL-ZK-NWn" id="ePo-mO-vwf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" placeholder="请输入验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rkK-Bc-Bsy">
+                    <rect key="frame" x="82" y="166" width="217" height="45"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="captcheTextAction:" destination="-1" eventType="editingChanged" id="ohy-3Y-qDy"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-ZK-NWn">
+                    <rect key="frame" x="82" y="253" width="217" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.458610409" green="1" blue="0.88712092170000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-pB-eaG">
+                    <rect key="frame" x="82" y="253" width="217" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Frd-Pl-A8T"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="下一步"/>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ob9-CE-Ugr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="166" id="1ln-Ur-Gal"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="250" id="3oR-TS-0VK"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="5kS-M9-jtr"/>
+                <constraint firstAttribute="trailing" secondItem="O53-pB-eaG" secondAttribute="trailing" constant="76" id="ABI-c4-bdw"/>
+                <constraint firstItem="rkK-Bc-Bsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="K7W-eE-aVm"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="O0d-8D-bqQ"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="OLu-c5-Iyf"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="Y2u-zI-7l7"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="a6h-O3-QnU"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="rkK-Bc-Bsy" secondAttribute="bottom" constant="39" id="km0-6j-a06"/>
+                <constraint firstAttribute="trailing" secondItem="O53-pB-eaG" secondAttribute="trailing" constant="76" id="q2G-1u-0iq"/>
+                <constraint firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" constant="81" id="t12-43-Skc"/>
+                <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="zPL-el-Kqf"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="K7W-eE-aVm"/>
+                    <exclude reference="t12-43-Skc"/>
+                    <exclude reference="5kS-M9-jtr"/>
+                    <exclude reference="ABI-c4-bdw"/>
+                    <exclude reference="a6h-O3-QnU"/>
+                    <exclude reference="zPL-el-Kqf"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="163.5" y="367.5"/>
+        </view>
+    </objects>
+</document>

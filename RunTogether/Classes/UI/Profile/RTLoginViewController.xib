@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RTLoginViewController">
+            <connections>
+                <outlet property="checkoutButton" destination="HvF-vd-zzZ" id="WQE-zh-hUC"/>
+                <outlet property="checkoutLable" destination="gjn-M0-y1G" id="y1J-h4-CZJ"/>
+                <outlet property="phoneNumberTextField" destination="dNo-Sk-Dfp" id="Jff-eh-1Bk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" placeholder="请输入手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dNo-Sk-Dfp">
+                    <rect key="frame" x="85" y="164" width="205" height="38"/>
+                    <attributedString key="attributedText"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <action selector="phoneNumerAction:" destination="-1" eventType="editingChanged" id="feE-Wa-4bO"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjn-M0-y1G">
+                    <rect key="frame" x="85" y="237" width="205" height="42"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvF-vd-zzZ">
+                    <rect key="frame" x="85" y="241" width="205" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="non-XP-JmB"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="验证"/>
+                    <connections>
+                        <action selector="checkoutButtonAction:" destination="-1" eventType="touchUpInside" id="ypR-bK-qP8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HvF-vd-zzZ" firstAttribute="top" secondItem="dNo-Sk-Dfp" secondAttribute="bottom" constant="41" id="ETs-lh-N92"/>
+                <constraint firstItem="dNo-Sk-Dfp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="164" id="Nbx-tV-77f"/>
+                <constraint firstItem="dNo-Sk-Dfp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="85" id="Z64-bA-oHi"/>
+                <constraint firstItem="HvF-vd-zzZ" firstAttribute="trailing" secondItem="dNo-Sk-Dfp" secondAttribute="trailing" id="ZZN-Sb-kU3"/>
+                <constraint firstItem="HvF-vd-zzZ" firstAttribute="leading" secondItem="dNo-Sk-Dfp" secondAttribute="leading" id="aBf-Hu-Hnk"/>
+                <constraint firstItem="dNo-Sk-Dfp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tGw-yd-Qf1"/>
+                <constraint firstItem="HvF-vd-zzZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="243" id="vvU-cm-3ZP"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
