@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Loading View Controller-->
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-kx-jib">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4W-kx-jib">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -27,7 +28,7 @@
                                     <action selector="beginButtonAction:" destination="jTI-9X-kIa" eventType="touchUpInside" id="oRV-uQ-96E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPT-Vl-8J0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPT-Vl-8J0">
                                 <rect key="frame" x="71" y="270" width="233" height="127"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -35,6 +36,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d4W-kx-jib" firstAttribute="bottom" secondItem="Rrq-kY-WOL" secondAttribute="top" id="55t-DH-qd2"/>
+                            <constraint firstItem="YPT-Vl-8J0" firstAttribute="top" secondItem="FA3-Zr-UW9" secondAttribute="bottom" constant="206" id="6nN-fK-aeX"/>
+                            <constraint firstAttribute="trailing" secondItem="d4W-kx-jib" secondAttribute="trailing" id="DjU-Ay-Fe9"/>
+                            <constraint firstItem="YPT-Vl-8J0" firstAttribute="centerY" secondItem="iIx-Yz-1fj" secondAttribute="centerY" id="H2W-3g-U5A"/>
+                            <constraint firstItem="YPT-Vl-8J0" firstAttribute="leading" secondItem="iIx-Yz-1fj" secondAttribute="leadingMargin" constant="55" id="J2I-WM-ID5"/>
+                            <constraint firstItem="d4W-kx-jib" firstAttribute="centerX" secondItem="YPT-Vl-8J0" secondAttribute="centerX" id="NGe-sK-rIa"/>
+                            <constraint firstItem="d4W-kx-jib" firstAttribute="top" secondItem="FA3-Zr-UW9" secondAttribute="bottom" constant="543" id="n7M-p3-dT1"/>
+                            <constraint firstItem="d4W-kx-jib" firstAttribute="leading" secondItem="iIx-Yz-1fj" secondAttribute="leading" id="zrd-AV-Bx4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q6e-ya-bOS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
