@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */ = {isa = PBXBuildFile; fileRef = 41338CCF1BE8CE6C00BCAEC3 /* rt.der */; };
 		63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1095DC4FECCF883DFAE6DBA0 /* libPods.a */; };
+		CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE65786E1C059C620045D043 /* CaptcheViewController.m */; };
+		CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE65786F1C059C620045D043 /* CaptcheViewController.xib */; };
+		CE65787B1C059C620045D043 /* QueuingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578711C059C620045D043 /* QueuingViewController.m */; };
+		CE65787C1C059C620045D043 /* QueuingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6578721C059C620045D043 /* QueuingViewController.xib */; };
+		CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578741C059C620045D043 /* RTLoadingViewController.m */; };
+		CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578771C059C620045D043 /* RTLoginViewController.m */; };
+		CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6578781C059C620045D043 /* RTLoginViewController.xib */; };
+		CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6578811C059C9F0045D043 /* RTLoading.storyboard */; };
+		CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -93,6 +102,20 @@
 		1095DC4FECCF883DFAE6DBA0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41338CCF1BE8CE6C00BCAEC3 /* rt.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = rt.der; path = ../rt.der; sourceTree = "<group>"; };
 		CAF811E886039A64FEC97BF0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE65786D1C059C620045D043 /* CaptcheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptcheViewController.h; path = Profile/CaptcheViewController.h; sourceTree = "<group>"; };
+		CE65786E1C059C620045D043 /* CaptcheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaptcheViewController.m; path = Profile/CaptcheViewController.m; sourceTree = "<group>"; };
+		CE65786F1C059C620045D043 /* CaptcheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CaptcheViewController.xib; path = Profile/CaptcheViewController.xib; sourceTree = "<group>"; };
+		CE6578701C059C620045D043 /* QueuingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QueuingViewController.h; path = Profile/QueuingViewController.h; sourceTree = "<group>"; };
+		CE6578711C059C620045D043 /* QueuingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QueuingViewController.m; path = Profile/QueuingViewController.m; sourceTree = "<group>"; };
+		CE6578721C059C620045D043 /* QueuingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QueuingViewController.xib; path = Profile/QueuingViewController.xib; sourceTree = "<group>"; };
+		CE6578731C059C620045D043 /* RTLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTLoadingViewController.h; path = Profile/RTLoadingViewController.h; sourceTree = "<group>"; };
+		CE6578741C059C620045D043 /* RTLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTLoadingViewController.m; path = Profile/RTLoadingViewController.m; sourceTree = "<group>"; };
+		CE6578761C059C620045D043 /* RTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTLoginViewController.h; path = Profile/RTLoginViewController.h; sourceTree = "<group>"; };
+		CE6578771C059C620045D043 /* RTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTLoginViewController.m; path = Profile/RTLoginViewController.m; sourceTree = "<group>"; };
+		CE6578781C059C620045D043 /* RTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTLoginViewController.xib; path = Profile/RTLoginViewController.xib; sourceTree = "<group>"; };
+		CE6578811C059C9F0045D043 /* RTLoading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLoading.storyboard; sourceTree = "<group>"; };
+		CE6578861C05B3630045D043 /* RTGamePropertiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGamePropertiesModel.h; sourceTree = "<group>"; };
+		CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGamePropertiesModel.m; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -619,6 +642,8 @@
 		D2EDA81A1C05981D00F1EA1A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CE6578861C05B3630045D043 /* RTGamePropertiesModel.h */,
+				CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -626,6 +651,18 @@
 		D2EDA81B1C05983200F1EA1A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CE6578731C059C620045D043 /* RTLoadingViewController.h */,
+				CE6578741C059C620045D043 /* RTLoadingViewController.m */,
+				CE6578811C059C9F0045D043 /* RTLoading.storyboard */,
+				CE6578761C059C620045D043 /* RTLoginViewController.h */,
+				CE6578771C059C620045D043 /* RTLoginViewController.m */,
+				CE6578781C059C620045D043 /* RTLoginViewController.xib */,
+				CE65786D1C059C620045D043 /* CaptcheViewController.h */,
+				CE65786E1C059C620045D043 /* CaptcheViewController.m */,
+				CE65786F1C059C620045D043 /* CaptcheViewController.xib */,
+				CE6578701C059C620045D043 /* QueuingViewController.h */,
+				CE6578711C059C620045D043 /* QueuingViewController.m */,
+				CE6578721C059C620045D043 /* QueuingViewController.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -773,13 +810,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
+				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
 				D2C2F1D21BEA102E0027A4A5 /* mapapi.bundle in Resources */,
+				CE65787C1C059C620045D043 /* QueuingViewController.xib in Resources */,
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
+				CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */,
 				41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -853,13 +894,16 @@
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
 				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
+				CE65787B1C059C620045D043 /* QueuingViewController.m in Sources */,
 				D239E1481BFC789B009A963F /* RTGameOverModel.m in Sources */,
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
+				CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */,
 				D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
 				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
+				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
@@ -879,6 +923,8 @@
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
 				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
+				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
+				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
