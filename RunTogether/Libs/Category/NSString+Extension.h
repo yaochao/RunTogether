@@ -11,4 +11,5 @@
 @interface NSString (Extension)
 /** 返回处理过的价格字符串 */
 - (instancetype)dealedPriceString;
+- (NSDate *)dateFromString;
 @end
