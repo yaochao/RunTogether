@@ -57,6 +57,13 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVA-yF-T8U">
+                    <rect key="frame" x="215" y="562" width="67" height="30"/>
+                    <state key="normal" title="排队成功"/>
+                    <connections>
+                        <action selector="queuingSuccess:" destination="-1" eventType="touchUpInside" id="RZg-dd-Tuy"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

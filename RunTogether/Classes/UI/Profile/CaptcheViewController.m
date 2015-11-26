@@ -49,10 +49,10 @@
         params[@"security_code"] = self.captcheTextField.text;
         NSString *interface = @"sessions";
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
-            NSLog(@"验证成功- %@",responseObject);
+            NSLogSuccessResponse;
             self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
         } failure:^(NSError *error) {
-            NSLog(@"验证失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+            NSLogErrorResponse;
         }];
         i++;
     }else{
@@ -65,7 +65,7 @@
     i = 0;
 }
 - (IBAction)captcheTextAction:(UITextField *)sender {
-    if (sender.text.length == 6) {
+    if (sender.text.length == RTSecurityCodeLength) {
         self.nextButton.userInteractionEnabled = YES;
         self.nextLable.alpha = 1;
     }else{

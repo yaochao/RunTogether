@@ -55,11 +55,14 @@ typedef enum {
 #define RTPreparationsType      @"preparations"
 #define RTSessionsType          @"sessions"
 #define RTRegisterType          @"users"
+#define RTLogoutType            @"sessions/me"
 
 /**
 *  AFN 取出Error Response Body
  */
 #define kErrorResponseObjectKey @"kErrorResponseObjectKey"
+#define NSLogErrorResponse NSLog(@"\n-------------------------Error--------------------------------\nError - %@\n-------------------------ErrorBody----------------------------\n%@", error, error.userInfo[kErrorResponseObjectKey])
+#define NSLogSuccessResponse NSLog(@"\n-------------------------Success------------------------------\n%@", responseObject)
 
 /**
  *  推送消息的类型 type
@@ -86,5 +89,15 @@ typedef enum {
 #define RTGameOverKey                     @"RTGameOverKey"
 #define RTGameDistanceChangedKey          @"RTGameDistanceChangedKey"
 #define RTGameRankChangedKey              @"RTGameRankChangedKey"
+
+/**
+ * 验证码长度
+ */
+#define RTSecurityCodeLength  6
+
+/**
+ * 昵称长度
+ */
+#define RTNameLength  30
 
 #endif

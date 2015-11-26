@@ -9,11 +9,13 @@
 #import "QueuingViewController.h"
 #import "RTNetworkTools.h"
 #import "RTGamePropertiesModel.h"
+#import "RTNameViewController.h"
 #import <MJExtension/MJExtension.h>
 @interface QueuingViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *beforeMeLable;
 @property (weak, nonatomic) IBOutlet UILabel *afterMeLable;
+- (IBAction)queuingSuccess:(UIButton *)sender;
 @end
 
 @implementation QueuingViewController
@@ -23,13 +25,13 @@
     UIBarButtonItem* leftButton = [[UIBarButtonItem alloc]initWithTitle:@"切换账号" style:UIBarButtonSystemItemDone target:self action:@selector(changeNumber)];
     self.navigationItem.leftBarButtonItem = leftButton;
     NSString *interface = [NSString stringWithFormat:@"users/%@/game_properties", self.user_id];
-    
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
         RTGamePropertiesModel* gameProperties = [RTGamePropertiesModel objectWithKeyValues:responseObject];
         self.beforeMeLable.text = [NSString stringWithFormat:@"%ld",gameProperties.queuing_users_before_me];
         self.afterMeLable.text = [NSString stringWithFormat:@"%ld",gameProperties.queuing_users_after_me];
     } failure:^(NSError *error) {
-        NSLog(@"请求排队数据失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+        NSLogErrorResponse;
     }];
         // Do any additional setup after loading the view from its nib.
 }
@@ -41,14 +43,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)queuingSuccess:(UIButton *)sender {
+    RTNameViewController* nameVC = [[RTNameViewController alloc]init];
+    [self.navigationController pushViewController:nameVC animated:YES];
 }
-*/
-
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RTSettingController : UIViewController
+@interface RTSettingController : UITableViewController
 
 @end
