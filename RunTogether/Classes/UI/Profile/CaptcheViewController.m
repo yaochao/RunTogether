@@ -49,10 +49,10 @@
         params[@"security_code"] = self.captcheTextField.text;
         NSString *interface = @"sessions";
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
-            NSLog(@"验证成功- %@",responseObject);
+            NSLogSuccessResponse;
             self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
         } failure:^(NSError *error) {
-            NSLog(@"验证失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+            NSLogErrorResponse;
         }];
         i++;
     }else{

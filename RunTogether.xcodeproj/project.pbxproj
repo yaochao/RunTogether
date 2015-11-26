@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */ = {isa = PBXBuildFile; fileRef = 41338CCF1BE8CE6C00BCAEC3 /* rt.der */; };
 		63BAF7065506F0EA7F57622F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1095DC4FECCF883DFAE6DBA0 /* libPods.a */; };
+		CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3B0AB51C06E25C00DE6C79 /* RTAvatarModel.m */; };
 		CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE65786E1C059C620045D043 /* CaptcheViewController.m */; };
 		CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE65786F1C059C620045D043 /* CaptcheViewController.xib */; };
 		CE65787B1C059C620045D043 /* QueuingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578711C059C620045D043 /* QueuingViewController.m */; };
@@ -20,6 +21,8 @@
 		CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */; };
 		CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920CB1C06996700540429 /* RTNameViewController.m */; };
 		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
+		CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920D41C06A81800540429 /* RTAvatarViewController.m */; };
+		CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920D51C06A81800540429 /* RTAvatarViewController.xib */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -116,6 +119,8 @@
 		1095DC4FECCF883DFAE6DBA0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41338CCF1BE8CE6C00BCAEC3 /* rt.der */ = {isa = PBXFileReference; lastKnownFileType = file; name = rt.der; path = ../rt.der; sourceTree = "<group>"; };
 		CAF811E886039A64FEC97BF0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CE3B0AB41C06E25C00DE6C79 /* RTAvatarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTAvatarModel.h; sourceTree = "<group>"; };
+		CE3B0AB51C06E25C00DE6C79 /* RTAvatarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTAvatarModel.m; sourceTree = "<group>"; };
 		CE65786D1C059C620045D043 /* CaptcheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptcheViewController.h; path = Profile/CaptcheViewController.h; sourceTree = "<group>"; };
 		CE65786E1C059C620045D043 /* CaptcheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaptcheViewController.m; path = Profile/CaptcheViewController.m; sourceTree = "<group>"; };
 		CE65786F1C059C620045D043 /* CaptcheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CaptcheViewController.xib; path = Profile/CaptcheViewController.xib; sourceTree = "<group>"; };
@@ -133,6 +138,9 @@
 		CEC920CA1C06996700540429 /* RTNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTNameViewController.h; path = Profile/RTNameViewController.h; sourceTree = "<group>"; };
 		CEC920CB1C06996700540429 /* RTNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTNameViewController.m; path = Profile/RTNameViewController.m; sourceTree = "<group>"; };
 		CEC920CC1C06996700540429 /* RTNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTNameViewController.xib; path = Profile/RTNameViewController.xib; sourceTree = "<group>"; };
+		CEC920D31C06A81800540429 /* RTAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAvatarViewController.h; path = Profile/RTAvatarViewController.h; sourceTree = "<group>"; };
+		CEC920D41C06A81800540429 /* RTAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAvatarViewController.m; path = Profile/RTAvatarViewController.m; sourceTree = "<group>"; };
+		CEC920D51C06A81800540429 /* RTAvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTAvatarViewController.xib; path = Profile/RTAvatarViewController.xib; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -393,6 +401,16 @@
 				CEC920CC1C06996700540429 /* RTNameViewController.xib */,
 			);
 			name = Name;
+			sourceTree = "<group>";
+		};
+		CEC920CF1C06A7BC00540429 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				CEC920D31C06A81800540429 /* RTAvatarViewController.h */,
+				CEC920D41C06A81800540429 /* RTAvatarViewController.m */,
+				CEC920D51C06A81800540429 /* RTAvatarViewController.xib */,
+			);
+			name = Avatar;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -756,6 +774,8 @@
 			children = (
 				CE6578861C05B3630045D043 /* RTGamePropertiesModel.h */,
 				CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */,
+				CE3B0AB41C06E25C00DE6C79 /* RTAvatarModel.h */,
+				CE3B0AB51C06E25C00DE6C79 /* RTAvatarModel.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -768,6 +788,7 @@
 				CEC920C71C06978F00540429 /* SecurityCode */,
 				CEC920C81C0697A900540429 /* Queuing */,
 				CEC920C91C06992500540429 /* Name */,
+				CEC920CF1C06A7BC00540429 /* Avatar */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -928,6 +949,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
@@ -1031,6 +1053,7 @@
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
 				D24F560A1C05E23800BB30A7 /* RTMyHistoryController.m in Sources */,
+				CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
@@ -1040,6 +1063,7 @@
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
+				CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
