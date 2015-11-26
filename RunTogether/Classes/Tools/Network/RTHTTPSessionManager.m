@@ -22,6 +22,8 @@
         
         // 设置反序列化的数据格式－> 官方建议的修改方式
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", nil];
+        // 设置请求Content-Type格式
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
         // 设置安全策略，关于自制的签名证书，SSL
         // 方式一：证书绑定方式
