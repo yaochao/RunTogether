@@ -7,6 +7,7 @@
 //
 
 #import "RTNameViewController.h"
+#import "RTAvatarViewController.h"
 
 @interface RTNameViewController ()
 
@@ -32,6 +33,8 @@
     }
 }
 - (IBAction)nextButtonAction:(UIButton *)sender {
-    
+    RTAvatarViewController *avatarVC = [[RTAvatarViewController alloc]init];
+    avatarVC.name = self.nameTextField.text;
+    [self.navigationController pushViewController:avatarVC animated:YES];
 }
 @end
