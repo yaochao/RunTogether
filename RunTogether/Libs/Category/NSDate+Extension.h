@@ -11,5 +11,6 @@
 @interface NSDate (Extension)
 
 - (NSString *)stringFromDate;
++ (NSString *)timeIntervalWithDateStr1:(NSString *)dateStr1 dateStr2:(NSString *)dateStr2;
 
 @end
