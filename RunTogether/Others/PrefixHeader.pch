@@ -87,4 +87,14 @@ typedef enum {
 #define RTGameDistanceChangedKey          @"RTGameDistanceChangedKey"
 #define RTGameRankChangedKey              @"RTGameRankChangedKey"
 
+/**
+ * 验证码长度
+ */
+#define RTSecurityCodeLength  6
+
+/**
+ * 昵称长度
+ */
+#define RTNameLength  30
+
 #endif

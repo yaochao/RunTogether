@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptcheViewController">
             <connections>
-                <outlet property="captcheTextField" destination="rkK-Bc-Bsy" id="ihV-tG-8ZQ"/>
+                <outlet property="captcheTextField" destination="rkK-Bc-Bsy" id="7mB-XG-gUW"/>
                 <outlet property="nextButton" destination="O53-pB-eaG" id="UP5-ST-oVx"/>
                 <outlet property="nextLable" destination="3IL-ZK-NWn" id="ePo-mO-vwf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,9 +21,9 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" placeholder="请输入验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rkK-Bc-Bsy">
                     <rect key="frame" x="82" y="166" width="217" height="45"/>
                     <attributedString key="attributedText"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                     <connections>
-                        <action selector="captcheTextAction:" destination="-1" eventType="editingChanged" id="ohy-3Y-qDy"/>
+                        <action selector="captcheTextAction:" destination="-1" eventType="editingChanged" id="jLR-sA-pO1"/>
                     </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-ZK-NWn">

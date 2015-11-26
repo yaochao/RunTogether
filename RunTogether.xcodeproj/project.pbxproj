@@ -18,6 +18,8 @@
 		CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6578781C059C620045D043 /* RTLoginViewController.xib */; };
 		CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6578811C059C9F0045D043 /* RTLoading.storyboard */; };
 		CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */; };
+		CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920CB1C06996700540429 /* RTNameViewController.m */; };
+		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -123,6 +125,9 @@
 		CE6578811C059C9F0045D043 /* RTLoading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTLoading.storyboard; sourceTree = "<group>"; };
 		CE6578861C05B3630045D043 /* RTGamePropertiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGamePropertiesModel.h; sourceTree = "<group>"; };
 		CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGamePropertiesModel.m; sourceTree = "<group>"; };
+		CEC920CA1C06996700540429 /* RTNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTNameViewController.h; path = Profile/RTNameViewController.h; sourceTree = "<group>"; };
+		CEC920CB1C06996700540429 /* RTNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTNameViewController.m; path = Profile/RTNameViewController.m; sourceTree = "<group>"; };
+		CEC920CC1C06996700540429 /* RTNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTNameViewController.xib; path = Profile/RTNameViewController.xib; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -323,6 +328,56 @@
 				1095DC4FECCF883DFAE6DBA0 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC920C51C06976100540429 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				CE6578731C059C620045D043 /* RTLoadingViewController.h */,
+				CE6578741C059C620045D043 /* RTLoadingViewController.m */,
+				CE6578811C059C9F0045D043 /* RTLoading.storyboard */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
+		CEC920C61C06977600540429 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE6578761C059C620045D043 /* RTLoginViewController.h */,
+				CE6578771C059C620045D043 /* RTLoginViewController.m */,
+				CE6578781C059C620045D043 /* RTLoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		CEC920C71C06978F00540429 /* SecurityCode */ = {
+			isa = PBXGroup;
+			children = (
+				CE65786D1C059C620045D043 /* CaptcheViewController.h */,
+				CE65786E1C059C620045D043 /* CaptcheViewController.m */,
+				CE65786F1C059C620045D043 /* CaptcheViewController.xib */,
+			);
+			name = SecurityCode;
+			sourceTree = "<group>";
+		};
+		CEC920C81C0697A900540429 /* Queuing */ = {
+			isa = PBXGroup;
+			children = (
+				CE6578701C059C620045D043 /* QueuingViewController.h */,
+				CE6578711C059C620045D043 /* QueuingViewController.m */,
+				CE6578721C059C620045D043 /* QueuingViewController.xib */,
+			);
+			name = Queuing;
+			sourceTree = "<group>";
+		};
+		CEC920C91C06992500540429 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				CEC920CA1C06996700540429 /* RTNameViewController.h */,
+				CEC920CB1C06996700540429 /* RTNameViewController.m */,
+				CEC920CC1C06996700540429 /* RTNameViewController.xib */,
+			);
+			name = Name;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -691,18 +746,11 @@
 		D2EDA81B1C05983200F1EA1A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CE6578731C059C620045D043 /* RTLoadingViewController.h */,
-				CE6578741C059C620045D043 /* RTLoadingViewController.m */,
-				CE6578811C059C9F0045D043 /* RTLoading.storyboard */,
-				CE6578761C059C620045D043 /* RTLoginViewController.h */,
-				CE6578771C059C620045D043 /* RTLoginViewController.m */,
-				CE6578781C059C620045D043 /* RTLoginViewController.xib */,
-				CE65786D1C059C620045D043 /* CaptcheViewController.h */,
-				CE65786E1C059C620045D043 /* CaptcheViewController.m */,
-				CE65786F1C059C620045D043 /* CaptcheViewController.xib */,
-				CE6578701C059C620045D043 /* QueuingViewController.h */,
-				CE6578711C059C620045D043 /* QueuingViewController.m */,
-				CE6578721C059C620045D043 /* QueuingViewController.xib */,
+				CEC920C51C06976100540429 /* Loading */,
+				CEC920C61C06977600540429 /* Login */,
+				CEC920C71C06978F00540429 /* SecurityCode */,
+				CEC920C81C0697A900540429 /* Queuing */,
+				CEC920C91C06992500540429 /* Name */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -860,6 +908,7 @@
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D24F56081C05E23800BB30A7 /* RTMyHistory.storyboard in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
+				CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
 				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
@@ -978,6 +1027,7 @@
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
+				CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */,

@@ -59,11 +59,12 @@
         }];
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"phone"] = self.phoneNumberTextField.text;
+        params[@"country_calling_code"] = @"+86";
         NSString *interface = @"security_codes";
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
             NSLog(@"获取验证码成功- %@",responseObject);
         } failure:^(NSError *error) {
-            NSLog(@"获取验证码失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+            NSLog(@"获取验证码失败- %@\nerror-body%@",error,error.userInfo[kErrorResponseObjectKey]);
         }];
         i++;
     }else{

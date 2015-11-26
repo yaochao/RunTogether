@@ -65,7 +65,7 @@
     i = 0;
 }
 - (IBAction)captcheTextAction:(UITextField *)sender {
-    if (sender.text.length == 6) {
+    if (sender.text.length == RTSecurityCodeLength) {
         self.nextButton.userInteractionEnabled = YES;
         self.nextLable.alpha = 1;
     }else{

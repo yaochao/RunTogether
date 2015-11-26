@@ -21,7 +21,7 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" placeholder="请输入手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dNo-Sk-Dfp">
                     <rect key="frame" x="85" y="164" width="205" height="38"/>
                     <attributedString key="attributedText"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                     <connections>
                         <action selector="phoneNumerAction:" destination="-1" eventType="editingChanged" id="feE-Wa-4bO"/>
                     </connections>
