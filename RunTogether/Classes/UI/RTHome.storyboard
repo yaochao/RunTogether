@@ -52,7 +52,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-6j-awb">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-6j-awb" userLabel="medalView">
                                         <rect key="frame" x="200" y="136" width="200" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medal" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-Gm-NKf" userLabel="Image View2">
@@ -77,7 +77,7 @@
                                             </imageView>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="w9O-uI-p4G" secondAttribute="bottom" id="2KO-3r-xwt"/>
                                             <constraint firstAttribute="width" constant="200" id="4P0-c0-z8P"/>
@@ -120,7 +120,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="6cz-Ru-nox"/>
                                     <constraint firstAttribute="trailing" secondItem="9nZ-gl-jxq" secondAttribute="trailing" constant="8" id="Bea-qY-Zlp"/>
@@ -141,6 +141,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIh-XC-xR2">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="个人历史记录">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,7 +152,7 @@
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="DIh-XC-xR2" secondAttribute="trailing" id="PvV-ca-ynB"/>
                                     <constraint firstItem="DIh-XC-xR2" firstAttribute="top" secondItem="g6c-Yt-pLo" secondAttribute="top" id="aGO-CM-0Vs"/>
@@ -165,19 +166,22 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUi-cH-cZC">
                                         <rect key="frame" x="150" y="25" width="300" height="50"/>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Glt-sm-lcp"/>
                                             <constraint firstAttribute="width" constant="300" id="zUV-Hf-Gbd"/>
                                         </constraints>
-                                        <state key="normal" title="入赛"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="入赛">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="enterGame:" destination="gM4-7Q-zpE" eventType="touchUpInside" id="S8b-di-t9R"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="SUi-cH-cZC" firstAttribute="centerY" secondItem="34u-ch-lA3" secondAttribute="centerY" id="2tQ-T0-Nyt"/>
                                     <constraint firstAttribute="height" constant="100" id="J1b-U1-7Pi"/>
@@ -203,7 +207,7 @@
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="VCE-At-XEG" firstAttribute="top" secondItem="ziC-t4-eQe" secondAttribute="bottom" constant="8" id="czh-GZ-NY0"/>
                                     <constraint firstItem="ziC-t4-eQe" firstAttribute="top" secondItem="BTD-g3-ffH" secondAttribute="top" constant="8" id="hal-DN-pAF"/>
