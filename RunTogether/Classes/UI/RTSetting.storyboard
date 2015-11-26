@@ -26,7 +26,7 @@
         <!--设置-->
         <scene sceneID="XlB-xW-cm2">
             <objects>
-                <tableViewController id="qXG-Vm-DGx" sceneMemberID="viewController">
+                <tableViewController id="qXG-Vm-DGx" customClass="RTSettingController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="s6l-DP-mha">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,6 +165,38 @@
                                             <constraints>
                                                 <constraint firstAttribute="leadingMargin" secondItem="oBE-3A-gzj" secondAttribute="leading" id="K1U-cE-2nd"/>
                                                 <constraint firstItem="oBE-3A-gzj" firstAttribute="centerY" secondItem="btO-7y-UfQ" secondAttribute="centerY" id="bJu-Kt-mYb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="JLw-cF-gEk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bDq-0s-cio">
+                                        <rect key="frame" x="0.0" y="391" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bDq-0s-cio" id="JIf-PO-dSi">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wl-Yz-MCY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="退出登录"/>
+                                                    <connections>
+                                                        <action selector="logoutBtnClick:" destination="qXG-Vm-DGx" eventType="touchUpInside" id="1WK-yr-sJT"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="6Wl-Yz-MCY" firstAttribute="leading" secondItem="JIf-PO-dSi" secondAttribute="leading" id="MyH-IO-bT6"/>
+                                                <constraint firstItem="6Wl-Yz-MCY" firstAttribute="top" secondItem="JIf-PO-dSi" secondAttribute="top" id="Uuv-dq-p4G"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Wl-Yz-MCY" secondAttribute="bottom" id="bdz-5B-2wp"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Wl-Yz-MCY" secondAttribute="trailing" id="cf2-50-3yH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
