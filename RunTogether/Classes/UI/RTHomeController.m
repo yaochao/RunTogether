@@ -63,6 +63,15 @@
     [super viewDidLoad];
 }
 
+#pragma mark - viewViewAppear
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // do somthing
+    // let the avatar become circle
+    self.avatarIV.layer.cornerRadius = self.avatarIV.frame.size.width / 2;
+    self.avatarIV.layer.masksToBounds = YES;
+}
+
 
 #pragma mark - 网络请求
 - (void)loadData {
