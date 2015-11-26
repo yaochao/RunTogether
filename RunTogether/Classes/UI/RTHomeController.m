@@ -11,14 +11,21 @@
 #import "RTMyHistoryController.h"
 #import "RTNetworkTools.h"
 #import "RTKeyChainTools.h"
+#import "RTGamePropertiesModel.h"
+#import "RTUserInfoModel.h"
+#import <MJExtension/MJExtension.h>
+#import <UIImageView+WebCache.h>
 
 @interface RTHomeController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *avartaIV;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarIV;
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *levelLbl;
+@property (weak, nonatomic) IBOutlet UILabel *totalDistanceLbl;
 @property (nonatomic, strong) RTSettingController *settingController;
 @property (nonatomic, strong) RTMyHistoryController *historyController;
+@property (nonatomic, strong) RTGamePropertiesModel *gamePropertiesModel;
+@property (nonatomic, strong) RTUserInfoModel *userInfoModel;
 @end
 
 @implementation RTHomeController
@@ -59,16 +66,22 @@
 
 #pragma mark - 网络请求
 - (void)loadData {
+    // load user_info
     NSString *interface = [NSString stringWithFormat:@"users/%@", [RTKeyChainTools getUserId]];
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
         NSLogSuccessResponse;
+        RTUserInfoModel *userInfoModel = [RTUserInfoModel objectWithKeyValues:responseObject];
+        self.userInfoModel = userInfoModel;
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];
     
+    // load game_properties
     NSString *interface2 = [NSString stringWithFormat:@"users/%@/game_properties", [RTKeyChainTools getUserId]];
     [RTNetworkTools getDataWithParams:nil interfaceType:interface2 success:^(id responseObject) {
         NSLogSuccessResponse;
+        RTGamePropertiesModel *gamePropertiesModel = [RTGamePropertiesModel objectWithKeyValues:responseObject];
+        self.gamePropertiesModel = gamePropertiesModel;
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];
@@ -94,7 +107,25 @@
 
 
 #pragma mark - setter
+- (void)setGamePropertiesModel:(RTGamePropertiesModel *)gamePropertiesModel {
+    _gamePropertiesModel = gamePropertiesModel;
+    // 赋值
+    // 等级
+    self.levelLbl.text = [NSString stringWithFormat:@"%li级", gamePropertiesModel.level];
+    // 勋章
+#warning TODO
+    // 总里程
+    self.totalDistanceLbl.text = [NSString stringWithFormat:@"%liKM", gamePropertiesModel.total_distance];
+}
 
+- (void)setUserInfoModel:(RTUserInfoModel *)userInfoModel {
+    _userInfoModel = userInfoModel;
+    // 赋值
+    // 头像
+    [self.avatarIV sd_setImageWithURL:[NSURL URLWithString:userInfoModel.avatar_url] placeholderImage:nil];
+    // 昵称
+    self.nameLbl.text = userInfoModel.name;
+}
 
 #pragma mark - didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {

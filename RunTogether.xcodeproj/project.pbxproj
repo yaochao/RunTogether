@@ -20,6 +20,7 @@
 		CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */; };
 		CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920CB1C06996700540429 /* RTNameViewController.m */; };
 		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
+		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -128,6 +129,8 @@
 		CEC920CA1C06996700540429 /* RTNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTNameViewController.h; path = Profile/RTNameViewController.h; sourceTree = "<group>"; };
 		CEC920CB1C06996700540429 /* RTNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTNameViewController.m; path = Profile/RTNameViewController.m; sourceTree = "<group>"; };
 		CEC920CC1C06996700540429 /* RTNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTNameViewController.xib; path = Profile/RTNameViewController.xib; sourceTree = "<group>"; };
+		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
+		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -791,6 +794,8 @@
 		D2EDA8201C05986E00F1EA1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D22682561C06F3F70069F422 /* RTUserInfoModel.h */,
+				D22682571C06F3F70069F422 /* RTUserInfoModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1025,6 +1030,7 @@
 				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
 				D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
+				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */,

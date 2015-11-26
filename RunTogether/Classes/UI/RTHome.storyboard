@@ -234,9 +234,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="a5j-D0-o4W"/>
                     <connections>
-                        <outlet property="avartaIV" destination="gZx-U9-cI8" id="oJ4-Ft-s8g"/>
+                        <outlet property="avatarIV" destination="gZx-U9-cI8" id="tz6-DZ-9gS"/>
                         <outlet property="levelLbl" destination="5oF-5k-7uj" id="tXj-sd-oQy"/>
                         <outlet property="nameLbl" destination="UAS-GL-che" id="zR6-z4-dO6"/>
+                        <outlet property="totalDistanceLbl" destination="VCE-At-XEG" id="ke0-9E-U7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZnX-Ku-Ea6" userLabel="First Responder" sceneMemberID="firstResponder"/>
