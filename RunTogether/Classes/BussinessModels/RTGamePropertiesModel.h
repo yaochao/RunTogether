@@ -14,9 +14,9 @@
 @property (nonatomic, assign) NSInteger queuing_users_after_me;
 @property (nonatomic, assign) NSInteger total_distance;
 @property (nonatomic, assign) NSInteger game_count;
-@property (nonatomic, assign) NSInteger mean_velocity;
+@property (nonatomic, strong) NSNumber *mean_velocity;
 @property (nonatomic, assign) NSInteger level;
 @property (nonatomic, assign) NSInteger medal;
-@property (nonatomic, strong) NSString *banned_until;
+@property (nonatomic, copy) NSString *banned_until;
 
 @end
