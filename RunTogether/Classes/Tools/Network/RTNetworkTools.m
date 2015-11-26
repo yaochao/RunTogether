@@ -78,6 +78,28 @@
 }
 
 
+#pragma mark - POST 加载网络数据
++ (void)patchDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
+    
+    // 获得网络管理单例对象
+    RTHTTPSessionManager *manager = [RTHTTPSessionManager sharedNetworkManager];
+    if (params == nil) {
+        params = [NSMutableDictionary dictionary];
+    }
+    
+    // 打印一下请求的地址
+    NSString *completeUrl = [BaseUrl stringByAppendingPathComponent:interfaceType];
+    NSLog(@"请求的网络地址 - %@", completeUrl);
+    
+    // 发送PATCH请求
+    [manager PATCH:completeUrl parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
+    }];
+}
+
+
 #pragma mark - 保存cookies和加载cookies和删除cookies
 
 + (void)saveCookies{
