@@ -10,4 +10,8 @@
 
 @interface RTGameModel : NSObject
 
+@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSString *distance;
+@property (nonatomic, copy) NSString *id;
+
 @end

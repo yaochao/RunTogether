@@ -21,6 +21,10 @@
 		CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920CB1C06996700540429 /* RTNameViewController.m */; };
 		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
+		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
+		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
+		D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682601C0702070069F422 /* RTMyHistoryModel.m */; };
+		D22682641C070E750069F422 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682631C070E750069F422 /* NSDate+Extension.m */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -131,6 +135,14 @@
 		CEC920CC1C06996700540429 /* RTNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTNameViewController.xib; path = Profile/RTNameViewController.xib; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
+		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
+		D226825A1C0701350069F422 /* RTGameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTGameModel.m; sourceTree = "<group>"; };
+		D226825C1C07018B0069F422 /* RTResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTResultModel.h; sourceTree = "<group>"; };
+		D226825D1C07018B0069F422 /* RTResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTResultModel.m; sourceTree = "<group>"; };
+		D226825F1C0702070069F422 /* RTMyHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyHistoryModel.h; sourceTree = "<group>"; };
+		D22682601C0702070069F422 /* RTMyHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryModel.m; sourceTree = "<group>"; };
+		D22682621C070E750069F422 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		D22682631C070E750069F422 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -403,6 +415,8 @@
 				D22CF0471BE84835007BB1EE /* NSString+BBExtension.m */,
 				D22CF0481BE84835007BB1EE /* NSString+Extension.h */,
 				D22CF0491BE84835007BB1EE /* NSString+Extension.m */,
+				D22682621C070E750069F422 /* NSDate+Extension.h */,
+				D22682631C070E750069F422 /* NSDate+Extension.m */,
 				D22CF04A1BE84835007BB1EE /* UIBarButtonItem+Extension.h */,
 				D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */,
 				D22CF04C1BE84835007BB1EE /* UIImage+BBExtension.h */,
@@ -796,6 +810,12 @@
 			children = (
 				D22682561C06F3F70069F422 /* RTUserInfoModel.h */,
 				D22682571C06F3F70069F422 /* RTUserInfoModel.m */,
+				D22682591C0701350069F422 /* RTGameModel.h */,
+				D226825A1C0701350069F422 /* RTGameModel.m */,
+				D226825C1C07018B0069F422 /* RTResultModel.h */,
+				D226825D1C07018B0069F422 /* RTResultModel.m */,
+				D226825F1C0702070069F422 /* RTMyHistoryModel.h */,
+				D22682601C0702070069F422 /* RTMyHistoryModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1017,6 +1037,8 @@
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
+				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
+				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
@@ -1029,7 +1051,9 @@
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
 				D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */,
 				D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */,
+				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
+				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,

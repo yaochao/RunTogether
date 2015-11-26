@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RTGameModel.h"
+#import "RTResultModel.h"
 
 @interface RTMyHistoryModel : NSObject
+
+@property (nonatomic, strong) RTGameModel *game;
+@property (nonatomic, strong) RTResultModel *result;
 
 @end

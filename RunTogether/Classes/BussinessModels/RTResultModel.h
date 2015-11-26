@@ -10,4 +10,8 @@
 
 @interface RTResultModel : NSObject
 
+@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, copy) NSString *rank;
+@property (nonatomic, copy) NSString *updated_at;
+
 @end
