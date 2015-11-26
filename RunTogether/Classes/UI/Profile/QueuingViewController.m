@@ -26,11 +26,12 @@
     self.navigationItem.leftBarButtonItem = leftButton;
     NSString *interface = [NSString stringWithFormat:@"users/%@/game_properties", self.user_id];
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
         RTGamePropertiesModel* gameProperties = [RTGamePropertiesModel objectWithKeyValues:responseObject];
         self.beforeMeLable.text = [NSString stringWithFormat:@"%ld",gameProperties.queuing_users_before_me];
         self.afterMeLable.text = [NSString stringWithFormat:@"%ld",gameProperties.queuing_users_after_me];
     } failure:^(NSError *error) {
-        NSLog(@"请求排队数据失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+        NSLogErrorResponse;
     }];
         // Do any additional setup after loading the view from its nib.
 }

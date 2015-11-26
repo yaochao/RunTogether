@@ -54,6 +54,7 @@
 - (void)putAvatarsOnButton{
     NSString *interface = @"sys_avatars";
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
         self.avatarModelArr = [RTAvatarModel objectArrayWithKeyValuesArray:responseObject];
         for (int i = 0; i < self.avatarModelArr.count; i++) {
             RTAvatarModel* avatarModel = self.avatarModelArr[i];
@@ -61,7 +62,7 @@
             [button sd_setImageWithURL:[NSURL URLWithString:avatarModel.url] forState:UIControlStateNormal];
         }
     } failure:^(NSError *error) {
-        NSLog(@"请求头像数据失败- %@\n%@",error,error.userInfo[kErrorResponseObjectKey]);
+        NSLogErrorResponse;
     }];
 }
 - (IBAction)pressButton:(UIButton *)sender {
