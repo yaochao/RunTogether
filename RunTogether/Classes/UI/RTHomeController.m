@@ -9,6 +9,8 @@
 #import "RTHomeController.h"
 #import "RTSettingController.h"
 #import "RTMyHistoryController.h"
+#import "RTNetworkTools.h"
+#import "RTKeyChainTools.h"
 
 @interface RTHomeController ()
 
@@ -55,9 +57,21 @@
 }
 
 
-#pragma mark -
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - 网络请求
+- (void)loadData {
+    NSString *interface = [NSString stringWithFormat:@"users/%@", [RTKeyChainTools getUserId]];
+    [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+    }];
+    
+    NSString *interface2 = [NSString stringWithFormat:@"users/%@/game_properties", [RTKeyChainTools getUserId]];
+    [RTNetworkTools getDataWithParams:nil interfaceType:interface2 success:^(id responseObject) {
+        NSLogSuccessResponse;
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+    }];
 }
 
 
@@ -80,5 +94,12 @@
 
 
 #pragma mark - setter
+
+
+#pragma mark - didReceiveMemoryWarning
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 
 @end

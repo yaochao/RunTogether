@@ -78,7 +78,7 @@
 }
 
 
-#pragma mark - POST 加载网络数据
+#pragma mark - PATCH 加载网络数据
 + (void)patchDataWithParams:(NSMutableDictionary *)params interfaceType:(NSString *)interfaceType success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure {
     
     // 获得网络管理单例对象
