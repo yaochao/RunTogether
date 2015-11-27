@@ -6,9 +6,13 @@
 //  Copyright © 2015年 赵欢. All rights reserved.
 //
 
+#import <MJExtension/MJExtension.h>
 #import "CaptcheViewController.h"
 #import "QueuingViewController.h"
 #import "RTNetworkTools.h"
+#import "RTKeyChainSingleton.h"
+#import "RTLoginModel.h"
+#import "RTKeyChainTools.h"
 @interface CaptcheViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *captcheTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
@@ -51,6 +55,10 @@
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
             NSLogSuccessResponse;
             self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
+            RTLoginModel *loginModel = [RTLoginModel objectWithKeyValues:responseObject];
+            [RTKeyChainTools saveRememberToken:loginModel.remember_token];
+            [RTKeyChainTools saveUserId:loginModel.user_id];
+            [RTKeyChainTools saveSessionKey:loginModel.session_key];
         } failure:^(NSError *error) {
             NSLogErrorResponse;
         }];

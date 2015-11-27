@@ -6,11 +6,12 @@
 //  Copyright © 2015年 duoduo. All rights reserved.
 //
 
+#import <MJExtension/MJExtension.h>
+#import <UIButton+WebCache.h>
 #import "RTAvatarViewController.h"
 #import "RTNetworkTools.h"
 #import "RTAvatarModel.h"
-#import <MJExtension/MJExtension.h>
-#import <UIButton+WebCache.h>
+#import "RTAvatarVoiceViewController.h"
 
 @interface RTAvatarViewController ()
 
@@ -43,10 +44,15 @@
     [checkButton setTitle:@"确认" forState:UIControlStateNormal];
     [checkButton setBackgroundColor:[UIColor redColor]];
     [checkButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [checkButton addTarget:self action:@selector(pressCheckButton) forControlEvents:UIControlEventTouchUpInside];
     [self.checkView addSubview:checkButton];
     [self.view addSubview:self.checkView];
     self.checkView.hidden = YES;
 
+}
+- (void)pressCheckButton{
+    RTAvatarVoiceViewController *avatarVoiceVC = [[RTAvatarVoiceViewController alloc]init];
+    [self.navigationController pushViewController:avatarVoiceVC animated:YES];
 }
 - (void)tapAction{
     self.checkView.hidden = YES;

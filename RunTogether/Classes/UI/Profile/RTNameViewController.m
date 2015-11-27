@@ -8,7 +8,7 @@
 
 #import "RTNameViewController.h"
 #import "RTAvatarViewController.h"
-
+#import "RTKeyChainTools.h"
 @interface RTNameViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;

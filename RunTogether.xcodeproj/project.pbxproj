@@ -23,6 +23,9 @@
 		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
 		CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920D41C06A81800540429 /* RTAvatarViewController.m */; };
 		CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920D51C06A81800540429 /* RTAvatarViewController.xib */; };
+		CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */; };
+		CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */; };
+		CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94B021C08042F004D2FA7 /* RTLoginModel.m */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -141,6 +144,11 @@
 		CEC920D31C06A81800540429 /* RTAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAvatarViewController.h; path = Profile/RTAvatarViewController.h; sourceTree = "<group>"; };
 		CEC920D41C06A81800540429 /* RTAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAvatarViewController.m; path = Profile/RTAvatarViewController.m; sourceTree = "<group>"; };
 		CEC920D51C06A81800540429 /* RTAvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTAvatarViewController.xib; path = Profile/RTAvatarViewController.xib; sourceTree = "<group>"; };
+		CED94AFC1C080015004D2FA7 /* RTAvatarVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAvatarVoiceViewController.h; path = Profile/RTAvatarVoiceViewController.h; sourceTree = "<group>"; };
+		CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAvatarVoiceViewController.m; path = Profile/RTAvatarVoiceViewController.m; sourceTree = "<group>"; };
+		CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTAvatarVoiceViewController.xib; path = Profile/RTAvatarVoiceViewController.xib; sourceTree = "<group>"; };
+		CED94B011C08042F004D2FA7 /* RTLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoginModel.h; sourceTree = "<group>"; };
+		CED94B021C08042F004D2FA7 /* RTLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoginModel.m; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -411,6 +419,16 @@
 				CEC920D51C06A81800540429 /* RTAvatarViewController.xib */,
 			);
 			name = Avatar;
+			sourceTree = "<group>";
+		};
+		CED94AFB1C07FFE0004D2FA7 /* AvatarVoice */ = {
+			isa = PBXGroup;
+			children = (
+				CED94AFC1C080015004D2FA7 /* RTAvatarVoiceViewController.h */,
+				CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */,
+				CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */,
+			);
+			name = AvatarVoice;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -776,6 +794,8 @@
 				CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */,
 				CE3B0AB41C06E25C00DE6C79 /* RTAvatarModel.h */,
 				CE3B0AB51C06E25C00DE6C79 /* RTAvatarModel.m */,
+				CED94B011C08042F004D2FA7 /* RTLoginModel.h */,
+				CED94B021C08042F004D2FA7 /* RTLoginModel.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -789,6 +809,7 @@
 				CEC920C81C0697A900540429 /* Queuing */,
 				CEC920C91C06992500540429 /* Name */,
 				CEC920CF1C06A7BC00540429 /* Avatar */,
+				CED94AFB1C07FFE0004D2FA7 /* AvatarVoice */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -949,6 +970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
@@ -1061,6 +1083,7 @@
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
+				CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */,
@@ -1077,6 +1100,7 @@
 				D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */,
 				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
+				CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */,
 				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
