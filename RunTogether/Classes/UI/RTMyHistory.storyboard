@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--个人历史记录-->
         <scene sceneID="haj-Yd-qUq">
             <objects>
                 <tableViewController id="JfY-OL-7Wz" customClass="RTMyHistoryController" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                             <outlet property="delegate" destination="JfY-OL-7Wz" id="GVo-UQ-e7Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="MrW-lo-z5B"/>
+                    <navigationItem key="navigationItem" title="个人历史记录" id="MrW-lo-z5B"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaN-kv-TQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
