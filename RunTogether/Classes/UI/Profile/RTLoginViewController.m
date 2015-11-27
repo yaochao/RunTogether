@@ -60,6 +60,7 @@
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"country_calling_code"] = @"+86";
         params[@"phone"] = self.phoneNumberTextField.text;
+        [RTKeyChainTools savePhone:self.phoneNumberTextField.text];
         NSString *interface = @"security_codes";
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
             NSLogSuccessResponse;

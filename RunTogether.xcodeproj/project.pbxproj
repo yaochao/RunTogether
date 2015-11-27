@@ -23,11 +23,18 @@
 		CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920CC1C06996700540429 /* RTNameViewController.xib */; };
 		CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC920D41C06A81800540429 /* RTAvatarViewController.m */; };
 		CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC920D51C06A81800540429 /* RTAvatarViewController.xib */; };
+		CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */; };
+		CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */; };
+		CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94B021C08042F004D2FA7 /* RTLoginModel.m */; };
+		CED94B071C082D82004D2FA7 /* LVRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94B061C082D82004D2FA7 /* LVRecordTool.m */; };
+		CED94B0B1C0830DA004D2FA7 /* ANLongTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */; };
+		CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
 		D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682601C0702070069F422 /* RTMyHistoryModel.m */; };
 		D22682641C070E750069F422 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682631C070E750069F422 /* NSDate+Extension.m */; };
+		D22682671C084F040069F422 /* RTResultItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682661C084F040069F422 /* RTResultItemModel.m */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -141,6 +148,16 @@
 		CEC920D31C06A81800540429 /* RTAvatarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAvatarViewController.h; path = Profile/RTAvatarViewController.h; sourceTree = "<group>"; };
 		CEC920D41C06A81800540429 /* RTAvatarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAvatarViewController.m; path = Profile/RTAvatarViewController.m; sourceTree = "<group>"; };
 		CEC920D51C06A81800540429 /* RTAvatarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTAvatarViewController.xib; path = Profile/RTAvatarViewController.xib; sourceTree = "<group>"; };
+		CED94AFC1C080015004D2FA7 /* RTAvatarVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTAvatarVoiceViewController.h; path = Profile/RTAvatarVoiceViewController.h; sourceTree = "<group>"; };
+		CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTAvatarVoiceViewController.m; path = Profile/RTAvatarVoiceViewController.m; sourceTree = "<group>"; };
+		CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RTAvatarVoiceViewController.xib; path = Profile/RTAvatarVoiceViewController.xib; sourceTree = "<group>"; };
+		CED94B011C08042F004D2FA7 /* RTLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLoginModel.h; sourceTree = "<group>"; };
+		CED94B021C08042F004D2FA7 /* RTLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLoginModel.m; sourceTree = "<group>"; };
+		CED94B051C082D82004D2FA7 /* LVRecordTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVRecordTool.h; sourceTree = "<group>"; };
+		CED94B061C082D82004D2FA7 /* LVRecordTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVRecordTool.m; sourceTree = "<group>"; };
+		CED94B081C0830D9004D2FA7 /* RunTogether-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunTogether-Bridging-Header.h"; sourceTree = "<group>"; };
+		CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANLongTapButton.swift; sourceTree = "<group>"; };
+		CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -151,6 +168,8 @@
 		D22682601C0702070069F422 /* RTMyHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryModel.m; sourceTree = "<group>"; };
 		D22682621C070E750069F422 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		D22682631C070E750069F422 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		D22682651C084F040069F422 /* RTResultItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTResultItemModel.h; sourceTree = "<group>"; };
+		D22682661C084F040069F422 /* RTResultItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTResultItemModel.m; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -413,6 +432,28 @@
 			name = Avatar;
 			sourceTree = "<group>";
 		};
+		CED94AFB1C07FFE0004D2FA7 /* AvatarVoice */ = {
+			isa = PBXGroup;
+			children = (
+				CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */,
+				CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */,
+				CED94AFC1C080015004D2FA7 /* RTAvatarVoiceViewController.h */,
+				CED94AFD1C080015004D2FA7 /* RTAvatarVoiceViewController.m */,
+				CED94AFE1C080015004D2FA7 /* RTAvatarVoiceViewController.xib */,
+				CED94B081C0830D9004D2FA7 /* RunTogether-Bridging-Header.h */,
+			);
+			name = AvatarVoice;
+			sourceTree = "<group>";
+		};
+		CED94B041C082D40004D2FA7 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				CED94B051C082D82004D2FA7 /* LVRecordTool.h */,
+				CED94B061C082D82004D2FA7 /* LVRecordTool.m */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +627,7 @@
 		D2917F891BE7083400004AE7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CED94B041C082D40004D2FA7 /* Record */,
 				D2ECB8511BF8763A00ECBA87 /* UserDefault */,
 				D297FE911BEB41A60029B3B0 /* Location */,
 				D2C2F1A11BE9B5B00027A4A5 /* Keychain */,
@@ -776,6 +818,8 @@
 				CE6578871C05B3630045D043 /* RTGamePropertiesModel.m */,
 				CE3B0AB41C06E25C00DE6C79 /* RTAvatarModel.h */,
 				CE3B0AB51C06E25C00DE6C79 /* RTAvatarModel.m */,
+				CED94B011C08042F004D2FA7 /* RTLoginModel.h */,
+				CED94B021C08042F004D2FA7 /* RTLoginModel.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -789,6 +833,7 @@
 				CEC920C81C0697A900540429 /* Queuing */,
 				CEC920C91C06992500540429 /* Name */,
 				CEC920CF1C06A7BC00540429 /* Avatar */,
+				CED94AFB1C07FFE0004D2FA7 /* AvatarVoice */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -837,6 +882,8 @@
 				D226825D1C07018B0069F422 /* RTResultModel.m */,
 				D226825F1C0702070069F422 /* RTMyHistoryModel.h */,
 				D22682601C0702070069F422 /* RTMyHistoryModel.m */,
+				D22682651C084F040069F422 /* RTResultItemModel.h */,
+				D22682661C084F040069F422 /* RTResultItemModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -910,6 +957,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RT;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = duoduo;
 				TargetAttributes = {
@@ -949,6 +997,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
@@ -1031,6 +1080,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED94B071C082D82004D2FA7 /* LVRecordTool.m in Sources */,
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
@@ -1049,6 +1099,7 @@
 				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
 				D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */,
 				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
+				D22682671C084F040069F422 /* RTResultItemModel.m in Sources */,
 				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
@@ -1056,11 +1107,14 @@
 				CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
+				CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
+				CED94B0B1C0830DA004D2FA7 /* ANLongTapButton.swift in Sources */,
 				D22CF0561BE84835007BB1EE /* NSString+Base64.m in Sources */,
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
+				CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
 				CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */,
@@ -1077,6 +1131,7 @@
 				D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */,
 				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
+				CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */,
 				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
@@ -1243,8 +1298,10 @@
 			baseConfigurationReference = CAF811E886039A64FEC97BF0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1260,6 +1317,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunTogether/Classes/UI/RunTogether-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -1269,8 +1328,10 @@
 			baseConfigurationReference = E9645101320C20B61C0B65AA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1286,6 +1347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunTogether/Classes/UI/RunTogether-Bridging-Header.h";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;

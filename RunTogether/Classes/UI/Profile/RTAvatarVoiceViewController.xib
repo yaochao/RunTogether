@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RTAvatarVoiceViewController">
+            <connections>
+                <outlet property="imageView" destination="6qr-O3-W7P" id="OVR-kd-A32"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-O3-W7P">
+                    <rect key="frame" x="103" y="89" width="169" height="135"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="169" id="Zy9-54-T05"/>
+                        <constraint firstAttribute="height" constant="135" id="kyk-P3-gNi"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-GX-B74" customClass="ANLongTapButton" customModule="RunTogether" customModuleProvider="target">
+                    <rect key="frame" x="113" y="295" width="149" height="152"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="152" id="CSw-oT-I7F"/>
+                        <constraint firstAttribute="width" constant="149" id="Hkm-8P-IyX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                            <color key="value" red="0.58478184970000002" green="1" blue="0.87206449180000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bgCircleColor">
+                            <color key="value" red="0.55679188970000004" green="0.42619510820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barTrackColor">
+                            <color key="value" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="LongTapTouchUpInside:" destination="-1" eventType="touchUpInside" id="j3a-U4-puc"/>
+                        <action selector="longTap:" destination="-1" eventType="touchDown" id="STG-YE-Nf4"/>
+                        <action selector="longTapOut:" destination="-1" eventType="touchUpOutside" id="AKe-Z6-Xnn"/>
+                        <action selector="longTapTouchDragExit:" destination="-1" eventType="touchDragExit" id="LJU-ra-hoY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeP-KZ-l6y">
+                    <rect key="frame" x="164" y="521" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="2MH-Um-p2o"/>
+                    </constraints>
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="playButtonAction:" destination="-1" eventType="touchUpInside" id="pwN-Fo-pHH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6qr-O3-W7P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="89" id="ACk-jR-S0b"/>
+                <constraint firstItem="6qr-O3-W7P" firstAttribute="centerX" secondItem="zeP-KZ-l6y" secondAttribute="centerX" id="AL8-hH-Qvt"/>
+                <constraint firstItem="6qr-O3-W7P" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jif-G6-0Qa"/>
+                <constraint firstItem="zeP-KZ-l6y" firstAttribute="top" secondItem="zhb-GX-B74" secondAttribute="bottom" constant="74" id="S9R-om-Hfn"/>
+                <constraint firstItem="zhb-GX-B74" firstAttribute="top" secondItem="6qr-O3-W7P" secondAttribute="bottom" constant="71" id="Tif-jI-O1U"/>
+                <constraint firstItem="6qr-O3-W7P" firstAttribute="centerX" secondItem="zhb-GX-B74" secondAttribute="centerX" id="y5D-3R-uSz"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

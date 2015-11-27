@@ -26,6 +26,12 @@
     [super viewDidLoad];
 }
 
+#pragma mark - viewWillAppear
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadDataWithPS:10 PN:1];
+}
+
 
 #pragma mark - 请求网络
 - (void)loadDataWithPS:(int)ps PN:(int)pn {
@@ -33,8 +39,8 @@
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
         NSLogSuccessResponse;
         // JSON->MODEL
-        NSMutableArray *modelArr = [RTMyHistoryModel objectArrayWithKeyValuesArray:responseObject];
-        self.modelArr = modelArr;
+//        NSMutableArray *modelArr = [RTMyHistoryModel objectArrayWithKeyValuesArray:responseObject];
+//        self.modelArr = modelArr;
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];
@@ -71,6 +77,11 @@
     _modelArr = modelArr;
     // 刷新表格
     [self.tableView reloadData];
+}
+
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
 }
 
 @end

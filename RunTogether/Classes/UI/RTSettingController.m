@@ -11,6 +11,7 @@
 
 @interface RTSettingController ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchBtn;
 @end
 
 @implementation RTSettingController
@@ -25,6 +26,14 @@
     }];
 }
 
+/**
+ *  switch
+ */
+- (IBAction)switchToggle:(UISwitch *)switchBtn {
+    NSLog(@"%@", switchBtn.isOn ? @"switch on" : @"switch off");
+}
+
+
 
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
@@ -35,6 +44,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
 }
 
 @end

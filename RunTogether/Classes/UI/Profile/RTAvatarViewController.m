@@ -6,11 +6,13 @@
 //  Copyright © 2015年 duoduo. All rights reserved.
 //
 
+#import <MJExtension/MJExtension.h>
+#import <UIButton+WebCache.h>
 #import "RTAvatarViewController.h"
 #import "RTNetworkTools.h"
 #import "RTAvatarModel.h"
-#import <MJExtension/MJExtension.h>
-#import <UIButton+WebCache.h>
+#import "RTAvatarVoiceViewController.h"
+#import "RTKeyChainTools.h"
 
 @interface RTAvatarViewController ()
 
@@ -43,10 +45,15 @@
     [checkButton setTitle:@"确认" forState:UIControlStateNormal];
     [checkButton setBackgroundColor:[UIColor redColor]];
     [checkButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [checkButton addTarget:self action:@selector(pressCheckButton) forControlEvents:UIControlEventTouchUpInside];
     [self.checkView addSubview:checkButton];
     [self.view addSubview:self.checkView];
     self.checkView.hidden = YES;
 
+}
+- (void)pressCheckButton{
+    RTAvatarVoiceViewController *avatarVoiceVC = [[RTAvatarVoiceViewController alloc]init];
+    [self.navigationController pushViewController:avatarVoiceVC animated:YES];
 }
 - (void)tapAction{
     self.checkView.hidden = YES;
@@ -59,7 +66,7 @@
         for (int i = 0; i < self.avatarModelArr.count; i++) {
             RTAvatarModel* avatarModel = self.avatarModelArr[i];
             UIButton *button = (UIButton*)[self.view viewWithTag:i+1];
-            [button sd_setImageWithURL:[NSURL URLWithString:avatarModel.url] forState:UIControlStateNormal];
+            [button sd_setImageWithURL:[NSURL URLWithString:avatarModel.url] forState:UIControlStateNormal placeholderImage:nil options:SDWebImageAllowInvalidSSLCertificates];
         }
     } failure:^(NSError *error) {
         NSLogErrorResponse;
@@ -68,5 +75,15 @@
 - (IBAction)pressButton:(UIButton *)sender {
     self.imageView.image = [sender imageForState:UIControlStateNormal];
     self.checkView.hidden = NO;
+    RTAvatarModel* avatarModel = self.avatarModelArr[sender.tag - 1];
+    NSString *interface = [NSString stringWithFormat:@"users/%@",[RTKeyChainTools getUserId]];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"avatar_id"] = @(avatarModel.ID);
+    params[@"name"] = self.name;
+    [RTNetworkTools patchDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+    }];
 }
 @end

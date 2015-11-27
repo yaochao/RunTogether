@@ -6,9 +6,14 @@
 //  Copyright © 2015年 赵欢. All rights reserved.
 //
 
+#import <MJExtension/MJExtension.h>
 #import "CaptcheViewController.h"
 #import "QueuingViewController.h"
 #import "RTNetworkTools.h"
+#import "RTKeyChainSingleton.h"
+#import "RTLoginModel.h"
+#import "RTKeyChainTools.h"
+#import "RTHomeController.h"
 @interface CaptcheViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *captcheTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
@@ -16,10 +21,19 @@
 - (IBAction)captcheTextAction:(UITextField *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *nextLable;
 @property (strong, nonatomic) NSMutableDictionary *captcheDic;
+@property (weak, nonatomic) IBOutlet UIButton *enterHomeBtn;
+
 @end
 
 @implementation CaptcheViewController{
     int i;
+}
+
+// 登录成功进入Home页
+- (IBAction)enterHomeClick:(id)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTHome" bundle:nil];
+    RTHomeController *homeController = [sb instantiateInitialViewController];
+    [self.navigationController pushViewController:homeController animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -51,6 +65,12 @@
         [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
             NSLogSuccessResponse;
             self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
+            RTLoginModel *loginModel = [RTLoginModel objectWithKeyValues:responseObject];
+            [RTKeyChainTools saveRememberToken:loginModel.remember_token];
+            [RTKeyChainTools saveUserId:loginModel.user_id];
+            [RTKeyChainTools saveSessionKey:loginModel.session_key];
+            // 让enterHomeBtn可点击
+            self.enterHomeBtn.enabled = YES;
         } failure:^(NSError *error) {
             NSLogErrorResponse;
         }];
@@ -63,6 +83,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     i = 0;
+    // 让enterHomeBtn不可点击
+    self.enterHomeBtn.enabled = NO;
 }
 - (IBAction)captcheTextAction:(UITextField *)sender {
     if (sender.text.length == RTSecurityCodeLength) {

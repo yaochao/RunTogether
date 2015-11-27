@@ -63,6 +63,7 @@ typedef enum {
 #define kErrorResponseObjectKey @"kErrorResponseObjectKey"
 #define NSLogErrorResponse NSLog(@"\n-------------------------Error--------------------------------\nError - %@\n-------------------------ErrorBody----------------------------\n%@", error, error.userInfo[kErrorResponseObjectKey])
 #define NSLogSuccessResponse NSLog(@"\n-------------------------Success------------------------------\n%@", responseObject)
+#define NSLogDealloc NSLog(@"%@ - 释放了", self)
 
 /**
  *  推送消息的类型 type

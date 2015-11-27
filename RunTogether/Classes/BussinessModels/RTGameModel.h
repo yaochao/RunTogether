@@ -13,5 +13,7 @@
 @property (nonatomic, copy) NSString *created_at;
 @property (nonatomic, copy) NSString *distance;
 @property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *status;
+@property (nonatomic, copy) NSString *updated_at;
 
 @end
