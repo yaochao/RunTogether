@@ -10,6 +10,7 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import "RTKeyChainTools.h"
+#import <SDWebImageManager.h>
 
 @interface AppDelegate ()
 
@@ -36,7 +37,10 @@
     if (ret) {
         NSLog(@"百度地图管理器启动成功！");
     }
+    
+    [[SDWebImageManager sharedManager].imageDownloader setValue: nil forHTTPHeaderField:@"Accept"];
 
+    
     return YES;
 }
 
