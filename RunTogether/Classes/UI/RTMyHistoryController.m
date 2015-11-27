@@ -73,4 +73,9 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
+}
+
 @end
