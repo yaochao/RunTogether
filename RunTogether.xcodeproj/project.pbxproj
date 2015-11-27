@@ -34,6 +34,7 @@
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
 		D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682601C0702070069F422 /* RTMyHistoryModel.m */; };
 		D22682641C070E750069F422 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682631C070E750069F422 /* NSDate+Extension.m */; };
+		D22682671C084F040069F422 /* RTResultItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682661C084F040069F422 /* RTResultItemModel.m */; };
 		D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */; };
 		D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */; };
 		D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF03D1BE84835007BB1EE /* MBProgressHUD.m */; };
@@ -167,6 +168,8 @@
 		D22682601C0702070069F422 /* RTMyHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryModel.m; sourceTree = "<group>"; };
 		D22682621C070E750069F422 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		D22682631C070E750069F422 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		D22682651C084F040069F422 /* RTResultItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTResultItemModel.h; sourceTree = "<group>"; };
+		D22682661C084F040069F422 /* RTResultItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTResultItemModel.m; sourceTree = "<group>"; };
 		D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -879,6 +882,8 @@
 				D226825D1C07018B0069F422 /* RTResultModel.m */,
 				D226825F1C0702070069F422 /* RTMyHistoryModel.h */,
 				D22682601C0702070069F422 /* RTMyHistoryModel.m */,
+				D22682651C084F040069F422 /* RTResultItemModel.h */,
+				D22682661C084F040069F422 /* RTResultItemModel.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1094,6 +1099,7 @@
 				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
 				D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */,
 				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
+				D22682671C084F040069F422 /* RTResultItemModel.m in Sources */,
 				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
 				D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */,
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
