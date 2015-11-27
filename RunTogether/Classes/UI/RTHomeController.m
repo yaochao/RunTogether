@@ -22,8 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *levelLbl;
 @property (weak, nonatomic) IBOutlet UILabel *totalDistanceLbl;
-@property (nonatomic, strong) RTSettingController *settingController;
-@property (nonatomic, strong) RTMyHistoryController *historyController;
+@property (nonatomic, weak) RTSettingController *settingController;
+@property (nonatomic, weak) RTMyHistoryController *historyController;
 @property (nonatomic, strong) RTGamePropertiesModel *gamePropertiesModel;
 @property (nonatomic, strong) RTUserInfoModel *userInfoModel;
 @end
