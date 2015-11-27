@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptcheViewController">
             <connections>
                 <outlet property="captcheTextField" destination="rkK-Bc-Bsy" id="7mB-XG-gUW"/>
+                <outlet property="enterHomeBtn" destination="XhD-65-8qN" id="A2y-Yt-gTc"/>
                 <outlet property="nextButton" destination="O53-pB-eaG" id="UP5-ST-oVx"/>
                 <outlet property="nextLable" destination="3IL-ZK-NWn" id="ePo-mO-vwf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,6 +21,7 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="bezel" placeholder="请输入验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rkK-Bc-Bsy">
                     <rect key="frame" x="82" y="166" width="217" height="45"/>
+                    <animations/>
                     <attributedString key="attributedText"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                     <connections>
@@ -28,6 +30,7 @@
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-ZK-NWn">
                     <rect key="frame" x="82" y="253" width="217" height="44"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.458610409" green="1" blue="0.88712092170000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,6 +38,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-pB-eaG">
                     <rect key="frame" x="82" y="253" width="217" height="44"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Frd-Pl-A8T"/>
                     </constraints>
@@ -44,7 +48,16 @@
                         <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ob9-CE-Ugr"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-65-8qN">
+                    <rect key="frame" x="151.5" y="319" width="71" height="30"/>
+                    <animations/>
+                    <state key="normal" title="进入Home"/>
+                    <connections>
+                        <action selector="enterHomeClick:" destination="-1" eventType="touchUpInside" id="lx3-qO-jre"/>
+                    </connections>
+                </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="3IL-ZK-NWn" secondAttribute="top" id="2xL-oB-w1d"/>
@@ -52,8 +65,10 @@
                 <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="rkK-Bc-Bsy" secondAttribute="leading" id="AVR-dD-ZcP"/>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="bottom" secondItem="3IL-ZK-NWn" secondAttribute="bottom" id="CEh-oF-Se9"/>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="leading" secondItem="3IL-ZK-NWn" secondAttribute="leading" id="DSd-Of-wxV"/>
+                <constraint firstItem="XhD-65-8qN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tpi-oB-cz6"/>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="3IL-ZK-NWn" secondAttribute="trailing" id="XRC-uB-mqI"/>
                 <constraint firstItem="rkK-Bc-Bsy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="82" id="Y6t-wO-jB2"/>
+                <constraint firstItem="XhD-65-8qN" firstAttribute="top" secondItem="O53-pB-eaG" secondAttribute="bottom" constant="22" id="kdV-CH-6mO"/>
                 <constraint firstItem="rkK-Bc-Bsy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="166" id="mcL-ec-FfO"/>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="trailing" secondItem="rkK-Bc-Bsy" secondAttribute="trailing" id="p4E-RX-827"/>
                 <constraint firstItem="O53-pB-eaG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="253" id="rv0-cX-1pv"/>
