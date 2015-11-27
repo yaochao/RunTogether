@@ -11,6 +11,7 @@
 
 @interface RTSettingController ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchBtn;
 @end
 
 @implementation RTSettingController
@@ -24,6 +25,14 @@
         NSLogErrorResponse;
     }];
 }
+
+/**
+ *  switch
+ */
+- (IBAction)switchToggle:(UISwitch *)switchBtn {
+    NSLog(@"%@", switchBtn.isOn ? @"switch on" : @"switch off");
+}
+
 
 
 #pragma mark - viewDidLoad

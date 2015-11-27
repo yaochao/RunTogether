@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -17,6 +17,7 @@
             <subviews>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-gj-CzV">
                     <rect key="frame" x="0.0" y="64" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="9jp-rv-JcO"/>
@@ -24,6 +25,7 @@
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPT-cV-kDv">
                     <rect key="frame" x="125" y="64" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="u7P-BH-KAd"/>
@@ -31,6 +33,7 @@
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXQ-EB-EQT">
                     <rect key="frame" x="250" y="64" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="bSw-u4-fp3"/>
@@ -38,6 +41,7 @@
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuM-c1-Xuk">
                     <rect key="frame" x="0.0" y="215" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="TkP-CW-ZXr"/>
@@ -45,6 +49,7 @@
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgL-bQ-l0V">
                     <rect key="frame" x="125" y="215" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="74f-ty-HRS"/>
@@ -52,6 +57,7 @@
                 </button>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uo-zp-EEG">
                     <rect key="frame" x="250" y="215" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="7LC-Tz-zix"/>
@@ -59,6 +65,7 @@
                 </button>
                 <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zs5-R6-ZEF">
                     <rect key="frame" x="0.0" y="366" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="gbs-g3-To2"/>
@@ -66,6 +73,7 @@
                 </button>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIw-Pj-JYH">
                     <rect key="frame" x="125" y="366" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="pdY-Gn-1AA"/>
@@ -73,6 +81,7 @@
                 </button>
                 <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-G1-eLp">
                     <rect key="frame" x="0.0" y="516" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="x5d-YZ-t85"/>
@@ -80,6 +89,7 @@
                 </button>
                 <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrF-rB-qij">
                     <rect key="frame" x="250" y="516" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="Z9L-zI-kHm"/>
@@ -87,6 +97,7 @@
                 </button>
                 <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-6p-fez">
                     <rect key="frame" x="125" y="516" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="PMY-pb-Vn5"/>
@@ -94,12 +105,14 @@
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-GJ-5wL">
                     <rect key="frame" x="250" y="366" width="125" height="151"/>
+                    <animations/>
                     <color key="backgroundColor" red="1" green="0.70293863830000003" blue="0.58929201099999995" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="brm-zc-tEX"/>
                     </connections>
                 </button>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="356.5" y="233.5"/>
@@ -107,6 +120,7 @@
         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Omc-is-yKd">
             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <animations/>
         </activityIndicatorView>
     </objects>
 </document>
