@@ -10,7 +10,7 @@
 
 @interface RTAvatarModel : NSObject
 
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, assign) int ID;
 @property (nonatomic, strong) NSString *url;
 
 @end

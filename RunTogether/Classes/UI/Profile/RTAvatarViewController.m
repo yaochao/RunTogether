@@ -12,6 +12,7 @@
 #import "RTNetworkTools.h"
 #import "RTAvatarModel.h"
 #import "RTAvatarVoiceViewController.h"
+#import "RTKeyChainTools.h"
 
 @interface RTAvatarViewController ()
 
@@ -65,8 +66,6 @@
         for (int i = 0; i < self.avatarModelArr.count; i++) {
             RTAvatarModel* avatarModel = self.avatarModelArr[i];
             UIButton *button = (UIButton*)[self.view viewWithTag:i+1];
-            
-//            [button sd_setImageWithURL:[NSURL URLWithString:avatarModel.url] forState:UIControlStateNormal];
             [button sd_setImageWithURL:[NSURL URLWithString:avatarModel.url] forState:UIControlStateNormal placeholderImage:nil options:SDWebImageAllowInvalidSSLCertificates];
         }
     } failure:^(NSError *error) {
@@ -76,5 +75,15 @@
 - (IBAction)pressButton:(UIButton *)sender {
     self.imageView.image = [sender imageForState:UIControlStateNormal];
     self.checkView.hidden = NO;
+    RTAvatarModel* avatarModel = self.avatarModelArr[sender.tag - 1];
+    NSString *interface = [NSString stringWithFormat:@"users/%@",[RTKeyChainTools getUserId]];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"avatar_id"] = @(avatarModel.ID);
+    params[@"name"] = self.name;
+    [RTNetworkTools patchDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+    }];
 }
 @end
