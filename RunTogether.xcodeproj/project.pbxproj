@@ -71,6 +71,8 @@
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
 		D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25526E51BE6FA2C00CDEFC7 /* LaunchScreen.xib */; };
 		D25526F31BE6FA2C00CDEFC7 /* RunTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */; };
+		D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = D286088C1C0C2472000D9CFD /* RTStartingLineController.m */; };
+		D286088F1C0C249E000D9CFD /* RTStartingLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */; };
 		D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2917F851BE7074D00004AE7 /* Default-568h@2x.png */; };
 		D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917F8E1BE7086100004AE7 /* AppDelegate.mm */; };
 		D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */; };
@@ -238,6 +240,9 @@
 		D25526EC1BE6FA2C00CDEFC7 /* RunTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526F11BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTogetherTests.m; sourceTree = "<group>"; };
+		D286088B1C0C2472000D9CFD /* RTStartingLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingLineController.h; sourceTree = "<group>"; };
+		D286088C1C0C2472000D9CFD /* RTStartingLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingLineController.m; sourceTree = "<group>"; };
+		D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTStartingLine.storyboard; sourceTree = "<group>"; };
 		D2917F851BE7074D00004AE7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		D2917F8D1BE7086100004AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2917F8E1BE7086100004AE7 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -853,6 +858,9 @@
 		D2EDA81D1C05984200F1EA1A /* StartingLine */ = {
 			isa = PBXGroup;
 			children = (
+				D286088B1C0C2472000D9CFD /* RTStartingLineController.h */,
+				D286088C1C0C2472000D9CFD /* RTStartingLineController.m */,
+				D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */,
 			);
 			name = StartingLine;
 			sourceTree = "<group>";
@@ -1006,6 +1014,7 @@
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
+				D286088F1C0C249E000D9CFD /* RTStartingLine.storyboard in Resources */,
 				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
@@ -1121,6 +1130,7 @@
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
+				D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
