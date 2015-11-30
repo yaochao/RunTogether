@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VtA-AN-SmE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Nav Controller-->
+        <scene sceneID="zeD-aT-7db">
+            <objects>
+                <navigationController id="Ryp-3S-lbS" customClass="RTBaseNavController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Rl-Hk-mSC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VtA-AN-SmE" kind="relationship" relationship="rootViewController" id="US8-IC-cHe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttC-xp-TK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349" y="336"/>
+        </scene>
+        <!--起跑线-->
+        <scene sceneID="A5o-qN-ud2">
+            <objects>
+                <viewController id="VtA-AN-SmE" customClass="RTStartingLineController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nws-ys-jby"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Lr-mH-XaB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q8h-Li-h8j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIm-Lk-aSC">
+                                <rect key="frame" x="70" y="508" width="460" height="42"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="开始">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="VtA-AN-SmE" eventType="touchUpInside" id="Mpp-Pm-muq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间赛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-6y-t3W">
+                                <rect key="frame" x="254.5" y="106" width="90" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-pU-KXF">
+                                <rect key="frame" x="40" y="192" width="520" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VtA-AN-SmE" id="AXb-7b-1OY"/>
+                                    <outlet property="delegate" destination="VtA-AN-SmE" id="nV9-Lh-fHc"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Mj-pU-KXF" firstAttribute="centerX" secondItem="Q8h-Li-h8j" secondAttribute="centerX" id="0Ip-IQ-nJA"/>
+                            <constraint firstItem="4Lr-mH-XaB" firstAttribute="top" secondItem="tIm-Lk-aSC" secondAttribute="bottom" constant="50" id="C5i-Ii-kzd"/>
+                            <constraint firstItem="6Mj-pU-KXF" firstAttribute="leading" secondItem="Q8h-Li-h8j" secondAttribute="leadingMargin" constant="20" id="HwY-Vv-K0t"/>
+                            <constraint firstItem="6Mj-pU-KXF" firstAttribute="centerY" secondItem="Q8h-Li-h8j" secondAttribute="centerY" id="LOp-HL-fcF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tIm-Lk-aSC" secondAttribute="trailing" constant="50" id="PH1-Pb-BPY"/>
+                            <constraint firstItem="6Mj-pU-KXF" firstAttribute="top" secondItem="fvR-6y-t3W" secondAttribute="bottom" constant="50" id="ZSe-fr-cbL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Mj-pU-KXF" secondAttribute="trailing" constant="20" id="gm6-lJ-udN"/>
+                            <constraint firstItem="tIm-Lk-aSC" firstAttribute="leading" secondItem="Q8h-Li-h8j" secondAttribute="leadingMargin" constant="50" id="kGj-hp-P06"/>
+                            <constraint firstItem="fvR-6y-t3W" firstAttribute="centerX" secondItem="Q8h-Li-h8j" secondAttribute="centerX" id="uEW-oR-ech"/>
+                            <constraint firstItem="tIm-Lk-aSC" firstAttribute="centerX" secondItem="Q8h-Li-h8j" secondAttribute="centerX" id="vdY-wp-Y8G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="起跑线" id="v4H-Cs-EXY"/>
+                    <connections>
+                        <outlet property="pickerView" destination="6Mj-pU-KXF" id="sjQ-4U-xbe"/>
+                        <outlet property="startBtn" destination="tIm-Lk-aSC" id="WJf-b0-By6"/>
+                        <outlet property="titleLbl" destination="fvR-6y-t3W" id="9qx-8O-1xK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSB-G6-46I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="336"/>
+        </scene>
+    </scenes>
+</document>

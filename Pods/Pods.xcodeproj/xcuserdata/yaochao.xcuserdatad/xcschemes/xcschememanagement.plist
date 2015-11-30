@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FastCoding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,15 +44,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06039BD458FED4B1BE25CBB1235632F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0E63E8E2BC4E15BB676B14B1DFA7B20D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B765E1D09B6C13A6845D61CF51D5D40</key>
+		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4061CD5D78F4E0D1956C02EE7B66784D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DE7A2F3ECA0504EC1576AD69DEC8E2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A36A5C2B46FB5CFE851BF0D137419A6A</key>
+		<key>9A45381AD8048D31CD8B3D1B1E303050</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF5C8C018DE9830764194573BDA590A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

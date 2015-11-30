@@ -36,6 +36,8 @@
 #pragma mark - 请求网络
 - (void)loadDataWithPS:(int)ps PN:(int)pn {
     NSString *interface = [NSString stringWithFormat:@"users/%@/game_summaries?ps=%i&pn=%i", [RTKeyChainTools getUserId], ps, pn];
+//    NSString *interface = [NSString stringWithFormat:@"users/%@/game_summaries?ps=%i&pn=%i", @10000, ps, pn];
+
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
         NSLogSuccessResponse;
         // JSON->MODEL

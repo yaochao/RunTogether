@@ -22,7 +22,9 @@ PODS:
     - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.3.5)
   - FastCoding (3.2.1)
+  - FLAnimatedImage (1.0.8)
   - MJExtension (2.5.16)
+  - pop (1.0.8)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -32,7 +34,9 @@ DEPENDENCIES:
   - AFNetworking (~> 2.6.1)
   - CocoaAsyncSocket (~> 7.3.5)
   - FastCoding (~> 3.2.1)
+  - FLAnimatedImage (~> 1.0)
   - MJExtension (~> 2.5.16)
+  - pop (~> 1.0)
   - SDWebImage (~> 3.7.3)
   - UICKeyChainStore (~> 2.1.0)
 
@@ -40,7 +44,9 @@ SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   CocoaAsyncSocket: 94c582a5bef4bb0f51b6ebf3e1b561d9091a68ba
   FastCoding: ed46c83ba23d048aafa0251972a1e1fc1cfc58ed
+  FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
   MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
