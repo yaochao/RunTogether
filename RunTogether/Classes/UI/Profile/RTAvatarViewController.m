@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSArray *avatarModelArr;
 @property (nonatomic, strong) UIView *checkView;
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, assign) int ID;
 - (IBAction)pressButton:(UIButton *)sender;
 
 @end
@@ -31,7 +32,8 @@
     [self createCheckView];
 }
 - (void)createCheckView{
-    self.checkView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+//    self.checkView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    self.checkView = [[UIView alloc]initWithFrame:self.view.frame];
     [self.checkView setBackgroundColor:[UIColor colorWithRed:1/255 green:1/255 blue:1/255 alpha:0.4]];
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
     tap.numberOfTapsRequired = 1;
@@ -54,6 +56,16 @@
 - (void)pressCheckButton{
     RTAvatarVoiceViewController *avatarVoiceVC = [[RTAvatarVoiceViewController alloc]init];
     [self.navigationController pushViewController:avatarVoiceVC animated:YES];
+    
+    NSString *interface = [NSString stringWithFormat:@"users/%@",[RTKeyChainTools getUserId]];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"avatar_id"] = @(self.ID);
+    params[@"name"] = self.name;
+    [RTNetworkTools patchDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+    }];
 }
 - (void)tapAction{
     self.checkView.hidden = YES;
@@ -76,14 +88,6 @@
     self.imageView.image = [sender imageForState:UIControlStateNormal];
     self.checkView.hidden = NO;
     RTAvatarModel* avatarModel = self.avatarModelArr[sender.tag - 1];
-    NSString *interface = [NSString stringWithFormat:@"users/%@",[RTKeyChainTools getUserId]];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"avatar_id"] = @(avatarModel.ID);
-    params[@"name"] = self.name;
-    [RTNetworkTools patchDataWithParams:params interfaceType:interface success:^(id responseObject) {
-        NSLogSuccessResponse;
-    } failure:^(NSError *error) {
-        NSLogErrorResponse;
-    }];
+    self.ID = avatarModel.ID;
 }
 @end
