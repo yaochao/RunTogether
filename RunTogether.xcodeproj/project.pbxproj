@@ -88,6 +88,7 @@
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
 		D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */; };
+		D2B70BC01C0CC32200580278 /* dog.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2B70BBF1C0CC32200580278 /* dog.gif */; };
 		D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
@@ -276,6 +277,7 @@
 		D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationModel.m; sourceTree = "<group>"; };
 		D297FE991BEB44F30029B3B0 /* RTLocationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationTools.h; sourceTree = "<group>"; };
 		D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationTools.m; sourceTree = "<group>"; };
+		D2B70BBF1C0CC32200580278 /* dog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dog.gif; sourceTree = "<group>"; };
 		D2C079751BF035BC00F40CFE /* RTMaxwellListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaxwellListener.h; sourceTree = "<group>"; };
 		D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTMaxwellListener.mm; sourceTree = "<group>"; };
 		D2C2F19F1BE9B54E0027A4A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -594,6 +596,7 @@
 		D25526D61BE6FA2C00CDEFC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2B70BBF1C0CC32200580278 /* dog.gif */,
 				D2C309AC1BF5D4580010D3F7 /* Localizable.strings */,
 				41338CCF1BE8CE6C00BCAEC3 /* rt.der */,
 				D2917F851BE7074D00004AE7 /* Default-568h@2x.png */,
@@ -1051,6 +1054,7 @@
 				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D28608A11C0C4BEB000D9CFD /* RTDetector.storyboard in Resources */,
+				D2B70BC01C0CC32200580278 /* dog.gif in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
