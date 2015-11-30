@@ -71,6 +71,12 @@
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
 		D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25526E51BE6FA2C00CDEFC7 /* LaunchScreen.xib */; };
 		D25526F31BE6FA2C00CDEFC7 /* RunTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */; };
+		D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = D286088C1C0C2472000D9CFD /* RTStartingLineController.m */; };
+		D286088F1C0C249E000D9CFD /* RTStartingLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */; };
+		D28608941C0C4307000D9CFD /* RTPrepareController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28608931C0C4307000D9CFD /* RTPrepareController.m */; };
+		D28608961C0C4314000D9CFD /* RTPrepare.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28608951C0C4314000D9CFD /* RTPrepare.storyboard */; };
+		D286089F1C0C4BDE000D9CFD /* RTDetectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = D286089E1C0C4BDE000D9CFD /* RTDetectorController.m */; };
+		D28608A11C0C4BEB000D9CFD /* RTDetector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28608A01C0C4BEB000D9CFD /* RTDetector.storyboard */; };
 		D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2917F851BE7074D00004AE7 /* Default-568h@2x.png */; };
 		D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2917F8E1BE7086100004AE7 /* AppDelegate.mm */; };
 		D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2917FA71BE746CF00004AE7 /* RTBaseNavController.m */; };
@@ -238,6 +244,15 @@
 		D25526EC1BE6FA2C00CDEFC7 /* RunTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526F11BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTogetherTests.m; sourceTree = "<group>"; };
+		D286088B1C0C2472000D9CFD /* RTStartingLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingLineController.h; sourceTree = "<group>"; };
+		D286088C1C0C2472000D9CFD /* RTStartingLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingLineController.m; sourceTree = "<group>"; };
+		D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTStartingLine.storyboard; sourceTree = "<group>"; };
+		D28608921C0C4307000D9CFD /* RTPrepareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPrepareController.h; sourceTree = "<group>"; };
+		D28608931C0C4307000D9CFD /* RTPrepareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPrepareController.m; sourceTree = "<group>"; };
+		D28608951C0C4314000D9CFD /* RTPrepare.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTPrepare.storyboard; sourceTree = "<group>"; };
+		D286089D1C0C4BDE000D9CFD /* RTDetectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDetectorController.h; sourceTree = "<group>"; };
+		D286089E1C0C4BDE000D9CFD /* RTDetectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDetectorController.m; sourceTree = "<group>"; };
+		D28608A01C0C4BEB000D9CFD /* RTDetector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTDetector.storyboard; sourceTree = "<group>"; };
 		D2917F851BE7074D00004AE7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		D2917F8D1BE7086100004AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D2917F8E1BE7086100004AE7 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -600,6 +615,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D28608901C0C4131000D9CFD /* Prepare */ = {
+			isa = PBXGroup;
+			children = (
+				D28608921C0C4307000D9CFD /* RTPrepareController.h */,
+				D28608931C0C4307000D9CFD /* RTPrepareController.m */,
+				D28608951C0C4314000D9CFD /* RTPrepare.storyboard */,
+			);
+			name = Prepare;
+			sourceTree = "<group>";
+		};
+		D28608971C0C4942000D9CFD /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				D286089D1C0C4BDE000D9CFD /* RTDetectorController.h */,
+				D286089E1C0C4BDE000D9CFD /* RTDetectorController.m */,
+				D28608A01C0C4BEB000D9CFD /* RTDetector.storyboard */,
+			);
+			name = Detector;
+			sourceTree = "<group>";
+		};
 		D2917F871BE7083400004AE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +888,11 @@
 		D2EDA81D1C05984200F1EA1A /* StartingLine */ = {
 			isa = PBXGroup;
 			children = (
+				D28608971C0C4942000D9CFD /* Detector */,
+				D28608901C0C4131000D9CFD /* Prepare */,
+				D286088B1C0C2472000D9CFD /* RTStartingLineController.h */,
+				D286088C1C0C2472000D9CFD /* RTStartingLineController.m */,
+				D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */,
 			);
 			name = StartingLine;
 			sourceTree = "<group>";
@@ -997,8 +1037,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
+				D28608961C0C4314000D9CFD /* RTPrepare.storyboard in Resources */,
 				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
+				D28608A11C0C4BEB000D9CFD /* RTDetector.storyboard in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
@@ -1006,6 +1048,7 @@
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
+				D286088F1C0C249E000D9CFD /* RTStartingLine.storyboard in Resources */,
 				CE6578821C059C9F0045D043 /* RTLoading.storyboard in Resources */,
 				D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */,
 				D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */,
@@ -1093,6 +1136,7 @@
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
 				CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */,
 				D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */,
+				D286089F1C0C4BDE000D9CFD /* RTDetectorController.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
@@ -1114,6 +1158,7 @@
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
+				D28608941C0C4307000D9CFD /* RTPrepareController.m in Sources */,
 				CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
@@ -1121,6 +1166,7 @@
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
+				D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,

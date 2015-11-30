@@ -20,9 +20,7 @@
 
 @end
 
-@implementation RTLoginViewController{
-    int i ;
-}
+@implementation RTLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,35 +42,33 @@
     }
     
 }
-- (void)viewWillAppear:(BOOL)animated{
-    i = 0;
-}
 - (IBAction)checkoutButtonAction:(UIButton *)sender {
-    if (i == 0) {
-        CGFloat width = self.checkoutLable.frame.size.width;
-        CGFloat x = self.checkoutLable.frame.origin.x;
-        CGFloat y = self.checkoutLable.frame.origin.y;
-        CGFloat height = self.checkoutLable.frame.size.height;
-        [self.checkoutLable setFrame:CGRectMake(x, y, 0, height)];
-        [UIView animateWithDuration:3 animations:^{
-            [self.checkoutLable setFrame:CGRectMake(x, y, width, height)];
-        }];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"country_calling_code"] = @"+86";
-        params[@"phone"] = self.phoneNumberTextField.text;
-        [RTKeyChainTools savePhone:self.phoneNumberTextField.text];
-        NSString *interface = @"security_codes";
-        [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
-            NSLogSuccessResponse;
-        } failure:^(NSError *error) {
-            NSLogErrorResponse;
+    CGFloat width = self.checkoutLable.frame.size.width;
+    CGFloat x = self.checkoutLable.frame.origin.x;
+    CGFloat y = self.checkoutLable.frame.origin.y;
+    CGFloat height = self.checkoutLable.frame.size.height;
+    self.checkoutLable.alpha = 0.4;
+    [self.checkoutLable setFrame:CGRectMake(x, y, 0, height)];
+    [UIView animateWithDuration:3 animations:^{
+        [self.checkoutLable setFrame:CGRectMake(x, y, width, height)];
+    }];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"country_calling_code"] = @"+86";
+    params[@"phone"] = self.phoneNumberTextField.text;
+    [RTKeyChainTools savePhone:self.phoneNumberTextField.text];
+    NSString *interface = @"security_codes";
+    [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
             
-        }];
-        i++;
-    }else{
         CaptcheViewController* captcheVC = [[CaptcheViewController alloc]init];
         [self.navigationController pushViewController:captcheVC animated:YES];
         captcheVC.phone = self.phoneNumberTextField.text;
-    }
+            
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"获取验证码失败" message:@"获取验证码失败，请检查网络和您输入的手机号是否正确" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+        [alertView show];
+    }];
 }
+
 @end

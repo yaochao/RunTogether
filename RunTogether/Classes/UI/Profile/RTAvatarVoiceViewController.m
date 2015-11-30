@@ -74,6 +74,10 @@
         // 已成功录音
         NSLog(@"已成功录音");
     }
+    // I/O不能同时
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self play];
+    });
 }
 
 - (IBAction)longTapTouchDragExit:(ANLongTapButton *)sender {
@@ -82,9 +86,5 @@
         [self.recordTool stopRecording];
         [self.recordTool destructionRecordingFile];
     });
-}
-
-- (IBAction)playButtonAction:(UIButton *)sender {
-    [self play];
 }
 @end
