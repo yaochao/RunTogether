@@ -47,4 +47,9 @@
     return _detectorController;
 }
 
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
+}
+
 @end

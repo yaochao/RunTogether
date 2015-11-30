@@ -14,13 +14,23 @@
 
 @implementation RTDetectorController
 
+
+#pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     
 }
 
+
+#pragma mark -
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
 }
 
 @end
