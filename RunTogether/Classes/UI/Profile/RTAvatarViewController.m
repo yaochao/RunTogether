@@ -32,8 +32,7 @@
     [self createCheckView];
 }
 - (void)createCheckView{
-//    self.checkView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
-    self.checkView = [[UIView alloc]initWithFrame:self.view.frame];
+    self.checkView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height - 64)];
     [self.checkView setBackgroundColor:[UIColor colorWithRed:1/255 green:1/255 blue:1/255 alpha:0.4]];
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
     tap.numberOfTapsRequired = 1;
