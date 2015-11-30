@@ -32,7 +32,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [NSString stringWithFormat:@"%@", self.dataSource[row]];
+    return [NSString stringWithFormat:@"%@ M", self.dataSource[row]];
 }
 
 
@@ -58,6 +58,9 @@
     // Do any additional setup after loading the view.
     self.dataSource = DataSource;
     [self.pickerView selectRow:1 inComponent:0 animated:NO];
+    // 圆角
+    self.startBtn.layer.cornerRadius = 5;
+    self.startBtn.layer.masksToBounds = YES;
 }
 
 
