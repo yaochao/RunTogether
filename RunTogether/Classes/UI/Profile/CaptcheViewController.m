@@ -25,15 +25,33 @@
 
 @end
 
-@implementation CaptcheViewController{
-    int i;
-}
+@implementation CaptcheViewController
 
 // 登录成功进入Home页
 - (IBAction)enterHomeClick:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTHome" bundle:nil];
     RTHomeController *homeController = [sb instantiateInitialViewController];
     [self.navigationController pushViewController:homeController animated:YES];
+    
+    [self nextLableAnimation];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"country_calling_code"] = @"+86";
+    params[@"phone"] = self.phone;
+    params[@"security_code"] = self.captcheTextField.text;
+    NSString *interface = @"sessions";
+    [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+        self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
+        RTLoginModel *loginModel = [RTLoginModel objectWithKeyValues:responseObject];
+        [RTKeyChainTools saveRememberToken:loginModel.remember_token];
+        [RTKeyChainTools saveUserId:loginModel.user_id];
+        [RTKeyChainTools saveSessionKey:loginModel.session_key];
+        
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"登陆失败" message:@"登陆失败，请检查网络和您输入的验证码是否正确" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+        [alertView show];
+    }];
 }
 
 - (void)viewDidLoad {
@@ -47,51 +65,55 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)nextLableAnimation{
+    CGFloat width = self.nextLable.frame.size.width;
+    CGFloat x = self.nextLable.frame.origin.x;
+    CGFloat y = self.nextLable.frame.origin.y;
+    CGFloat height = self.nextLable.frame.size.height;
+    self.nextLable.alpha = 0.4;
+    [self.nextLable setFrame:CGRectMake(x, y, 0, height)];
+    [UIView animateWithDuration:3 animations:^{
+        [self.nextLable setFrame:CGRectMake(x, y, width, height)];
+    }];
+}
 - (IBAction)nextButtonAction:(UIButton *)sender {
-    if (i == 0) {
-        CGFloat width = self.nextLable.frame.size.width;
-        CGFloat x = self.nextLable.frame.origin.x;
-        CGFloat y = self.nextLable.frame.origin.y;
-        CGFloat height = self.nextLable.frame.size.height;
-        [self.nextLable setFrame:CGRectMake(x, y, 0, height)];
-        [UIView animateWithDuration:3 animations:^{
-            [self.nextLable setFrame:CGRectMake(x, y, width, height)];
-        }];
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"country_calling_code"] = @"+86";
-        params[@"phone"] = self.phone;
-        params[@"security_code"] = self.captcheTextField.text;
-        NSString *interface = @"sessions";
-        [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
-            NSLogSuccessResponse;
-            self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
-            RTLoginModel *loginModel = [RTLoginModel objectWithKeyValues:responseObject];
-            [RTKeyChainTools saveRememberToken:loginModel.remember_token];
-            [RTKeyChainTools saveUserId:loginModel.user_id];
-            [RTKeyChainTools saveSessionKey:loginModel.session_key];
-            // 让enterHomeBtn可点击
-            self.enterHomeBtn.enabled = YES;
-        } failure:^(NSError *error) {
-            NSLogErrorResponse;
-        }];
-        i++;
-    }else{
+    [self nextLableAnimation];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"country_calling_code"] = @"+86";
+    params[@"phone"] = self.phone;
+    params[@"security_code"] = self.captcheTextField.text;
+    NSString *interface = @"sessions";
+    [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
+        NSLogSuccessResponse;
+        self.captcheDic = [[NSMutableDictionary alloc]initWithDictionary:responseObject];
+        RTLoginModel *loginModel = [RTLoginModel objectWithKeyValues:responseObject];
+        [RTKeyChainTools saveRememberToken:loginModel.remember_token];
+        [RTKeyChainTools saveUserId:loginModel.user_id];
+        [RTKeyChainTools saveSessionKey:loginModel.session_key];
+            
         QueuingViewController* queuingVC = [[QueuingViewController alloc]init];
         queuingVC.user_id = self.captcheDic[@"user_id"];
         [self.navigationController pushViewController:queuingVC animated:YES];
-    }
+            
+    } failure:^(NSError *error) {
+        NSLogErrorResponse;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"登陆失败" message:@"登陆失败，请检查网络和您输入的验证码是否正确" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+        [alertView show];
+        
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated{
-    i = 0;
     // 让enterHomeBtn不可点击
     self.enterHomeBtn.enabled = NO;
 }
 - (IBAction)captcheTextAction:(UITextField *)sender {
     if (sender.text.length == RTSecurityCodeLength) {
         self.nextButton.userInteractionEnabled = YES;
+        self.enterHomeBtn.enabled = YES;
         self.nextLable.alpha = 1;
     }else{
         self.nextButton.userInteractionEnabled = NO;
+        self.enterHomeBtn.enabled = NO;
         self.nextLable.alpha = 0.4;
     }
 }

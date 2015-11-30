@@ -43,8 +43,8 @@
     UIButton *checkButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [checkButton setFrame:CGRectMake(width/4, height/4*3, width/2, 40)];
     [checkButton setTitle:@"确认" forState:UIControlStateNormal];
-    [checkButton setBackgroundColor:[UIColor redColor]];
-    [checkButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [checkButton setBackgroundColor:[UIColor blackColor]];
+    [checkButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [checkButton addTarget:self action:@selector(pressCheckButton) forControlEvents:UIControlEventTouchUpInside];
     [self.checkView addSubview:checkButton];
     [self.view addSubview:self.checkView];
