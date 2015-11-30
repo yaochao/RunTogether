@@ -87,8 +87,4 @@
         [self.recordTool destructionRecordingFile];
     });
 }
-
-- (IBAction)playButtonAction:(UIButton *)sender {
-    [self play];
-}
 @end
