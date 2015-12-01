@@ -15,7 +15,10 @@
 - (IBAction)longTapOut:(ANLongTapButton *)sender;
 - (IBAction)LongTapTouchUpInside:(ANLongTapButton *)sender;
 - (IBAction)longTapTouchDragExit:(ANLongTapButton *)sender;
-- (IBAction)playButtonAction:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UILabel *recordLable;
+- (IBAction)nextPage:(UIButton *)sender;
+
 
 /** 录音工具 */
 @property (nonatomic, strong) LVRecordTool *recordTool;
@@ -32,6 +35,7 @@
     [super viewDidLoad];
     self.recordTool = [LVRecordTool sharedRecordTool];
     self.recordTool.delegate = self;
+    self.nextButton.enabled = NO;
 }
 #pragma mark - 播放录音
 - (void)play {
@@ -54,6 +58,7 @@
     [self.recordTool playRecordingFile];
 }
 - (IBAction)LongTapTouchUpInside:(ANLongTapButton *)sender {
+    self.recordLable.text = @"重录";
     double currentTime = self.recordTool.recorder.currentTime;
     NSLog(@"%lf", currentTime);
     if (currentTime < 2) {
@@ -74,10 +79,20 @@
         // 已成功录音
         NSLog(@"已成功录音");
     }
+    if (currentTime > 3) {
+        [self.recordTool stopRecording];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imageView.image = [UIImage imageNamed:@"mic_0"];
+        });
+        
+#warning todo 超时声音提示
+        
+    }
     // I/O不能同时
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self play];
     });
+    self.nextButton.enabled = YES;
 }
 
 - (IBAction)longTapTouchDragExit:(ANLongTapButton *)sender {
@@ -86,5 +101,7 @@
         [self.recordTool stopRecording];
         [self.recordTool destructionRecordingFile];
     });
+}
+- (IBAction)nextPage:(UIButton *)sender {
 }
 @end
