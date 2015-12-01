@@ -29,6 +29,15 @@
 		CED94B071C082D82004D2FA7 /* LVRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94B061C082D82004D2FA7 /* LVRecordTool.m */; };
 		CED94B0B1C0830DA004D2FA7 /* ANLongTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */; };
 		CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */; };
+		D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D224465B1C0D32B1002BA47D /* RTMyInfoController.m */; };
+		D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */; };
+		D22446621C0D44D1002BA47D /* RTMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446611C0D44D1002BA47D /* RTMatchingController.m */; };
+		D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446631C0D44F1002BA47D /* RTMatching.storyboard */; };
+		D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446671C0D4D7F002BA47D /* RTMatchResultController.m */; };
+		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
+		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
+		D22446731C0D87E5002BA47D /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = D22446701C0D87E5002BA47D /* IOKit */; };
+		D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = D22446741C0D97DE002BA47D /* detectorLoading.gif */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -71,6 +80,8 @@
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
 		D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25526E51BE6FA2C00CDEFC7 /* LaunchScreen.xib */; };
 		D25526F31BE6FA2C00CDEFC7 /* RunTogetherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */; };
+		D27D96071C08DC8A0013AC97 /* RTBlurEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D96061C08DC8A0013AC97 /* RTBlurEffectController.m */; };
+		D27D960A1C08DE4C0013AC97 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D96091C08DE4C0013AC97 /* UIImage+ImageEffects.m */; };
 		D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = D286088C1C0C2472000D9CFD /* RTStartingLineController.m */; };
 		D286088F1C0C249E000D9CFD /* RTStartingLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */; };
 		D28608941C0C4307000D9CFD /* RTPrepareController.m in Sources */ = {isa = PBXBuildFile; fileRef = D28608931C0C4307000D9CFD /* RTPrepareController.m */; };
@@ -86,6 +97,7 @@
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
 		D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */; };
+		D2B70BC01C0CC32200580278 /* dog.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2B70BBF1C0CC32200580278 /* dog.gif */; };
 		D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */; };
 		D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A41BE9ECAE0027A4A5 /* CommonFunc.m */; };
 		D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C2F1A61BE9ECAE0027A4A5 /* NSString+Hash.m */; };
@@ -164,6 +176,21 @@
 		CED94B081C0830D9004D2FA7 /* RunTogether-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunTogether-Bridging-Header.h"; sourceTree = "<group>"; };
 		CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANLongTapButton.swift; sourceTree = "<group>"; };
 		CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
+		D224465A1C0D32B1002BA47D /* RTMyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyInfoController.h; sourceTree = "<group>"; };
+		D224465B1C0D32B1002BA47D /* RTMyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyInfoController.m; sourceTree = "<group>"; };
+		D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMyInfo.storyboard; sourceTree = "<group>"; };
+		D22446601C0D44D1002BA47D /* RTMatchingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchingController.h; sourceTree = "<group>"; };
+		D22446611C0D44D1002BA47D /* RTMatchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchingController.m; sourceTree = "<group>"; };
+		D22446631C0D44F1002BA47D /* RTMatching.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatching.storyboard; sourceTree = "<group>"; };
+		D22446661C0D4D7F002BA47D /* RTMatchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultController.h; sourceTree = "<group>"; };
+		D22446671C0D4D7F002BA47D /* RTMatchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultController.m; sourceTree = "<group>"; };
+		D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatchResult.storyboard; sourceTree = "<group>"; };
+		D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultCell.h; sourceTree = "<group>"; };
+		D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultCell.m; sourceTree = "<group>"; };
+		D22446701C0D87E5002BA47D /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
+		D22446711C0D87E5002BA47D /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		D22446721C0D87E5002BA47D /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
+		D22446741C0D97DE002BA47D /* detectorLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = detectorLoading.gif; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -244,6 +271,10 @@
 		D25526EC1BE6FA2C00CDEFC7 /* RunTogetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunTogetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526F11BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526F21BE6FA2C00CDEFC7 /* RunTogetherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunTogetherTests.m; sourceTree = "<group>"; };
+		D27D96051C08DC8A0013AC97 /* RTBlurEffectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBlurEffectController.h; sourceTree = "<group>"; };
+		D27D96061C08DC8A0013AC97 /* RTBlurEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBlurEffectController.m; sourceTree = "<group>"; };
+		D27D96081C08DE4C0013AC97 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		D27D96091C08DE4C0013AC97 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		D286088B1C0C2472000D9CFD /* RTStartingLineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTStartingLineController.h; sourceTree = "<group>"; };
 		D286088C1C0C2472000D9CFD /* RTStartingLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTStartingLineController.m; sourceTree = "<group>"; };
 		D286088E1C0C249E000D9CFD /* RTStartingLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTStartingLine.storyboard; sourceTree = "<group>"; };
@@ -270,6 +301,7 @@
 		D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationModel.m; sourceTree = "<group>"; };
 		D297FE991BEB44F30029B3B0 /* RTLocationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationTools.h; sourceTree = "<group>"; };
 		D297FE9A1BEB44F30029B3B0 /* RTLocationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationTools.m; sourceTree = "<group>"; };
+		D2B70BBF1C0CC32200580278 /* dog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dog.gif; sourceTree = "<group>"; };
 		D2C079751BF035BC00F40CFE /* RTMaxwellListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMaxwellListener.h; sourceTree = "<group>"; };
 		D2C079761BF035BC00F40CFE /* RTMaxwellListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTMaxwellListener.mm; sourceTree = "<group>"; };
 		D2C2F19F1BE9B54E0027A4A5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -342,6 +374,7 @@
 				D2C2F1C01BEA0BA10027A4A5 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D2C2F1BF1BEA0BA10027A4A5 /* BaiduMapAPI_Search.framework in Frameworks */,
 				D2C2F1BE1BEA0BA10027A4A5 /* BaiduMapAPI_Radar.framework in Frameworks */,
+				D22446731C0D87E5002BA47D /* IOKit in Frameworks */,
 				D2C2F1BB1BEA0BA10027A4A5 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				D2C2F1BC1BEA0BA10027A4A5 /* BaiduMapAPI_Location.framework in Frameworks */,
 				D2C2F1BD1BEA0BA10027A4A5 /* BaiduMapAPI_Map.framework in Frameworks */,
@@ -469,6 +502,48 @@
 			name = Record;
 			sourceTree = "<group>";
 		};
+		D22446591C0D3285002BA47D /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D224465A1C0D32B1002BA47D /* RTMyInfoController.h */,
+				D224465B1C0D32B1002BA47D /* RTMyInfoController.m */,
+				D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */,
+			);
+			name = MyInfo;
+			sourceTree = "<group>";
+		};
+		D224465F1C0D4486002BA47D /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				D22446601C0D44D1002BA47D /* RTMatchingController.h */,
+				D22446611C0D44D1002BA47D /* RTMatchingController.m */,
+				D22446631C0D44F1002BA47D /* RTMatching.storyboard */,
+			);
+			name = Matching;
+			sourceTree = "<group>";
+		};
+		D22446651C0D4D5E002BA47D /* MatchResult */ = {
+			isa = PBXGroup;
+			children = (
+				D22446661C0D4D7F002BA47D /* RTMatchResultController.h */,
+				D22446671C0D4D7F002BA47D /* RTMatchResultController.m */,
+				D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */,
+				D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */,
+				D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */,
+			);
+			name = MatchResult;
+			sourceTree = "<group>";
+		};
+		D224466F1C0D87E5002BA47D /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				D22446701C0D87E5002BA47D /* IOKit */,
+				D22446711C0D87E5002BA47D /* IOPowerSources.h */,
+				D22446721C0D87E5002BA47D /* IOPSKeys.h */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +570,8 @@
 				D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */,
 				D22CF04C1BE84835007BB1EE /* UIImage+BBExtension.h */,
 				D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */,
+				D27D96081C08DE4C0013AC97 /* UIImage+ImageEffects.h */,
+				D27D96091C08DE4C0013AC97 /* UIImage+ImageEffects.m */,
 				D22CF04E1BE84835007BB1EE /* UIView+Extension.h */,
 				D22CF04F1BE84835007BB1EE /* UIView+Extension.m */,
 			);
@@ -586,6 +663,8 @@
 		D25526D61BE6FA2C00CDEFC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D22446741C0D97DE002BA47D /* detectorLoading.gif */,
+				D2B70BBF1C0CC32200580278 /* dog.gif */,
 				D2C309AC1BF5D4580010D3F7 /* Localizable.strings */,
 				41338CCF1BE8CE6C00BCAEC3 /* rt.der */,
 				D2917F851BE7074D00004AE7 /* Default-568h@2x.png */,
@@ -688,6 +767,7 @@
 		D2917F8B1BE7085000004AE7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				D224466F1C0D87E5002BA47D /* IO */,
 				D2EDA8031C05824800F1EA1A /* Maxwell */,
 				D2C2F1B21BEA0BA10027A4A5 /* BaiduMap */,
 				D2C2F1A21BE9ECAE0027A4A5 /* Security */,
@@ -876,11 +956,14 @@
 		D2EDA81C1C05983A00F1EA1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D22446591C0D3285002BA47D /* MyInfo */,
 				D24F55FD1C05E1F400BB30A7 /* Setting */,
 				D24F55FC1C05E1DC00BB30A7 /* MyHistory */,
 				D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */,
 				D24F560C1C05E24E00BB30A7 /* RTHomeController.h */,
 				D24F560D1C05E24E00BB30A7 /* RTHomeController.m */,
+				D27D96051C08DC8A0013AC97 /* RTBlurEffectController.h */,
+				D27D96061C08DC8A0013AC97 /* RTBlurEffectController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -888,6 +971,8 @@
 		D2EDA81D1C05984200F1EA1A /* StartingLine */ = {
 			isa = PBXGroup;
 			children = (
+				D22446651C0D4D5E002BA47D /* MatchResult */,
+				D224465F1C0D4486002BA47D /* Matching */,
 				D28608971C0C4942000D9CFD /* Detector */,
 				D28608901C0C4131000D9CFD /* Prepare */,
 				D286088B1C0C2472000D9CFD /* RTStartingLineController.h */,
@@ -1036,15 +1121,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D28608961C0C4314000D9CFD /* RTPrepare.storyboard in Resources */,
+				D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */,
 				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D28608A11C0C4BEB000D9CFD /* RTDetector.storyboard in Resources */,
+				D2B70BC01C0CC32200580278 /* dog.gif in Resources */,
 				D24F56011C05E22900BB30A7 /* RTSetting.storyboard in Resources */,
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D24F56081C05E23800BB30A7 /* RTMyHistory.storyboard in Resources */,
+				D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
@@ -1058,6 +1147,7 @@
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
 				CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */,
 				41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */,
+				D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,6 +1241,8 @@
 				CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
+				D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */,
+				D27D96071C08DC8A0013AC97 /* RTBlurEffectController.m in Sources */,
 				CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
 				CED94B0B1C0830DA004D2FA7 /* ANLongTapButton.swift in Sources */,
@@ -1158,7 +1250,9 @@
 				D2C2F1AE1BE9F0D10027A4A5 /* RTKeyChainSingleton.m in Sources */,
 				D239E1541BFC7BB3009A963F /* RTGameRankChangedModel.m in Sources */,
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
+				D27D960A1C08DE4C0013AC97 /* UIImage+ImageEffects.m in Sources */,
 				D28608941C0C4307000D9CFD /* RTPrepareController.m in Sources */,
+				D22446621C0D44D1002BA47D /* RTMatchingController.m in Sources */,
 				CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
@@ -1167,6 +1261,7 @@
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
 				D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */,
+				D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
@@ -1178,6 +1273,7 @@
 				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
 				CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */,
+				D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */,
 				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
@@ -1359,6 +1455,10 @@
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunTogether/Libs/IO",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1389,6 +1489,10 @@
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunTogether/Libs/IO",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

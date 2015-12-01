@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RTAvatarVoiceViewController">
             <connections>
                 <outlet property="imageView" destination="6qr-O3-W7P" id="OVR-kd-A32"/>
+                <outlet property="nextButton" destination="fuW-X2-Jw9" id="tuv-PW-TrK"/>
+                <outlet property="recordLable" destination="oU3-H3-c1k" id="8U8-4I-reu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,13 +33,13 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                            <color key="value" red="0.58478184970000002" green="1" blue="0.87206449180000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="bgCircleColor">
-                            <color key="value" red="0.55679188970000004" green="0.42619510820000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="barTrackColor">
-                            <color key="value" red="1" green="0.86147966300000001" blue="0.78006145940000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -47,6 +49,21 @@
                         <action selector="longTapTouchDragExit:" destination="-1" eventType="touchDragExit" id="LJU-ra-hoY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuW-X2-Jw9">
+                    <rect key="frame" x="113" y="516" width="149" height="37"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="下一页"/>
+                    <connections>
+                        <action selector="nextPage:" destination="-1" eventType="touchUpInside" id="bZo-sH-Wjm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="录音" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU3-H3-c1k">
+                    <rect key="frame" x="160" y="354" width="55" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

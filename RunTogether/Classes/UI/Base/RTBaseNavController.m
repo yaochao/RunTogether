@@ -35,9 +35,9 @@
 */
 
 
-#pragma mark - 让状态栏的字体设置为白色
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
+//#pragma mark - 让状态栏的字体设置为白色
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
 
 @end

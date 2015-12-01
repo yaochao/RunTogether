@@ -35,39 +35,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEQ-60-hL2" userLabel="topView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="386"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5P-1g-hDA" userLabel="topCenterView">
-                                        <rect key="frame" x="0.0" y="43" width="600" height="300"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="lDl-4P-ywc"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="64" width="600" height="336"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="r5P-1g-hDA" secondAttribute="trailing" id="89a-jd-CSc"/>
-                                    <constraint firstItem="r5P-1g-hDA" firstAttribute="centerY" secondItem="sEQ-60-hL2" secondAttribute="centerY" id="aaF-O3-Bit"/>
-                                    <constraint firstItem="r5P-1g-hDA" firstAttribute="leading" secondItem="sEQ-60-hL2" secondAttribute="leading" id="vcl-HA-DjO"/>
-                                </constraints>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-3o-fEg" userLabel="bottomView">
-                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u79-og-siY">
-                                        <rect key="frame" x="282" y="56" width="37" height="37"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ium-Rc-v8I" customClass="FLAnimatedImageView">
+                                        <rect key="frame" x="250" y="50" width="100" height="100"/>
                                         <animations/>
-                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="2dm-pg-Xgw"/>
+                                            <constraint firstAttribute="height" constant="100" id="Vpk-aE-Vbb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-EQ-L4C">
+                                        <rect key="frame" x="282" y="81" width="37" height="37"/>
+                                        <animations/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="u79-og-siY" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="E5V-Bp-Dkn"/>
-                                    <constraint firstAttribute="height" constant="150" id="Far-LV-UQN"/>
-                                    <constraint firstItem="u79-og-siY" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="sTW-CZ-WhV"/>
+                                    <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="2xC-9O-822"/>
+                                    <constraint firstAttribute="height" constant="200" id="Far-LV-UQN"/>
+                                    <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="UNe-Ba-1Q7"/>
+                                    <constraint firstItem="ium-Rc-v8I" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="XwD-oU-mYP"/>
+                                    <constraint firstItem="ium-Rc-v8I" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="fP1-eb-W14"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -85,8 +80,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="检测页" id="13x-cQ-iPq"/>
                     <connections>
+                        <outlet property="animatedImgView" destination="ium-Rc-v8I" id="WBk-H3-yfh"/>
                         <outlet property="bottomView" destination="cBV-3o-fEg" id="5aS-QQ-3X5"/>
-                        <outlet property="topCenterView" destination="r5P-1g-hDA" id="Axy-gd-ajA"/>
                         <outlet property="topView" destination="sEQ-60-hL2" id="4Jx-ee-4Jr"/>
                     </connections>
                 </viewController>
