@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RTDetectorController : UITableViewController
+// 协议
+@class RTDetectorController;
+@protocol RTDetectorDelegate <NSObject>
+@required
+- (void)detector:(RTDetectorController *)detector didFinishedDetect:(NSMutableArray *)detectorResult;
+@end
 
+@interface RTDetectorController : UITableViewController
+@property (nonatomic, weak) id<RTDetectorDelegate> delegate;
 @end
