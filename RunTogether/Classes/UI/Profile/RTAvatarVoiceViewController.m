@@ -85,7 +85,7 @@
             self.imageView.image = [UIImage imageNamed:@"mic_0"];
         });
         
-#warning todo 超时声音提示
+#warning Todo 超时声音提示
         
     }
     // I/O不能同时
