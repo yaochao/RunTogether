@@ -11,10 +11,12 @@
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
+
+#define DecetorViewHeight 300
+
 @interface RTPrepareController ()
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
-@property (weak, nonatomic) IBOutlet UIView *topCenterView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (nonatomic, strong) RTDetectorController *detectorController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
@@ -35,8 +37,8 @@
 
 #pragma mark - setupView
 - (void)setupView {
-    self.detectorController.view.frame = CGRectMake(0, 0, self.topCenterView.frame.size.width, self.topCenterView.frame.size.height);
-    [self.topCenterView addSubview:self.detectorController.view];
+    self.detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
+    [self.topView addSubview:self.detectorController.view];
 }
 
 - (void)didReceiveMemoryWarning {
