@@ -36,4 +36,10 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
+}
+
+
 @end
