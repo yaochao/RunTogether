@@ -41,18 +41,17 @@
 
 #pragma mark - setupView
 - (void)setupView {
-    
     CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
     self.topView.frame = topViewFrame;
+    // gif
     NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
     FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
     self.animatedImgView.animatedImage = animatedImg;
-    // add topView's content
+    
+    // setup topView's content
     [self.topView addSubview:self.detectorController.view];
-    
-    [self.topView addSubview:self.matchingController.view];
-    
-    [self.topView addSubview:self.matchResultController.view];
+//    [self.topView addSubview:self.matchingController.view];
+//    [self.topView addSubview:self.matchResultController.view];
 }
 
 
