@@ -33,8 +33,8 @@
     [super didReceiveMemoryWarning];
 }
 - (IBAction)phoneNumerAction:(UITextField *)sender {
-#warning TODO 为了测试 11改为4位
-    if (sender.text.length >= 4) {
+    if (sender.text.length >= RTPhoneNumberLength) {
+        sender.text = [sender.text substringToIndex:RTPhoneNumberLength];
         self.checkoutButton.userInteractionEnabled = YES;
         self.checkoutLable.alpha = 1;
     }else{
