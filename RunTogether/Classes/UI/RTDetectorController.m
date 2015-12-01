@@ -19,6 +19,9 @@
 #define DelayInSeconds 0.6
 
 @interface RTDetectorController ()
+{
+    NSMutableArray *detectorResult;
+}
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *gpsCheckbox;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *networkCheckbox;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *batteryCheckbox;
@@ -34,7 +37,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detectorLoading" ofType:@"gif"]]];
+    // 开始检测GPS
     [self detectGPS];
+    // 初始化结果数据
+    detectorResult = [NSMutableArray array];
 }
 
 
@@ -56,10 +62,12 @@
         if (!locationEnable) {
             self.gpsCheckbox.animatedImage = nil;
             self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            [detectorResult addObject:@"no"];
             NSLog(@"GPS failed!");
         } else {
             self.gpsCheckbox.animatedImage = nil;
             self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            [detectorResult addObject:@"yes"];
             NSLog(@"GPS OK!");
         }
         [bself detectNetwork];
@@ -75,10 +83,12 @@
         if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
             self.networkCheckbox.animatedImage = nil;
             self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            [detectorResult addObject:@"no"];
             NSLog(@"Network unconnected!");
         } else {
             self.networkCheckbox.animatedImage = nil;
             self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            [detectorResult addObject:@"yes"];
             NSLog(@"Network OK!");
         }
         [bself detectBattery];
@@ -94,10 +104,12 @@
         if ([self getCurrentBatteryLevel] <= 10) {
             self.batteryCheckbox.animatedImage = nil;
             self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            [detectorResult addObject:@"no"];
             NSLog(@"电量不足，剩余%f", [self getCurrentBatteryLevel]);
         } else {
             self.batteryCheckbox.animatedImage = nil;
             self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            [detectorResult addObject:@"yes"];
             NSLog(@"Battery OK!");
         }
         [bself detectMic];
@@ -112,10 +124,12 @@
         if (![self checkMic]) {
             self.micCheckbox.animatedImage = nil;
             self.micCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            [detectorResult addObject:@"no"];
             NSLog(@"Mic failed!");
         } else {
             self.micCheckbox.animatedImage = nil;
             self.micCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            [detectorResult addObject:@"yes"];
             NSLog(@"Mic OK!");
         }
         [bself detectEar];
@@ -124,18 +138,22 @@
 
 - (void)detectEar {
     self.earCheckbox.animatedImage = self.animatedImg;
+    // 延时
+    __block typeof(self) bself = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (![self checkEar]) {
             self.earCheckbox.animatedImage = nil;
             self.earCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            [detectorResult addObject:@"no"];
             NSLog(@"Ear failed!");
         } else {
             self.earCheckbox.animatedImage = nil;
             self.earCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            [detectorResult addObject:@"yes"];
             NSLog(@"Ear OK!");
         }
+        [bself.delegate detector:bself didFinishedDetect:detectorResult];
     });
-
 }
 
 

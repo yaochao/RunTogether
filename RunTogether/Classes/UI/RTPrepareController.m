@@ -19,7 +19,7 @@
 #define MatchingViewHeight self.topView.frame.size.height
 #define MatchResultViewHeight self.topView.frame.size.height
 
-@interface RTPrepareController ()
+@interface RTPrepareController () <RTDetectorDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
@@ -32,6 +32,16 @@
 
 @implementation RTPrepareController
 
+
+#pragma mark - RTDetectorDelegate
+- (void)detector:(RTDetectorController *)detector didFinishedDetect:(NSMutableArray *)detectorResult {
+    for (NSString *result in detectorResult) {
+        NSLog(@"%@", result);
+    }
+}
+
+
+#pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setupView
@@ -68,6 +78,7 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTDetector" bundle:nil];
         _detectorController = [sb instantiateInitialViewController];
         _detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
+        _detectorController.delegate = self;
         
     }
     return _detectorController;
