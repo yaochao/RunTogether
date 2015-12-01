@@ -42,7 +42,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-3o-fEg" userLabel="bottomView">
                                 <rect key="frame" x="0.0" y="400" width="600" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ium-Rc-v8I" customClass="FLAnimatedImageView">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ium-Rc-v8I" customClass="FLAnimatedImageView">
                                         <rect key="frame" x="250" y="50" width="100" height="100"/>
                                         <animations/>
                                         <constraints>
@@ -50,10 +50,17 @@
                                             <constraint firstAttribute="height" constant="100" id="Vpk-aE-Vbb"/>
                                         </constraints>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-EQ-L4C">
+                                        <rect key="frame" x="282" y="81" width="37" height="37"/>
+                                        <animations/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="2xC-9O-822"/>
                                     <constraint firstAttribute="height" constant="200" id="Far-LV-UQN"/>
+                                    <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="UNe-Ba-1Q7"/>
                                     <constraint firstItem="ium-Rc-v8I" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="XwD-oU-mYP"/>
                                     <constraint firstItem="ium-Rc-v8I" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="fP1-eb-W14"/>
                                 </constraints>
