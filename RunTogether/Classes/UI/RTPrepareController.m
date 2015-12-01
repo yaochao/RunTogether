@@ -12,6 +12,7 @@
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
 
+#define BottomViewHeight 200
 #define DecetorViewHeight 300
 
 @interface RTPrepareController ()
@@ -28,17 +29,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setupView
-    [self setupView];
+    
+    CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
+    self.topView.frame = topViewFrame;
     NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
     FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
     self.animatedImgView.animatedImage = animatedImg;
-    
+    // setupView
+    [self setupView];
 }
 
 #pragma mark - setupView
 - (void)setupView {
-    self.detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
     [self.topView addSubview:self.detectorController.view];
+    self.detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
 }
 
 - (void)didReceiveMemoryWarning {
