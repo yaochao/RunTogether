@@ -70,6 +70,7 @@
 }
 - (IBAction)LongTapTouchUpInside:(ANLongTapButton *)sender {
     self.recordLable.text = @"重录";
+    [self.recordTool stopRecording];
     // I/O不能同时
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self play];
