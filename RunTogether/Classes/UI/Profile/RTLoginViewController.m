@@ -33,7 +33,8 @@
     [super didReceiveMemoryWarning];
 }
 - (IBAction)phoneNumerAction:(UITextField *)sender {
-    if (sender.text.length >= 11) {
+    if (sender.text.length >= RTPhoneNumberLength) {
+        sender.text = [sender.text substringToIndex:RTPhoneNumberLength];
         self.checkoutButton.userInteractionEnabled = YES;
         self.checkoutLable.alpha = 1;
     }else{
