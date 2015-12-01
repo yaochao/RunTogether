@@ -38,7 +38,7 @@
     [super viewDidLoad];
     self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detectorLoading" ofType:@"gif"]]];
     // 开始检测GPS
-    [self detectGPS];
+    [self detectAll];
     // 初始化结果数据
     detectorResult = [NSMutableArray array];
 }
@@ -47,10 +47,6 @@
 #pragma mark - detect
 - (void)detectAll {
     [self detectGPS];
-    [self detectNetwork];
-    [self detectBattery];
-    [self detectMic];
-    [self detectEar];
 }
 
 - (void)detectGPS {

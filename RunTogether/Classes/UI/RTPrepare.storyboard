@@ -55,14 +55,24 @@
                                         <animations/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GB-3M-CSH">
+                                        <rect key="frame" x="270" y="24" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="重新检测"/>
+                                        <connections>
+                                            <action selector="redetectBtnClick:" destination="hao-D5-A6R" eventType="touchUpInside" id="MuK-xO-6Lu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="2xC-9O-822"/>
+                                    <constraint firstItem="gq7-EQ-L4C" firstAttribute="top" secondItem="0GB-3M-CSH" secondAttribute="bottom" constant="27" id="4QQ-lQ-d4I"/>
                                     <constraint firstAttribute="height" constant="200" id="Far-LV-UQN"/>
                                     <constraint firstItem="gq7-EQ-L4C" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="UNe-Ba-1Q7"/>
                                     <constraint firstItem="ium-Rc-v8I" firstAttribute="centerY" secondItem="cBV-3o-fEg" secondAttribute="centerY" id="XwD-oU-mYP"/>
                                     <constraint firstItem="ium-Rc-v8I" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="fP1-eb-W14"/>
+                                    <constraint firstItem="0GB-3M-CSH" firstAttribute="centerX" secondItem="cBV-3o-fEg" secondAttribute="centerX" id="t36-qh-GNd"/>
                                 </constraints>
                             </view>
                         </subviews>

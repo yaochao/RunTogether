@@ -32,6 +32,9 @@
 
 @implementation RTPrepareController
 
+- (IBAction)redetectBtnClick:(id)sender {
+    [self.detectorController detectAll];
+}
 
 #pragma mark - RTDetectorDelegate
 - (void)detector:(RTDetectorController *)detector didFinishedDetect:(NSMutableArray *)detectorResult {

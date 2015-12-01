@@ -17,4 +17,6 @@
 
 @interface RTDetectorController : UITableViewController
 @property (nonatomic, weak) id<RTDetectorDelegate> delegate;
+
+- (void)detectAll;
 @end
