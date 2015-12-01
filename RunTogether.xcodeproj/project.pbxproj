@@ -29,6 +29,8 @@
 		CED94B071C082D82004D2FA7 /* LVRecordTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CED94B061C082D82004D2FA7 /* LVRecordTool.m */; };
 		CED94B0B1C0830DA004D2FA7 /* ANLongTapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */; };
 		CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */; };
+		D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D224465B1C0D32B1002BA47D /* RTMyInfoController.m */; };
+		D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -167,6 +169,9 @@
 		CED94B081C0830D9004D2FA7 /* RunTogether-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunTogether-Bridging-Header.h"; sourceTree = "<group>"; };
 		CED94B091C0830DA004D2FA7 /* ANLongTapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANLongTapButton.swift; sourceTree = "<group>"; };
 		CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Closure.swift"; sourceTree = "<group>"; };
+		D224465A1C0D32B1002BA47D /* RTMyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyInfoController.h; sourceTree = "<group>"; };
+		D224465B1C0D32B1002BA47D /* RTMyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyInfoController.m; sourceTree = "<group>"; };
+		D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMyInfo.storyboard; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -475,6 +480,16 @@
 				CED94B061C082D82004D2FA7 /* LVRecordTool.m */,
 			);
 			name = Record;
+			sourceTree = "<group>";
+		};
+		D22446591C0D3285002BA47D /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D224465A1C0D32B1002BA47D /* RTMyInfoController.h */,
+				D224465B1C0D32B1002BA47D /* RTMyInfoController.m */,
+				D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */,
+			);
+			name = MyInfo;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -887,6 +902,7 @@
 		D2EDA81C1C05983A00F1EA1A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D22446591C0D3285002BA47D /* MyInfo */,
 				D24F55FD1C05E1F400BB30A7 /* Setting */,
 				D24F55FC1C05E1DC00BB30A7 /* MyHistory */,
 				D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */,
@@ -1059,6 +1075,7 @@
 				CE65787A1C059C620045D043 /* CaptcheViewController.xib in Resources */,
 				D2917F861BE7074D00004AE7 /* Default-568h@2x.png in Resources */,
 				D24F56081C05E23800BB30A7 /* RTMyHistory.storyboard in Resources */,
+				D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */,
 				D25526E71BE6FA2C00CDEFC7 /* LaunchScreen.xib in Resources */,
 				CEC920CE1C06996700540429 /* RTNameViewController.xib in Resources */,
 				D2C309A21BF5D3C20010D3F7 /* RTLocation.storyboard in Resources */,
@@ -1183,6 +1200,7 @@
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
 				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
 				D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */,
+				D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
