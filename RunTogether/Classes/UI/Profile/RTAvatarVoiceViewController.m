@@ -10,6 +10,7 @@
 #import "LVRecordTool.h"
 #import "RunTogether-Bridging-Header.h"
 #import "Runtogether-Swift.h"
+#import "RTHomeController.h"
 #define RecordTime 3
 @interface RTAvatarVoiceViewController ()<LVRecordToolDelegate>
 - (IBAction)longTap:(ANLongTapButton *)sender;
@@ -19,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UILabel *recordLable;
 - (IBAction)nextPage:(UIButton *)sender;
-
 
 /** 录音工具 */
 @property (nonatomic, strong) LVRecordTool *recordTool;
@@ -85,6 +85,9 @@
     });
 }
 - (IBAction)nextPage:(UIButton *)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTHome" bundle:nil];
+    RTHomeController *homtController = [sb instantiateInitialViewController];
+    [self.navigationController pushViewController:homtController animated:YES];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [self.recordTool stopRecording];
