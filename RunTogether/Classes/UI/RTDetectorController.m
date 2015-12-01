@@ -12,6 +12,9 @@
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import "RTKeyChainTools.h"
+#import "IOPowerSources.h"
+#import "IOPSKeys.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface RTDetectorController ()
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *gpsCheckbox;
@@ -30,8 +33,14 @@
     [super viewDidLoad];
     self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detector" ofType:@"gif"]]];
     [self detectGPS];
+    [self detectNetwork];
+    [self detectBattery];
+    [self detectMic];
+    [self detectEar];
 }
 
+
+#pragma mark - detect
 - (void)detectGPS {
     self.gpsCheckbox.animatedImage = self.animatedImg;
     BOOL locationEnable = [CLLocationManager locationServicesEnabled];
@@ -47,17 +56,128 @@
 }
 
 - (void)detectNetwork {
-    // 前面已经做好，这边只需调用即可
     NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
     if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
-        self.gpsCheckbox.animatedImage = nil;
-        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+        self.networkCheckbox.animatedImage = nil;
+        self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
         NSLog(@"Network unconnected!");
     } else {
-        self.gpsCheckbox.animatedImage = nil;
-        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        self.networkCheckbox.animatedImage = nil;
+        self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
         NSLog(@"Network OK!");
     }
+}
+
+- (void)detectBattery {
+    NSLog(@"当前电量%f", [self getCurrentBatteryLevel]);
+    if ([self getCurrentBatteryLevel] <= 10) {
+        self.batteryCheckbox.animatedImage = nil;
+        self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+        NSLog(@"电量不足，剩余%f", [self getCurrentBatteryLevel]);
+    } else {
+        self.batteryCheckbox.animatedImage = nil;
+        self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        NSLog(@"Battery OK!");
+    }
+}
+
+- (void)detectMic {
+    if (![self checkMic]) {
+        self.micCheckbox.animatedImage = nil;
+        self.micCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+        NSLog(@"Mic failed!");
+    } else {
+        self.micCheckbox.animatedImage = nil;
+        self.micCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        NSLog(@"Mic OK!");
+    }
+}
+
+- (void)detectEar {
+    if (![self checkEar]) {
+        self.earCheckbox.animatedImage = nil;
+        self.earCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+        NSLog(@"Ear failed!");
+    } else {
+        self.earCheckbox.animatedImage = nil;
+        self.earCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        NSLog(@"Ear OK!");
+    }
+
+}
+
+
+#pragma mark - 获得电量
+-(CGFloat)getCurrentBatteryLevel
+{
+    //Returns a blob of Power Source information in an opaque CFTypeRef.
+    CFTypeRef blob = IOPSCopyPowerSourcesInfo();
+    //Returns a CFArray of Power Source handles, each of type CFTypeRef.
+    CFArrayRef sources = IOPSCopyPowerSourcesList(blob);
+    CFDictionaryRef pSource = NULL;
+    const void *psValue;
+    //Returns the number of values currently in an array.
+    long numOfSources = CFArrayGetCount(sources);
+    //Error in CFArrayGetCount
+    if (numOfSources == 0)
+    {
+        NSLog(@"Error in CFArrayGetCount");
+        return -1.0f;
+    }
+    //Calculating the remaining energy
+    for (int i = 0 ; i < numOfSources; i++)
+    {
+        //Returns a CFDictionary with readable information about the specific power source.
+        pSource = IOPSGetPowerSourceDescription(blob, CFArrayGetValueAtIndex(sources, i));
+        if (!pSource)
+        {
+            NSLog(@"Error in IOPSGetPowerSourceDescription");
+            return -1.0f;
+        }
+        psValue = (CFStringRef)CFDictionaryGetValue(pSource, CFSTR(kIOPSNameKey));
+        
+        int curCapacity = 0;
+        int maxCapacity = 0;
+        double percent;
+        
+        psValue = CFDictionaryGetValue(pSource, CFSTR(kIOPSCurrentCapacityKey));
+        CFNumberGetValue((CFNumberRef)psValue, kCFNumberSInt32Type, &curCapacity);
+        psValue = CFDictionaryGetValue(pSource, CFSTR(kIOPSMaxCapacityKey));
+        CFNumberGetValue((CFNumberRef)psValue, kCFNumberSInt32Type, &maxCapacity);
+        percent = ((double)curCapacity/(double)maxCapacity * 100.0f);
+        return percent;
+    }
+    return -1.0f;
+}
+
+#pragma mark - 检测麦克
+- (BOOL)checkMic {
+    AVAudioSession *avSession = [AVAudioSession sharedInstance];
+    __block BOOL isAvailable = NO;
+    if ([avSession respondsToSelector:@selector(requestRecordPermission:)]) {
+        [avSession requestRecordPermission:^(BOOL available) {
+            isAvailable = available;
+            if (available) {
+            }
+            else
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[[UIAlertView alloc] initWithTitle:@"无法录音" message:@"请在“设置-隐私-麦克风”选项中允许xx访问你的麦克风" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+                });
+            }
+            }];
+    }
+    return isAvailable;
+}
+
+#pragma mark - 检测是否插入了耳机
+- (BOOL)checkEar {
+    AVAudioSessionRouteDescription* route = [[AVAudioSession sharedInstance] currentRoute];
+    for (AVAudioSessionPortDescription* desc in [route outputs]) {
+        if ([[desc portType] isEqualToString:AVAudioSessionPortHeadphones])
+            return YES;
+    }
+    return NO;
 }
 
 

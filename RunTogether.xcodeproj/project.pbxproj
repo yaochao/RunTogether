@@ -36,6 +36,7 @@
 		D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446671C0D4D7F002BA47D /* RTMatchResultController.m */; };
 		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
 		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
+		D22446731C0D87E5002BA47D /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = D22446701C0D87E5002BA47D /* IOKit */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -185,6 +186,9 @@
 		D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatchResult.storyboard; sourceTree = "<group>"; };
 		D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultCell.h; sourceTree = "<group>"; };
 		D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultCell.m; sourceTree = "<group>"; };
+		D22446701C0D87E5002BA47D /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
+		D22446711C0D87E5002BA47D /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		D22446721C0D87E5002BA47D /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 				D2C2F1C01BEA0BA10027A4A5 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D2C2F1BF1BEA0BA10027A4A5 /* BaiduMapAPI_Search.framework in Frameworks */,
 				D2C2F1BE1BEA0BA10027A4A5 /* BaiduMapAPI_Radar.framework in Frameworks */,
+				D22446731C0D87E5002BA47D /* IOKit in Frameworks */,
 				D2C2F1BB1BEA0BA10027A4A5 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				D2C2F1BC1BEA0BA10027A4A5 /* BaiduMapAPI_Location.framework in Frameworks */,
 				D2C2F1BD1BEA0BA10027A4A5 /* BaiduMapAPI_Map.framework in Frameworks */,
@@ -525,6 +530,16 @@
 				D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */,
 			);
 			name = MatchResult;
+			sourceTree = "<group>";
+		};
+		D224466F1C0D87E5002BA47D /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				D22446701C0D87E5002BA47D /* IOKit */,
+				D22446711C0D87E5002BA47D /* IOPowerSources.h */,
+				D22446721C0D87E5002BA47D /* IOPSKeys.h */,
+			);
+			path = IO;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -749,6 +764,7 @@
 		D2917F8B1BE7085000004AE7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				D224466F1C0D87E5002BA47D /* IO */,
 				D2EDA8031C05824800F1EA1A /* Maxwell */,
 				D2C2F1B21BEA0BA10027A4A5 /* BaiduMap */,
 				D2C2F1A21BE9ECAE0027A4A5 /* Security */,
@@ -1435,6 +1451,10 @@
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunTogether/Libs/IO",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1465,6 +1485,10 @@
 				INFOPLIST_FILE = RunTogether/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunTogether/Libs/IO",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.duoduosports.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
