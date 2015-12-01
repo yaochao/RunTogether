@@ -41,8 +41,8 @@
     [RTNetworkTools getDataWithParams:nil interfaceType:interface success:^(id responseObject) {
         NSLogSuccessResponse;
         // JSON->MODEL
-//        NSMutableArray *modelArr = [RTMyHistoryModel objectArrayWithKeyValuesArray:responseObject];
-//        self.modelArr = modelArr;
+        NSMutableArray *modelArr = [RTMyHistoryModel objectArrayWithKeyValuesArray:responseObject];
+        self.modelArr = modelArr;
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];

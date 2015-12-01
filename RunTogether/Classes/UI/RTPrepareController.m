@@ -8,6 +8,8 @@
 
 #import "RTPrepareController.h"
 #import "RTDetectorController.h"
+#import <FLAnimatedImage/FLAnimatedImageView.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
 
 @interface RTPrepareController ()
 
@@ -15,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topCenterView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (nonatomic, strong) RTDetectorController *detectorController;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
 
 @end
 
@@ -24,6 +27,9 @@
     [super viewDidLoad];
     // setupView
     [self setupView];
+    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
+    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
+    self.animatedImgView.animatedImage = animatedImg;
     
 }
 
@@ -45,6 +51,11 @@
         _detectorController = [sb instantiateInitialViewController];
     }
     return _detectorController;
+}
+
+#pragma mark - dealloc
+- (void)dealloc {
+    NSLogDealloc;
 }
 
 @end
