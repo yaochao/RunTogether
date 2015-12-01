@@ -35,27 +35,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setupView
-    
-    CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
-    self.topView.frame = topViewFrame;
-    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
-    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
-    self.animatedImgView.animatedImage = animatedImg;
-    // setupView
     [self setupView];
 }
 
 
 #pragma mark - setupView
 - (void)setupView {
-//    [self.topView addSubview:self.detectorController.view];
-//    self.detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
     
-//    [self.topView addSubview:self.matchingController.view];
-//    self.matchingController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchingViewHeight) / 2, self.topView.frame.size.width, MatchingViewHeight);
+    CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
+    self.topView.frame = topViewFrame;
+    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
+    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
+    self.animatedImgView.animatedImage = animatedImg;
+    // add topView's content
+    [self.topView addSubview:self.detectorController.view];
+    
+    [self.topView addSubview:self.matchingController.view];
     
     [self.topView addSubview:self.matchResultController.view];
-    self.matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
 }
 
 
@@ -71,6 +68,8 @@
     if (_detectorController == nil) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTDetector" bundle:nil];
         _detectorController = [sb instantiateInitialViewController];
+        _detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
+        
     }
     return _detectorController;
 }
@@ -79,6 +78,8 @@
     if (_matchingController == nil) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatching" bundle:nil];
         _matchingController = [sb instantiateInitialViewController];
+        _matchingController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchingViewHeight) / 2, self.topView.frame.size.width, MatchingViewHeight);
+
     }
     return _matchingController;
 }
@@ -87,6 +88,8 @@
     if (_matchResultController == nil) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatchResult" bundle:nil];
         _matchResultController = [sb instantiateInitialViewController];
+        _matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
+
     }
     return _matchResultController;
 }
