@@ -49,7 +49,8 @@
     [self nextLableAnimation];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"country_calling_code"] = @"+86";
-    params[@"phone"] = self.phone;
+//    params[@"phone"] = self.phone;
+    params[@"phone"] = @"10000";
     params[@"security_code"] = self.captcheTextField.text;
     NSString *interface = @"sessions";
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
@@ -95,8 +96,7 @@
     [self nextLableAnimation];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"country_calling_code"] = @"+86";
-//    params[@"phone"] = self.phone;
-    params[@"phone"] = @"10000";
+    params[@"phone"] = self.phone;
     params[@"security_code"] = self.captcheTextField.text;
     NSString *interface = @"sessions";
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {

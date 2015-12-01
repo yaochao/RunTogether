@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
+#import <AFNetworking/AFNetworkReachabilityManager.h>
+#import "RTKeyChainTools.h"
 
 @interface RTDetectorController ()
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *gpsCheckbox;
@@ -41,6 +43,20 @@
         self.gpsCheckbox.animatedImage = nil;
         self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
         NSLog(@"GPS OK!");
+    }
+}
+
+- (void)detectNetwork {
+    // 前面已经做好，这边只需调用即可
+    NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
+    if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
+        self.gpsCheckbox.animatedImage = nil;
+        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+        NSLog(@"Network unconnected!");
+    } else {
+        self.gpsCheckbox.animatedImage = nil;
+        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+        NSLog(@"Network OK!");
     }
 }
 
