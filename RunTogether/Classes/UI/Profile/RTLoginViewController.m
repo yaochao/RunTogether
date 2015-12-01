@@ -79,13 +79,15 @@
 - (void)loginWithPhone:(NSString *)phone proof:(NSString *)proof type:(RTLoginType)type {
     // 请求网络
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"country_calling_code"] = @"+86";
     params[@"phone"] = phone;
     if (type == RTLoginPasswordType) {
-        params[@"password"] = proof;
+        params[@"security_code"] = proof;
     } else {
         params[@"remember_token"] = [RTKeyChainTools getRememberToken];
     }
     [RTNetworkTools postDataWithParams:params interfaceType:RTSessionsType success:^(NSDictionary *responseObject) {
+        NSLogSuccessResponse;
         [MBProgressHUD hideHUD];
         NSLog(@"%@", responseObject);
         _responseObject = responseObject;
@@ -103,23 +105,12 @@
         [RTKeyChainTools saveSessionKey:responseObject[@"session_key"]];
         [RTKeyChainTools saveEndpoint:responseObject[@"maxwell_endpoint"]];
         
-        // 判断是否需要跳转页面
-        if (type == RTLoginPasswordType) {
-            [MBProgressHUD showSuccess:NSLocalizedString(@"登录成功", nil)];
-            NSLog(@"登录成功");
-            [self dismissViewControllerAnimated:YES completion:nil];
-            //            self.locationVC = [[UIStoryboard storyboardWithName:@"RTLocation" bundle:nil] instantiateInitialViewController];
-            //            [self.navigationController pushViewController:self.locationVC animated:YES];
-        } else {
-            [MBProgressHUD showSuccess:NSLocalizedString(@"后台自动登录成功", nil)];
-            NSLog(@"后台自动登录成功");
-        }
-//        // 打开Maxwell
-//        [self startMaxwellClient];
-        
+        [MBProgressHUD showSuccess:NSLocalizedString(@"后台自动登录成功", nil)];
+        NSLog(@"后台自动登录成功");
+
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUD];
-        NSLog(@"网络错误 - %@", error);
+        NSLogErrorResponse;
         // 提示网络有问题
         NSString *errorMsg = [NSString stringWithFormat:NSLocalizedString(@"请检查您的网络连接\n错误代码 %li", nil), error.code];
         // 判断是否需要提示用户，隐式登录不需要
