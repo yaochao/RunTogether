@@ -31,6 +31,8 @@
 		CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED94B0A1C0830DA004D2FA7 /* NSTimer+Closure.swift */; };
 		D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D224465B1C0D32B1002BA47D /* RTMyInfoController.m */; };
 		D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */; };
+		D22446621C0D44D1002BA47D /* RTMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446611C0D44D1002BA47D /* RTMatchingController.m */; };
+		D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446631C0D44F1002BA47D /* RTMatching.storyboard */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -172,6 +174,9 @@
 		D224465A1C0D32B1002BA47D /* RTMyInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMyInfoController.h; sourceTree = "<group>"; };
 		D224465B1C0D32B1002BA47D /* RTMyInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyInfoController.m; sourceTree = "<group>"; };
 		D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMyInfo.storyboard; sourceTree = "<group>"; };
+		D22446601C0D44D1002BA47D /* RTMatchingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchingController.h; sourceTree = "<group>"; };
+		D22446611C0D44D1002BA47D /* RTMatchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchingController.m; sourceTree = "<group>"; };
+		D22446631C0D44F1002BA47D /* RTMatching.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatching.storyboard; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -490,6 +495,16 @@
 				D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */,
 			);
 			name = MyInfo;
+			sourceTree = "<group>";
+		};
+		D224465F1C0D4486002BA47D /* Matching */ = {
+			isa = PBXGroup;
+			children = (
+				D22446601C0D44D1002BA47D /* RTMatchingController.h */,
+				D22446611C0D44D1002BA47D /* RTMatchingController.m */,
+				D22446631C0D44F1002BA47D /* RTMatching.storyboard */,
+			);
+			name = Matching;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -917,6 +932,7 @@
 		D2EDA81D1C05984200F1EA1A /* StartingLine */ = {
 			isa = PBXGroup;
 			children = (
+				D224465F1C0D4486002BA47D /* Matching */,
 				D28608971C0C4942000D9CFD /* Detector */,
 				D28608901C0C4131000D9CFD /* Prepare */,
 				D286088B1C0C2472000D9CFD /* RTStartingLineController.h */,
@@ -1067,6 +1083,7 @@
 			files = (
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D28608961C0C4314000D9CFD /* RTPrepare.storyboard in Resources */,
+				D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */,
 				CED94B001C080015004D2FA7 /* RTAvatarVoiceViewController.xib in Resources */,
 				CEC920D71C06A81800540429 /* RTAvatarViewController.xib in Resources */,
 				D28608A11C0C4BEB000D9CFD /* RTDetector.storyboard in Resources */,
@@ -1192,6 +1209,7 @@
 				D22682611C0702070069F422 /* RTMyHistoryModel.m in Sources */,
 				D27D960A1C08DE4C0013AC97 /* UIImage+ImageEffects.m in Sources */,
 				D28608941C0C4307000D9CFD /* RTPrepareController.m in Sources */,
+				D22446621C0D44D1002BA47D /* RTMatchingController.m in Sources */,
 				CED94AFF1C080015004D2FA7 /* RTAvatarVoiceViewController.m in Sources */,
 				D22682641C070E750069F422 /* NSDate+Extension.m in Sources */,
 				D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */,
