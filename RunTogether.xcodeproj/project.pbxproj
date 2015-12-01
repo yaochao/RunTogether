@@ -37,6 +37,7 @@
 		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
 		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
 		D22446731C0D87E5002BA47D /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = D22446701C0D87E5002BA47D /* IOKit */; };
+		D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = D22446741C0D97DE002BA47D /* detectorLoading.gif */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -189,6 +190,7 @@
 		D22446701C0D87E5002BA47D /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
 		D22446711C0D87E5002BA47D /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
 		D22446721C0D87E5002BA47D /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
+		D22446741C0D97DE002BA47D /* detectorLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = detectorLoading.gif; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 		D25526D61BE6FA2C00CDEFC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D22446741C0D97DE002BA47D /* detectorLoading.gif */,
 				D2B70BBF1C0CC32200580278 /* dog.gif */,
 				D2C309AC1BF5D4580010D3F7 /* Localizable.strings */,
 				41338CCF1BE8CE6C00BCAEC3 /* rt.der */,
@@ -1118,6 +1121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D28608961C0C4314000D9CFD /* RTPrepare.storyboard in Resources */,
 				D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */,

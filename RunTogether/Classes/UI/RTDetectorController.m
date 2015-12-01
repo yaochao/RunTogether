@@ -16,6 +16,8 @@
 #import "IOPSKeys.h"
 #import <AVFoundation/AVFoundation.h>
 
+#define DelayInSeconds 0.6
+
 @interface RTDetectorController ()
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *gpsCheckbox;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *networkCheckbox;
@@ -31,7 +33,13 @@
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detector" ofType:@"gif"]]];
+    self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detectorLoading" ofType:@"gif"]]];
+    [self detectGPS];
+}
+
+
+#pragma mark - detect
+- (void)detectAll {
     [self detectGPS];
     [self detectNetwork];
     [self detectBattery];
@@ -39,70 +47,94 @@
     [self detectEar];
 }
 
-
-#pragma mark - detect
 - (void)detectGPS {
     self.gpsCheckbox.animatedImage = self.animatedImg;
-    BOOL locationEnable = [CLLocationManager locationServicesEnabled];
-    if (!locationEnable) {
-        self.gpsCheckbox.animatedImage = nil;
-        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
-        NSLog(@"GPS failed!");
-    } else {
-        self.gpsCheckbox.animatedImage = nil;
-        self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
-        NSLog(@"GPS OK!");
-    }
+    // 延时
+    __block typeof(self) bself = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        BOOL locationEnable = [CLLocationManager locationServicesEnabled];
+        if (!locationEnable) {
+            self.gpsCheckbox.animatedImage = nil;
+            self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            NSLog(@"GPS failed!");
+        } else {
+            self.gpsCheckbox.animatedImage = nil;
+            self.gpsCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            NSLog(@"GPS OK!");
+        }
+        [bself detectNetwork];
+    });
 }
 
 - (void)detectNetwork {
-    NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
-    if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
-        self.networkCheckbox.animatedImage = nil;
-        self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
-        NSLog(@"Network unconnected!");
-    } else {
-        self.networkCheckbox.animatedImage = nil;
-        self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
-        NSLog(@"Network OK!");
-    }
+    self.networkCheckbox.animatedImage = self.animatedImg;
+    //延时
+    __block typeof(self) bself = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *lastNetworkReachabilityStatus = [RTKeyChainTools getLastNetworkReachabilityStatus];
+        if ([lastNetworkReachabilityStatus isEqualToString:@"unconnected"]) {
+            self.networkCheckbox.animatedImage = nil;
+            self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            NSLog(@"Network unconnected!");
+        } else {
+            self.networkCheckbox.animatedImage = nil;
+            self.networkCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            NSLog(@"Network OK!");
+        }
+        [bself detectBattery];
+    });
 }
 
 - (void)detectBattery {
-    NSLog(@"当前电量%f", [self getCurrentBatteryLevel]);
-    if ([self getCurrentBatteryLevel] <= 10) {
-        self.batteryCheckbox.animatedImage = nil;
-        self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
-        NSLog(@"电量不足，剩余%f", [self getCurrentBatteryLevel]);
-    } else {
-        self.batteryCheckbox.animatedImage = nil;
-        self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
-        NSLog(@"Battery OK!");
-    }
+    self.batteryCheckbox.animatedImage = self.animatedImg;
+    // 延时
+    __block typeof(self) bself = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"当前电量%f", [self getCurrentBatteryLevel]);
+        if ([self getCurrentBatteryLevel] <= 10) {
+            self.batteryCheckbox.animatedImage = nil;
+            self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            NSLog(@"电量不足，剩余%f", [self getCurrentBatteryLevel]);
+        } else {
+            self.batteryCheckbox.animatedImage = nil;
+            self.batteryCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            NSLog(@"Battery OK!");
+        }
+        [bself detectMic];
+    });
 }
 
 - (void)detectMic {
-    if (![self checkMic]) {
-        self.micCheckbox.animatedImage = nil;
-        self.micCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
-        NSLog(@"Mic failed!");
-    } else {
-        self.micCheckbox.animatedImage = nil;
-        self.micCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
-        NSLog(@"Mic OK!");
-    }
+    self.micCheckbox.animatedImage = self.animatedImg;
+    // 延时
+    __block typeof(self) bself = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (![self checkMic]) {
+            self.micCheckbox.animatedImage = nil;
+            self.micCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            NSLog(@"Mic failed!");
+        } else {
+            self.micCheckbox.animatedImage = nil;
+            self.micCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            NSLog(@"Mic OK!");
+        }
+        [bself detectEar];
+    });
 }
 
 - (void)detectEar {
-    if (![self checkEar]) {
-        self.earCheckbox.animatedImage = nil;
-        self.earCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
-        NSLog(@"Ear failed!");
-    } else {
-        self.earCheckbox.animatedImage = nil;
-        self.earCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
-        NSLog(@"Ear OK!");
-    }
+    self.earCheckbox.animatedImage = self.animatedImg;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (![self checkEar]) {
+            self.earCheckbox.animatedImage = nil;
+            self.earCheckbox.image = [UIImage imageNamed:@"checkbox_error"];
+            NSLog(@"Ear failed!");
+        } else {
+            self.earCheckbox.animatedImage = nil;
+            self.earCheckbox.image = [UIImage imageNamed:@"checkbox_checked"];
+            NSLog(@"Ear OK!");
+        }
+    });
 
 }
 
