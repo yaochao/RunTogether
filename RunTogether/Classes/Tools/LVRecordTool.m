@@ -56,7 +56,7 @@
     [self.recorder updateMeters];
     double lowPassResults = pow(10, (0.05 * [self.recorder peakPowerForChannel:0]));
     float result  = 10 * (float)lowPassResults;
-    NSLog(@"%f", result);
+    NSLog(@"_%f", result);
     int no = 0;
     if (result > 0 && result <= 1.3) {
         no = 1;
