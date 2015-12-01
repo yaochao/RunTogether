@@ -9,6 +9,12 @@
 #import "RTNameViewController.h"
 #import "RTAvatarViewController.h"
 #import "RTKeyChainTools.h"
+
+/**
+ * 昵称长度
+ */
+#define RTNameLength  30
+
 @interface RTNameViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;

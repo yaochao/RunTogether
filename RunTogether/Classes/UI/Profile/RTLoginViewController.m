@@ -41,7 +41,6 @@
         self.checkoutButton.userInteractionEnabled = NO;
         self.checkoutLable.alpha = 0.4;
     }
-    
 }
 - (IBAction)checkoutButtonAction:(UIButton *)sender {
     CGFloat width = self.checkoutLable.frame.size.width;

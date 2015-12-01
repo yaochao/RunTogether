@@ -92,21 +92,11 @@ typedef enum {
 #define RTGameDistanceChangedKey          @"RTGameDistanceChangedKey"
 #define RTGameRankChangedKey              @"RTGameRankChangedKey"
 
-/**
- * 验证码长度
- */
-#define RTSecurityCodeLength  6
+
 /**
  * 手机号长度
  */
 #define RTPhoneNumberLength 11
-/**
- * 重新获取验证码冷却时间 单位：s
- */
-#define RTSendSecurityCodeAgainTime 60
-/**
- * 昵称长度
- */
-#define RTNameLength  30
+
 
 #endif

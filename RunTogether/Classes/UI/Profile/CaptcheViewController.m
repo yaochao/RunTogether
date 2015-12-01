@@ -14,6 +14,16 @@
 #import "RTLoginModel.h"
 #import "RTKeyChainTools.h"
 #import "RTHomeController.h"
+
+/**
+ * 重新获取验证码冷却时间 单位：s
+ */
+#define RTSendSecurityCodeAgainTime 3
+/**
+ * 验证码长度
+ */
+#define RTSecurityCodeLength  6
+
 @interface CaptcheViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *captcheTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
