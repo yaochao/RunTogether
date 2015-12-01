@@ -10,6 +10,7 @@
 #import "LVRecordTool.h"
 #import "RunTogether-Bridging-Header.h"
 #import "Runtogether-Swift.h"
+#define RecordTime 3
 @interface RTAvatarVoiceViewController ()<LVRecordToolDelegate>
 - (IBAction)longTap:(ANLongTapButton *)sender;
 - (IBAction)longTapOut:(ANLongTapButton *)sender;
@@ -53,41 +54,22 @@
 }
 - (IBAction)longTap:(ANLongTapButton *)sender {
     [self.recordTool startRecording];
+    // 限制录音时间
+    [self performSelector:@selector(stopRecord) withObject:self afterDelay:RecordTime];
+}
+- (void)stopRecord{
+    [self.recordTool stopRecording];
+    NSLog(@"停");
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+#warning Todo 超时声音提示
+//        [self play];
+//    });
 }
 - (IBAction)longTapOut:(ANLongTapButton *)sender {
     [self.recordTool playRecordingFile];
 }
 - (IBAction)LongTapTouchUpInside:(ANLongTapButton *)sender {
     self.recordLable.text = @"重录";
-    double currentTime = self.recordTool.recorder.currentTime;
-    NSLog(@"%lf", currentTime);
-    if (currentTime < 2) {
-        self.imageView.image = [UIImage imageNamed:@"mic_0"];
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            
-            [self.recordTool stopRecording];
-            [self.recordTool destructionRecordingFile];
-        });
-    } else {
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            
-            [self.recordTool stopRecording];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.imageView.image = [UIImage imageNamed:@"mic_0"];
-            });
-        });
-        // 已成功录音
-        NSLog(@"已成功录音");
-    }
-    if (currentTime > 3) {
-        [self.recordTool stopRecording];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.imageView.image = [UIImage imageNamed:@"mic_0"];
-        });
-        
-#warning Todo 超时声音提示
-        
-    }
     // I/O不能同时
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self play];
@@ -103,5 +85,9 @@
     });
 }
 - (IBAction)nextPage:(UIButton *)sender {
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [self.recordTool stopRecording];
+    [self.recordTool destructionRecordingFile];
 }
 @end
