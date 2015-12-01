@@ -36,7 +36,6 @@
 		D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446671C0D4D7F002BA47D /* RTMatchResultController.m */; };
 		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
 		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
-		D22446731C0D87E5002BA47D /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = D22446701C0D87E5002BA47D /* IOKit */; };
 		D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = D22446741C0D97DE002BA47D /* detectorLoading.gif */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
@@ -56,6 +55,12 @@
 		D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04B1BE84835007BB1EE /* UIBarButtonItem+Extension.m */; };
 		D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04D1BE84835007BB1EE /* UIImage+BBExtension.m */; };
 		D22CF05B1BE84835007BB1EE /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D22CF04F1BE84835007BB1EE /* UIView+Extension.m */; };
+		D233EA0F1C0DDD54008DD169 /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = D233E9FF1C0DDD54008DD169 /* IOKit */; };
+		D233EA101C0DDD54008DD169 /* common_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D233EA041C0DDD54008DD169 /* common_structs.pb.cc */; };
+		D233EA111C0DDD54008DD169 /* MaxwellClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = D233EA071C0DDD54008DD169 /* MaxwellClient.mm */; };
+		D233EA121C0DDD54008DD169 /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D233EA081C0DDD54008DD169 /* subscriber_publisher.pb.cc */; };
+		D233EA131C0DDD54008DD169 /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D233EA0A1C0DDD54008DD169 /* subscriber_publisher_structs.pb.cc */; };
+		D233EA141C0DDD54008DD169 /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D233EA0E1C0DDD54008DD169 /* google.framework */; };
 		D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */; };
 		D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E13B1BFC75B4009A963F /* RTLocationCreateBodyModel.m */; };
 		D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D239E13E1BFC7665009A963F /* RTGameStartedModel.m */; };
@@ -123,11 +128,6 @@
 		D2C309AA1BF5D4580010D3F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2C309AC1BF5D4580010D3F7 /* Localizable.strings */; };
 		D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */; };
 		D2ECB8571BF87C0400ECBA87 /* NSObject+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ECB8561BF87C0400ECBA87 /* NSObject+UserDefaults.m */; };
-		D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8051C05824800F1EA1A /* common_structs.pb.cc */; };
-		D2EDA8111C05824800F1EA1A /* MaxwellClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8081C05824800F1EA1A /* MaxwellClient.mm */; };
-		D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA8091C05824800F1EA1A /* subscriber_publisher.pb.cc */; };
-		D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA80B1C05824800F1EA1A /* subscriber_publisher_structs.pb.cc */; };
-		D2EDA8141C05824800F1EA1A /* google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EDA80F1C05824800F1EA1A /* google.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,9 +187,6 @@
 		D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatchResult.storyboard; sourceTree = "<group>"; };
 		D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultCell.h; sourceTree = "<group>"; };
 		D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultCell.m; sourceTree = "<group>"; };
-		D22446701C0D87E5002BA47D /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
-		D22446711C0D87E5002BA47D /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
-		D22446721C0D87E5002BA47D /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
 		D22446741C0D97DE002BA47D /* detectorLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = detectorLoading.gif; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
@@ -227,6 +224,18 @@
 		D22CF04E1BE84835007BB1EE /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D22CF04F1BE84835007BB1EE /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D22CF06C1BE88704007BB1EE /* RTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHTTPSessionManager.h; sourceTree = "<group>"; };
+		D233E9FF1C0DDD54008DD169 /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
+		D233EA001C0DDD54008DD169 /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		D233EA011C0DDD54008DD169 /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
+		D233EA041C0DDD54008DD169 /* common_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_structs.pb.cc; sourceTree = "<group>"; };
+		D233EA051C0DDD54008DD169 /* common_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_structs.pb.h; sourceTree = "<group>"; };
+		D233EA061C0DDD54008DD169 /* MaxwellClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxwellClient.h; sourceTree = "<group>"; };
+		D233EA071C0DDD54008DD169 /* MaxwellClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxwellClient.mm; sourceTree = "<group>"; };
+		D233EA081C0DDD54008DD169 /* subscriber_publisher.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher.pb.cc; sourceTree = "<group>"; };
+		D233EA091C0DDD54008DD169 /* subscriber_publisher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher.pb.h; sourceTree = "<group>"; };
+		D233EA0A1C0DDD54008DD169 /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
+		D233EA0B1C0DDD54008DD169 /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
+		D233EA0E1C0DDD54008DD169 /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
 		D239E1371BFC6861009A963F /* RTLocationCreatedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationCreatedModel.h; sourceTree = "<group>"; };
 		D239E1381BFC6861009A963F /* RTLocationCreatedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLocationCreatedModel.m; sourceTree = "<group>"; };
 		D239E13A1BFC75B4009A963F /* RTLocationCreateBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationCreateBodyModel.h; sourceTree = "<group>"; };
@@ -343,15 +352,6 @@
 		D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserDefaultManager.m; sourceTree = "<group>"; };
 		D2ECB8551BF87C0400ECBA87 /* NSObject+UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UserDefaults.h"; sourceTree = "<group>"; };
 		D2ECB8561BF87C0400ECBA87 /* NSObject+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UserDefaults.m"; sourceTree = "<group>"; };
-		D2EDA8051C05824800F1EA1A /* common_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common_structs.pb.cc; sourceTree = "<group>"; };
-		D2EDA8061C05824800F1EA1A /* common_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_structs.pb.h; sourceTree = "<group>"; };
-		D2EDA8071C05824800F1EA1A /* MaxwellClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxwellClient.h; sourceTree = "<group>"; };
-		D2EDA8081C05824800F1EA1A /* MaxwellClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MaxwellClient.mm; sourceTree = "<group>"; };
-		D2EDA8091C05824800F1EA1A /* subscriber_publisher.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher.pb.cc; sourceTree = "<group>"; };
-		D2EDA80A1C05824800F1EA1A /* subscriber_publisher.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher.pb.h; sourceTree = "<group>"; };
-		D2EDA80B1C05824800F1EA1A /* subscriber_publisher_structs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subscriber_publisher_structs.pb.cc; sourceTree = "<group>"; };
-		D2EDA80C1C05824800F1EA1A /* subscriber_publisher_structs.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subscriber_publisher_structs.pb.h; sourceTree = "<group>"; };
-		D2EDA80F1C05824800F1EA1A /* google.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = google.framework; sourceTree = "<group>"; };
 		E9645101320C20B61C0B65AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,10 +360,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2EDA8141C05824800F1EA1A /* google.framework in Frameworks */,
+				D233EA141C0DDD54008DD169 /* google.framework in Frameworks */,
 				D239E1681C02B231009A963F /* Security.framework in Frameworks */,
 				D2C2F1D01BEA0C9A0027A4A5 /* libstdc++.6.0.9.tbd in Frameworks */,
 				D2C2F1CE1BEA0C860027A4A5 /* CoreTelephony.framework in Frameworks */,
+				D233EA0F1C0DDD54008DD169 /* IOKit in Frameworks */,
 				D2C2F1CC1BEA0C7B0027A4A5 /* libsqlite3.0.tbd in Frameworks */,
 				D2C2F1CA1BEA0C650027A4A5 /* CoreGraphics.framework in Frameworks */,
 				D2C2F1C81BEA0C5A0027A4A5 /* SystemConfiguration.framework in Frameworks */,
@@ -374,7 +375,6 @@
 				D2C2F1C01BEA0BA10027A4A5 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				D2C2F1BF1BEA0BA10027A4A5 /* BaiduMapAPI_Search.framework in Frameworks */,
 				D2C2F1BE1BEA0BA10027A4A5 /* BaiduMapAPI_Radar.framework in Frameworks */,
-				D22446731C0D87E5002BA47D /* IOKit in Frameworks */,
 				D2C2F1BB1BEA0BA10027A4A5 /* BaiduMapAPI_Cloud.framework in Frameworks */,
 				D2C2F1BC1BEA0BA10027A4A5 /* BaiduMapAPI_Location.framework in Frameworks */,
 				D2C2F1BD1BEA0BA10027A4A5 /* BaiduMapAPI_Map.framework in Frameworks */,
@@ -534,16 +534,6 @@
 			name = MatchResult;
 			sourceTree = "<group>";
 		};
-		D224466F1C0D87E5002BA47D /* IO */ = {
-			isa = PBXGroup;
-			children = (
-				D22446701C0D87E5002BA47D /* IOKit */,
-				D22446711C0D87E5002BA47D /* IOPowerSources.h */,
-				D22446721C0D87E5002BA47D /* IOPSKeys.h */,
-			);
-			path = IO;
-			sourceTree = "<group>";
-		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +566,56 @@
 				D22CF04F1BE84835007BB1EE /* UIView+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D233E9FE1C0DDD53008DD169 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				D233E9FF1C0DDD54008DD169 /* IOKit */,
+				D233EA001C0DDD54008DD169 /* IOPowerSources.h */,
+				D233EA011C0DDD54008DD169 /* IOPSKeys.h */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		D233EA021C0DDD54008DD169 /* Maxwell */ = {
+			isa = PBXGroup;
+			children = (
+				D233EA031C0DDD54008DD169 /* MaxwellClient */,
+				D233EA0C1C0DDD54008DD169 /* protobuf */,
+			);
+			path = Maxwell;
+			sourceTree = "<group>";
+		};
+		D233EA031C0DDD54008DD169 /* MaxwellClient */ = {
+			isa = PBXGroup;
+			children = (
+				D233EA041C0DDD54008DD169 /* common_structs.pb.cc */,
+				D233EA051C0DDD54008DD169 /* common_structs.pb.h */,
+				D233EA061C0DDD54008DD169 /* MaxwellClient.h */,
+				D233EA071C0DDD54008DD169 /* MaxwellClient.mm */,
+				D233EA081C0DDD54008DD169 /* subscriber_publisher.pb.cc */,
+				D233EA091C0DDD54008DD169 /* subscriber_publisher.pb.h */,
+				D233EA0A1C0DDD54008DD169 /* subscriber_publisher_structs.pb.cc */,
+				D233EA0B1C0DDD54008DD169 /* subscriber_publisher_structs.pb.h */,
+			);
+			path = MaxwellClient;
+			sourceTree = "<group>";
+		};
+		D233EA0C1C0DDD54008DD169 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				D233EA0D1C0DDD54008DD169 /* framework */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		D233EA0D1C0DDD54008DD169 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				D233EA0E1C0DDD54008DD169 /* google.framework */,
+			);
+			path = framework;
 			sourceTree = "<group>";
 		};
 		D239E1361BFC67D4009A963F /* Push */ = {
@@ -767,8 +807,8 @@
 		D2917F8B1BE7085000004AE7 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				D224466F1C0D87E5002BA47D /* IO */,
-				D2EDA8031C05824800F1EA1A /* Maxwell */,
+				D233E9FE1C0DDD53008DD169 /* IO */,
+				D233EA021C0DDD54008DD169 /* Maxwell */,
 				D2C2F1B21BEA0BA10027A4A5 /* BaiduMap */,
 				D2C2F1A21BE9ECAE0027A4A5 /* Security */,
 				D22CF0381BE84835007BB1EE /* Category */,
@@ -884,46 +924,6 @@
 				D2ECB8531BF876B200ECBA87 /* RTUserDefaultManager.m */,
 			);
 			path = UserDefault;
-			sourceTree = "<group>";
-		};
-		D2EDA8031C05824800F1EA1A /* Maxwell */ = {
-			isa = PBXGroup;
-			children = (
-				D2EDA8041C05824800F1EA1A /* MaxwellClient */,
-				D2EDA80D1C05824800F1EA1A /* protobuf */,
-			);
-			path = Maxwell;
-			sourceTree = "<group>";
-		};
-		D2EDA8041C05824800F1EA1A /* MaxwellClient */ = {
-			isa = PBXGroup;
-			children = (
-				D2EDA8051C05824800F1EA1A /* common_structs.pb.cc */,
-				D2EDA8061C05824800F1EA1A /* common_structs.pb.h */,
-				D2EDA8071C05824800F1EA1A /* MaxwellClient.h */,
-				D2EDA8081C05824800F1EA1A /* MaxwellClient.mm */,
-				D2EDA8091C05824800F1EA1A /* subscriber_publisher.pb.cc */,
-				D2EDA80A1C05824800F1EA1A /* subscriber_publisher.pb.h */,
-				D2EDA80B1C05824800F1EA1A /* subscriber_publisher_structs.pb.cc */,
-				D2EDA80C1C05824800F1EA1A /* subscriber_publisher_structs.pb.h */,
-			);
-			path = MaxwellClient;
-			sourceTree = "<group>";
-		};
-		D2EDA80D1C05824800F1EA1A /* protobuf */ = {
-			isa = PBXGroup;
-			children = (
-				D2EDA80E1C05824800F1EA1A /* framework */,
-			);
-			path = protobuf;
-			sourceTree = "<group>";
-		};
-		D2EDA80E1C05824800F1EA1A /* framework */ = {
-			isa = PBXGroup;
-			children = (
-				D2EDA80F1C05824800F1EA1A /* google.framework */,
-			);
-			path = framework;
 			sourceTree = "<group>";
 		};
 		D2EDA81A1C05981D00F1EA1A /* Profile */ = {
@@ -1217,7 +1217,6 @@
 				D22CF0501BE84835007BB1EE /* MBProgressHUD+MJ.m in Sources */,
 				D239E13F1BFC7665009A963F /* RTGameStartedModel.m in Sources */,
 				D2917FB01BE746CF00004AE7 /* RTBaseNavController.m in Sources */,
-				D2EDA8111C05824800F1EA1A /* MaxwellClient.mm in Sources */,
 				D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */,
 				D239E1391BFC6861009A963F /* RTLocationCreatedModel.m in Sources */,
 				D239E1571BFC7C34009A963F /* RTGameRankChangedBodyModel.m in Sources */,
@@ -1230,7 +1229,6 @@
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
-				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
 				D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */,
 				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
 				D22682671C084F040069F422 /* RTResultItemModel.m in Sources */,
@@ -1239,7 +1237,6 @@
 				D2C2F1AA1BE9ECAE0027A4A5 /* NSString+Hash.m in Sources */,
 				D24F560A1C05E23800BB30A7 /* RTMyHistoryController.m in Sources */,
 				CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */,
-				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
 				D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */,
 				D27D96071C08DC8A0013AC97 /* RTBlurEffectController.m in Sources */,
@@ -1259,12 +1256,13 @@
 				CEC920D61C06A81800540429 /* RTAvatarViewController.m in Sources */,
 				D22CF05A1BE84835007BB1EE /* UIImage+BBExtension.m in Sources */,
 				D239E1631BFEF6C6009A963F /* RTGameDistanceChangedBodyModel.m in Sources */,
-				D2EDA8101C05824800F1EA1A /* common_structs.pb.cc in Sources */,
 				D286088D1C0C2472000D9CFD /* RTStartingLineController.m in Sources */,
+				D233EA131C0DDD54008DD169 /* subscriber_publisher_structs.pb.cc in Sources */,
 				D224465C1C0D32B1002BA47D /* RTMyInfoController.m in Sources */,
 				D239E1451BFC7775009A963F /* RTGameStartedBodyUsersModel.m in Sources */,
 				D2ECB8541BF876B200ECBA87 /* RTUserDefaultManager.m in Sources */,
 				D2917FBA1BE7565600004AE7 /* RTNetworkTools.m in Sources */,
+				D233EA101C0DDD54008DD169 /* common_structs.pb.cc in Sources */,
 				D239E1421BFC767F009A963F /* RTGameStartedBodyModel.m in Sources */,
 				D22CF0541BE84835007BB1EE /* NSDate+Category.m in Sources */,
 				D2C079771BF035BC00F40CFE /* RTMaxwellListener.mm in Sources */,
@@ -1273,10 +1271,12 @@
 				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
 				CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */,
+				D233EA111C0DDD54008DD169 /* MaxwellClient.mm in Sources */,
 				D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */,
 				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
+				D233EA121C0DDD54008DD169 /* subscriber_publisher.pb.cc in Sources */,
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
