@@ -9,6 +9,7 @@
 #import "RTPrepareController.h"
 #import "RTDetectorController.h"
 #import "RTMatchingController.h"
+#import "RTMatchResultController.h"
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
@@ -16,6 +17,7 @@
 #define BottomViewHeight 200
 #define DecetorViewHeight 300
 #define MatchingViewHeight self.topView.frame.size.height
+#define MatchResultViewHeight self.topView.frame.size.height
 
 @interface RTPrepareController ()
 
@@ -23,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (nonatomic, strong) RTDetectorController *detectorController;
 @property (nonatomic, strong) RTMatchingController *matchingController;
+@property (nonatomic, strong) RTMatchResultController *matchResultController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
 
 @end
@@ -42,19 +45,26 @@
     [self setupView];
 }
 
+
 #pragma mark - setupView
 - (void)setupView {
 //    [self.topView addSubview:self.detectorController.view];
 //    self.detectorController.view.frame = CGRectMake(0, (self.topView.frame.size.height - DecetorViewHeight) / 2, self.topView.frame.size.width, DecetorViewHeight);
     
-    [self.topView addSubview:self.matchingController.view];
-    self.matchingController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchingViewHeight) / 2, self.topView.frame.size.width, MatchingViewHeight);
+//    [self.topView addSubview:self.matchingController.view];
+//    self.matchingController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchingViewHeight) / 2, self.topView.frame.size.width, MatchingViewHeight);
+    
+    [self.topView addSubview:self.matchResultController.view];
+    self.matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
 }
 
+
+#pragma mark -
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - getter
 - (RTDetectorController *)detectorController {
@@ -72,6 +82,15 @@
     }
     return _matchingController;
 }
+
+- (RTMatchResultController *)matchResultController {
+    if (_matchResultController == nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatchResult" bundle:nil];
+        _matchResultController = [sb instantiateInitialViewController];
+    }
+    return _matchResultController;
+}
+
 
 #pragma mark - dealloc
 - (void)dealloc {

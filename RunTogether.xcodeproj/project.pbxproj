@@ -33,6 +33,9 @@
 		D224465E1C0D32BB002BA47D /* RTMyInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D224465D1C0D32BB002BA47D /* RTMyInfo.storyboard */; };
 		D22446621C0D44D1002BA47D /* RTMatchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446611C0D44D1002BA47D /* RTMatchingController.m */; };
 		D22446641C0D44F1002BA47D /* RTMatching.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446631C0D44F1002BA47D /* RTMatching.storyboard */; };
+		D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446671C0D4D7F002BA47D /* RTMatchResultController.m */; };
+		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
+		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -177,6 +180,11 @@
 		D22446601C0D44D1002BA47D /* RTMatchingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchingController.h; sourceTree = "<group>"; };
 		D22446611C0D44D1002BA47D /* RTMatchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchingController.m; sourceTree = "<group>"; };
 		D22446631C0D44F1002BA47D /* RTMatching.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatching.storyboard; sourceTree = "<group>"; };
+		D22446661C0D4D7F002BA47D /* RTMatchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultController.h; sourceTree = "<group>"; };
+		D22446671C0D4D7F002BA47D /* RTMatchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultController.m; sourceTree = "<group>"; };
+		D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTMatchResult.storyboard; sourceTree = "<group>"; };
+		D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultCell.h; sourceTree = "<group>"; };
+		D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultCell.m; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -505,6 +513,18 @@
 				D22446631C0D44F1002BA47D /* RTMatching.storyboard */,
 			);
 			name = Matching;
+			sourceTree = "<group>";
+		};
+		D22446651C0D4D5E002BA47D /* MatchResult */ = {
+			isa = PBXGroup;
+			children = (
+				D22446661C0D4D7F002BA47D /* RTMatchResultController.h */,
+				D22446671C0D4D7F002BA47D /* RTMatchResultController.m */,
+				D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */,
+				D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */,
+				D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */,
+			);
+			name = MatchResult;
 			sourceTree = "<group>";
 		};
 		D22CF0381BE84835007BB1EE /* Category */ = {
@@ -932,6 +952,7 @@
 		D2EDA81D1C05984200F1EA1A /* StartingLine */ = {
 			isa = PBXGroup;
 			children = (
+				D22446651C0D4D5E002BA47D /* MatchResult */,
 				D224465F1C0D4486002BA47D /* Matching */,
 				D28608971C0C4942000D9CFD /* Detector */,
 				D28608901C0C4131000D9CFD /* Prepare */,
@@ -1106,6 +1127,7 @@
 				D22CF0511BE84835007BB1EE /* MBProgressHUD.bundle in Resources */,
 				CE6578801C059C620045D043 /* RTLoginViewController.xib in Resources */,
 				41338CD01BE8CE6C00BCAEC3 /* rt.der in Resources */,
+				D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1199,6 +1221,7 @@
 				CE3B0AB61C06E25C00DE6C79 /* RTAvatarModel.m in Sources */,
 				D2EDA8131C05824800F1EA1A /* subscriber_publisher_structs.pb.cc in Sources */,
 				D239E14B1BFC78BC009A963F /* RTGameOverBodyModel.m in Sources */,
+				D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */,
 				D27D96071C08DC8A0013AC97 /* RTBlurEffectController.m in Sources */,
 				CED94B0C1C0830DA004D2FA7 /* NSTimer+Closure.swift in Sources */,
 				D2C2F1A91BE9ECAE0027A4A5 /* CommonFunc.m in Sources */,
@@ -1230,6 +1253,7 @@
 				D226825E1C07018B0069F422 /* RTResultModel.m in Sources */,
 				CE65787D1C059C620045D043 /* RTLoadingViewController.m in Sources */,
 				CED94B031C08042F004D2FA7 /* RTLoginModel.m in Sources */,
+				D22446681C0D4D7F002BA47D /* RTMatchResultController.m in Sources */,
 				D226825B1C0701350069F422 /* RTGameModel.m in Sources */,
 				D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */,
 				CE6578881C05B3630045D043 /* RTGamePropertiesModel.m in Sources */,
