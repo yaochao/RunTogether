@@ -12,6 +12,7 @@
 #import "RTMatchResultController.h"
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
+#import "MBProgressHUD+MJ.h"
 
 
 #define BottomViewHeight 200
@@ -38,8 +39,19 @@
 
 #pragma mark - RTDetectorDelegate
 - (void)detector:(RTDetectorController *)detector didFinishedDetect:(NSMutableArray *)detectorResult {
-    for (NSString *result in detectorResult) {
-        NSLog(@"%@", result);
+    for (int i =0; i < 5; i++) {
+        if ([detectorResult[i] isEqualToString:@"no"]) {
+            // 检测不通过
+            [MBProgressHUD showError:@"对不起，检测不通过"];
+            break;
+        }
+        if (i == 4) {
+            // 检测通过
+            [MBProgressHUD showSuccess:@"恭喜您，检测通过"];
+            // 切换到下一页
+            [self.topView addSubview:self.matchingController.view];
+        }
+        
     }
 }
 
