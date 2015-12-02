@@ -140,7 +140,7 @@
 
 - (void)setUserInfoModel:(RTUserInfoModel *)userInfoModel {
     _userInfoModel = userInfoModel;
-    // 赋值
+    // 赋值/
     // 头像
     [self.avatarIV sd_setImageWithURL:[NSURL URLWithString:userInfoModel.avatar_url] placeholderImage:nil];
     // 昵称

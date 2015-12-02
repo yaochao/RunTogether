@@ -63,6 +63,12 @@
 
 #pragma mark - Table view delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+#warning TODO
+    if (self.modelArr.count == 0) {
+        // cell
+        RTMyHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myHistoryCell"];
+        return cell;
+    }
     // model
     RTMyHistoryModel *myHistoryModel = self.modelArr[indexPath.row];
     // cell
