@@ -7,6 +7,8 @@
 //
 
 #import "RTMatchResultCell.h"
+#import "RTGameStartedBodyUsersModel.h"
+#import <UIImageView+WebCache.h>
 
 @interface RTMatchResultCell ()
 
@@ -28,6 +30,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - setter
+- (void)setUserModel:(RTGameStartedBodyUsersModel *)userModel {
+    _userModel = userModel;
+    // 给控件赋值
+    self.nameLbl.text = userModel.name;
+#warning TODO
+    
 }
 
 @end
