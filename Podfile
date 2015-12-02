@@ -7,3 +7,4 @@ pod 'CocoaAsyncSocket', '~> 7.3.5'
 pod 'FastCoding', '~> 3.2.1'
 pod 'pop', '~> 1.0'
 pod 'FLAnimatedImage', '~> 1.0'
+pod 'AMapLocation' #定位SDK
