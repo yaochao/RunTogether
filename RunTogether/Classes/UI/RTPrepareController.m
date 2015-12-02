@@ -20,7 +20,7 @@
 #define MatchingViewHeight self.topView.frame.size.height
 #define MatchResultViewHeight self.topView.frame.size.height
 
-@interface RTPrepareController () <RTDetectorDelegate>
+@interface RTPrepareController () <RTDetectorDelegate, RTMatchingDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
@@ -53,6 +53,21 @@
         }
         
     }
+}
+
+
+#pragma mark - RTMatchingDelegate
+- (void)matching:(RTMatchingController *)matchingController totalStep:(NSInteger)totalStep {
+    if (totalStep < 10) {
+        // 播放语音 提示他 没有达到标准
+        [MBProgressHUD showError:@"运动没有达到标准，动起来"];
+        // ...
+        return;
+    }
+    // 切换到下一页
+    [MBProgressHUD showSuccess:@"恭喜您，您已加入了匹配"];
+    [self.topView addSubview:self.matchResultController.view];
+    [matchingController stopMonitor];
 }
 
 
@@ -104,7 +119,7 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatching" bundle:nil];
         _matchingController = [sb instantiateInitialViewController];
         _matchingController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchingViewHeight) / 2, self.topView.frame.size.width, MatchingViewHeight);
-
+        _matchingController.delegate = self;
     }
     return _matchingController;
 }

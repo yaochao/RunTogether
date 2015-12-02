@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RTMatchingController;
+@protocol RTMatchingDelegate <NSObject>
+@required
+- (void)matching:(RTMatchingController *)matchingController totalStep:(NSInteger)totalStep;
+@end
 
 @interface RTMatchingController : UIViewController
-
+@property (nonatomic, weak) id<RTMatchingDelegate> delegate;
+- (void)stopMonitor;
 @end

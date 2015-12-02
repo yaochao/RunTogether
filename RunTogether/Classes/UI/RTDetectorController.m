@@ -39,8 +39,6 @@
     self.animatedImg = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"detectorLoading" ofType:@"gif"]]];
     // 开始检测GPS
     [self detectAll];
-    // 初始化结果数据
-    detectorResult = [NSMutableArray array];
 }
 
 
@@ -51,6 +49,8 @@
 
 - (void)detectGPS {
     self.gpsCheckbox.animatedImage = self.animatedImg;
+    // 初始化数组
+    detectorResult = [NSMutableArray array];
     // 延时
     __block typeof(self) bself = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(DelayInSeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
