@@ -18,7 +18,7 @@
 
 @implementation RTMaxwellListener
 
-// 每次推送会调用3次这个方法
+
 - (void) onMessage:(SessionId *)sessionId
                   :(MaxwellMessage *)message {
     // 字符串转字典

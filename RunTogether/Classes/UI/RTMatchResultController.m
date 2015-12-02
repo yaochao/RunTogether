@@ -56,5 +56,9 @@
     NSLogDealloc;
 }
 
+- (void)loadData {
+    
+}
+
 
 @end

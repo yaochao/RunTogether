@@ -151,7 +151,7 @@
     NSString *interface = @"security_codes";
     [RTNetworkTools postDataWithParams:params interfaceType:interface success:^(id responseObject) {
         NSLogSuccessResponse;
-            
+        
         CaptcheViewController* captcheVC = [[CaptcheViewController alloc]init];
         [self.navigationController pushViewController:captcheVC animated:YES];
         captcheVC.phone = self.phoneNumberTextField.text;
