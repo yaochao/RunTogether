@@ -11,6 +11,7 @@
 #import "RTNetworkTools.h"
 #import "RTGameStartedBodyModel.h"
 #import "RTGameStartedBodyUsersModel.h"
+#import "UITableView+Wave.h"
 
 @interface RTMatchResultController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -89,7 +90,7 @@
 - (void)setUsers:(NSArray *)users {
     _users = users;
     // 刷新表格
-    [self.tableView reloadData];
+    [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
 }
 
 
