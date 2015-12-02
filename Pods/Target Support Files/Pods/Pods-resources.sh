@@ -57,6 +57,12 @@ install_resource()
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AMap3DMap/MAMapKit.framework/Versions/3.2.1.94eef6d.752/Resources/AMap.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AMap3DMap/MAMapKit.framework/Versions/3.2.1.94eef6d.752/Resources/AMap.bundle"
+fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
