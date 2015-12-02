@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RTLoginViewController : UIViewController
-
+// tokenLogin
+- (void)tokenLogin;
 @end

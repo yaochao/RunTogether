@@ -16,6 +16,7 @@
 #import <MJExtension/MJExtension.h>
 #import <UIImageView+WebCache.h>
 #import "RTStartingLineController.h"
+#import "MaxwellClient.h"
 
 @interface RTHomeController ()
 
@@ -28,6 +29,7 @@
 @property (nonatomic, weak)RTStartingLineController *startingLineController;
 @property (nonatomic, strong) RTGamePropertiesModel *gamePropertiesModel;
 @property (nonatomic, strong) RTUserInfoModel *userInfoModel;
+@property (nonatomic, strong) MaxwellClient *maxwellClient;
 @end
 
 @implementation RTHomeController
@@ -64,6 +66,30 @@
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
+    // 打开Maxwell
+    [self startMaxwellClient];
+}
+
+
+#pragma mark - 启动Maxwell
+- (void)startMaxwellClient {
+    // 先停止
+    [self stopMaxwellClient];
+    // 启动Maxwell
+    [self.maxwellClient start];
+    NSLog(@"Maxwell启动了");
+}
+
+#pragma mark - 关闭Maxwell
+- (void)stopMaxwellClient {
+    //
+    if (self.maxwellClient == nil) {
+        return;
+    }
+    [self.maxwellClient stop];
+    self.maxwellClient = nil;
+    NSLog(@"maxwell关闭了");
 }
 
 #pragma mark - viewViewAppear
@@ -146,6 +172,16 @@
     // 昵称
     self.nameLbl.text = userInfoModel.name;
 }
+
+
+#pragma mark - getter
+- (MaxwellClient *)maxwellClient {
+    // 加载Maxwell
+    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
+    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithLongLong:[[RTKeyChainTools getUserId] longLongValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    return _maxwellClient;
+}
+
 
 #pragma mark - didReceiveMemoryWarning
 - (void)didReceiveMemoryWarning {

@@ -20,6 +20,9 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AMap3DMap (3.2.1)
+  - AMapLocation (1.0.1)
+  - AMapSearch (3.1.0)
   - CocoaAsyncSocket (7.3.5)
   - FastCoding (3.2.1)
   - FLAnimatedImage (1.0.8)
@@ -32,6 +35,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.1)
+  - AMap3DMap
+  - AMapLocation
+  - AMapSearch
   - CocoaAsyncSocket (~> 7.3.5)
   - FastCoding (~> 3.2.1)
   - FLAnimatedImage (~> 1.0)
@@ -42,6 +48,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AMap3DMap: 1f179c4fc41a60e42243466eb188e3be946aa163
+  AMapLocation: d33782bd102563aae1824cb4fae8b4495376f016
+  AMapSearch: aa7621ae8aec9cb8df116710b26e3fe3d09dc0ff
   CocoaAsyncSocket: 94c582a5bef4bb0f51b6ebf3e1b561d9091a68ba
   FastCoding: ed46c83ba23d048aafa0251972a1e1fc1cfc58ed
   FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24

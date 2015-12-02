@@ -69,6 +69,14 @@
         RTMyHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myHistoryCell"];
         return cell;
     }
+    
+#warning TODO
+    if (self.modelArr.count == 0) {
+        RTMyHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myHistoryCell"];
+        return cell;
+    }
+    
+>>>>>>> 5616737fd1fae48a1949231276fd6895f6ff603f
     // model
     RTMyHistoryModel *myHistoryModel = self.modelArr[indexPath.row];
     // cell

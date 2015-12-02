@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class RTGameStartedBodyUsersModel;
+
 @interface RTMatchResultCell : UITableViewCell
+
+@property (nonatomic, strong) RTGameStartedBodyUsersModel *userModel;
 
 @end

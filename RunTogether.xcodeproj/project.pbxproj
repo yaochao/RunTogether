@@ -37,6 +37,7 @@
 		D224466A1C0D4D8D002BA47D /* RTMatchResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D22446691C0D4D8D002BA47D /* RTMatchResult.storyboard */; };
 		D224466D1C0D51C2002BA47D /* RTMatchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */; };
 		D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */ = {isa = PBXBuildFile; fileRef = D22446741C0D97DE002BA47D /* detectorLoading.gif */; };
+		D22446781C0EFE2F002BA47D /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = D22446771C0EFE2F002BA47D /* UITableView+Wave.m */; };
 		D22682581C06F3F70069F422 /* RTUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D22682571C06F3F70069F422 /* RTUserInfoModel.m */; };
 		D226825B1C0701350069F422 /* RTGameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825A1C0701350069F422 /* RTGameModel.m */; };
 		D226825E1C07018B0069F422 /* RTResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D226825D1C07018B0069F422 /* RTResultModel.m */; };
@@ -79,7 +80,7 @@
 		D24F56091C05E23800BB30A7 /* RTMyHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F56051C05E23800BB30A7 /* RTMyHistoryCell.m */; };
 		D24F560A1C05E23800BB30A7 /* RTMyHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F56071C05E23800BB30A7 /* RTMyHistoryController.m */; };
 		D24F560E1C05E24E00BB30A7 /* RTHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */; };
-		D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F560D1C05E24E00BB30A7 /* RTHomeController.m */; };
+		D24F560F1C05E24E00BB30A7 /* RTHomeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D24F560D1C05E24E00BB30A7 /* RTHomeController.mm */; };
 		D25526D91BE6FA2C00CDEFC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D25526D81BE6FA2C00CDEFC7 /* main.m */; };
 		D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25526E01BE6FA2C00CDEFC7 /* Main.storyboard */; };
 		D25526E41BE6FA2C00CDEFC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D25526E31BE6FA2C00CDEFC7 /* Images.xcassets */; };
@@ -188,6 +189,8 @@
 		D224466B1C0D51C2002BA47D /* RTMatchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMatchResultCell.h; sourceTree = "<group>"; };
 		D224466C1C0D51C2002BA47D /* RTMatchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMatchResultCell.m; sourceTree = "<group>"; };
 		D22446741C0D97DE002BA47D /* detectorLoading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = detectorLoading.gif; sourceTree = "<group>"; };
+		D22446761C0EFE2F002BA47D /* UITableView+Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wave.h"; sourceTree = "<group>"; };
+		D22446771C0EFE2F002BA47D /* UITableView+Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wave.m"; sourceTree = "<group>"; };
 		D22682561C06F3F70069F422 /* RTUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUserInfoModel.h; sourceTree = "<group>"; };
 		D22682571C06F3F70069F422 /* RTUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUserInfoModel.m; sourceTree = "<group>"; };
 		D22682591C0701350069F422 /* RTGameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTGameModel.h; sourceTree = "<group>"; };
@@ -270,7 +273,7 @@
 		D24F56071C05E23800BB30A7 /* RTMyHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMyHistoryController.m; sourceTree = "<group>"; };
 		D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTHome.storyboard; sourceTree = "<group>"; };
 		D24F560C1C05E24E00BB30A7 /* RTHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHomeController.h; sourceTree = "<group>"; };
-		D24F560D1C05E24E00BB30A7 /* RTHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHomeController.m; sourceTree = "<group>"; };
+		D24F560D1C05E24E00BB30A7 /* RTHomeController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTHomeController.mm; sourceTree = "<group>"; };
 		D25526D31BE6FA2C00CDEFC7 /* RunTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25526D71BE6FA2C00CDEFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25526D81BE6FA2C00CDEFC7 /* main.m */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -537,6 +540,8 @@
 		D22CF0381BE84835007BB1EE /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D22446761C0EFE2F002BA47D /* UITableView+Wave.h */,
+				D22446771C0EFE2F002BA47D /* UITableView+Wave.m */,
 				D22CF0391BE84835007BB1EE /* MBProgressHUD+MJ.h */,
 				D22CF03A1BE84835007BB1EE /* MBProgressHUD+MJ.m */,
 				D22CF03B1BE84835007BB1EE /* MBProgressHUD.bundle */,
@@ -961,7 +966,7 @@
 				D24F55FC1C05E1DC00BB30A7 /* MyHistory */,
 				D24F560B1C05E24E00BB30A7 /* RTHome.storyboard */,
 				D24F560C1C05E24E00BB30A7 /* RTHomeController.h */,
-				D24F560D1C05E24E00BB30A7 /* RTHomeController.m */,
+				D24F560D1C05E24E00BB30A7 /* RTHomeController.mm */,
 				D27D96051C08DC8A0013AC97 /* RTBlurEffectController.h */,
 				D27D96061C08DC8A0013AC97 /* RTBlurEffectController.m */,
 			);
@@ -1225,11 +1230,13 @@
 				D297FE9B1BEB44F30029B3B0 /* RTLocationTools.m in Sources */,
 				CE6578791C059C620045D043 /* CaptcheViewController.m in Sources */,
 				D239E13C1BFC75B4009A963F /* RTLocationCreateBodyModel.m in Sources */,
+				D22446781C0EFE2F002BA47D /* UITableView+Wave.m in Sources */,
 				D286089F1C0C4BDE000D9CFD /* RTDetectorController.m in Sources */,
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
-				D24F560F1C05E24E00BB30A7 /* RTHomeController.m in Sources */,
+				D2EDA8121C05824800F1EA1A /* subscriber_publisher.pb.cc in Sources */,
+				D24F560F1C05E24E00BB30A7 /* RTHomeController.mm in Sources */,
 				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
 				D22682671C084F040069F422 /* RTResultItemModel.m in Sources */,
 				CE65787F1C059C620045D043 /* RTLoginViewController.m in Sources */,
