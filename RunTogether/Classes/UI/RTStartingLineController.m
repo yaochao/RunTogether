@@ -8,14 +8,14 @@
 
 #import "RTStartingLineController.h"
 #import "RTPrepareController.h"
+#import "NSObject+UserDefaults.h"
 
-#define DataSource @[@1000, @3000, @5000, @10000]
+#define DataSource @[@"1000", @"3000", @"5000", @"10000"]
 #define ComponentCount 1
 #define RowHeight 50
 #define CornerRadius 5
 
 @interface RTStartingLineController () <UIPickerViewDataSource, UIPickerViewDelegate>
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLbl;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIButton *startBtn;
@@ -52,7 +52,10 @@
 #pragma mark - btnClick
 - (IBAction)startBtnClick:(id)sender {
     NSLog(@"start");
+    // push
     [self.navigationController pushViewController:self.prepareController animated:YES];
+    // save
+    [self.dataSource[[self.pickerView selectedRowInComponent:0]] saveValueWithKey:SELECTED_DISTANCE];
 }
 
 
