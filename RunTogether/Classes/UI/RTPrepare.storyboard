@@ -92,6 +92,7 @@
                     <connections>
                         <outlet property="animatedImgView" destination="ium-Rc-v8I" id="WBk-H3-yfh"/>
                         <outlet property="bottomView" destination="cBV-3o-fEg" id="5aS-QQ-3X5"/>
+                        <outlet property="indicatorView" destination="gq7-EQ-L4C" id="O1P-UK-64l"/>
                         <outlet property="topView" destination="sEQ-60-hL2" id="4Jx-ee-4Jr"/>
                     </connections>
                 </viewController>
