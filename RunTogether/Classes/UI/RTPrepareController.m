@@ -15,6 +15,7 @@
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import "MBProgressHUD+MJ.h"
 #import "RTGameOverBodyModel.h"
+#import "RTResultController.h"
 
 
 #define BottomViewHeight 200
@@ -30,6 +31,7 @@
 @property (nonatomic, strong) RTMatchingController *matchingController;
 @property (nonatomic, strong) RTMatchResultController *matchResultController;
 @property (nonatomic, weak) RTRunningController *runningController;
+@property (nonatomic, weak) RTResultController *resultController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 @property (nonatomic, strong) RTGameOverBodyModel *gameOverBodyModel;
@@ -82,6 +84,7 @@
 #pragma mark - RTMatchResultDelegate
 - (void)matchResult:(RTMatchResultController *)matchResultController didFinishedMatch:(NSArray *)users {
     // 开始动画倒计时
+    self.animatedImgView.hidden = NO;
     NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"countDown" ofType:@"gif"]];
     FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
     self.animatedImgView.animatedImage = animatedImg;
@@ -109,6 +112,7 @@
     // 让runningController DISMISS
     [self.runningController dismiss];
     // push出比赛结果页面
+    [self.navigationController pushViewController:self.resultController animated:NO];
 }
 
 
@@ -160,6 +164,14 @@
         _runningController = [sb instantiateInitialViewController];
     }
     return _runningController;
+}
+
+- (RTResultController *)resultController {
+    if (_resultController == nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTResult" bundle:nil];
+        _resultController = [sb instantiateInitialViewController];
+    }
+    return _resultController;
 }
 
 #pragma mark -

@@ -70,12 +70,12 @@
     // 打开Maxwell
     [self startMaxwellClient];
     // 注册通知
-    [RTNotificationCenter addObserver:self selector:@selector(receivedStopMaxwell:) name:RTStopMaxwellNotification object:nil];
+    [RTNotificationCenter addObserver:self selector:@selector(receivedStopMaxwell) name:RTStopMaxwellNotification object:nil];
 }
 
 
 #pragma mark - receivedStopMaxwell
-- (void)receivedStopMaxwell:(NSNotification *)notification {
+- (void)receivedStopMaxwell {
     [self stopMaxwellClient];
 }
 
@@ -90,12 +90,10 @@
 
 #pragma mark - 关闭Maxwell
 - (void)stopMaxwellClient {
-    //
-    if (self.maxwellClient == nil) {
-        return;
+    if (_maxwellClient != nil) {
+        [_maxwellClient stop];
+        _maxwellClient = nil;
     }
-    [self.maxwellClient stop];
-    self.maxwellClient = nil;
     NSLog(@"maxwell关闭了");
 }
 
@@ -180,12 +178,14 @@
     self.nameLbl.text = userInfoModel.name;
 }
 
-=
+
 #pragma mark - getter
 - (MaxwellClient *)maxwellClient {
     // 加载Maxwell
-    RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
-    _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithLongLong:[[RTKeyChainTools getUserId] longLongValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    if (_maxwellClient == nil) {
+        RTMaxwellListener *listener = [[RTMaxwellListener alloc] init];
+        _maxwellClient = [[MaxwellClient alloc] initWithEndpoint:[RTKeyChainTools getEndpoint] withUserId:[NSNumber numberWithLongLong:[[RTKeyChainTools getUserId] longLongValue]] withSessionKey:[RTKeyChainTools getSessionKey] withListener:listener];
+    }
     return _maxwellClient;
 }
 

@@ -7,16 +7,32 @@
 //
 
 #import "RTResultController.h"
+#import "RTResultCell.h"
 
-@interface RTResultController ()
+@interface RTResultController () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIView *topView;
 
 @end
 
 @implementation RTResultController
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //
+    RTResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultCell"];
+    return cell;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {

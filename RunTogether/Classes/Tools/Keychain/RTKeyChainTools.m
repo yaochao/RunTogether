@@ -96,7 +96,6 @@
     [self removePhone];
     [self removeEndpoint];
     [self removeLastNetworkReachabilityStatus];
-    [self removeAll];
     return YES;
 }
 

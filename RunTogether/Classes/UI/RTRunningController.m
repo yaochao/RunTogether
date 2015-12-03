@@ -83,11 +83,12 @@
         if ([overBodyRankModel.user.id isEqualToString:meId]) {
             meModel = overBodyRankModel.user;
             meIndex = i;
+            meOverBodyRankModel = overBodyRankModel;
         }
     }
     // 已经拿到了个人model和index
     self.rankLbl.text = [NSString stringWithFormat:@"第%@名", RankMap[meIndex]];
-    // 我排第一名，我前面没人
+    //
     if (meIndex != 0 && meIndex != (rankChangedBodyModel.rank.count - 1)) {
         behindOverBodyRankModel = rankChangedBodyModel.rank[meIndex + 1];
         aheadOverBodyRankModel = rankChangedBodyModel.rank[meIndex - 1];

@@ -104,6 +104,9 @@
 		D2955EFF1C0FF10700B3C262 /* RTRunningController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2955EFE1C0FF10700B3C262 /* RTRunningController.m */; };
 		D2955F011C0FF11A00B3C262 /* RTRunning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2955F001C0FF11A00B3C262 /* RTRunning.storyboard */; };
 		D2955F031C1014F400B3C262 /* countDown.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2955F021C1014F400B3C262 /* countDown.gif */; };
+		D2955F061C10487700B3C262 /* RTResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2955F051C10487700B3C262 /* RTResultController.m */; };
+		D2955F081C10488200B3C262 /* RTResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2955F071C10488200B3C262 /* RTResult.storyboard */; };
+		D2955F0B1C104D5000B3C262 /* RTResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2955F0A1C104D5000B3C262 /* RTResultCell.m */; };
 		D297FE8E1BEB311F0029B3B0 /* RTLocationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */; };
 		D297FE941BEB41F70029B3B0 /* RTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE931BEB41F70029B3B0 /* RTLocationManager.m */; };
 		D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D297FE971BEB43BB0029B3B0 /* RTLocationModel.m */; };
@@ -317,6 +320,11 @@
 		D2955EFE1C0FF10700B3C262 /* RTRunningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRunningController.m; sourceTree = "<group>"; };
 		D2955F001C0FF11A00B3C262 /* RTRunning.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTRunning.storyboard; sourceTree = "<group>"; };
 		D2955F021C1014F400B3C262 /* countDown.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = countDown.gif; sourceTree = "<group>"; };
+		D2955F041C10487700B3C262 /* RTResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTResultController.h; sourceTree = "<group>"; };
+		D2955F051C10487700B3C262 /* RTResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTResultController.m; sourceTree = "<group>"; };
+		D2955F071C10488200B3C262 /* RTResult.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTResult.storyboard; sourceTree = "<group>"; };
+		D2955F091C104D5000B3C262 /* RTResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTResultCell.h; sourceTree = "<group>"; };
+		D2955F0A1C104D5000B3C262 /* RTResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTResultCell.m; sourceTree = "<group>"; };
 		D297FE8C1BEB311F0029B3B0 /* RTLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationController.h; sourceTree = "<group>"; };
 		D297FE8D1BEB311F0029B3B0 /* RTLocationController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTLocationController.mm; sourceTree = "<group>"; };
 		D297FE921BEB41F70029B3B0 /* RTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLocationManager.h; sourceTree = "<group>"; };
@@ -1024,6 +1032,11 @@
 		D2EDA81F1C05986000F1EA1A /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				D2955F041C10487700B3C262 /* RTResultController.h */,
+				D2955F051C10487700B3C262 /* RTResultController.m */,
+				D2955F071C10488200B3C262 /* RTResult.storyboard */,
+				D2955F091C104D5000B3C262 /* RTResultCell.h */,
+				D2955F0A1C104D5000B3C262 /* RTResultCell.m */,
 			);
 			name = Result;
 			sourceTree = "<group>";
@@ -1153,6 +1166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2955F081C10488200B3C262 /* RTResult.storyboard in Resources */,
 				D22446751C0D97DE002BA47D /* detectorLoading.gif in Resources */,
 				D25526E21BE6FA2C00CDEFC7 /* Main.storyboard in Resources */,
 				D2955F011C0FF11A00B3C262 /* RTRunning.storyboard in Resources */,
@@ -1266,6 +1280,7 @@
 				D22CF0531BE84835007BB1EE /* NSData+Base64.m in Sources */,
 				D2917FB71BE755C600004AE7 /* RTHTTPSessionManager.m in Sources */,
 				D22CF0571BE84835007BB1EE /* NSString+BBExtension.m in Sources */,
+				D2955F061C10487700B3C262 /* RTResultController.m in Sources */,
 				D24F560F1C05E24E00BB30A7 /* RTHomeController.mm in Sources */,
 				D24F56021C05E22900BB30A7 /* RTSettingController.m in Sources */,
 				D22682671C084F040069F422 /* RTResultItemModel.m in Sources */,
@@ -1318,6 +1333,7 @@
 				D22CF0591BE84835007BB1EE /* UIBarButtonItem+Extension.m in Sources */,
 				CEC920CD1C06996700540429 /* RTNameViewController.m in Sources */,
 				D297FE981BEB43BB0029B3B0 /* RTLocationModel.m in Sources */,
+				D2955F0B1C104D5000B3C262 /* RTResultCell.m in Sources */,
 				D22CF0521BE84835007BB1EE /* MBProgressHUD.m in Sources */,
 				D2917F8F1BE7086100004AE7 /* AppDelegate.mm in Sources */,
 				D297FE8E1BEB311F0029B3B0 /* RTLocationController.mm in Sources */,
