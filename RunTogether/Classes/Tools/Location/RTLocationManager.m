@@ -11,7 +11,6 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
-#define GaodeKey @"cb2c63df9702b31cd9316cabfec5cee5"
 @interface RTLocationManager ()<AMapLocationManagerDelegate,AMapSearchDelegate>
 
 @property (nonatomic, strong) RTLocationModel *locationInfo;

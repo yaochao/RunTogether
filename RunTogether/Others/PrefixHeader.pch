@@ -98,5 +98,10 @@ typedef enum {
  */
 #define RTPhoneNumberLength 11
 
+/**
+ *高德地图key
+ */
+#define GaodeKey @"9abdc932267a0f1d15eab62cde2f3236"
+
 
 #endif
