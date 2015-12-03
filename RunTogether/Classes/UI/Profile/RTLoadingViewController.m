@@ -41,6 +41,7 @@
 */
 
 - (IBAction)beginButtonAction:(id)sender {
+    
     RTLoginViewController *loginVC = [[RTLoginViewController alloc]init];
     [self.navigationController pushViewController:loginVC animated:YES];
 }
