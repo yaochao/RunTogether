@@ -33,11 +33,6 @@
 #define BaseUrl @"https://api.duoduosports.com/v1"
 
 /**
- *  百度地图AppKey
- */
-#define BaiduMapAppKey @"Bo9uI5LwGFjfhceL1xlTKYxG"
-
-/**
  *  通知中心
  */
 #define RTNotificationCenter [NSNotificationCenter defaultCenter]

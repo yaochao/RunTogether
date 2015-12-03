@@ -40,7 +40,7 @@
     [self.locationManager startUpdatingLocation];
     
     //    self.mapView.showsUserLocation = YES;
-    NSLog(@"start");
+    NSLog(@"高德地图启动成功！");
     
 }
 
