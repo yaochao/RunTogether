@@ -50,6 +50,9 @@
             [MBProgressHUD showSuccess:@"恭喜您，检测通过"];
             // 切换到下一页
             [self.topView addSubview:self.matchingController.view];
+            // 移除检测页
+            [self.detectorController.view removeFromSuperview];
+            self.detectorController = nil;
         }
         
     }
@@ -68,6 +71,8 @@
     [MBProgressHUD showSuccess:@"恭喜您，您已加入了匹配"];
     [self.topView addSubview:self.matchResultController.view];
     [matchingController stopMonitor];
+    // 移除动起来页
+    [self.matchingController.view removeFromSuperview];
 }
 
 
@@ -90,15 +95,6 @@
     
     // setup topView's content
     [self.topView addSubview:self.detectorController.view];
-//    [self.topView addSubview:self.matchingController.view];
-//    [self.topView addSubview:self.matchResultController.view];
-}
-
-
-#pragma mark -
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -129,9 +125,15 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatchResult" bundle:nil];
         _matchResultController = [sb instantiateInitialViewController];
         _matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
-
     }
     return _matchResultController;
+}
+
+
+#pragma mark -
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
