@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RTRunningController : UIViewController
-
+- (void)dismiss;
 @end

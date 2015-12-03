@@ -8,6 +8,7 @@
 
 #import "RTSettingController.h"
 #import "RTNetworkTools.h"
+#import "RTKeyChainTools.h"
 
 @interface RTSettingController ()
 
@@ -24,6 +25,12 @@
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];
+    // 清空钥匙串
+    [RTKeyChainTools removeAll];
+    // 关闭lisenner
+    [RTNotificationCenter postNotificationName:RTStopMaxwellNotification object:nil];
+    // POP到最顶
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /**

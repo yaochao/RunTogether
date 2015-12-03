@@ -33,6 +33,7 @@
 + (BOOL)removePhone;
 + (BOOL)removeEndpoint;
 + (BOOL)removeLastNetworkReachabilityStatus;
++ (BOOL)removeAll;
 
 
 @end

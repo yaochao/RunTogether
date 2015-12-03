@@ -69,8 +69,15 @@
     [self loadData];
     // 打开Maxwell
     [self startMaxwellClient];
+    // 注册通知
+    [RTNotificationCenter addObserver:self selector:@selector(receivedStopMaxwell:) name:RTStopMaxwellNotification object:nil];
 }
 
+
+#pragma mark - receivedStopMaxwell
+- (void)receivedStopMaxwell:(NSNotification *)notification {
+    [self stopMaxwellClient];
+}
 
 #pragma mark - 启动Maxwell
 - (void)startMaxwellClient {
@@ -173,7 +180,7 @@
     self.nameLbl.text = userInfoModel.name;
 }
 
-
+=
 #pragma mark - getter
 - (MaxwellClient *)maxwellClient {
     // 加载Maxwell

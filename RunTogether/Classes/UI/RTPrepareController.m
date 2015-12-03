@@ -14,6 +14,7 @@
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import "MBProgressHUD+MJ.h"
+#import "RTGameOverBodyModel.h"
 
 
 #define BottomViewHeight 200
@@ -31,7 +32,7 @@
 @property (nonatomic, weak) RTRunningController *runningController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
-
+@property (nonatomic, strong) RTGameOverBodyModel *gameOverBodyModel;
 @end
 
 @implementation RTPrepareController
@@ -99,6 +100,15 @@
     [super viewDidLoad];
     // setupView
     [self setupView];
+    [RTNotificationCenter addObserver:self selector:@selector(receivedGameOverPushNotification:) name:RTGameOverNotification object:nil];
+}
+
+#pragma mark - receivedPushNotification
+- (void)receivedGameOverPushNotification:(NSNotification *)notification {
+    self.gameOverBodyModel = notification.userInfo[RTGameOverKey];
+    // 让runningController DISMISS
+    [self.runningController dismiss];
+    // push出比赛结果页面
 }
 
 
