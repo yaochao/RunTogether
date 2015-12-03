@@ -10,6 +10,7 @@
 #import "RTDetectorController.h"
 #import "RTMatchingController.h"
 #import "RTMatchResultController.h"
+#import "RTRunningController.h"
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import "MBProgressHUD+MJ.h"
@@ -20,14 +21,16 @@
 #define MatchingViewHeight self.topView.frame.size.height
 #define MatchResultViewHeight self.topView.frame.size.height
 
-@interface RTPrepareController () <RTDetectorDelegate, RTMatchingDelegate>
+@interface RTPrepareController () <RTDetectorDelegate, RTMatchingDelegate, RTMatchResultDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (nonatomic, strong) RTDetectorController *detectorController;
 @property (nonatomic, strong) RTMatchingController *matchingController;
 @property (nonatomic, strong) RTMatchResultController *matchResultController;
+@property (nonatomic, weak) RTRunningController *runningController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -75,6 +78,21 @@
     [self.matchingController.view removeFromSuperview];
 }
 
+#pragma mark - RTMatchResultDelegate
+- (void)matchResult:(RTMatchResultController *)matchResultController didFinishedMatch:(NSArray *)users {
+    // 开始动画倒计时
+    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"countDown" ofType:@"gif"]];
+    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
+    self.animatedImgView.animatedImage = animatedImg;
+    // 隐藏菊花
+    [self.indicatorView stopAnimating];
+    // 等待5秒进入Running页
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController presentViewController:self.runningController animated:YES completion:nil];
+    });
+    
+}
+
 
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
@@ -88,10 +106,6 @@
 - (void)setupView {
     CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
     self.topView.frame = topViewFrame;
-    // gif
-    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
-    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
-    self.animatedImgView.animatedImage = animatedImg;
     
     // setup topView's content
     [self.topView addSubview:self.detectorController.view];
@@ -125,10 +139,18 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatchResult" bundle:nil];
         _matchResultController = [sb instantiateInitialViewController];
         _matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
+        _matchResultController.delegate = self;
     }
     return _matchResultController;
 }
 
+- (RTRunningController *)runningController {
+    if (_runningController ==nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTRunning" bundle:nil];
+        _runningController = [sb instantiateInitialViewController];
+    }
+    return _runningController;
+}
 
 #pragma mark -
 - (void)didReceiveMemoryWarning {

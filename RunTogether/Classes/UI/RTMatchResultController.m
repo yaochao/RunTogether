@@ -48,6 +48,22 @@
     return RowHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 当cell完全显示完之后
+    if (indexPath.row == self.users.count - 1) {
+        // 开始倒计时
+        [self countDown];
+    }
+    NSLog(@"end display cell %li", indexPath.row);
+
+}
+
+
+#pragma mark - 倒计时5秒
+- (void)countDown {
+    [self.delegate matchResult:self didFinishedMatch:self.users];
+}
+
 
 #pragma mark - viewDidLoad
 - (void)viewDidLoad {
@@ -87,6 +103,7 @@
         NSLogErrorResponse;
     }];
 }
+
 
 #pragma mark - setter
 - (void)setUsers:(NSArray *)users {
