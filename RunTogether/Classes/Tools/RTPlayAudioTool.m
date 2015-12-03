@@ -8,9 +8,14 @@
 
 #import "RTPlayAudioTool.h"
 #import <AudioToolbox/AudioToolbox.h>
+
+@interface RTPlayAudioTool ()<AUAudioUnitFactory>
+
+@end
+
 @implementation RTPlayAudioTool
 /**
- *  播放完成回调函数
+ *  播放完成回调函数 注意这里是C
  *
  *  @param soundID    系统声音ID
  *  @param clientData 回调时传递的数据
@@ -18,7 +23,6 @@
 void soundCompleteCallback(SystemSoundID soundID,void * clientData){
     NSLog(@"播放完成...");
 }
-
 
 + (void)playSoundEffect:(NSString *)name{
     NSLog(@"------------");
