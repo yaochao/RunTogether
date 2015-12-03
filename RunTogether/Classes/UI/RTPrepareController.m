@@ -10,9 +10,12 @@
 #import "RTDetectorController.h"
 #import "RTMatchingController.h"
 #import "RTMatchResultController.h"
+#import "RTRunningController.h"
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import "MBProgressHUD+MJ.h"
+#import "RTGameOverBodyModel.h"
+#import "RTResultController.h"
 
 
 #define BottomViewHeight 200
@@ -20,15 +23,18 @@
 #define MatchingViewHeight self.topView.frame.size.height
 #define MatchResultViewHeight self.topView.frame.size.height
 
-@interface RTPrepareController () <RTDetectorDelegate, RTMatchingDelegate>
+@interface RTPrepareController () <RTDetectorDelegate, RTMatchingDelegate, RTMatchResultDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (nonatomic, strong) RTDetectorController *detectorController;
 @property (nonatomic, strong) RTMatchingController *matchingController;
 @property (nonatomic, strong) RTMatchResultController *matchResultController;
+@property (nonatomic, weak) RTRunningController *runningController;
+@property (nonatomic, weak) RTResultController *resultController;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *animatedImgView;
-
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
+@property (nonatomic, strong) RTGameOverBodyModel *gameOverBodyModel;
 @end
 
 @implementation RTPrepareController
@@ -50,6 +56,9 @@
             [MBProgressHUD showSuccess:@"恭喜您，检测通过"];
             // 切换到下一页
             [self.topView addSubview:self.matchingController.view];
+            // 移除检测页
+            [self.detectorController.view removeFromSuperview];
+            self.detectorController = nil;
         }
         
     }
@@ -68,6 +77,24 @@
     [MBProgressHUD showSuccess:@"恭喜您，您已加入了匹配"];
     [self.topView addSubview:self.matchResultController.view];
     [matchingController stopMonitor];
+    // 移除动起来页
+    [self.matchingController.view removeFromSuperview];
+}
+
+#pragma mark - RTMatchResultDelegate
+- (void)matchResult:(RTMatchResultController *)matchResultController didFinishedMatch:(NSArray *)users {
+    // 开始动画倒计时
+    self.animatedImgView.hidden = NO;
+    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"countDown" ofType:@"gif"]];
+    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
+    self.animatedImgView.animatedImage = animatedImg;
+    // 隐藏菊花
+    [self.indicatorView stopAnimating];
+    // 等待5秒进入Running页
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.navigationController presentViewController:self.runningController animated:YES completion:nil];
+    });
+    
 }
 
 
@@ -76,6 +103,16 @@
     [super viewDidLoad];
     // setupView
     [self setupView];
+    [RTNotificationCenter addObserver:self selector:@selector(receivedGameOverPushNotification:) name:RTGameOverNotification object:nil];
+}
+
+#pragma mark - receivedPushNotification
+- (void)receivedGameOverPushNotification:(NSNotification *)notification {
+    self.gameOverBodyModel = notification.userInfo[RTGameOverKey];
+    // 让runningController DISMISS
+    [self.runningController dismiss];
+    // push出比赛结果页面
+    [self.navigationController pushViewController:self.resultController animated:NO];
 }
 
 
@@ -83,22 +120,9 @@
 - (void)setupView {
     CGRect topViewFrame = CGRectMake(0, 64, Screen_W, Screen_H - BottomViewHeight - 64);
     self.topView.frame = topViewFrame;
-    // gif
-    NSData *gifData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dog" ofType:@"gif"]];
-    FLAnimatedImage *animatedImg = [FLAnimatedImage animatedImageWithGIFData:gifData];
-    self.animatedImgView.animatedImage = animatedImg;
     
     // setup topView's content
     [self.topView addSubview:self.detectorController.view];
-//    [self.topView addSubview:self.matchingController.view];
-//    [self.topView addSubview:self.matchResultController.view];
-}
-
-
-#pragma mark -
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -129,9 +153,31 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTMatchResult" bundle:nil];
         _matchResultController = [sb instantiateInitialViewController];
         _matchResultController.view.frame = CGRectMake(0, (self.topView.frame.size.height - MatchResultViewHeight) / 2, self.topView.frame.size.width, MatchResultViewHeight);
-
+        _matchResultController.delegate = self;
     }
     return _matchResultController;
+}
+
+- (RTRunningController *)runningController {
+    if (_runningController ==nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTRunning" bundle:nil];
+        _runningController = [sb instantiateInitialViewController];
+    }
+    return _runningController;
+}
+
+- (RTResultController *)resultController {
+    if (_resultController == nil) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTResult" bundle:nil];
+        _resultController = [sb instantiateInitialViewController];
+    }
+    return _resultController;
+}
+
+#pragma mark -
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

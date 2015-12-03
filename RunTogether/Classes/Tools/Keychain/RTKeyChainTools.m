@@ -89,4 +89,14 @@
     return [[RTKeyChainSingleton sharedKeyChainSingleton] removeItemForKey:@"networkReachabilityStatus"];
 }
 
++ (BOOL)removeAll {
+    [self removeRememberToken];
+    [self removeUserId];
+    [self removeSessionKey];
+    [self removePhone];
+    [self removeEndpoint];
+    [self removeLastNetworkReachabilityStatus];
+    return YES;
+}
+
 @end

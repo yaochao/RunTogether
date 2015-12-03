@@ -11,7 +11,6 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
-#define GaodeKey @"cb2c63df9702b31cd9316cabfec5cee5"
 @interface RTLocationManager ()<AMapLocationManagerDelegate,AMapSearchDelegate>
 
 @property (nonatomic, strong) RTLocationModel *locationInfo;
@@ -41,7 +40,7 @@
     [self.locationManager startUpdatingLocation];
     
     //    self.mapView.showsUserLocation = YES;
-    NSLog(@"start");
+    NSLog(@"高德地图启动成功！");
     
 }
 

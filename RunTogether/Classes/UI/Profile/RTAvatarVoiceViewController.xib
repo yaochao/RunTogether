@@ -43,6 +43,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <action selector="LongTapTouchDown:" destination="-1" eventType="touchDown" id="XNc-BM-NEf"/>
                         <action selector="LongTapTouchUpInside:" destination="-1" eventType="touchUpInside" id="j3a-U4-puc"/>
                         <action selector="longTap:" destination="-1" eventType="touchDown" id="STG-YE-Nf4"/>
                         <action selector="longTapOut:" destination="-1" eventType="touchUpOutside" id="AKe-Z6-Xnn"/>

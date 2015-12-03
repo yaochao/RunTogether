@@ -12,6 +12,9 @@
 #import "RTGameStartedBodyModel.h"
 #import "RTGameStartedBodyUsersModel.h"
 #import "UITableView+Wave.h"
+#import "NSObject+UserDefaults.h"
+
+#define RowHeight 60
 
 @interface RTMatchResultController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -33,18 +36,32 @@
     if (self.users.count == 0) {
         return [tableView dequeueReusableCellWithIdentifier:@"RTMatchResultCell"];
     }
-    // 拿到model
-    // 拿到cell
+    RTGameStartedBodyUsersModel *userModel = self.users[indexPath.row];
     RTMatchResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RTMatchResultCell"];
-    // 赋值
-#warning TODO
+    cell.userModel = userModel;
     return cell;
 }
 
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return RowHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 当cell完全显示完之后
+    if (indexPath.row == self.users.count - 1) {
+        // 开始倒计时
+        [self countDown];
+    }
+    NSLog(@"end display cell %li", indexPath.row);
+
+}
+
+
+#pragma mark - 倒计时5秒
+- (void)countDown {
+    [self.delegate matchResult:self didFinishedMatch:self.users];
 }
 
 
@@ -78,13 +95,15 @@
 - (void)loadData {
     // 请求网络，进行匹配
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"distance"] = @1000;
+    params[@"distance"] = [NSObject getValueWithKey:SELECTED_DISTANCE];
+    NSLog(@"SELECTED_DISTANCE:%@", [NSObject getValueWithKey:SELECTED_DISTANCE]);
     [RTNetworkTools postDataWithParams:params interfaceType:RTPreparationsType success:^(NSDictionary *responseObject) {
         NSLogSuccessResponse;
     } failure:^(NSError *error) {
         NSLogErrorResponse;
     }];
 }
+
 
 #pragma mark - setter
 - (void)setUsers:(NSArray *)users {

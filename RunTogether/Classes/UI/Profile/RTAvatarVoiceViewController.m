@@ -11,6 +11,7 @@
 #import "RunTogether-Bridging-Header.h"
 #import "Runtogether-Swift.h"
 #import "RTHomeController.h"
+#import "RTPlayAudioTool.h"
 #define RecordTime 3
 @interface RTAvatarVoiceViewController ()<LVRecordToolDelegate>
 - (IBAction)longTap:(ANLongTapButton *)sender;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UILabel *recordLable;
 - (IBAction)nextPage:(UIButton *)sender;
+- (IBAction)LongTapTouchDown:(UIButton *)sender;
 
 /** 录音工具 */
 @property (nonatomic, strong) LVRecordTool *recordTool;
@@ -30,7 +32,10 @@
 
 @end
 
-@implementation RTAvatarVoiceViewController
+@implementation RTAvatarVoiceViewController{
+    NSDate* touchDownTime;
+    NSTimeInterval dTime;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,21 +59,24 @@
 }
 - (IBAction)longTap:(ANLongTapButton *)sender {
     [self.recordTool startRecording];
+    
     // 限制录音时间
     [self performSelector:@selector(stopRecord) withObject:self afterDelay:RecordTime];
 }
 - (void)stopRecord{
+    if (dTime < 3) {
+        return;
+    }
     [self.recordTool stopRecording];
     NSLog(@"停");
-//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-#warning Todo 超时声音提示
-//        [self play];
-//    });
+    [RTPlayAudioTool playSoundEffect:@"6224.wav"];
 }
 - (IBAction)longTapOut:(ANLongTapButton *)sender {
     [self.recordTool playRecordingFile];
 }
 - (IBAction)LongTapTouchUpInside:(ANLongTapButton *)sender {
+    dTime = [touchDownTime timeIntervalSinceNow];
+    dTime = -dTime;
     self.recordLable.text = @"重录";
     [self.recordTool stopRecording];
     // I/O不能同时
@@ -89,6 +97,10 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"RTHome" bundle:nil];
     RTHomeController *homtController = [sb instantiateInitialViewController];
     [self.navigationController pushViewController:homtController animated:YES];
+}
+
+- (IBAction)LongTapTouchDown:(UIButton *)sender {
+    touchDownTime = [NSDate date];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [self.recordTool stopRecording];

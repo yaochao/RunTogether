@@ -31,13 +31,6 @@
     _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [_reachabilityManager startMonitoring];
     
-    // 启动百度地图管理器
-    _mapManager = [[BMKMapManager alloc] init];
-    BOOL ret = [_mapManager start:BaiduMapAppKey generalDelegate:nil];
-    if (ret) {
-        NSLog(@"百度地图管理器启动成功！");
-    }
-    
     [[SDWebImageManager sharedManager].imageDownloader setValue: nil forHTTPHeaderField:@"Accept"];
 
     

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RTMatchResultController : UIViewController
+@class RTMatchResultController;
 
+@protocol RTMatchResultDelegate <NSObject>
+@required
+- (void)matchResult:(RTMatchResultController *)matchResultController didFinishedMatch:(NSArray *)users;
+@end
+
+@interface RTMatchResultController : UIViewController
+@property (nonatomic, weak) id<RTMatchResultDelegate> delegate;
 @end
