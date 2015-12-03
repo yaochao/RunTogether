@@ -9,7 +9,7 @@
 #import "RTPlayAudioTool.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-@interface RTPlayAudioTool ()<AUAudioUnitFactory>
+@interface RTPlayAudioTool ()
 
 @end
 
