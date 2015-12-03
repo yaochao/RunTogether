@@ -94,7 +94,7 @@ typedef enum {
 #define RTPhoneNumberLength 11
 
 /**
- *高德地图key
+ * 高德地图key
  */
 #define GaodeKey @"9abdc932267a0f1d15eab62cde2f3236"
 
@@ -102,6 +102,37 @@ typedef enum {
  *  SELECTED_DISTANCE
  */
 #define SELECTED_DISTANCE @"SELECTED_DISTANCE"
+
+/**
+ * 音频文件
+ */
+#define behind_nearing      @"behind_nearing.wav"
+#define catching_up         @"catching_up.wav"
+#define countdown           @"countdown.wav"
+#define drop_GPS            @"drop_GPS.wav"
+#define drop_network        @"drop_network.wav"
+#define drop_notmoving      @"drop_not moving.wav"
+#define fall_behind         @"fall_behind.wav"
+#define finish_recording    @"finish_recording.wav"
+#define GPS_disconnect      @"GPS_disconnect"
+#define GPS_recovery        @"GPS_recovery"
+#define match_before        @"match_before"
+#define members_join        @"members_join"
+#define network_disconnect  @"network_disconnect"
+#define network_recovery    @"network_recovery"
+#define not_moving          @"not_moving"
+#define ranking_01          @"ranking_01"
+#define ranking_03          @"ranking_03"
+#define ranking_05          @"ranking_05"
+#define sayhi_test_01       @"say hi_test_01"
+#define sayhi_test_02       @"say hi_test_02"
+#define sayhi_test_03       @"say hi_test_03"
+#define sayhi_test_04       @"say hi_test_04"
+#define sayhi_test_05       @"say hi_test_05"
+#define sayhi_test_06       @"say hi_test_06"
+#define somebody_behind     @"somebody_behind"
+#define start_leader        @"start_leader"
+#define surpass             @"surpass"
 
 
 #endif
